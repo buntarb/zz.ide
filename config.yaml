@@ -1,0 +1,83 @@
+# Root namespace
+NAMESPACE: 'zz.ide'
+
+# Module paths
+PATH:
+
+  # Compiled files folder
+  BIN: 'bin'
+
+  # Source files folder
+  LIB: 'lib'
+
+  # JavaScript sources folder
+  SOURCES: 'sources'
+
+  # Compiled .soy templates folder
+  COMPILED_SOY: '_tpl'
+
+  # Messages files folder
+  MESSAGES: 'messages'
+
+  # Templates (.soy) files folder
+  TEMPLATES: 'templates'
+
+  # Resources (images/fonts) files folder
+  RESOURCES: 'resources'
+
+  # Stylesheets folder
+  STYLESHEETS: 'stylesheets'
+
+  # Stylesheets (.scss) sources files folder
+  SCSS: 'scss'
+
+  # Stylesheets (.gss) compiled files folder
+  CSS: '.css'
+
+  # Services compiling
+  SVC: 'svc'
+
+# Server settings
+SERVER:
+
+  # Server domain/IP
+  SERVER_DOMAIN: 'localhost'
+
+  # Server port
+  SERVER_PORT: 8888
+
+  # Documentation server sub-domain
+  SERVER_DOC: 'doc'
+
+  # Developer server sub-domain
+  SERVER_DEV: 'dev'
+
+  # Test server sub-domain
+  SERVER_TST: 'tst'
+
+  # Production-like server sub-domain
+  SERVER_APP: 'app'
+
+  # Unit Test server sub-domain
+  SERVER_UT: 'ut'
+
+# Compile settings
+COMPILATION:
+
+  # Default locale
+  LOCALE: 'en'
+
+  # Compilation level
+  COMPILE_LEVEL: 'ADVANCED_OPTIMIZATIONS'
+
+  # Source code input ECMAScript version
+  INPUT_LANGUAGE: 'ECMASCRIPT5_STRICT'
+
+  # Compiled code ECMAScript version
+  OUTPUT_LANGUAGE: 'ECMASCRIPT5_STRICT'
+
+  # Enable/disable source map file generation
+  SOURCE_MAP_ENABLE: false
+
+  # Version of source map files
+  SOURCE_MAP: 'V3'
