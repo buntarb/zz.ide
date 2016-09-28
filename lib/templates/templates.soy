@@ -35,7 +35,14 @@
 {template .treeDatarow}
     <li
         data-row="{$uid}">
-        <div>
+        <div
+            class="{css node-type}">
+            {if $datarow.type == 'folder'} typeFolder
+            {elseif $datarow.type == 'file'} typeFile
+            {/if}
+        </div>
+        <div
+            class="{css node-title}">
             {$datarow.title}
         </div>
         <div
