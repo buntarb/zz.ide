@@ -28,21 +28,24 @@
 {/template}
 
 /**
+ * @param clientEvent
  * @param datarow
  * @param fields
  * @param uid
  */
 {template .treeDatarow}
     <li
-        data-row="{$uid}">
+        data-row="{$uid}"
         <div
-            class="{css node-type}">
-            {if $datarow.type == 'folder'} typeFolder
-            {elseif $datarow.type == 'file'} typeFile
-            {/if}
-        </div>
-        <div
-            class="{css node-title}">
+            class="{css node-title}"
+            data-event="{$clientEvent.ACTION}"
+            data-field="{$fields.title}">
+            <div
+                class="{css node-type}">
+                {if $datarow.type == 'folder'} typeFolder
+                {elseif $datarow.type == 'file'} typeFile
+                {/if}
+            </div>
             {$datarow.title}
         </div>
         <div
