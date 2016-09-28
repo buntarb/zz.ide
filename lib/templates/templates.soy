@@ -35,7 +35,7 @@
  */
 {template .treeDatarow}
     <li
-        data-row="{$uid}"
+        data-row="{$uid}">
         <div
             class="{css node-title}"
             data-event="{$clientEvent.ACTION}"
@@ -46,7 +46,9 @@
                 {elseif $datarow.type == 'file'} typeFile
                 {/if}
             </div>
-            {$datarow.title}
+            <span>
+                {$datarow.title}
+            </span>
         </div>
         <div
             data-type="{$fields.children}">
