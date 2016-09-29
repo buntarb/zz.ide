@@ -10,3 +10,51 @@
 @import "deps";
 
 // Module styles.
+
+ul.tree-list {
+
+  margin-left: 10px;
+  padding-left: 0;
+  ul.tree-list {
+
+    margin-left: 20px;
+  }
+  li.tree-node {
+
+    list-style-type: none;
+    i.awesome-icons {
+
+      margin-right: 10px;
+      font-size: 14px;
+    }
+    div.node-folder {
+
+      i.show-if-open{
+
+        display: none;
+      }
+      i.show-if-close {
+
+        display: inline-block;
+      }
+    }
+    div.node-folder.folder-open {
+
+      i.show-if-close {
+
+        display: none;
+      }
+      i.show-if-open {
+
+        display: inline-block;
+      }
+    }
+    div.node-file {
+
+      i.node-icon {
+
+        margin-left: 15px;
+      }
+    }
+  }
+}

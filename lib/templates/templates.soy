@@ -23,6 +23,7 @@
  */
 {template .treeDataset}
     <ul
+        class="{css tree-list}"
         data-set="{$uid}">
     </ul>
 {/template}
@@ -35,21 +36,52 @@
  */
 {template .treeDatarow}
     <li
+        class="{css tree-node}"
         data-row="{$uid}">
-        <div
-            class="{css node-title}"
-            data-event="{$clientEvent.ACTION}"
-            data-field="{$fields.title}">
+        {if $datarow.type == 'folder'}
             <div
-                class="{css node-type}">
-                {if $datarow.type == 'folder'} typeFolder
-                {elseif $datarow.type == 'file'} typeFile
-                {/if}
+                class="{css node-folder}"
+                data-event="{$clientEvent.ACTION}"
+                data-field="{$fields.title}">
+                <i
+                    class="{css awesome-icons} {css node-angle} {css show-if-close}"
+                    aria-hidden="true">
+                    {literal}&#xf105;{/literal}
+                </i>
+                <i
+                    class="{css awesome-icons} {css node-icon} {css show-if-close}"
+                    aria-hidden="true">
+                    {literal}&#xf114;{/literal}
+                </i>
+                <i
+                    class="{css awesome-icons} {css node-angle} {css show-if-open}"
+                    aria-hidden="true">
+                    {literal}&#xf107;{/literal}
+                </i>
+                <i
+                    class="{css awesome-icons} {css node-icon} {css show-if-open}"
+                    aria-hidden="true">
+                    {literal}&#xf115;{/literal}
+                </i>
+                <span
+                    class="{css node-title}">
+                    {$datarow.title}
+                </span>
             </div>
-            <span>
-                {$datarow.title}
-            </span>
-        </div>
+        {elseif $datarow.type == 'file'}
+            <div
+                class="{css node-file}">
+                <i
+                    class="{css awesome-icons} {css node-icon}"
+                    aria-hidden="true">
+                    {literal}&#xf1c9;{/literal}
+                </i>
+                <span
+                    class="{css node-title}">
+                    {$datarow.title}
+                </span>
+            </div>
+        {/if}
         <div
             data-type="{$fields.children}">
         </div>
