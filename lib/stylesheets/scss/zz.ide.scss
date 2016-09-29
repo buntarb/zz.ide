@@ -29,6 +29,12 @@ ul.tree-list {
     }
     div.node-folder {
 
+      position: relative;
+      box-sizong: border-box;
+      &:hover {
+
+        background: #d6e9f8;
+      }
       i.show-if-open{
 
         display: none;
@@ -51,6 +57,12 @@ ul.tree-list {
     }
     div.node-file {
 
+      position: relative;
+      box-sizong: border-box;
+      &:hover {
+
+        background: #d6e9f8;
+      }
       i.node-icon {
 
         margin-left: 15px;

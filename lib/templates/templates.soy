@@ -70,7 +70,9 @@
             </div>
         {elseif $datarow.type == 'file'}
             <div
-                class="{css node-file}">
+                class="{css node-file}"
+                data-event="{$clientEvent.ACTION}"
+                data-field="{$fields.title}">
                 <i
                     class="{css awesome-icons} {css node-icon}"
                     aria-hidden="true">
