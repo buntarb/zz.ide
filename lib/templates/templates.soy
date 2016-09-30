@@ -42,7 +42,7 @@
             <div
                 class="{css node-folder}"
                 data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.title}">
+                data-field="{$fields.isFolderOpen}">
                 <i
                     class="{css awesome-icons} {css node-angle} {css show-if-close}"
                     aria-hidden="true">
@@ -64,28 +64,28 @@
                     {literal}&#xf115;{/literal}
                 </i>
                 <span
-                    class="{css node-title}">
+                    class="{css node-title}"
+                    data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
             </div>
+        <div
+            data-type="{$fields.children}">
+        </div>
         {elseif $datarow.type == 'file'}
             <div
-                class="{css node-file}"
-                data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.title}">
+                class="{css node-file}">
                 <i
                     class="{css awesome-icons} {css node-icon}"
                     aria-hidden="true">
                     {literal}&#xf1c9;{/literal}
                 </i>
                 <span
-                    class="{css node-title}">
+                    class="{css node-title}"
+                    data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
             </div>
         {/if}
-        <div
-            data-type="{$fields.children}">
-        </div>
     </li>
 {/template}

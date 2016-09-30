@@ -38,8 +38,14 @@ FIELDS:
       type: zz.ide.models.Tree
       required: false
 
-  isopen:
+  isFolderOpen:
 
     index: 6
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  isContextShow:
+
+    index: 7
     type: zz.models.enums.FieldType.BOOLEAN
     required: false
