@@ -19,6 +19,7 @@
 		"zz.controllers": "",
 		"zz.models": "",
 		"zz.styles": "",
-		"zz.ui": ""
+		"zz.ui": "",
+		"zz.services": ""
 	}
 }

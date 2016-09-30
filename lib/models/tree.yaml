@@ -34,6 +34,12 @@ FIELDS:
 
   children:
 
-    index: 5
-    type: zz.ide.models.Tree
+      index: 5
+      type: zz.ide.models.Tree
+      required: false
+
+  isopen:
+
+    index: 6
+    type: zz.models.enums.FieldType.BOOLEAN
     required: false

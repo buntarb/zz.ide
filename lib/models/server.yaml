@@ -1,4 +1,4 @@
-NAMESPACE: 'zz.ide.models.Node'
+NAMESPACE: 'zz.ide.models.Server'
 
 FIELDS:
 
@@ -32,8 +32,8 @@ FIELDS:
     type: zz.models.enums.FieldType.NUMBER
     required: false
 
-  isopen:
+  children:
 
     index: 5
-    type: zz.models.enums.FieldType.BOOLEAN
+    type: zz.ide.models.Tree
     required: false
