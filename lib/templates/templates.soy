@@ -42,8 +42,7 @@
             <div
                 class="{css node} {css node-folder}"
                 data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.isFolderOpen}"
-                data-field="{$fields.isContextShow}">
+                data-field="{$fields.isFolderOpen}">
                 <i
                     class="{css awesome-icons} {css node-angle} {css show-if-close}"
                     aria-hidden="true">
@@ -69,19 +68,18 @@
                     data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
-                <div
-                    class="{css context-btn-wrapper}"
-                    data-type="{$fields.context}">
-                </div>
             </div>
-        <div
-            data-type="{$fields.children}">
-        </div>
+            <div
+                class="{css context-btn-wrapper}"
+                data-type="{$fields.context}">
+            </div>
+            <div
+                data-type="{$fields.children}">
+            </div>
         {elseif $datarow.type == 'file'}
             <div
                 class="{css node} {css node-file}"
-                data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.isContextShow}">
+                data-event="{$clientEvent.ACTION}">
                 <i
                     class="{css awesome-icons} {css node-icon}"
                     aria-hidden="true">
@@ -92,10 +90,10 @@
                     data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
-                <div
-                    class="{css context-btn-wrapper}"
-                    data-type="{$fields.context}">
-                </div>
+            </div>
+            <div
+                class="{css context-btn-wrapper}"
+                data-type="{$fields.context}">
             </div>
         {/if}
     </li>

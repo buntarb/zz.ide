@@ -47,13 +47,7 @@ FIELDS:
     type: zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  isContextShow:
-
-    index: 7
-    type: zz.models.enums.FieldType.BOOLEAN
-    required: false
-
   context:
-     index: 8
+     index: 7
      type: zz.ide.models.Context
      required: false
