@@ -1,0 +1,9 @@
+NAMESPACE: 'zz.ide.models.Context'
+
+FIELDS:
+
+  isContextOpen:
+
+    index: 1
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false

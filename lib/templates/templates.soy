@@ -40,7 +40,7 @@
         data-row="{$uid}">
         {if $datarow.type == 'folder'}
             <div
-                class="{css node-folder}"
+                class="{css node} {css node-folder}"
                 data-event="{$clientEvent.ACTION}"
                 data-field="{$fields.isFolderOpen}">
                 <i
@@ -68,13 +68,19 @@
                     data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
+                <div
+                    class="{css context-btn-wrapper}"
+                    data-type="{$fields.context}">
+                </div>
             </div>
         <div
             data-type="{$fields.children}">
         </div>
         {elseif $datarow.type == 'file'}
             <div
-                class="{css node-file}">
+                class="{css node} {css node-file}"
+                data-event="{$clientEvent.ACTION}"
+                data-field="{$fields.isContextShow}">
                 <i
                     class="{css awesome-icons} {css node-icon}"
                     aria-hidden="true">
@@ -85,7 +91,40 @@
                     data-field="{$fields.title}">
                     {$datarow.title}
                 </span>
+                <div
+                    class="{css context-btn-wrapper}"
+                    data-type="{$fields.context}">
+                </div>
             </div>
         {/if}
     </li>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .contextDataset}
+    <div
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param clientEvent
+ * @param fields
+ * @param uid
+ */
+{template .contextDatarow}
+    <div
+        class="{css context-btn}"
+        data-row="{$uid}"
+        data-event="{$clientEvent.ACTION}"
+        data-field="{$fields.isContextOpen}">
+        <i
+            class="{css awesome-icons} {css context-icon}"
+            aria-hidden="true">
+            {literal}&#xf0c9;{/literal}
+        </i>
+    </div>
 {/template}
