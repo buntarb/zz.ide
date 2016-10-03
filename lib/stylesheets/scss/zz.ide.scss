@@ -44,6 +44,10 @@ ul.tree-list {
 
         display: inline-block;
       }
+      i.node-icon, i.node-angle {
+
+        cursor: pointer;
+      }
     }
     & div.node-folder.folder-open {
 
@@ -68,6 +72,10 @@ ul.tree-list {
       position: absolute;
       top: 0;
       right: 0;
+      i.context-icon {
+
+        cursor: pointer;
+      }
     }
   }
 }
