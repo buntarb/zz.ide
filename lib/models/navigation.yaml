@@ -1,0 +1,87 @@
+NAMESPACE: 'zz.ide.models.Navigation'
+
+FIELDS:
+
+  title:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  type:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  path:
+
+    index: 2
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  content:
+
+    index: 3
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  count:
+
+    index: 4
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
+
+  children:
+
+      index: 5
+      type: zz.ide.models.Tree
+      required: false
+
+  isNavigationShow:
+
+    index: 6
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  searchField:
+
+    index: 7
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  searchPlaceholder:
+
+    index: 8
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  searchButtonIcon:
+
+    index: 9
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  searchBtnState:
+
+    index: 10
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  isFolderOpen:
+
+    index: 11
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  isContextShow:
+
+    index: 12
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  isContextOpen:
+
+     index: 13
+     type: zz.models.enums.FieldType.BOOLEAN
+     required: false
