@@ -1,0 +1,14 @@
+NAMESPACE: 'zz.ide.models.View'
+
+REQUIRE:
+
+  -  'zz.ide.models.Ace'
+
+FIELDS:
+
+  ace:
+
+    index: 0
+    type: zz.ide.models.Ace
+    required: false
+

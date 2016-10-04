@@ -182,8 +182,8 @@
             data-type="{$fields.navigation}">
         </div>
         <div
-            class="{css ace-wrapper}"
-            data-type="{$fields.ace}">
+            class="{css view-wrapper}"
+            data-type="{$fields.view}">
         </div>
     </div>
 {/template}
@@ -312,6 +312,30 @@
                 {/if}
             </li>
         </ul>
+    </div>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .viewDataset}
+    <div
+        class="{css view-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param uid
+ * @param fields
+ */
+{template .viewDatarow}
+    <div
+        data-row="{$uid}">
+        <div
+            data-type="{$fields.ace}">
+        </div>
     </div>
 {/template}
 

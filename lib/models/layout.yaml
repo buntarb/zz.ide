@@ -3,7 +3,7 @@ NAMESPACE: 'zz.ide.models.Layout'
 REQUIRE:
   -  'zz.ide.models.Header'
   -  'zz.ide.models.Navigation'
-  -  'zz.ide.models.Ace'
+  -  'zz.ide.models.View'
 
 FIELDS:
 
@@ -19,9 +19,9 @@ FIELDS:
     type: zz.ide.models.Navigation
     required: false
 
-  ace:
+  view:
 
     index: 2
-    type: zz.ide.models.Ace
+    type: zz.ide.models.View
     required: false
 
