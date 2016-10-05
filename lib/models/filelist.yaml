@@ -1,0 +1,21 @@
+NAMESPACE: 'zz.ide.models.Filelist'
+
+FIELDS:
+
+  icon:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  color:
+
+      index: 1
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  title:
+
+      index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: false

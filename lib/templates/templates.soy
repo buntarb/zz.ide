@@ -178,7 +178,7 @@
             data-type="{$fields.header}">
         </div>
         <div
-            class="{css navigation-wrapper}"
+            class="{css navigation-wrapper} {css is-open}"
             data-type="{$fields.navigation}">
         </div>
         <div
@@ -208,12 +208,15 @@
 {template .headerDatarow}
     <div
         class="{css header}"
-        data-row="{$uid}"
+        data-row="{$uid}">
         <div
-            class="{css header--btn}"
-            data-event="{$clientEvent.ACTION}"
-            data-field="{$fields.buttonIcon}">
-            {$datarow.buttonIcon}
+            class="{css header--btn}">
+            <i
+                class="{css material-icons}"
+                data-event="{$clientEvent.ACTION}"
+                data-field="{$fields.buttonIcon}">
+                {$datarow.buttonIcon}
+            </i>
         </div>
     </div>
 {/template}
@@ -224,23 +227,298 @@
  * @param uid
  */
 {template .navigationDataset}
-    <ul
+    <div
         class="{css navigation-set}"
         data-set="{$uid}">
-    </ul>
+    </div>
 {/template}
 
 /**
-* @param clientEvent
- * @param datarow
- * @param fields
  * @param uid
+ * @param fields
  */
 {template .navigationDatarow}
-    <li
-        class="{css navigation}"
+    <div
         data-row="{$uid}">
-    </li>
+        <ul
+            class="{css navigation-set}">
+            <li
+                class="{css navigation-node}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: #4285f4">
+                   storage
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Models
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: #ef6c00">
+                   web
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Templates
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: #33ac71">
+                   insert_drive_file
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Styles
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   language
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Messages
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   image
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Resources
+                </span>
+            </li>
+        </ul>
+        <ul
+            class="{css navigation-set}">
+            <li
+                class="{css navigation-node}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Controllers
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Enums
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Errors
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Events
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Factories
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Services
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Tests
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   folder
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    Views
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    base.js
+                </span>
+            </li>
+        </ul>
+        <ul
+            class="{css navigation-set}">
+            <li
+                class="{css navigation-node}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    index.html
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    package.json
+                </span>
+            </li>
+            <li
+                class="{css navigation-node}"
+                data-row="{$uid}">
+                <i
+                   class="{css material-icons} {css navigation-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css navigation-node--title}"
+                    data-field="{$fields.title}">
+                    config.yaml
+                </span>
+            </li>
+        </ul>
+    </div>
 {/template}
 
 
@@ -262,7 +540,12 @@
     <div
         data-row="{$uid}">
         <div
+            class="{css ace-wrapper}"
             data-type="{$fields.ace}">
+        </div>
+        <div
+            class="{css filelist-wrapper}"
+            data-type="{$fields.filelist}">
         </div>
     </div>
 {/template}
@@ -284,6 +567,27 @@
     <div
         id="{css editor}"
         class="{css ace}"
+        data-row="{$uid}">
+    </div>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .filelistDataset}
+    <div
+        class="{css filelist-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param uid
+ */
+{template .filelistDatarow}
+    <div
+        class="{css filelist}"
         data-row="{$uid}">
     </div>
 {/template}

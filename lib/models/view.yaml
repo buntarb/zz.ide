@@ -3,6 +3,7 @@ NAMESPACE: 'zz.ide.models.View'
 REQUIRE:
 
   -  'zz.ide.models.Ace'
+  -  'zz.ide.models.Filelist'
 
 FIELDS:
 
@@ -10,5 +11,11 @@ FIELDS:
 
     index: 0
     type: zz.ide.models.Ace
+    required: false
+
+  filelist:
+
+    index: 1
+    type: zz.ide.models.Filelist
     required: false
 
