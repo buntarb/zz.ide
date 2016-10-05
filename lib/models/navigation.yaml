@@ -1,0 +1,22 @@
+NAMESPACE: 'zz.ide.models.Navigation'
+
+FIELDS:
+
+  title:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  icon:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  color:
+
+    index: 2
+    type: zz.models.enums.FieldType.STRING
+    required: false
+

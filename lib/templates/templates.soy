@@ -40,7 +40,7 @@
         data-row="{$uid}">
         {if $datarow.type == 'folder'}
             <div
-                class="{css node-folder}"
+                class="{css node} {css node-folder}"
                 data-event="{$clientEvent.ACTION}"
                 data-field="{$fields.isFolderOpen}">
                 <i
@@ -69,12 +69,17 @@
                     {$datarow.title}
                 </span>
             </div>
-        <div
-            data-type="{$fields.children}">
-        </div>
+            <div
+                class="{css context-btn-wrapper}"
+                data-type="{$fields.context}">
+            </div>
+            <div
+                data-type="{$fields.children}">
+            </div>
         {elseif $datarow.type == 'file'}
             <div
-                class="{css node-file}">
+                class="{css node} {css node-file}"
+                data-event="{$clientEvent.ACTION}">
                 <i
                     class="{css awesome-icons} {css node-icon}"
                     aria-hidden="true">
@@ -86,6 +91,199 @@
                     {$datarow.title}
                 </span>
             </div>
+            <div
+                class="{css context-btn-wrapper}"
+                data-type="{$fields.context}">
+            </div>
         {/if}
     </li>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .contextDataset}
+    <div
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param clientEvent
+ * @param fields
+ * @param uid
+ */
+{template .contextDatarow}
+    <div
+        class="{css context-btn}"
+        data-row="{$uid}"
+        data-event="{$clientEvent.ACTION}"
+        data-field="{$fields.isContextOpen}">
+        <i
+            class="{css awesome-icons} {css context-icon}"
+            aria-hidden="true">
+            {literal}&#xf0c9;{/literal}
+        </i>
+    </div>
+{/template}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * @param uid
+ */
+{template .applicationDataset}
+    <div
+        class="{css application-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param fields
+ * @param uid
+ */
+{template .applicationDatarow}
+    <div
+        data-row="{$uid}">
+        <div
+            class="{css layout-wrapper}"
+            data-type="{$fields.layout}">
+        </div>
+    </div>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .layoutDataset}
+    <div
+        class="{css layout-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param fields
+ * @param uid
+ */
+{template .layoutDatarow}
+    <div
+        class="{css layout}"
+        data-row="{$uid}">
+        <div
+            class="{css header-wrapper}"
+            data-type="{$fields.header}">
+        </div>
+        <div
+            class="{css navigation-wrapper}"
+            data-type="{$fields.navigation}">
+        </div>
+        <div
+            class="{css view-wrapper}"
+            data-type="{$fields.view}">
+        </div>
+    </div>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .headerDataset}
+    <div
+        class="{css header-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+* @param clientEvent
+ * @param datarow
+ * @param fields
+ * @param uid
+ */
+{template .headerDatarow}
+    <div
+        class="{css header}"
+        data-row="{$uid}"
+        <div
+            class="{css header--btn}"
+            data-event="{$clientEvent.ACTION}"
+            data-field="{$fields.buttonIcon}">
+            {$datarow.buttonIcon}
+        </div>
+    </div>
+{/template}
+
+
+
+/**
+ * @param uid
+ */
+{template .navigationDataset}
+    <ul
+        class="{css navigation-set}"
+        data-set="{$uid}">
+    </ul>
+{/template}
+
+/**
+* @param clientEvent
+ * @param datarow
+ * @param fields
+ * @param uid
+ */
+{template .navigationDatarow}
+    <li
+        class="{css navigation}"
+        data-row="{$uid}">
+    </li>
+{/template}
+
+
+/**
+ * @param uid
+ */
+{template .viewDataset}
+    <div
+        class="{css view-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param uid
+ * @param fields
+ */
+{template .viewDatarow}
+    <div
+        data-row="{$uid}">
+        <div
+            data-type="{$fields.ace}">
+        </div>
+    </div>
+{/template}
+
+/**
+ * @param uid
+ */
+{template .aceDataset}
+    <div
+        class="{css ace-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param uid
+ */
+{template .aceDatarow}
+    <div
+        id="{css editor}"
+        class="{css ace}"
+        data-row="{$uid}">
+    </div>
 {/template}

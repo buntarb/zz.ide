@@ -1,0 +1,9 @@
+NAMESPACE: 'zz.ide.models.Header'
+
+FIELDS:
+
+  buttonIcon:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false

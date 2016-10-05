@@ -19,15 +19,16 @@ ul.tree-list {
 
     margin-left: 20px;
   }
-  li.tree-node {
+  & li.tree-node {
 
+    position: relative;
     list-style-type: none;
     i.awesome-icons {
 
       margin-right: 10px;
       font-size: 14px;
     }
-    div.node-folder {
+    & div.node {
 
       position: relative;
       box-sizing: border-box;
@@ -35,37 +36,45 @@ ul.tree-list {
 
         background: #d6e9f8;
       }
-      i.show-if-open{
+      & i.show-if-open{
 
         display: none;
       }
-      i.show-if-close {
+      & i.show-if-close {
+
+        display: inline-block;
+      }
+      i.node-icon, i.node-angle {
+
+        cursor: pointer;
+      }
+    }
+    & div.node-folder.folder-open {
+
+      & i.show-if-close {
+
+        display: none;
+      }
+      & i.show-if-open {
 
         display: inline-block;
       }
     }
-    div.node-folder.folder-open {
+    & div.node-file {
 
-      i.show-if-close {
-
-        display: none;
-      }
-      i.show-if-open {
-
-        display: inline-block;
-      }
-    }
-    div.node-file {
-
-      position: relative;
-      box-sizing: border-box;
-      &:hover {
-
-        background: #d6e9f8;
-      }
-      i.node-icon {
+      & i.node-icon {
 
         margin-left: 15px;
+      }
+    }
+    & div.context-btn-wrapper {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      i.context-icon {
+
+        cursor: pointer;
       }
     }
   }

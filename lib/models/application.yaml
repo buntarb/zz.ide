@@ -1,0 +1,12 @@
+NAMESPACE: 'zz.ide.models.Application'
+
+REQUIRE:
+  -  'zz.ide.models.Layout'
+
+FIELDS:
+
+  layout:
+
+    index: 0
+    type: zz.ide.models.Layout
+    required: false

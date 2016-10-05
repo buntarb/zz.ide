@@ -1,0 +1,21 @@
+NAMESPACE: 'zz.ide.models.Ace'
+
+FIELDS:
+
+  theme:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  syntax:
+
+      index: 1
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  content:
+
+      index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: false

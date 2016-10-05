@@ -1,0 +1,27 @@
+NAMESPACE: 'zz.ide.models.Layout'
+
+REQUIRE:
+  -  'zz.ide.models.Header'
+  -  'zz.ide.models.Navigation'
+  -  'zz.ide.models.View'
+
+FIELDS:
+
+  header:
+
+    index: 0
+    type: zz.ide.models.Header
+    required: false
+
+  navigation:
+
+    index: 1
+    type: zz.ide.models.Navigation
+    required: false
+
+  view:
+
+    index: 2
+    type: zz.ide.models.View
+    required: false
+
