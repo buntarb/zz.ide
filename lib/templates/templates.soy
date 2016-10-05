@@ -224,10 +224,10 @@
  * @param uid
  */
 {template .navigationDataset}
-    <div
+    <ul
         class="{css navigation-set}"
         data-set="{$uid}">
-    </div>
+    </ul>
 {/template}
 
 /**
@@ -237,82 +237,10 @@
  * @param uid
  */
 {template .navigationDatarow}
-    <div
+    <li
         class="{css navigation}"
         data-row="{$uid}">
-        <div
-            class="{css navigation--search-wrapper}"
-            <input
-                class="{css navigation--search}"
-                data-field="{$fields.searchField}"
-                data-field="{$fields.searchPlaceholder}"
-                value="{$datarow.searchField}"
-                placeholder="{$datarow.searchPlaceholder}"
-                type="text">
-            <div
-                class="{css navigation--btn}"
-                data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.searchButtonIcon}">
-                {$datarow.searchButtonIcon}
-            </div>
-        </div>
-        <ul
-            class="{css navigation--tree-list}">
-            <li
-                class="{css navigation--tree-node-wrapper}">
-                {if $datarow.type == 'folder'}
-                    <div
-                        class="{css navigation--tree-node} {css navigation--tree-node_folder}"
-                        data-event="{$clientEvent.ACTION}"
-                        data-field="{$fields.isFolderOpen}">
-                        <i
-                            class="{css awesome-icons} {css node-angle} {css show-if-close}"
-                            aria-hidden="true">
-                            {literal}&#xf105;{/literal}
-                        </i>
-                        <i
-                            class="{css awesome-icons} {css node-icon} {css show-if-close}"
-                            aria-hidden="true">
-                            {literal}&#xf114;{/literal}
-                        </i>
-                        <i
-                            class="{css awesome-icons} {css node-angle} {css show-if-open}"
-                            aria-hidden="true">
-                            {literal}&#xf107;{/literal}
-                        </i>
-                        <i
-                            class="{css awesome-icons} {css node-icon} {css show-if-open}"
-                            aria-hidden="true">
-                            {literal}&#xf115;{/literal}
-                        </i>
-                        <span
-                            class="{css navigation--tree-node-title}"
-                            data-field="{$fields.title}">
-                            {$datarow.title}
-                        </span>
-                    </div>
-                    <div
-                        data-type="{$fields.children}">
-                    </div>
-                {elseif $datarow.type == 'file'}
-                    <div
-                        class="{css navigation--tree-node} {css navigation--tree-node_file}"
-                        data-event="{$clientEvent.ACTION}">
-                        <i
-                            class="{css awesome-icons} {css node-icon}"
-                            aria-hidden="true">
-                            {literal}&#xf1c9;{/literal}
-                        </i>
-                        <span
-                            class="{css navigation--tree-node-title}"
-                            data-field="{$fields.title}">
-                            {$datarow.title}
-                        </span>
-                    </div>
-                {/if}
-            </li>
-        </ul>
-    </div>
+    </li>
 {/template}
 
 
