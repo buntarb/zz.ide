@@ -584,10 +584,110 @@
 
 /**
  * @param uid
+ * @param fields
  */
 {template .filelistDatarow}
     <div
         class="{css filelist}"
         data-row="{$uid}">
+        <ul
+            class="{css filelist-list}">
+            <li
+                class="{css filelist-node}">
+                <i
+                   class="{css material-icons} {css filelist-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css filelist-node--title}"
+                    data-field="{$fields.title}">
+                    view.js
+                </span>
+                <div
+                    class="{css filelist-node--menu}">
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            edit
+                        </i>
+                    </div>
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            delete
+                        </i>
+                    </div>
+                </div>
+            </li>
+            <li
+                class="{css filelist-node}">
+                <i
+                   class="{css material-icons} {css filelist-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css filelist-node--title}"
+                    data-field="{$fields.title}">
+                    controllercontrollercontrollercontrollercontrollercontroller.js
+                </span>
+                <div
+                    class="{css filelist-node--menu}">
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            edit
+                        </i>
+                    </div>
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            delete
+                        </i>
+                    </div>
+                </div>
+            </li>
+            <li
+                class="{css filelist-node}">
+                <i
+                   class="{css material-icons} {css filelist-node--icon}"
+                   data-field="{$fields.icon}"
+                   data-field="{$fields.color}"
+                   style="color: {$fields.color}">
+                   description
+                </i>
+                <span
+                    class="{css filelist-node--title}"
+                    data-field="{$fields.title}">
+                    base.js
+                </span>
+                <div
+                    class="{css filelist-node--menu}">
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            edit
+                        </i>
+                    </div>
+                    <div
+                        class="{css filelist-node--btn}">
+                        <i
+                            class="{css material-icons} {css filelist-node--icon}">
+                            delete
+                        </i>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 {/template}
