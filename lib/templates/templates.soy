@@ -547,6 +547,10 @@
             class="{css filelist-wrapper}"
             data-type="{$fields.filelist}">
         </div>
+        <div
+            class="{css startpage-wrapper}"
+            data-type="{$fields.startpage}">
+        </div>
     </div>
 {/template}
 
@@ -689,5 +693,28 @@
                 </div>
             </li>
         </ul>
+    </div>
+{/template}
+
+/**
+ * @param uid
+ */
+{template .startpageDataset}
+    <div
+        class="{css startpage-set}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
+ * @param uid
+ */
+{template .startpageDatarow}
+    <div
+        class="{css startpage}"
+        data-row="{$uid}">
+        <p>
+            startpage
+        </p>
     </div>
 {/template}

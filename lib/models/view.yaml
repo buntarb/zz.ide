@@ -19,3 +19,9 @@ FIELDS:
     type: zz.ide.models.Filelist
     required: false
 
+  startpage:
+
+    index: 2
+    type: zz.ide.models.Startpage
+    required: false
+
