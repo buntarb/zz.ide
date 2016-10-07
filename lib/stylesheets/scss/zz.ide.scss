@@ -113,6 +113,10 @@ body {
             padding: 0 0 10px 0;
             box-sizing: border-box;
             border-bottom: 1px solid #ddd;
+            &:last-child {
+
+              border-bottom: none;
+            }
             & li.navigation-node {
 
               display: table;
