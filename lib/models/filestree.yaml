@@ -18,7 +18,7 @@ FIELDS:
 
     index: 2
     type: zz.models.enums.FieldType.STRING
-    required: false
+    required: true
 
   content:
 
