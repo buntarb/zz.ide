@@ -1,8 +1,8 @@
-NAMESPACE: 'zz.ide.models.Server'
+NAMESPACE: 'zz.ide.models.FilesTree'
 
 FIELDS:
 
-  title:
+  name:
 
     index: 0
     type: zz.models.enums.FieldType.STRING
@@ -11,7 +11,7 @@ FIELDS:
   type:
 
     index: 1
-    type: zz.models.enums.FieldType.STRING
+    type: zz.models.enums.FieldType.NUMBER
     required: false
 
   path:
@@ -26,14 +26,8 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  count:
-
-    index: 4
-    type: zz.models.enums.FieldType.NUMBER
-    required: false
-
   children:
 
-    index: 5
-    type: zz.ide.models.Tree
+    index: 4
+    type: zz.ide.models.FilesTree
     required: false
