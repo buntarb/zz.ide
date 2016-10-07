@@ -168,6 +168,7 @@
 /**
  * @param fields
  * @param uid
+ * @param clientEvent
  */
 {template .layoutDatarow}
     <div
@@ -185,6 +186,14 @@
             class="{css view-wrapper}"
             data-type="{$fields.view}">
         </div>
+        <div
+            class="{css layout--main-action-btn}"
+            data-event="{$clientEvent.ACTION}">
+            <i
+                class="{css material-icons}">
+                add
+            </i>
+        </div>
     </div>
 {/template}
 
@@ -200,7 +209,7 @@
 {/template}
 
 /**
-* @param clientEvent
+ * @param clientEvent
  * @param datarow
  * @param fields
  * @param uid

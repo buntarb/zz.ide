@@ -25,3 +25,8 @@ FIELDS:
     type: zz.ide.models.View
     required: false
 
+  button:
+
+    index: 3
+    type:  zz.models.enums.FieldType.STRING
+    required: false

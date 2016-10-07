@@ -10,12 +10,18 @@ FIELDS:
 
   syntax:
 
-      index: 1
-      type: zz.models.enums.FieldType.STRING
-      required: false
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
 
   content:
 
-      index: 2
-      type: zz.models.enums.FieldType.STRING
-      required: false
+    index: 2
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  height:
+
+    index: 3
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
