@@ -131,51 +131,24 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * @param uid
+ * @param key
  */
-{template .applicationDataset}
+{template .application}
     <div
-        class="{css application-set}"
-        data-set="{$uid}">
+        class="{css layout-wrapper}"
+        data-model="{$key.layout}"
+        data-view="layout"
+        data-controller="layout">
     </div>
 {/template}
+
 
 /**
  * @param key
- * @param uid
  */
-{template .applicationDatarow}
+{template .layout}
     <div
-        data-row="{$uid}">
-        <div
-            class="{css layout-wrapper}"
-            data-model="{$key.layout}"
-            data-view="layout"
-            data-controller="layout">
-        </div>
-    </div>
-{/template}
-
-
-/**
- * @param uid
- */
-{template .layoutDataset}
-    <div
-        class="{css layout-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
-
-/**
- * @param key
- * @param uid
- * @param clientEvent
- */
-{template .layoutDatarow}
-    <div
-        class="{css layout}"
-        data-row="{$uid}">
+        class="{css layout}">
         <div
             class="{css header-wrapper}"
             data-model="{$key.header}"
@@ -196,7 +169,7 @@
         </div>
         <div
             class="{css layout--main-action-btn}"
-            data-event="{$clientEvent.ACTION}">
+            data-action>
             <i
                 class="{css material-icons}">
                 add
@@ -206,25 +179,14 @@
 {/template}
 
 
-/**
- * @param uid
- */
-{template .headerDataset}
-    <div
-        class="{css header-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
 
 /**
  * @param key
  * @param value
- * @param uid
  */
-{template .headerDatarow}
+{template .header}
     <div
-        class="{css header}"
-        data-row="{$uid}">
+        class="{css header}">
         <div
             class="{css header--btn}">
             <i
@@ -240,447 +202,371 @@
 
 
 /**
- * @param uid
  */
-{template .navigationDataset}
-    <div
-        class="{css navigation-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
-
-/**
- * @param uid
- */
-{template .navigationDatarow}
-    <div
-        data-row="{$uid}">
-        <ul
-            class="{css navigation-set}">
-            <li
-                class="{css navigation-node}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   style="color: #4285f4">
-                   storage
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Models
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   style="color: #ef6c00">
-                   web
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Templates
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   style="color: #33ac71">
-                   insert_drive_file
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Styles
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   language
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Messages
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   image
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Resources
-                </span>
-            </li>
-        </ul>
-        <ul
-            class="{css navigation-set}">
-            <li
-                class="{css navigation-node}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Controllers
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Enums
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Errors
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Events
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Factories
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Services
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Tests
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   folder
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    Views
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    base.js
-                </span>
-            </li>
-        </ul>
-        <ul
-            class="{css navigation-set}">
-            <li
-                class="{css navigation-node}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    index.html
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    package.json
-                </span>
-            </li>
-            <li
-                class="{css navigation-node}"
-                data-row="{$uid}">
-                <i
-                   class="{css material-icons} {css navigation-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css navigation-node--title}">
-                    config.yaml
-                </span>
-            </li>
-        </ul>
-    </div>
+{template .navigation}
+    <ul
+        class="{css navigation}">
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}"
+               style="color: #4285f4">
+               storage
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Models
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}"
+               style="color: #ef6c00">
+               web
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Templates
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}"
+               style="color: #33ac71">
+               insert_drive_file
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Styles
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               language
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Messages
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               image
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Resources
+            </span>
+        </li>
+    </ul>
+    <ul
+        class="{css navigation-set}">
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Controllers
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Enums
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Errors
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Events
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Factories
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Services
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Tests
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               folder
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                Views
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               description
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                base.js
+            </span>
+        </li>
+    </ul>
+    <ul
+        class="{css navigation-set}">
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               description
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                index.html
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               description
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                package.json
+            </span>
+        </li>
+        <li
+            class="{css navigation-node}">
+            <i
+               class="{css material-icons} {css navigation-node--icon}">
+               description
+            </i>
+            <span
+                class="{css navigation-node--title}">
+                config.yaml
+            </span>
+        </li>
+    </ul>
 {/template}
 
 
-/**
- * @param uid
- */
-{template .viewDataset}
-    <div
-        class="{css view-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
 
 /**
- * @param uid
  * @param key
  */
-{template .viewDatarow}
+{template .view}
     <div
-        data-row="{$uid}">
-        <div
-            class="{css ace-wrapper}"
-            data-model="{$key.ace}"
-            data-view="ace"
-            data-controller="ace">
-        </div>
-        <div
-            class="{css filelist-wrapper}"
-            data-model="{$key.filelist}"
-            data-view="filelist"
-            data-controller="filelist">
-        </div>
-        <div
-            class="{css blankfolder-wrapper}"
-            data-model="{$key.blankfolder}"
-            data-view="blankfolder"
-            data-controller="blankfolder">
-        </div>
+        class="{css ace-wrapper}"
+        data-model="{$key.ace}"
+        data-view="ace"
+        data-controller="ace">
+    </div>
+    <div
+        class="{css filelist-wrapper}"
+        data-model="{$key.filelist}"
+        data-view="filelist"
+        data-controller="filelist">
+    </div>
+    <div
+        class="{css blankfolder-wrapper}"
+        data-model="{$key.blankfolder}"
+        data-view="blankfolder"
+        data-controller="blankfolder">
     </div>
 {/template}
 
-/**
- * @param uid
- */
-{template .aceDataset}
-    <div
-        class="{css ace-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
 
 /**
- * @param uid
+ *
  */
-{template .aceDatarow}
+{template .ace}
     <div
         id="{css editor}"
-        class="{css ace}"
-        data-row="{$uid}">
+        class="{css ace}">
     </div>
 {/template}
 
 
-/**
- * @param uid
- */
-{template .filelistDataset}
-    <div
-        class="{css filelist-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
 
 /**
- * @param uid
  * @param key
  */
-{template .filelistDatarow}
-    <div
-        class="{css filelist}"
-        data-row="{$uid}">
-        <ul
-            class="{css filelist-list}">
-            <li
-                class="{css filelist-node}">
-                <i
-                   class="{css material-icons} {css filelist-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css filelist-node--title}"
-                    data-model="{$key.title}">
-                    view.js
-                </span>
+{template .filelist}
+    <ul
+        class="{css filelist}">
+        <li
+            class="{css filelist-node}">
+            <i
+               class="{css material-icons} {css filelist-node--icon}">
+               description
+            </i>
+            <span
+                class="{css filelist-node--title}"
+                data-model="{$key.title}">
+                view.js
+            </span>
+            <div
+                class="{css filelist-node--menu}">
                 <div
-                    class="{css filelist-node--menu}">
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            edit
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            delete
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            more_vert
-                        </i>
-                    </div>
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        edit
+                    </i>
                 </div>
-            </li>
-            <li
-                class="{css filelist-node}">
-                <i
-                   class="{css material-icons} {css filelist-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css filelist-node--title}"
-                    data-model="{$key.title}">
-                    controllercontrollercontrollercontrollercontrollercontroller.js
-                </span>
                 <div
-                    class="{css filelist-node--menu}">
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            edit
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            delete
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            more_vert
-                        </i>
-                    </div>
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        delete
+                    </i>
                 </div>
-            </li>
-            <li
-                class="{css filelist-node}">
-                <i
-                   class="{css material-icons} {css filelist-node--icon}">
-                   description
-                </i>
-                <span
-                    class="{css filelist-node--title}"
-                    data-model="{$key.title}">
-                    base.js
-                </span>
                 <div
-                    class="{css filelist-node--menu}">
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            edit
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            delete
-                        </i>
-                    </div>
-                    <div
-                        class="{css filelist-node--btn}">
-                        <i
-                            class="{css material-icons} {css filelist-node--icon}">
-                            more_vert
-                        </i>
-                    </div>
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        more_vert
+                    </i>
                 </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </li>
+        <li
+            class="{css filelist-node}">
+            <i
+               class="{css material-icons} {css filelist-node--icon}">
+               description
+            </i>
+            <span
+                class="{css filelist-node--title}"
+                data-model="{$key.title}">
+                controllercontrollercontrollercontrollercontrollercontroller.js
+            </span>
+            <div
+                class="{css filelist-node--menu}">
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        edit
+                    </i>
+                </div>
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        delete
+                    </i>
+                </div>
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        more_vert
+                    </i>
+                </div>
+            </div>
+        </li>
+        <li
+            class="{css filelist-node}">
+            <i
+               class="{css material-icons} {css filelist-node--icon}">
+               description
+            </i>
+            <span
+                class="{css filelist-node--title}"
+                data-model="{$key.title}">
+                base.js
+            </span>
+            <div
+                class="{css filelist-node--menu}">
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        edit
+                    </i>
+                </div>
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        delete
+                    </i>
+                </div>
+                <div
+                    class="{css filelist-node--btn}">
+                    <i
+                        class="{css material-icons} {css filelist-node--icon}">
+                        more_vert
+                    </i>
+                </div>
+            </div>
+        </li>
+    </ul>
 {/template}
 
-/**
- * @param uid
- */
-{template .blankfolderDataset}
-    <div
-        class="{css blankfolder-set}"
-        data-set="{$uid}">
-    </div>
-{/template}
 
 /**
- * @param uid
  */
-{template .blankfolderDatarow}
+{template .blankfolder}
     <div
-        class="{css blankfolder}"
-        data-row="{$uid}">
+        class="{css blankfolder}">
         <p>
             blankfolder
         </p>
