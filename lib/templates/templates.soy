@@ -141,7 +141,7 @@
 {/template}
 
 /**
- * @param fields
+ * @param key
  * @param uid
  */
 {template .applicationDatarow}
@@ -149,7 +149,9 @@
         data-row="{$uid}">
         <div
             class="{css layout-wrapper}"
-            data-type="{$fields.layout}">
+            data-model="{$key.layout}"
+            data-view="layout"
+            data-controller="layout">
         </div>
     </div>
 {/template}
@@ -166,7 +168,7 @@
 {/template}
 
 /**
- * @param fields
+ * @param key
  * @param uid
  * @param clientEvent
  */
@@ -176,15 +178,21 @@
         data-row="{$uid}">
         <div
             class="{css header-wrapper}"
-            data-type="{$fields.header}">
+            data-model="{$key.header}"
+            data-view="header"
+            data-controller="header">
         </div>
         <div
             class="{css navigation-wrapper} {css is-open}"
-            data-type="{$fields.navigation}">
+            data-model="{$key.navigation}"
+            data-view="navigation"
+            data-controller="navigation">
         </div>
         <div
             class="{css view-wrapper}"
-            data-type="{$fields.view}">
+            data-model="{$key.view}"
+            data-view="view"
+            data-controller="view">
         </div>
         <div
             class="{css layout--main-action-btn}"
@@ -209,9 +217,8 @@
 {/template}
 
 /**
- * @param clientEvent
- * @param datarow
- * @param fields
+ * @param key
+ * @param value
  * @param uid
  */
 {template .headerDatarow}
@@ -222,9 +229,9 @@
             class="{css header--btn}">
             <i
                 class="{css material-icons}"
-                data-event="{$clientEvent.ACTION}"
-                data-field="{$fields.buttonIcon}">
-                {$datarow.buttonIcon}
+                data-model="{$key.buttonIcon}"
+                data-action>
+                {$value.buttonIcon}
             </i>
         </div>
     </div>
@@ -244,7 +251,6 @@
 
 /**
  * @param uid
- * @param fields
  */
 {template .navigationDatarow}
     <div
@@ -255,14 +261,11 @@
                 class="{css navigation-node}">
                 <i
                    class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
                    style="color: #4285f4">
                    storage
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Models
                 </span>
             </li>
@@ -271,14 +274,11 @@
                 data-row="{$uid}">
                 <i
                    class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
                    style="color: #ef6c00">
                    web
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Templates
                 </span>
             </li>
@@ -287,14 +287,11 @@
                 data-row="{$uid}">
                 <i
                    class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
                    style="color: #33ac71">
                    insert_drive_file
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Styles
                 </span>
             </li>
@@ -302,15 +299,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    language
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Messages
                 </span>
             </li>
@@ -318,15 +311,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    image
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Resources
                 </span>
             </li>
@@ -336,15 +325,11 @@
             <li
                 class="{css navigation-node}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Controllers
                 </span>
             </li>
@@ -352,15 +337,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Enums
                 </span>
             </li>
@@ -368,15 +349,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Errors
                 </span>
             </li>
@@ -384,15 +361,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Events
                 </span>
             </li>
@@ -400,15 +373,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Factories
                 </span>
             </li>
@@ -416,15 +385,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Services
                 </span>
             </li>
@@ -432,15 +397,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Tests
                 </span>
             </li>
@@ -448,15 +409,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    folder
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     Views
                 </span>
             </li>
@@ -464,15 +421,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    description
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     base.js
                 </span>
             </li>
@@ -482,15 +435,11 @@
             <li
                 class="{css navigation-node}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    description
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     index.html
                 </span>
             </li>
@@ -498,15 +447,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    description
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     package.json
                 </span>
             </li>
@@ -514,15 +459,11 @@
                 class="{css navigation-node}"
                 data-row="{$uid}">
                 <i
-                   class="{css material-icons} {css navigation-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css navigation-node--icon}">
                    description
                 </i>
                 <span
-                    class="{css navigation-node--title}"
-                    data-field="{$fields.title}">
+                    class="{css navigation-node--title}">
                     config.yaml
                 </span>
             </li>
@@ -543,22 +484,28 @@
 
 /**
  * @param uid
- * @param fields
+ * @param key
  */
 {template .viewDatarow}
     <div
         data-row="{$uid}">
         <div
             class="{css ace-wrapper}"
-            data-type="{$fields.ace}">
+            data-model="{$key.ace}"
+            data-view="ace"
+            data-controller="ace">
         </div>
         <div
             class="{css filelist-wrapper}"
-            data-type="{$fields.filelist}">
+            data-model="{$key.filelist}"
+            data-view="filelist"
+            data-controller="filelist">
         </div>
         <div
-            class="{css startpage-wrapper}"
-            data-type="{$fields.startpage}">
+            class="{css blankfolder-wrapper}"
+            data-model="{$key.blankfolder}"
+            data-view="blankfolder"
+            data-controller="blankfolder">
         </div>
     </div>
 {/template}
@@ -597,7 +544,7 @@
 
 /**
  * @param uid
- * @param fields
+ * @param key
  */
 {template .filelistDatarow}
     <div
@@ -608,15 +555,12 @@
             <li
                 class="{css filelist-node}">
                 <i
-                   class="{css material-icons} {css filelist-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css filelist-node--icon}">
                    description
                 </i>
                 <span
                     class="{css filelist-node--title}"
-                    data-field="{$fields.title}">
+                    data-model="{$key.title}">
                     view.js
                 </span>
                 <div
@@ -647,15 +591,12 @@
             <li
                 class="{css filelist-node}">
                 <i
-                   class="{css material-icons} {css filelist-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css filelist-node--icon}">
                    description
                 </i>
                 <span
                     class="{css filelist-node--title}"
-                    data-field="{$fields.title}">
+                    data-model="{$key.title}">
                     controllercontrollercontrollercontrollercontrollercontroller.js
                 </span>
                 <div
@@ -686,15 +627,12 @@
             <li
                 class="{css filelist-node}">
                 <i
-                   class="{css material-icons} {css filelist-node--icon}"
-                   data-field="{$fields.icon}"
-                   data-field="{$fields.color}"
-                   style="color: {$fields.color}">
+                   class="{css material-icons} {css filelist-node--icon}">
                    description
                 </i>
                 <span
                     class="{css filelist-node--title}"
-                    data-field="{$fields.title}">
+                    data-model="{$key.title}">
                     base.js
                 </span>
                 <div
@@ -729,9 +667,9 @@
 /**
  * @param uid
  */
-{template .startpageDataset}
+{template .blankfolderDataset}
     <div
-        class="{css startpage-set}"
+        class="{css blankfolder-set}"
         data-set="{$uid}">
     </div>
 {/template}
@@ -739,12 +677,12 @@
 /**
  * @param uid
  */
-{template .startpageDatarow}
+{template .blankfolderDatarow}
     <div
-        class="{css startpage}"
+        class="{css blankfolder}"
         data-row="{$uid}">
         <p>
-            startpage
+            blankfolder
         </p>
     </div>
 {/template}
