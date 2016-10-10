@@ -148,7 +148,8 @@
  */
 {template .layout}
     <div
-        class="{css layout}">
+        class="{css layout}"
+        data-class="{$key.navigationIsShown}:{css nav-is-shown}">
         <div
             class="{css header-wrapper}"
             data-model="{$key.header}"
@@ -266,7 +267,7 @@
         </li>
     </ul>
     <ul
-        class="{css navigation-set}">
+        class="{css navigation}">
         <li
             class="{css navigation-node}">
             <i
@@ -368,7 +369,7 @@
         </li>
     </ul>
     <ul
-        class="{css navigation-set}">
+        class="{css navigation}">
         <li
             class="{css navigation-node}">
             <i

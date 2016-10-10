@@ -85,6 +85,11 @@ body {
         }
       }
       /*Navigation styles starts*********************************************************************************/
+      &.nav-is-shown div.navigation-wrapper {
+
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
       & div.navigation-wrapper {
 
         position: fixed;
@@ -97,11 +102,6 @@ body {
         transform: translateX(-242px);
         -webkit-transition: -webkit-transform .15s ease-in-out;
         transition: transform .15s ease-in-out;
-        &.is-open {
-
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-        }
         & ul.navigation {
 
           margin: 10px;
