@@ -23,6 +23,6 @@ FIELDS:
   blankfolder:
 
     index: 2
-    type: zz.ide.models.Startpage
+    type: zz.ide.models.Blankfolder
     required: false
 

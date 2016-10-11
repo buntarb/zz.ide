@@ -156,70 +156,66 @@ body {
 
           position: relative;
           box-sizing: border-box;
+          min-width: 324px;
           margin-right: 104px;
-          & ul.filelist {
+          box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+          & div.filelist-node {
 
-            margin: 0;
-            padding: 0;
-            box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-            & li.filelist-node {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px 20px;
+            color: #616161;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+            background: white;
+            list-style-type: none;
+            overflow: hidden;
+            & i.filelist-node--icon {
 
-              display: flex;
-              align-items: center;
-              box-sizing: border-box;
-              width: 100%;
-              padding: 8px 20px;
-              color: #616161;
-              border-right: 1px solid #e0e0e0;
-              border-bottom: 1px solid #e0e0e0;
-              border-left: 1px solid #e0e0e0;
-              background: white;
-              list-style-type: none;
+              margin-right: 20px;
+            }
+            & span.filelist-node--title {
+
+              margin-right: 10px;
+              white-space: nowrap;
               overflow: hidden;
-              & i.filelist-node--icon {
+              text-overflow: ellipsis;
+            }
+            & div.filelist-node--menu {
 
-                margin-right: 20px;
-              }
-              & span.filelist-node--title {
+              display: none;
+              position: absolute;
+              justify-content: space-between;
+              align-items: center;
+              right: 0;
+              & div.filelist-node--btn {
 
-                margin-right: 10px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-              & div.filelist-node--menu {
-
-                display: none;
-                position: absolute;
+                display: flex;
                 justify-content: space-between;
                 align-items: center;
-                right: 0;
-                & div.filelist-node--btn {
+                margin-right: 5px;
+                i.filelist-node--icon {
 
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  margin-right: 5px;
-                  i.filelist-node--icon {
+                  cursor: pointer;
+                  &:hover {
 
-                    cursor: pointer;
-                    &:hover {
-
-                      color: black;
-                    }
+                    color: black;
                   }
                 }
               }
-              &:hover {
+            }
+            &:hover {
 
-                & div.filelist-node--menu {
+              & div.filelist-node--menu {
 
-                  display: flex;
-                }
-                & span.filelist-node--title {
+                display: flex;
+              }
+              & span.filelist-node--title {
 
-                  margin-right: 110px;
-                }
+                margin-right: 120px;
               }
             }
           }
@@ -239,5 +235,9 @@ body {
         }
       }
     }
+  }
+  :focus {
+
+    outline: none;
   }
 }

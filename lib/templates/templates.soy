@@ -158,7 +158,7 @@
             data-controller="header">
         </div>
         <div
-            class="{css navigation-wrapper} {css is-open}"
+            class="{css navigation-wrapper}"
             data-model="{$key.navigation}"
             data-view="navigation"
             data-controller="navigation">
@@ -445,7 +445,7 @@
         id="{css editor}"
         class="{css ace}"
         data-model="{$key.height}"
-        style="height: {$value.height}">
+        style="height: {$value.height}px">
     </div>
 {/template}
 
@@ -453,119 +453,46 @@
 
 /**
  * @param key
+ * @param value
  */
 {template .filelist}
-    <ul
-        class="{css filelist}">
-        <li
-            class="{css filelist-node}">
-            <i
-               class="{css material-icons} {css filelist-node--icon}">
-               description
-            </i>
-            <span
-                class="{css filelist-node--title}"
-                data-model="{$key.title}">
-                view.js
-            </span>
+    <div
+        class="{css filelist-node}">
+        <i
+           class="{css material-icons} {css filelist-node--icon}">
+           description
+        </i>
+        <span
+            class="{css filelist-node--title}"
+            data-model="{$key.title}">
+            {$value.title}
+        </span>
+        <div
+            class="{css filelist-node--menu}">
             <div
-                class="{css filelist-node--menu}">
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        edit
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        delete
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        more_vert
-                    </i>
-                </div>
+                class="{css filelist-node--btn}">
+                <i
+                    class="{css material-icons} {css filelist-node--icon}">
+                    edit
+                </i>
             </div>
-        </li>
-        <li
-            class="{css filelist-node}">
-            <i
-               class="{css material-icons} {css filelist-node--icon}">
-               description
-            </i>
-            <span
-                class="{css filelist-node--title}"
-                data-model="{$key.title}">
-                controllercontrollercontrollercontrollercontrollercontroller.js
-            </span>
             <div
-                class="{css filelist-node--menu}">
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        edit
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        delete
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        more_vert
-                    </i>
-                </div>
+                class="{css filelist-node--btn}">
+                <i
+                    class="{css material-icons} {css filelist-node--icon}"
+                    data-action>
+                    delete
+                </i>
             </div>
-        </li>
-        <li
-            class="{css filelist-node}">
-            <i
-               class="{css material-icons} {css filelist-node--icon}">
-               description
-            </i>
-            <span
-                class="{css filelist-node--title}"
-                data-model="{$key.title}">
-                base.js
-            </span>
             <div
-                class="{css filelist-node--menu}">
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        edit
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        delete
-                    </i>
-                </div>
-                <div
-                    class="{css filelist-node--btn}">
-                    <i
-                        class="{css material-icons} {css filelist-node--icon}">
-                        more_vert
-                    </i>
-                </div>
+                class="{css filelist-node--btn}">
+                <i
+                    class="{css material-icons} {css filelist-node--icon}">
+                    more_vert
+                </i>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 {/template}
 
 
