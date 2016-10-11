@@ -4,6 +4,7 @@ REQUIRE:
 
   -  'zz.ide.models.Ace'
   -  'zz.ide.models.Filelist'
+  -  'zz.ide.models.Blankfolder'
 
 FIELDS:
 
@@ -19,7 +20,7 @@ FIELDS:
     type: zz.ide.models.Filelist
     required: false
 
-  startpage:
+  blankfolder:
 
     index: 2
     type: zz.ide.models.Startpage

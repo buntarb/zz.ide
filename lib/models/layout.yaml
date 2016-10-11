@@ -25,8 +25,14 @@ FIELDS:
     type: zz.ide.models.View
     required: false
 
-  button:
+  buttonIcon:
 
     index: 3
     type:  zz.models.enums.FieldType.STRING
+    required: false
+
+  navigationIsShown:
+
+    index: 4
+    type:  zz.models.enums.FieldType.BOOLEAN
     required: false
