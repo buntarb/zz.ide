@@ -145,6 +145,7 @@
 
 /**
  * @param key
+ * @param value
  */
 {template .layout}
     <div
@@ -172,8 +173,10 @@
             class="{css layout--main-action-btn}"
             data-action>
             <i
-                class="{css material-icons}">
-                add
+                class="{css material-icons}"
+                data-model="{$key.buttonIcon}"
+                data-action>
+                {$value.buttonIcon}
             </i>
         </div>
     </div>
@@ -434,12 +437,15 @@
 
 
 /**
- *
+ * @param key
+ * @param value
  */
 {template .ace}
     <div
         id="{css editor}"
-        class="{css ace}">
+        class="{css ace}"
+        data-model="{$key.height}"
+        style="height: {$value.height}">
     </div>
 {/template}
 

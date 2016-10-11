@@ -21,6 +21,7 @@
 		"zz.styles": "",
 		"zz.ui": "",
 		"zz.services": "",
-		"zz.net": ""
+		"zz.net": "",
+		"zz.environment": ""
 	}
 }
