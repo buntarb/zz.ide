@@ -16,24 +16,16 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
+{namespace zz.ide.templates.application}
 
-goog.provide( 'zz.ide.views.Navigation' );
-
-goog.require( 'goog.dom' );
-
-goog.require( 'zz.environment.services.RAM' );
-goog.require( 'zz.views.FEBase' );
-goog.require( 'zz.ide.templates.navigation' );
-goog.require( 'zz.ide.enums.CssClass' );
-goog.require( 'zz.environment.services.MVCTree' );
 /**
- * Navigation view.
- * @constructor
+ * @param key
  */
-zz.ide.views.Navigation = function( ){
-
-    goog.base( this, zz.ide.templates.navigation.default );
-};
-goog.inherits( zz.ide.views.Navigation, zz.views.FEBase );
-goog.addSingletonGetter( zz.ide.views.Navigation );
-zz.environment.services.MVCTree.registry.setView( 'navigation', zz.ide.views.Navigation );
+{template .default}
+    <div
+        class="{css layout-wrapper}"
+        data-model="{$key.layout}"
+        data-view="layout"
+        data-controller="layout">
+    </div>
+{/template}
