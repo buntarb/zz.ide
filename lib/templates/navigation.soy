@@ -25,7 +25,7 @@
 {template .default}
     <div
         class="{css navigation-node}"
-        data-class="{$key.delimeter}:{css navigation-delimeter}">
+        data-action>
         <i
            class="{css material-icons} {css navigation-node--icon}"
            data-model="{$key.icon}"
@@ -39,4 +39,9 @@
             {$value.title}
         </span>
     </div>
+    {if $value.delimeter}
+        <div
+            class="{css navigation-delimeter}">
+        </div>
+    {/if}
 {/template}
