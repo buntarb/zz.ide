@@ -20,3 +20,23 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
+  path:
+
+    index: 3
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  type:
+
+    index: 4
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
+
+  delimeter:
+
+    index: 5
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+
+

@@ -19,205 +19,29 @@
 {namespace zz.ide.templates.navigation}
 
 /**
+ * @param key
+ * @param value
  */
 {template .default}
-    <ul
-        class="{css navigation}">
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}"
-               style="color: #4285f4">
-               storage
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Models
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}"
-               style="color: #ef6c00">
-               web
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Templates
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}"
-               style="color: #33ac71">
-               insert_drive_file
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Styles
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               language
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Messages
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               image
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Resources
-            </span>
-        </li>
-    </ul>
-    <ul
-        class="{css navigation}">
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Controllers
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Enums
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Errors
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Events
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Factories
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Services
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Tests
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               folder
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                Views
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               description
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                base.js
-            </span>
-        </li>
-    </ul>
-    <ul
-        class="{css navigation}">
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               description
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                index.html
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               description
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                package.json
-            </span>
-        </li>
-        <li
-            class="{css navigation-node}">
-            <i
-               class="{css material-icons} {css navigation-node--icon}">
-               description
-            </i>
-            <span
-                class="{css navigation-node--title}">
-                config.yaml
-            </span>
-        </li>
-    </ul>
+    <div
+        class="{css navigation-node}"
+        data-action>
+        <i
+           class="{css material-icons} {css navigation-node--icon}"
+           data-model="{$key.icon}"
+           data-model="{$key.color}"
+           style="color: {$value.color}">
+           {$value.icon}
+        </i>
+        <span
+            class="{css navigation-node--title}"
+            data-model="{$key.title}">
+            {$value.title}
+        </span>
+    </div>
+    {if $value.delimeter}
+        <div
+            class="{css navigation-delimeter}">
+        </div>
+    {/if}
 {/template}

@@ -93,6 +93,8 @@ body {
       & div.navigation-wrapper {
 
         position: fixed;
+        box-sizing: border-box;
+        padding: 10px;
         top: 56px;
         bottom: 0;
         left: 0;
@@ -102,46 +104,43 @@ body {
         transform: translateX(-242px);
         -webkit-transition: -webkit-transform .15s ease-in-out;
         transition: transform .15s ease-in-out;
-        & ul.navigation {
+        & div.navigation-node {
 
-          margin: 10px;
-          padding: 0 0 10px 0;
+          display: table;
+          position: relative;
           box-sizing: border-box;
+          padding: 0 12px 0 16px;
+          height: 40px;
+          width: 100%;
+          border-radius: 2px;
+          list-style-type: none;
+          cursor: pointer;
+          &:hover {
+
+            background-color: rgba(0, 0, 0, .05);
+          }
+          & i.navigation-node--icon {
+
+            display: table-cell;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            color: #616161;
+          }
+          & span.navigation-node--title {
+
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 24px;
+            color: #616161;
+          }
+        }
+        & div.navigation-delimeter {
+
+          display: block;
+          box-sizing: border-box;
+          margin: 10px 0;
           border-bottom: 1px solid #ddd;
-          &:last-child {
-
-            border-bottom: none;
-          }
-          & li.navigation-node {
-
-            display: table;
-            box-sizing: border-box;
-            padding: 0 12px 0 16px;
-            height: 40px;
-            width: 100%;
-            border-radius: 2px;
-            list-style-type: none;
-            cursor: pointer;
-            &:hover {
-
-              background-color: rgba(0, 0, 0, .05);
-            }
-            & i.navigation-node--icon {
-
-              display: table-cell;
-              vertical-align: middle;
-              width: 24px;
-              height: 24px;
-              color: #616161;
-            }
-            & span.navigation-node--title {
-
-              display: table-cell;
-              vertical-align: middle;
-              padding-left: 24px;
-              color: #616161;
-            }
-          }
         }
       }
       & div.view-wrapper {
