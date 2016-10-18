@@ -24,7 +24,8 @@
  */
 {template .default}
     <div
-        class="{css filelist-node}">
+        class="{css filelist-node}"
+        data-action="open">
         <i
            class="{css material-icons} {css filelist-node--icon}">
            description
@@ -32,14 +33,15 @@
         <span
             class="{css filelist-node--title}"
             data-model="{$key.title}">
-            {$value.title}
+            {$value.name}
         </span>
         <div
             class="{css filelist-node--menu}">
             <div
                 class="{css filelist-node--btn}">
                 <i
-                    class="{css material-icons} {css filelist-node--icon}">
+                    class="{css material-icons} {css filelist-node--icon}"
+                    data-action="open">
                     edit
                 </i>
             </div>
@@ -47,14 +49,15 @@
                 class="{css filelist-node--btn}">
                 <i
                     class="{css material-icons} {css filelist-node--icon}"
-                    data-action>
+                    data-action="delete">
                     delete
                 </i>
             </div>
             <div
                 class="{css filelist-node--btn}">
                 <i
-                    class="{css material-icons} {css filelist-node--icon}">
+                    class="{css material-icons} {css filelist-node--icon}"
+                    data-action="menu">
                     more_vert
                 </i>
             </div>

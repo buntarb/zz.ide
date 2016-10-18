@@ -2,20 +2,32 @@ NAMESPACE: 'zz.ide.models.Filelist'
 
 FIELDS:
 
-  icon:
+  name:
 
-    index: 0
-    type: zz.models.enums.FieldType.STRING
-    required: false
-
-  color:
-
-      index: 1
+      index: 0
       type: zz.models.enums.FieldType.STRING
       required: false
 
-  title:
+  type:
+
+      index: 1
+      type: zz.models.enums.FieldType.NUMBER
+      required:
+
+  path:
 
       index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  icon:
+
+      index: 3
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  color:
+
+      index: 4
       type: zz.models.enums.FieldType.STRING
       required: false

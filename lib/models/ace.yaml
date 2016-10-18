@@ -14,14 +14,35 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  content:
+  height:
 
     index: 2
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
+
+  content:
+
+    index: 3
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  height:
+  name:
 
-    index: 3
+    index: 4
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  type:
+
+    index: 5
     type: zz.models.enums.FieldType.NUMBER
     required: false
+
+  path:
+
+    index: 6
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+
+

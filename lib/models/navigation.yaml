@@ -2,7 +2,7 @@ NAMESPACE: 'zz.ide.models.Navigation'
 
 FIELDS:
 
-  title:
+  name:
 
     index: 0
     type: zz.models.enums.FieldType.STRING
