@@ -43,6 +43,3 @@ FIELDS:
     index: 6
     type: zz.models.enums.FieldType.STRING
     required: false
-
-
-

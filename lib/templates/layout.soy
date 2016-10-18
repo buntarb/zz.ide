@@ -47,12 +47,24 @@
         </div>
         <div
             class="{css layout--main-action-btn}"
-            data-action>
+            data-action="main-action-btn">
             <i
                 class="{css material-icons}"
                 data-model="{$key.buttonIcon}">
                 {$value.buttonIcon}
             </i>
+        </div>
+        <div
+            class="{css modal-window}"
+            data-class="{$key.modalIsShown}:{css show}">
+            <i
+                class="{css material-icons} {css close-modal-window}"
+                data-action="close-modal-window">
+                close
+            </i>
+            <div>
+                add new file
+            </div>
         </div>
     </div>
 {/template}
