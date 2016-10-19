@@ -25,7 +25,8 @@
 {template .default}
     <div
         class="{css filelist-node}"
-        data-action="open">
+        data-action
+        data-open='1'>
         <i
            class="{css material-icons} {css filelist-node--icon}">
            description
@@ -41,7 +42,8 @@
                 class="{css filelist-node--btn}">
                 <i
                     class="{css material-icons} {css filelist-node--icon}"
-                    data-action="open">
+                    data-action
+                    data-open='1'>
                     edit
                 </i>
             </div>
@@ -49,7 +51,8 @@
                 class="{css filelist-node--btn}">
                 <i
                     class="{css material-icons} {css filelist-node--icon}"
-                    data-action="delete">
+                    data-action
+                    data-delete='1'>
                     delete
                 </i>
             </div>
@@ -57,7 +60,8 @@
                 class="{css filelist-node--btn}">
                 <i
                     class="{css material-icons} {css filelist-node--icon}"
-                    data-action="menu">
+                    data-action
+                    data-menu='1'>
                     more_vert
                 </i>
             </div>
