@@ -16,22 +16,33 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-{namespace zz.ide.templates.application}
+{namespace zz.ide.templates.modal}
 
 /**
- * @param key
+ * @param value
  */
 {template .default}
     <div
-        class="{css layout-wrapper}"
-        data-model="{$key.layout}"
-        data-view="layout"
-        data-controller="layout">
-    </div>
-    <div
-        class="{css modal-wrapper}"
-        data-model="{$key.modal}"
-        data-view="modal"
-        data-controller="modal">
+        id="{css modal}"
+        class="{css modal}">
+        <div
+            class="{css modal--buttons}">
+            {if $value.showResize}
+                <i
+                    class="{css material-icons} {css modal--btn}"
+                    data-action
+                    data-resize-modal='1'>
+                    fullscreen
+                </i>
+            {/if}
+            {if $value.showClose}
+                <i
+                    class="{css material-icons} {css modal--btn}"
+                    data-action
+                    data-close-modal='1'>
+                    close
+                </i>
+            {/if}
+        </div>
     </div>
 {/template}
