@@ -12,7 +12,7 @@ FIELDS:
 
       index: 1
       type: zz.models.enums.FieldType.NUMBER
-      required:
+      required: false
 
   path:
 

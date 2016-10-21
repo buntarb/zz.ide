@@ -16,17 +16,25 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-{namespace zz.ide.templates.modaldeletefile}
+{namespace zz.ide.templates.modaladdfile}
 
 
 /**
  * @param value
+ * @param key
  */
 {template .default}
     <div
         class='{css modal--text}'>
-        Delete file {$value.name}?
+        Type name for new file
     </div>
+    <input
+        class="{css mdl-textfield__input}"
+        type="text"
+        data-model="{$key.name}"
+        value="{$value.name}"
+        data-input>
+    </label>
     <div
         class="{css modal--buttons_dialog}">
         <button

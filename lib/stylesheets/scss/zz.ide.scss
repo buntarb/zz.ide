@@ -25,6 +25,7 @@ body {
       height: 150px;
       top: 300px;
       left: 150px;
+      z-index: 10;
       padding: 40px;
       background: white;
       border: 1px solid #ddd;
@@ -49,6 +50,15 @@ body {
         &:hover {
 
           color: black;
+        }
+      }
+      & div.modal--buttons_dialog {
+
+        margin-top: 20px;
+        text-align: center;
+        & button.modal--button_ok {
+
+          margin-left: 40px;
         }
       }
     }
