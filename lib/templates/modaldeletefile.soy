@@ -16,14 +16,30 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
+{namespace zz.ide.templates.modaldeletefile}
 
-goog.provide( 'zz.ide.enums.CssClass' );
 
 /**
- * Default CSS class to be applied to the root element of view.
- * @type {string}
+ * @param value
  */
-zz.ide.enums.CssClass = {
-
-    MODAL: goog.getCssName( 'modal' )
-};
+{template .default}
+    <div
+        class='{css modal--text}'>
+        Delete file {$value.name}?
+    </div>
+    <div
+        class="{css modal-window--buttons}">
+        <button
+            class="{css modal--button_cancel}"
+            data-action
+            data-close-modal='1'>
+            Cancel
+        </button>
+        <button
+            class="{css modal--button_ok}"
+            data-action
+            data-delete='1'>
+            Ok
+        </button>
+    </div>
+{/template}
