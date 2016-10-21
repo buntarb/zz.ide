@@ -2,6 +2,7 @@ NAMESPACE: 'zz.ide.models.Application'
 
 REQUIRE:
   -  'zz.ide.models.Layout'
+  -  'zz.ide.models.Modal'
 
 FIELDS:
 
@@ -9,4 +10,10 @@ FIELDS:
 
     index: 0
     type: zz.ide.models.Layout
+    required: false
+
+  modal:
+
+    index: 1
+    type: zz.ide.models.Modal
     required: false

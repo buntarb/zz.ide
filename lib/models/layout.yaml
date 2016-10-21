@@ -36,9 +36,3 @@ FIELDS:
     index: 4
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
-
-  modalIsShown:
-
-    index: 5
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
