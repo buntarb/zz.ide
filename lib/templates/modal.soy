@@ -25,6 +25,12 @@
     <div
         id="{css modal}"
         class="{css modal}">
+        {if $value.title}
+            <div
+                class="{css modal--title}">
+                {$value.title}
+            </div>
+        {/if}
         <div
             class="{css modal--buttons}">
             {if $value.showResize}
