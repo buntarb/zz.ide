@@ -19,18 +19,18 @@
 {namespace zz.ide.templates.modal}
 
 /**
+ * @param key
  * @param value
  */
 {template .default}
     <div
         id="{css modal}"
         class="{css modal}">
-        {if $value.title}
-            <div
-                class="{css modal--title}">
-                {$value.title}
-            </div>
-        {/if}
+        <div
+            class="{css modal--title}"
+            data-model="{$key.title}">
+            {$value.title}
+        </div>
         <div
             class="{css modal--buttons}">
             {if $value.showResize}
