@@ -57,11 +57,16 @@
         </div>
         <div
             class="{css layout--compile-app-btn}"
+            data-class="{$key.compiling}:{css compiling}"
             data-action
             data-compile-app='1'>
             <i
-                class="{css material-icons}">
+                class="{css material-icons} {css ready}">
                 build
+            </i>
+            <i
+                class="{css material-icons} {css compiling}">
+                autorenew
             </i>
         </div>
     </div>

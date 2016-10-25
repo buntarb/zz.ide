@@ -128,6 +128,22 @@ body {
         text-decoration: none;
         text-align: center;
         line-height: 60px;
+        & i.compiling {
+
+          display: none;
+        }
+        &.compiling {
+
+          cursor: wait;
+          & i.compiling {
+
+            display: inline-block;
+          }
+          & i.ready {
+
+            display: none;
+          }
+        }
       }
       /*Header editor styles starts*********************************************************************************/
       & div.header-wrapper {
