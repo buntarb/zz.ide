@@ -17,64 +17,64 @@ body {
 
     position: relative;
     box-sizing: border-box;
-    /*Modal window styles starts*********************************************************************************/
-    & div.modal {
-
-      position: fixed;
-      width: 300px;
-      height: 150px;
-      top: 300px;
-      left: 150px;
-      z-index: 10;
-      padding: 40px;
-      background: white;
-      border: 1px solid #ddd;
-      box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-      & div.modal--title {
-
-        position: relative;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-      & div.modal--text {
-
-         position: relative;
-         box-sizing: border-box;
-         margin-bottom: 20px;
-         text-align: center;
-       }
-      & div.modal--buttons {
-
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-      & i.modal--btn {
-
-        color: #616161;
-        cursor: pointer;
-        &:hover {
-
-          color: black;
-        }
-      }
-      & div.modal--buttons_dialog {
-
-        margin-top: 20px;
-        text-align: center;
-        & button.modal--button_ok {
-
-          margin-left: 40px;
-        }
-      }
-    }
     /*Layout styles starts*********************************************************************************/
     & div.layout {
 
       position: relative;
       box-sizing: border-box;
       padding-top: 56px;
+      /*Modal window styles starts*********************************************************************************/
+      & div.modal {
+
+        position: fixed;
+        width: 300px;
+        height: 150px;
+        top: 300px;
+        left: 150px;
+        z-index: 10;
+        padding: 40px;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+        & div.modal--title {
+
+          position: relative;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        & div.modal--text {
+
+          position: relative;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        & div.modal--buttons {
+
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+        & i.modal--btn {
+
+          color: #616161;
+          cursor: pointer;
+          &:hover {
+
+            color: black;
+          }
+        }
+        & div.modal--buttons_dialog {
+
+          margin-top: 20px;
+          text-align: center;
+          & button.modal--button_ok {
+
+            margin-left: 40px;
+          }
+        }
+      }
       div.layout--main-action-btn {
 
         position: fixed;
