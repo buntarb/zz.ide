@@ -15,6 +15,7 @@
 	"dependencies": {
 
 	    "imazzine-developer-kit": "",
+
 		"zz.views": "",
 		"zz.controllers": "",
 		"zz.models": "",
@@ -22,6 +23,8 @@
 		"zz.ui": "",
 		"zz.services": "",
 		"zz.net": "",
-		"zz.environment": ""
+		"zz.environment": "",
+		"zz.routers": "",
+		"zz.app": ""
 	}
 }
