@@ -30,13 +30,20 @@ body {
       background: white;
       border: 1px solid #ddd;
       box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-      & div.modal--text {
+      & div.modal--title {
 
         position: relative;
         box-sizing: border-box;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-align: center;
       }
+      & div.modal--text {
+
+         position: relative;
+         box-sizing: border-box;
+         margin-bottom: 20px;
+         text-align: center;
+       }
       & div.modal--buttons {
 
         position: absolute;
@@ -94,6 +101,53 @@ body {
         text-decoration: none;
         text-align: center;
         line-height: 60px;
+      }
+      div.layout--compile-app-btn {
+
+        position: fixed;
+        bottom: 100px;
+        right: 40px;
+        width: 56px;
+        height: 56px;
+        margin: auto;
+        padding: 0;
+        z-index: 2;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        overflow: hidden;
+        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+        border: none;
+        background: #ff4081;
+        color: white;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        line-height: 60px;
+        & i.compiling {
+
+          display: none;
+        }
+        &.compiling {
+
+          cursor: wait;
+          & i.compiling {
+
+            display: inline-block;
+            animation-name: spin;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+          & i.ready {
+
+            display: none;
+          }
+        }
       }
       /*Header editor styles starts*********************************************************************************/
       & div.header-wrapper {
@@ -291,5 +345,17 @@ body {
   :focus {
 
     outline: none;
+  }
+}
+
+@keyframes spin {
+
+  from {
+
+    transform: rotate( 0deg );
+  }
+  to {
+
+    transform: rotate( 360deg );
   }
 }
