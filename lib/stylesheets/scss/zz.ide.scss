@@ -253,14 +253,15 @@ body {
         margin: 0 0 0 232px;
         padding: 10px 50px 50px 50px;
 
-        /*Filelist styles starts*********************************************************************************/
-        & div.filelist-wrapper {
+        & div.dataset {
 
           position: relative;
           box-sizing: border-box;
           min-width: 324px;
           margin-right: 104px;
           box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+
+          /*Filelist styles starts*********************************************************************************/
           & div.filelist-node {
 
             display: flex;
@@ -324,13 +325,7 @@ body {
               }
             }
           }
-        }
-        /*Ace editor styles starts*********************************************************************************/
-        & div.ace-wrapper {
-
-          box-sizing: border-box;
-          position: relative;
-          box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+          /*Ace editor styles starts*********************************************************************************/
           & div.ace {
 
             position: relative;

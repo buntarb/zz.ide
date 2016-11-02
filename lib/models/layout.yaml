@@ -44,14 +44,8 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  path:
-
-    index: 6
-    type:  zz.models.enums.FieldType.STRING
-    required: false
-
   compiling:
 
-    index: 7
+    index: 6
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
