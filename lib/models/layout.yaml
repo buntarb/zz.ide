@@ -44,8 +44,32 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compiling:
+  compilingApp:
 
     index: 6
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  compilingSoy:
+
+    index: 7
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  compilingStyles:
+
+    index: 8
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  compilingModels:
+
+    index: 9
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  calculatingDeps:
+
+    index: 10
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
