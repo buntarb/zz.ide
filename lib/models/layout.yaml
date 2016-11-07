@@ -68,14 +68,8 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingApp:
-
-    index: 10
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
-
   calculatingDeps:
 
-    index: 11
+    index: 10
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false

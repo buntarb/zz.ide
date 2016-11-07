@@ -25,7 +25,7 @@
 {template .default}
     <div
         class="{css layout} {css nav-is-shown}"
-        data-class="{$key.navigationIsShown}:{css nav-is-shown}">
+        data-class="{$key.navigationIsShown}:{css nav-is-shown},{$key.compiling}:{css compiling}">
         <div
             class="{css header-wrapper}"
             data-model="{$key.header}"
@@ -65,8 +65,7 @@
             </i>
         </div>
         <div
-            class="{css layout--compile-btn-wrapper}"
-            data-hover>
+            class="{css layout--compile-btn-wrapper}">
             <div
                 class="{css layout--compileapp-btn} {css layout--btn}"
                 data-class="{$key.compiling}:{css compiling}"
@@ -84,10 +83,10 @@
             <div
                 class="{css layout--compile-btns-wrapper}">
                 <div
-                    class="{css layout--btn}"
+                    class="{css layout--btn} {css compile-models}"
                     data-class="{$key.compilingModels}:{css compiling}"
                     data-action
-                    data-compile-app='1'>
+                    data-compile-models='1'>
                     <i
                         class="{css material-icons} {css ready}">
                         storage
@@ -98,7 +97,7 @@
                     </i>
                 </div>
                 <div
-                    class="{css layout--btn}"
+                    class="{css layout--btn}  {css compile-soy}"
                     data-class="{$key.compilingSoy}:{css compiling}"
                     data-action
                     data-compile-soy='1'>
@@ -112,7 +111,7 @@
                     </i>
                 </div>
                 <div
-                    class="{css layout--btn}"
+                    class="{css layout--btn} {css compile-styles}"
                     data-class="{$key.compilingStyles}:{css compiling}"
                     data-action
                     data-compile-styles='1'>
@@ -126,10 +125,10 @@
                     </i>
                 </div>
                 <div
-                    class="{css layout--btn}"
+                    class="{css layout--btn} {css calculate-deps}"
                     data-class="{$key.calculatingDeps}:{css compiling}"
                     data-action
-                    data-compile-styles='1'>
+                    data-calculating-deps='1'>
                     <i
                         class="{css material-icons} {css ready}">
                         folder
