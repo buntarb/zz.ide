@@ -102,7 +102,7 @@ body {
 
         display: none;
         position: fixed;
-        bottom: 30px;
+        bottom: 35px;
         right: 110px;
         &.show {
 
@@ -163,31 +163,30 @@ body {
 
             margin-bottom: 10px;
           }
+          & div.compile-models {
+
+            background: #4285f4;
+          }
+          & div.compile-soy {
+
+            background: #ef6c00;
+          }
+          & div.compile-styles {
+
+            background: #33ac71;
+          }
+          & div.calculate-deps {
+
+            background: #616161;
+          }
         }
         &:hover {
 
           height: 350px;
-          & div.layout--compileapp-btn {
-
-            animation-name: spin;
-            animation-duration: 500ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-          }
           & div.layout--compile-btns-wrapper {
 
             height: 265px;
             opacity: 1;
-          }
-        }
-        &:not(:hover){
-
-          & div.layout--compileapp-btn {
-
-            animation-name: spin;
-            animation-duration: 500ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
           }
         }
       }
@@ -375,6 +374,25 @@ body {
             box-sizing: border-box;
             height: 500px;
           }
+        }
+      }
+      & div.layout--spinner{
+
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #616161;
+        opacity: 0.5;
+      }
+      &.compiling {
+
+        opacity: 0.7;
+        div {
+
+          cursor: wait !important;
         }
       }
     }
