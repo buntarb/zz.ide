@@ -16,31 +16,35 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-{namespace zz.ide.templates.navigation}
+{namespace zz.ide.templates.modalcopyfile}
+
 
 /**
  * @param key
- * @param value
  */
 {template .default}
     <div
-        class="{css navigation-node}"
-        data-action>
-        <i
-           class="{css material-icons} {css navigation-node--icon}"
-           data-model="{$key.icon}"
-           style="color: {$value.color}">
-           {$value.icon}
-        </i>
-        <span
-            class="{css navigation-node--title}"
-            data-model="{$key.name}">
-            {$value.name}
-        </span>
+        class='{css modal--text}'>
+        Type namespace for copied file.
     </div>
-    {if $value.delimeter}
-        <div
-            class="{css navigation-delimeter}">
-        </div>
-    {/if}
+    <input
+        class="{css mdl-textfield__input}"
+        type="text"
+        data-input="{$key.name}">
+    </label>
+    <div
+        class="{css modal--buttons_dialog}">
+        <button
+            class="{css modal--button_cancel} {css mdl-button} {css mdl-button--raised}"
+            data-action
+            data-close-modal='1'>
+            Cancel
+        </button>
+        <button
+            class="{css modal--button_ok} {css mdl-button} {css mdl-button--raised}"
+            data-action
+            data-save='1'>
+            Ok
+        </button>
+    </div>
 {/template}
