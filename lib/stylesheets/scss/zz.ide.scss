@@ -134,7 +134,6 @@ body {
           }
           &.compiling {
 
-            cursor: wait;
             & > i.compiling {
 
               display: inline-block;
@@ -375,17 +374,6 @@ body {
             height: 500px;
           }
         }
-      }
-      & div.layout--spinner{
-
-        display: none;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: #616161;
-        opacity: 0.5;
       }
       &.compiling {
 
