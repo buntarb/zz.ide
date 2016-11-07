@@ -32,10 +32,10 @@ FIELDS:
     type: zz.ide.models.Error
     required: false
 
-  buttonIcon:
+  addBtnShow:
 
     index: 4
-    type:  zz.models.enums.FieldType.STRING
+    type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
   navigationIsShown:
@@ -44,7 +44,7 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingApp:
+  compiling:
 
     index: 6
     type:  zz.models.enums.FieldType.BOOLEAN
@@ -68,8 +68,14 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  calculatingDeps:
+  compilingApp:
 
     index: 10
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  calculatingDeps:
+
+    index: 11
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false

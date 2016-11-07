@@ -21,7 +21,6 @@
 
 /**
  * @param key
- * @param value
  */
 {template .default}
     <div
@@ -56,28 +55,91 @@
             class="{css view-wrapper}">
         </div>
         <div
-            class="{css layout--main-action-btn}"
+            class="{css layout--add-btn} {css layout--btn}"
+            data-class="{$key.addBtnShow}:{css show}"
             data-action
-            data-main-btn='1'>
+            data-add-btn='1'>
             <i
-                class="{css material-icons}"
-                data-model="{$key.buttonIcon}">
-                {$value.buttonIcon}
+                class="{css material-icons}">
+                add
             </i>
         </div>
         <div
-            class="{css layout--compile-app-btn}"
-            data-class="{$key.compilingApp}:{css compiling}"
-            data-action
-            data-compile-app='1'>
-            <i
-                class="{css material-icons} {css ready}">
-                build
-            </i>
-            <i
-                class="{css material-icons} {css compiling}">
-                autorenew
-            </i>
+            class="{css layout--compile-btn-wrapper}"
+            data-hover>
+            <div
+                class="{css layout--compileapp-btn} {css layout--btn}"
+                data-class="{$key.compiling}:{css compiling}"
+                data-action
+                data-compile-app='1'>
+                <i
+                    class="{css material-icons} {css ready}">
+                    build
+                </i>
+                <i
+                    class="{css material-icons} {css compiling}">
+                    autorenew
+                </i>
+            </div>
+            <div
+                class="{css layout--compile-btns-wrapper}">
+                <div
+                    class="{css layout--btn}"
+                    data-class="{$key.compilingModels}:{css compiling}"
+                    data-action
+                    data-compile-app='1'>
+                    <i
+                        class="{css material-icons} {css ready}">
+                        storage
+                    </i>
+                    <i
+                        class="{css material-icons} {css compiling}">
+                        autorenew
+                    </i>
+                </div>
+                <div
+                    class="{css layout--btn}"
+                    data-class="{$key.compilingSoy}:{css compiling}"
+                    data-action
+                    data-compile-soy='1'>
+                    <i
+                        class="{css material-icons} {css ready}">
+                        web
+                    </i>
+                    <i
+                        class="{css material-icons} {css compiling}">
+                        autorenew
+                    </i>
+                </div>
+                <div
+                    class="{css layout--btn}"
+                    data-class="{$key.compilingStyles}:{css compiling}"
+                    data-action
+                    data-compile-styles='1'>
+                    <i
+                        class="{css material-icons} {css ready}">
+                        insert_drive_file
+                    </i>
+                    <i
+                        class="{css material-icons} {css compiling}">
+                        autorenew
+                    </i>
+                </div>
+                <div
+                    class="{css layout--btn}"
+                    data-class="{$key.calculatingDeps}:{css compiling}"
+                    data-action
+                    data-compile-styles='1'>
+                    <i
+                        class="{css material-icons} {css ready}">
+                        folder
+                    </i>
+                    <i
+                        class="{css material-icons} {css compiling}">
+                        autorenew
+                    </i>
+                </div>
+            </div>
         </div>
     </div>
 {/template}

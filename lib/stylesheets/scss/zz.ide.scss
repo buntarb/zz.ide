@@ -74,11 +74,8 @@ body {
           }
         }
       }
-      div.layout--main-action-btn {
+      & div.layout--btn {
 
-        position: fixed;
-        bottom: 30px;
-        right: 40px;
         width: 56px;
         height: 56px;
         margin: auto;
@@ -101,50 +98,96 @@ body {
         text-align: center;
         line-height: 60px;
       }
-      div.layout--compile-app-btn {
+      & div.layout--add-btn {
+
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 110px;
+        &.show {
+
+          display: block;
+        }
+      }
+      & div.layout--compile-btn-wrapper {
 
         position: fixed;
-        bottom: 100px;
-        right: 40px;
         width: 56px;
         height: 56px;
-        margin: auto;
-        padding: 0;
-        z-index: 2;
-        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0;
+        padding: 5px;
+        bottom: 30px;
+        right: 40px;
         overflow: hidden;
-        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
-        border: none;
-        background: #ff4081;
-        color: white;
-        border-radius: 50%;
-        outline: none;
-        cursor: pointer;
-        text-decoration: none;
-        text-align: center;
-        line-height: 60px;
-        & i.compiling {
+        transition: height 0.5s;
+        & div.layout--compileapp-btn {
 
-          display: none;
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          z-index: 3;
         }
-        &.compiling {
+        & div.layout--btn{
 
-          cursor: wait;
-          & i.compiling {
-
-            display: inline-block;
-            animation-name: spin;
-            animation-duration: 1000ms;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-          }
-          & i.ready {
+          & > i.compiling {
 
             display: none;
+          }
+          &.compiling {
+
+            cursor: wait;
+            & > i.compiling {
+
+              display: inline-block;
+              animation-name: spin;
+              animation-duration: 1000ms;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+            }
+            & > i.ready {
+
+              display: none;
+            }
+          }
+        }
+        & div.layout--compile-btns-wrapper {
+
+          display: block;
+          position: absolute;
+          bottom: 60px;
+          height: 0;
+          overflow: hidden;
+          transition: all 0.5s;
+          z-index: 2;
+          opacity: 0;
+          & div.layout--btn {
+
+            margin-bottom: 10px;
+          }
+        }
+        &:hover {
+
+          height: 350px;
+          & div.layout--compileapp-btn {
+
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+          }
+          & div.layout--compile-btns-wrapper {
+
+            height: 265px;
+            opacity: 1;
+          }
+        }
+        &:not(:hover){
+
+          & div.layout--compileapp-btn {
+
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
           }
         }
       }
