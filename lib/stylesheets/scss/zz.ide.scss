@@ -182,10 +182,26 @@ body {
         &:hover {
 
           height: 350px;
+          & div.layout--compileapp-btn {
+
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+          }
           & div.layout--compile-btns-wrapper {
 
             height: 265px;
             opacity: 1;
+          }
+        }
+        &.blur {
+
+          & div.layout--compileapp-btn {
+
+            animation-name: anti_spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
           }
         }
       }
@@ -402,3 +418,16 @@ body {
     transform: rotate( 360deg );
   }
 }
+
+@keyframes anti_spin {
+
+  from {
+
+    transform: rotate( 0deg );
+  }
+  to {
+
+    transform: rotate( -360deg );
+  }
+}
+

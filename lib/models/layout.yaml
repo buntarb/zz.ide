@@ -73,3 +73,9 @@ FIELDS:
     index: 10
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
+
+  compileBtnBlur:
+
+      index: 11
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
