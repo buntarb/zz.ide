@@ -38,5 +38,11 @@ FIELDS:
     type: zz.models.enums.FieldType.BOOLEAN
     required: false
 
+  selected:
+
+    index: 6
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
 
 

@@ -306,6 +306,12 @@ body {
             padding-left: 24px;
             color: #616161;
           }
+          &.selected {
+
+            color: #212121;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, .1);
+          }
         }
         & div.navigation-delimeter {
 
