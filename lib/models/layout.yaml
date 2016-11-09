@@ -79,3 +79,23 @@ FIELDS:
       index: 11
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
+
+  colorGreen:
+
+      index: 12
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
+
+  colorOrange:
+
+      index: 13
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
+
+  colorBlue:
+
+      index: 14
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
+
+
