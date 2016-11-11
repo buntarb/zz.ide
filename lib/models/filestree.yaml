@@ -38,7 +38,6 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-
   stderr:
 
     index: 6
@@ -49,10 +48,4 @@ FIELDS:
 
     index: 7
     type: zz.ide.models.FilesTree
-    required: false
-
-  out:
-
-    index: 7
-    type: zz.models.enums.FieldType.STRING
     required: false
