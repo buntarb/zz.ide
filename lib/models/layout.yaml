@@ -80,33 +80,15 @@ FIELDS:
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
 
-  colorGreen:
+  backBtnShow:
 
       index: 12
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
 
-  colorOrange:
-
-      index: 13
-      type:  zz.models.enums.FieldType.BOOLEAN
-      required: false
-
-  colorBlue:
-
-      index: 14
-      type:  zz.models.enums.FieldType.BOOLEAN
-      required: false
-
-  backBtnShow:
-
-      index: 15
-      type:  zz.models.enums.FieldType.BOOLEAN
-      required: false
-
   forwardBtnShow:
 
-      index: 16
+      index: 13
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
 

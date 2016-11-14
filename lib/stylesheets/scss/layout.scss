@@ -232,31 +232,30 @@ div.layout {
     box-sizing: border-box;
     top: 0;
     width: 100%;
-    height: 56px;
-    z-index: 10;
-    background: #898984;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-    &.green {
-
-      background: #33ac71;
-    }
-    &.orange {
-
-      background: #ef6c00;
-    }
-    &.blue {
-
-      background: #4285f4;
-    }
     & div.header {
 
       display: flex;
       display: -webkit-flex;
       position: relative;
+      height: 56px;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-      height: 56px;
+      background: #898984;
+      z-index: 10;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+      &.green {
+
+        background: #33ac71;
+      }
+      &.orange {
+
+        background: #ef6c00;
+      }
+      &.blue {
+
+        background: #4285f4;
+      }
       & div.header--btn {
 
         display: flex;
