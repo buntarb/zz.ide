@@ -4,7 +4,11 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-// Importing styles from related modules.
-// Please, don't delete this import.
 
-@import "deps";
+div.ace {
+
+  position: relative;
+  box-sizing: border-box;
+  height: 500px;
+}
+

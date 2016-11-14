@@ -7,3 +7,15 @@ FIELDS:
     index: 0
     type: zz.models.enums.FieldType.STRING
     required: false
+
+  search:
+
+      index: 1
+      type:  zz.models.enums.FieldType.STRING
+      required: false
+
+  searchFocus:
+
+      index: 2
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
