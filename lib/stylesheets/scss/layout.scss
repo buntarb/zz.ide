@@ -232,6 +232,7 @@ div.layout {
     box-sizing: border-box;
     top: 0;
     width: 100%;
+    z-index: 10;
     & div.header {
 
       display: flex;
@@ -242,7 +243,6 @@ div.layout {
       align-items: center;
       box-sizing: border-box;
       background: #898984;
-      z-index: 10;
       box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
       &.green {
 
@@ -261,11 +261,18 @@ div.layout {
         display: flex;
         display: -webkit-flex;
         position: absolute;
-        left: 0;
         justify-content: center;
         align-items: center;
         width: 56px;
         height: 56px;
+        &.header--app-btn {
+
+          right: 0;
+        }
+        &.header--nav-btn {
+
+           left: 0;
+         }
         & i {
 
           cursor: pointer;
@@ -377,13 +384,17 @@ div.layout {
 
     & div.layout--back-btn {
 
-      -webkit-transform: translateX(270px);
-      transform: translateX(270px);
+      //-webkit-transform: translateX(270px);
+      //transform: translateX(270px);
+      -webkit-transform: translateX(35px);
+      transform: translateX(35px);
     }
     & div.layout--forward-btn {
 
-      -webkit-transform: translateX(335px);
-      transform: translateX(335px);
+      //-webkit-transform: translateX(335px);
+      //transform: translateX(335px);
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
     }
     & div.navigation-wrapper {
 
@@ -399,7 +410,7 @@ div.layout {
     box-sizing: border-box;
     padding: 10px;
     top: 56px;
-    bottom: 0;
+    bottom: 120px;
     left: 0;
     width: 232px;
     overflow-y: hidden;
