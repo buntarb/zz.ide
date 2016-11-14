@@ -35,5 +35,26 @@
                 {$value.buttonIcon}
             </i>
         </div>
+        <div
+            class="{css header--search-wrapper}"
+            data-class="{$key.searchFocus}:{css focus}">
+            <div
+                class="{css header--search-btn}">
+                <i
+                  class="{css material-icons}"
+                  data-action>
+                  search
+                </i>
+            </div>
+            <div
+                class="{css header--search-input-wrapper}">
+                <input
+                    class="{css header--search-input}"
+                    data-input="{$key.search}"
+                    data-focus
+                    data-blur
+                    placeholder="Search">
+            </div>
+        </div>
     </div>
 {/template}

@@ -32,20 +32,20 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  stdout:
+  stderr:
 
     index: 5
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  stderr:
-
-    index: 6
-    type: zz.models.enums.FieldType.STRING
-    required: false
-
   children:
 
-    index: 7
+    index: 6
     type: zz.ide.models.FilesTree
+    required: false
+
+  stdout:
+
+    index: 7
+    type: zz.models.enums.FieldType.STRING
     required: false

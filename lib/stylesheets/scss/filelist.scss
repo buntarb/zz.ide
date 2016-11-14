@@ -1,0 +1,69 @@
+/**
+* @fileoverview zz.ide main stylesheets files.
+* @license Apache-2.0
+* @author buntarb@gmail.com (Artem Lytvynov)
+*/
+
+div.filelist-node {
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 20px;
+  color: #616161;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  background: white;
+  list-style-type: none;
+  overflow: hidden;
+  & i.filelist-node--icon {
+
+    margin-right: 20px;
+  }
+  & span.filelist-node--title {
+
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  & div.filelist-node--menu {
+
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    & div.filelist-node--btn {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 5px;
+      i.filelist-node--icon {
+
+        cursor: pointer;
+        &:hover {
+
+          color: black;
+        }
+      }
+    }
+  }
+  &:hover {
+
+    & div.filelist-node--menu {
+
+      display: flex;
+    }
+    & span.filelist-node--title {
+
+      margin-right: 120px;
+    }
+  }
+}
+
+
+
