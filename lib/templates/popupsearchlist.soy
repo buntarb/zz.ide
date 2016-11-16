@@ -16,19 +16,20 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-
-goog.provide( 'zz.ide.enums.CssClass' );
+{namespace zz.ide.templates.popupsearchlist}
 
 /**
- * Default CSS class to be applied to the root element of view.
- * @type {string}
+ * @param key
+ * @param value
  */
-zz.ide.enums.CssClass = {
-
-    MODAL: goog.getCssName( 'modal' ),
-    POPUP: goog.getCssName( 'popup' ),
-    HEADER: goog.getCssName( 'header' ),
-    BLUE: goog.getCssName( 'blue' ),
-    ORANGE: goog.getCssName( 'orange' ),
-    GREEN: goog.getCssName( 'green' )
-};
+{template .default}
+    <div
+        class="{css popupsearchlist-node}"
+        data-action>
+        <span
+            class="{css popupsearchlist-node--title}"
+            data-model="{$key.name}">
+            {$value.name}
+        </span>
+    </div>
+{/template}

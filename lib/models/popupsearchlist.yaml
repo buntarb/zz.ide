@@ -1,0 +1,9 @@
+NAMESPACE: 'zz.ide.models.PopupSearchlist'
+
+FIELDS:
+
+  name:
+
+      index: 0
+      type: zz.models.enums.FieldType.STRING
+      required: true
