@@ -61,31 +61,43 @@ div.layout {
       }
     }
   }
-  & div.popup {
+  & div.popup-wrapper {
 
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 56px;
-    left: 215px;
-    z-index: 10;
-    padding: 10px;
-    background: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-    & div.popupsearchlist-node {
+    & div.popup {
 
-      cursor: pointer;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 56px;
+      left: 215px;
+      z-index: 10;
       padding: 10px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      &:hover {
+      background: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+      & div.popupsearchlist-node {
 
-        background: rgba(0, 0, 0, .05);
+        cursor: pointer;
+        padding: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:hover {
+
+          background: rgba(0, 0, 0, .05);
+        }
       }
-    }
 
+    }
+    &.popup-is-open {
+
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+    }
   }
   & div.layout--btn {
 
