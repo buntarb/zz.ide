@@ -66,8 +66,6 @@ div.layout {
     & div.popup {
 
       position: absolute;
-      width: 300px;
-      height: 300px;
       top: 56px;
       left: 215px;
       z-index: 30;
@@ -343,12 +341,7 @@ div.layout {
           width: 72px;
           & i {
 
-            cursor: pointer;
             color: #f2f2f2;
-            &:hover {
-
-              color: white;
-            }
           }
         }
         & div.header--search-input-wrapper {
