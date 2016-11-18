@@ -120,15 +120,6 @@ div.layout {
       }
 
     }
-    &.popup-is-open {
-
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 20;
-    }
   }
   & div.layout--btn {
 
@@ -352,7 +343,7 @@ div.layout {
           }
         }
       }
-      & div.header--search-wrapper {
+      & label.header--search-wrapper {
 
         display: flex;
         display: -webkit-flex;
@@ -361,6 +352,7 @@ div.layout {
         border-radius: 2px;
         min-width: 144px;
         background: rgba(255,255,255,.15);
+
         & div.header--search-btn {
 
           display: flex;
