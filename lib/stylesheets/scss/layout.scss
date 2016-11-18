@@ -73,6 +73,17 @@ div.layout {
       background: white;
       border: 1px solid #ddd;
       box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+
+      & div.dataset {
+
+        display: flex;
+        width: 300px;
+        flex-wrap: wrap;
+        & div.datarow {
+
+          box-sizing: border-box;
+        }
+      }
       & div.popupsearchlist-node {
 
         position: relative;
@@ -85,6 +96,26 @@ div.layout {
         &:hover {
 
           background: rgba(0, 0, 0, .05);
+        }
+      }
+      & div.services-node {
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 100px;
+        cursor: pointer;
+        z-index: 40;
+        & div.services-node--icon {
+
+          text-align: center;
+        }
+        & div.services-node--title {
+
+          text-align: center;
         }
       }
 
@@ -303,7 +334,7 @@ div.layout {
         align-items: center;
         width: 56px;
         height: 56px;
-        &.header--app-btn {
+        &.header--services-btn {
 
           right: 0;
         }
