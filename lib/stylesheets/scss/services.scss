@@ -1,0 +1,41 @@
+/**
+* @fileoverview zz.ide main stylesheets files.
+* @license Apache-2.0
+* @author buntarb@gmail.com (Artem Lytvynov)
+*/
+
+
+div.services-dataset {
+
+  display: flex;
+  flex-wrap: wrap;
+  & div.datarow {
+
+    box-sizing: border-box;
+    & div.services-node {
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 5px;
+      width: 100px;
+      cursor: pointer;
+      border-radius: 2px;
+      z-index: 40;
+      &:hover {
+
+        background: rgba(0, 0, 0, .05);
+      }
+      & div.services-node--icon {
+
+        text-align: center;
+      }
+      & div.services-node--title {
+
+        text-align: center;
+      }
+    }
+  }
+}
