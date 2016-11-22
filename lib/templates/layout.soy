@@ -25,7 +25,8 @@
 {template .default}
     <div
         class="{css layout} {css nav-is-shown}"
-        data-class="{$key.navigationIsShown}:{css nav-is-shown},{$key.compiling}:{css compiling}">
+        data-class="{$key.navigationIsShown}:{css nav-is-shown},{$key.compiling}:{css compiling}"
+        data-action>
         <div
             class="{css header-wrapper}"
             data-model="{$key.header}"
@@ -52,7 +53,6 @@
         </div>
         <div
             class="{css popup-wrapper}"
-            data-class="{$key.isPopupOpen}:{css popup-is-open}"
             data-model="{$key.popup}"
             data-view="popup"
             data-controller="popup"

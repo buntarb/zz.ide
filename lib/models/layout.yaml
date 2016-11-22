@@ -99,10 +99,4 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  isPopupOpen:
-
-    index: 15
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
-
 

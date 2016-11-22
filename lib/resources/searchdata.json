@@ -1,8 +1,0 @@
-[
-  "zz.ide.controllers.Header",
-  "zz.ide.controllers.Layout",
-  "zz.ide.controllers.Navigation",
-  "zz.ide.views.Header",
-  "zz.ide.views.Layout",
-  "zz.ide.views.Navigation"
-]

@@ -1,0 +1,21 @@
+NAMESPACE: 'zz.ide.models.Services'
+
+FIELDS:
+
+  name:
+
+      index: 0
+      type: zz.models.enums.FieldType.STRING
+      required: true
+
+  icon:
+
+      index: 1
+      type: zz.models.enums.FieldType.STRING
+      required: true
+
+  action:
+
+      index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: true

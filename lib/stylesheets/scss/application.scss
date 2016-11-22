@@ -4,18 +4,80 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-body {
+html {
 
-  background: #f2f2f2;
-  div#root {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  & > body {
 
     position: relative;
+    min-height: 100%;
+    width: 100%;
+    float: left;
     box-sizing: border-box;
-  }
-  :focus {
+    background: #f2f2f2;
+    & div#root {
 
-    outline: none;
+      position: relative;
+      min-height: 100%;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+      & > div.dataset {
+
+        position: relative;
+        min-height: 100%;
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        & > div.datarow {
+
+          position: relative;
+          min-height: 100%;
+          width: 100%;
+          float: left;
+          box-sizing: border-box;
+          & > div.layout-wrapper {
+
+            position: relative;
+            min-height: 100%;
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+            & > div.dataset {
+
+              position: relative;
+              min-height: 100%;
+              width: 100%;
+              float: left;
+              box-sizing: border-box;
+              & > div.datarow {
+
+                position: relative;
+                min-height: 100%;
+                width: 100%;
+                float: left;
+                box-sizing: border-box;
+                & > div.layout {
+
+                  position: relative;
+                  min-height: 100%;
+                  width: 100%;
+                  float: left;
+                  box-sizing: border-box;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    :focus {
+
+      outline: none;
+    }
   }
 }
-
-

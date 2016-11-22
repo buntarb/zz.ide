@@ -36,7 +36,7 @@
                 {$value.buttonIcon}
             </i>
         </div>
-        <div
+        <label
             class="{css header--search-wrapper}"
             data-class="{$key.searchFocus}:{css focus}">
             <div
@@ -56,12 +56,13 @@
                     data-blur
                     placeholder="Search">
             </div>
-        </div>
+        </label>
         <div
-            class="{css header--btn} {css header--app-btn}">
+            class="{css header--btn} {css header--services-btn}"
+            data-action
+            data-services-btn="1">
             <i
-                class="{css material-icons}"
-                data-model="{$key.buttonIcon}">
+                class="{css material-icons}">
                 apps
             </i>
         </div>
