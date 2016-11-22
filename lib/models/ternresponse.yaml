@@ -2,14 +2,20 @@ NAMESPACE: 'zz.ide.models.TernResponse'
 
 FIELDS:
 
-  response:
+  type:
 
     index: 0
     type: zz.models.enums.FieldType.STRING
-    required: false
+    required: true
 
-  stderror:
+  response:
 
     index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  stderr:
+
+    index: 2
     type: zz.models.enums.FieldType.STRING
     required: false

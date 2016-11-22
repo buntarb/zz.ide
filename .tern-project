@@ -1,15 +1,7 @@
 {
-  "libs": [
-    "browser",
-    "jquery"
-  ],
+  "libs": [ ],
   "loadEagerly": [
     "lib/sources/**/*.js"
   ],
-  "plugins": {
-    "requirejs": {
-      "baseURL": "./",
-      "paths": {}
-    }
-  }
+  "plugins": { }
 }
