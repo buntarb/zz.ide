@@ -1,0 +1,21 @@
+/**
+* @fileoverview zz.ide main stylesheets files.
+* @license Apache-2.0
+* @author buntarb@gmail.com (Artem Lytvynov)
+*/
+
+div.popupsearchlist-node {
+
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 2px;
+  z-index: 40;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  &:hover {
+
+    background: rgba(0, 0, 0, .05);
+  }
+}

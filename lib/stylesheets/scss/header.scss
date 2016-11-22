@@ -1,0 +1,150 @@
+/**
+* @fileoverview zz.ide main stylesheets files.
+* @license Apache-2.0
+* @author buntarb@gmail.com (Artem Lytvynov)
+*/
+
+
+div.header {
+
+  display: flex;
+  display: -webkit-flex;
+  position: relative;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #898984;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  &.green {
+
+    background: #33ac71;
+  }
+  &.orange {
+
+    background: #ef6c00;
+  }
+  &.blue {
+
+    background: #4285f4;
+  }
+  & div.header--btn {
+
+    display: flex;
+    display: -webkit-flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    &.header--services-btn {
+
+      right: 0;
+    }
+    &.header--nav-btn {
+
+      left: 0;
+    }
+    & i {
+
+      cursor: pointer;
+      color: #f2f2f2;
+      &:hover {
+
+        color: white;
+      }
+    }
+  }
+  & label.header--search-wrapper {
+
+    display: flex;
+    display: -webkit-flex;
+    position: relative;
+    align-items: center;
+    border-radius: 2px;
+    min-width: 144px;
+    background: rgba(255, 255, 255, .15);
+
+    & div.header--search-btn {
+
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      position: relative;
+      width: 72px;
+      & i {
+
+        color: #f2f2f2;
+      }
+    }
+    & div.header--search-input-wrapper {
+
+      position: relative;
+      & input {
+
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 36px;
+        padding-right: 10px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2em;
+      }
+      & input::-webkit-input-placeholder {
+
+        color: #f2f2f2;
+      }
+      & input::-moz-placeholder {
+
+        color: #f2f2f2;
+      }
+      & input:-moz-placeholder {
+
+        color: #f2f2f2;
+      }
+      & input:-ms-input-placeholder {
+
+        color: #f2f2f2;
+      }
+    }
+    &.focus {
+
+      background: white;
+      & div.header--search-btn {
+
+        & i {
+
+          color: black;
+        }
+      }
+      & div.header--search-input-wrapper {
+
+        & input {
+
+          color: black;
+        }
+        & input::-webkit-input-placeholder {
+
+          color: white;
+        }
+        & input::-moz-placeholder {
+
+          color: white;
+        }
+        & input:-moz-placeholder {
+
+          color: white;
+        }
+        & input:-ms-input-placeholder {
+
+          color: white;
+        }
+      }
+    }
+  }
+}
+
