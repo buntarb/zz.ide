@@ -1,0 +1,21 @@
+NAMESPACE: 'zz.ide.models.TernRequest'
+
+FIELDS:
+
+  query:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  files:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  timeout:
+
+    index: 2
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
