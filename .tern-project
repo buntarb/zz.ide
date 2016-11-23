@@ -1,6 +1,8 @@
 {
   "libs": [ ],
   "loadEagerly": [
+    "node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/**/*.js",
+    "node_modules/zz.*/**/*.js",
     "lib/sources/**/*.js"
   ],
   "plugins": { }
