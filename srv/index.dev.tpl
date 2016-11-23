@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="stylesheet" href="/[{(PATH.LIB)}]/[{(PATH.STYLESHEETS)}]/[{(PATH.CSS)}]/[{(PATH.BIN)}]/[{(NAMESPACE)}].css">
         <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ace.js"></script>
+        <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ext-language_tools.js"></script>
         <script src="/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/base.js"></script>
         <script>goog.require("goog.soy");</script>
         <script src="/node_modules/imazzine-developer-kit/[{(PATH.BIN)}]/[{(PATH.TEMPLATES)}]/soyutils_usegoog.js"></script>
