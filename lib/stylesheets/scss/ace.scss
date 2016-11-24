@@ -8,116 +8,110 @@
 div.ace {
 
   position: relative;
-  margin: 36px 0 26px;
   box-sizing: border-box;
-  & div.ace-header-wrapper {
+  padding: 26px 0;
+  & div.ace-header {
 
-    position: fixed;
-    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
     top: 0;
-    height: 36px;
-    padding-top: 10px;
+    left: 0;
+    right: 0;
     z-index: 30;
-    background: #f2f2f2;
-    & div.ace-header {
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 26px;
+    padding: 2px 5px;
+    border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
+    background: white;
+    & div.ace-header--title {
+
+      color: #616161;
+    }
+    & label.ace-header--search-wrapper {
 
       display: flex;
       display: -webkit-flex;
-      justify-content: space-between;
-      box-sizing: border-box;
-      height: 26px;
-      padding: 2px 5px;
-      box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-      border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
-      background: white;
-      & div.ace-header--title {
+      position: relative;
+      align-items: center;
+      border-radius: 2px;
+      min-width: 80px;
+      background: rgba(255, 255, 255, .15);
 
-        color: #616161;
-      }
-      & label.ace-header--search-wrapper {
+      & div.ace-header--search-btn {
 
         display: flex;
         display: -webkit-flex;
         position: relative;
-        align-items: center;
-        border-radius: 2px;
-        min-width: 80px;
-        background: rgba(255, 255, 255, .15);
+        & i {
 
+          margin: auto;
+          color: #616161;
+        }
+      }
+      & div.ace-header--search-input-wrapper {
+
+        position: relative;
+        & input {
+
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          padding-right: 10px;
+          background: none;
+          border: none;
+          color: #616161;
+          font-size: 1em;
+        }
+        & input::-webkit-input-placeholder {
+
+          color: #616161;
+        }
+        & input::-moz-placeholder {
+
+          color: #616161;
+        }
+        & input:-moz-placeholder {
+
+          color: #616161;
+        }
+        & input:-ms-input-placeholder {
+
+          color: #616161;
+        }
+      }
+      &.focus {
+
+        background: white;
         & div.ace-header--search-btn {
 
-          display: flex;
-          display: -webkit-flex;
-          position: relative;
           & i {
 
-            margin: auto;
-            color: #616161;
+            color: black;
           }
         }
         & div.ace-header--search-input-wrapper {
 
-          position: relative;
           & input {
 
-            display: block;
-            box-sizing: border-box;
-            width: 100%;
-            padding-right: 10px;
-            background: none;
-            border: none;
-            color: #616161;
-            font-size: 1em;
+            color: black;
           }
           & input::-webkit-input-placeholder {
 
-            color: #616161;
+            color: white;
           }
           & input::-moz-placeholder {
 
-            color: #616161;
+            color: white;
           }
           & input:-moz-placeholder {
 
-            color: #616161;
+            color: white;
           }
           & input:-ms-input-placeholder {
 
-            color: #616161;
-          }
-        }
-        &.focus {
-
-          background: white;
-          & div.ace-header--search-btn {
-
-            & i {
-
-              color: black;
-            }
-          }
-          & div.ace-header--search-input-wrapper {
-
-            & input {
-
-              color: black;
-            }
-            & input::-webkit-input-placeholder {
-
-              color: white;
-            }
-            & input::-moz-placeholder {
-
-              color: white;
-            }
-            & input:-moz-placeholder {
-
-              color: white;
-            }
-            & input:-ms-input-placeholder {
-
-              color: white;
-            }
+            color: white;
           }
         }
       }
@@ -130,14 +124,15 @@ div.ace {
   }
   & div.ace-footer {
 
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     height: 26px;
     padding: 2px 5px;
     z-index: 30;
     box-sizing: border-box;
-    box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-    border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
+    border-top: 1px solid rgba( 0, 0, 0, 0.24 );
     background: white;
   }
 }
