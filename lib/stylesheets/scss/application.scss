@@ -7,66 +7,79 @@
 html {
 
   position: relative;
-  min-height: 100%;
-  width: 100%;
-  float: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
   box-sizing: border-box;
   & > body {
 
     position: relative;
-    min-height: 100%;
-    width: 100%;
-    float: left;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: stretch;
+    align-items: stretch;
     box-sizing: border-box;
     background: #f2f2f2;
+    overflow-y: scroll;
     & div#root {
 
       position: relative;
-      min-height: 100%;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: stretch;
+      align-items: stretch;
       width: 100%;
-      float: left;
       box-sizing: border-box;
       & > div.dataset {
 
         position: relative;
-        min-height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: stretch;
+        align-items: stretch;
         width: 100%;
-        float: left;
         box-sizing: border-box;
         & > div.datarow {
 
           position: relative;
-          min-height: 100%;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: stretch;
+          align-items: stretch;
           width: 100%;
-          float: left;
           box-sizing: border-box;
           & > div.layout-wrapper {
 
             position: relative;
-            min-height: 100%;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: stretch;
+            align-items: stretch;
             width: 100%;
-            float: left;
             box-sizing: border-box;
             & > div.dataset {
 
               position: relative;
-              min-height: 100%;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-align-items: stretch;
+              align-items: stretch;
               width: 100%;
-              float: left;
               box-sizing: border-box;
               & > div.datarow {
 
                 position: relative;
-                min-height: 100%;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: stretch;
+                align-items: stretch;
                 width: 100%;
-                float: left;
                 box-sizing: border-box;
                 & > div.layout {
 
                   position: relative;
-                  min-height: 100%;
                   width: 100%;
-                  float: left;
                   box-sizing: border-box;
                 }
               }
