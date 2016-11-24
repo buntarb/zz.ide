@@ -7,4 +7,5 @@
         <title></title>
         <style>[{(STYLE)}]</style>
         <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ace.js"></script>
+        <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ext-language_tools.js"></script>
         <script>
