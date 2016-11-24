@@ -9,7 +9,7 @@ div.layout {
 
   position: relative;
   box-sizing: border-box;
-  padding-top: 56px;
+  transition: padding-top 0.15s;
   & div.layout--btn {
 
     width: 56px;
@@ -81,6 +81,7 @@ div.layout {
     right: 40px;
     overflow: hidden;
     transition: height 0.5s;
+    z-index: 100;
     & div.layout--compileapp-btn {
 
       position: absolute;
@@ -174,13 +175,43 @@ div.layout {
       }
     }
   }
+  &.header-is-shown {
+
+    & div.header-wrapper {
+
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
   & div.header-wrapper {
 
     position: fixed;
     box-sizing: border-box;
     top: 0;
     width: 100%;
+    -webkit-transform: translateY(-56px);
+    transform: translateY(-56px);
+    transition: transform 0.15s;
     z-index: 10;
+  }
+  & div.navigation-wrapper {
+
+    position: fixed;
+    box-sizing: border-box;
+    padding: 10px 10px 120px 10px;
+    top: 56px;
+    bottom: -56px;
+    left: 0;
+    width: 232px;
+    overflow-y: hidden;
+    -webkit-transform: translate(-242px, 0);
+    transform: translate(-242px, 0);
+    -webkit-transition: -webkit-transform .15s ease-in-out;
+    transition: transform .15s ease-in-out;
+    &:hover {
+
+      overflow-y: auto;
+    }
   }
   &.nav-is-shown {
 
@@ -196,35 +227,29 @@ div.layout {
     }
     & div.navigation-wrapper {
 
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
+      -webkit-transform: translate(0, -56px);
+      transform: translate(0, -56px);
     }
   }
-  & div.navigation-wrapper {
+  &.nav-is-shown.header-is-shown {
 
-    position: fixed;
-    box-sizing: border-box;
-    padding: 10px 10px 120px 10px;
-    top: 56px;
-    bottom: 0;
-    left: 0;
-    width: 232px;
-    overflow-y: hidden;
-    -webkit-transform: translateX(-242px);
-    transform: translateX(-242px);
-    -webkit-transition: -webkit-transform .15s ease-in-out;
-    transition: transform .15s ease-in-out;
-    &:hover {
+    & div.navigation-wrapper {
 
-      overflow-y: auto;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      bottom: 0;
     }
+  }
+  &.header-is-shown {
+
+    padding-top: 56px;
   }
   & div.view-wrapper {
 
     position: relative;
     box-sizing: border-box;
     min-width: 324px;
-    margin: 10px 154px 50px 282px;
+    margin: 10px 154px 0 282px;
     box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
   }
   &.compiling {

@@ -51,52 +51,57 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compiling:
+  headerIsShown:
 
     index: 7
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingSoy:
+  compiling:
 
     index: 8
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingStyles:
+  compilingSoy:
 
     index: 9
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingModels:
+  compilingStyles:
 
     index: 10
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  calculatingDeps:
+  compilingModels:
 
     index: 11
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compileBtnBlur:
+  calculatingDeps:
 
     index: 12
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  backBtnShow:
+  compileBtnBlur:
 
     index: 13
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  forwardBtnShow:
+  backBtnShow:
 
     index: 14
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
+  forwardBtnShow:
+
+    index: 15
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
 
