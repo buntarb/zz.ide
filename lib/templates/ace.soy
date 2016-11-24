@@ -20,12 +20,54 @@
 {namespace zz.ide.templates.ace}
 
 /**
+* @param key
 * @param value
 */
 {template .default}
  <div
-     id="{css ace}"
-     class="{css ace}"
-     style="height: {$value.height}px">
+    class="{css ace}">
+    <div
+        class="{css ace-header-wrapper}">
+        <div
+            class="{css ace-header}">
+            <div
+                class="{css ace-header--title}">
+                {$value.name}
+            </div>
+            <label
+                class="{css ace-header--search-wrapper}">
+                <div
+                    class="{css ace-header--search-btn}">
+                    <i
+                      class="{css material-icons}">
+                      search
+                    </i>
+                </div>
+                <div
+                    class="{css ace-header--search-input-wrapper}">
+                    <input
+                        class="{css ace-header--search-input}"
+                        data-input="{$key.search}"
+                        placeholder="Search">
+                </div>
+            </label>
+        </div>
+    </div>
+    <div
+        id="{css ace-editor}"
+        class="{css ace--editor}"
+        style="height: {$value.height}px">
+    </div>
+    <div
+        class="{css ace-footer}">
+        <div
+            class="{css number-of-lines}">
+            Total number of lines is&#160;
+            <span
+                data-model="{$key.numberOfLines}"
+                {$value.numberOfLines}>
+            </span>
+        </div>
+    </div>
  </div>
 {/template}

@@ -43,3 +43,15 @@ FIELDS:
     index: 6
     type: zz.models.enums.FieldType.STRING
     required: false
+
+  search:
+
+    index: 7
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  numberOfLines:
+
+    index: 8
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
