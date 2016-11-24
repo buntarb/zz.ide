@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/[{(PATH.BIN)}]/[{(NAMESPACE)}].css">
         <script src="/[{(PATH.BIN)}]/[{(NAMESPACE)}].tst.js"></script>
         <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ace.js"></script>
+        <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ext-language_tools.js"></script>
     </head>
     <body>
         <div id="root"></div>
