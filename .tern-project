@@ -1,7 +1,18 @@
 {
-  "libs": [ ],
-  "loadEagerly": [
-    "lib/sources/**/*.js"
+  "libs": [
+    "browser",
+    "ecmascript"
   ],
-  "plugins": { }
+  "dontLoad": [ ],
+  "loadEagerly": [ ],
+  "plugins": {
+    "doc_comment": false,
+    "closure": {
+        "debug": true,
+        "finder": {
+            "name": "grep",
+            "dirs": [ "C://www//imazzine-developer-lib//zz.ide" ]
+        }
+    }
+  }
 }
