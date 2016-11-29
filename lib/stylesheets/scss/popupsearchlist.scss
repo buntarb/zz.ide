@@ -3,19 +3,24 @@
 * @license Apache-2.0
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
+div.popupsearchlist-dataset {
 
-div.popupsearchlist-node {
-
-  position: relative;
-  cursor: pointer;
+  max-height: 500px;
   padding: 10px;
-  border-radius: 2px;
-  z-index: 40;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  &:hover {
+  overflow-y: auto;
+  & div.popupsearchlist-node {
 
-    background: rgba(0, 0, 0, .05);
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 2px;
+    z-index: 40;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:hover {
+
+      background: rgba(0, 0, 0, .05);
+    }
   }
 }
