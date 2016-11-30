@@ -8,20 +8,14 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-  completed:
-
-    index: 1
-    type: zz.models.enums.FieldType.BOOLEAN
-    required: false
-
   result:
 
-    index: 2
+    index: 1
     type: zz.models.enums.FieldType.STRING
     required: false
 
   stderr:
 
-    index: 3
+    index: 2
     type: zz.models.enums.FieldType.STRING
     required: false
