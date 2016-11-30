@@ -3,3 +3,15 @@
 * @license Apache-2.0
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
+
+div.documentation-title {
+
+  & span.documentation-name {
+
+    word-wrap: break-word;
+  }
+}
+div.documentation-description {
+
+  word-wrap: break-word;
+}
