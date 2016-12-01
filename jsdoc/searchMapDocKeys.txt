@@ -39,7 +39,6 @@
 <anonymous>~idx
 <anonymous>~indx
 <anonymous>~isClass
-<anonymous>~isMethod
 <anonymous>~item
 <anonymous>~node
 <anonymous>~outDatarow
@@ -413,6 +412,7 @@ chmodSync
 chown
 chownSync
 class
+classModel
 className
 client
 clientX
@@ -510,8 +510,6 @@ data.index
 data.required
 data.type
 dataClass
-dataMethod
-dataValue
 datafield
 datafield[undefined]
 datarow
@@ -559,6 +557,7 @@ documentationController
 documentationData
 documentationDataMessageModel
 documentationModel
+documentationView
 editorChangedHandler_
 editorChangedTimerHandler_
 editor_
@@ -656,9 +655,9 @@ getDataJson
 getDataString
 getDatarowSchema
 getDirectories
-getDocumentationDataMethod
-getDocumentationDataValue
 getDocumentationModel
+getDocumentationModelMethod
+getDocumentationModelValue
 getElementUid
 getElementValue
 getErrorController
@@ -808,7 +807,6 @@ isIphone
 isIpod
 isLinux
 isMacintosh
-isMethod
 isMobile
 isMouseEventWithinMarkedElement_
 isNoError
@@ -904,8 +902,6 @@ modelChanged
 modelChangedInternal
 modelDatarow
 modelElement
-modelMethod
-modelValue
 model[undefined]
 model_
 model_soy_
@@ -2417,6 +2413,7 @@ zz.ide.controllers.Header#fullSearchResponseHandler_~documentationController
 zz.ide.controllers.Header#fullSearchResponseHandler_~documentationData
 zz.ide.controllers.Header#fullSearchResponseHandler_~documentationDataMessageModel
 zz.ide.controllers.Header#fullSearchResponseHandler_~documentationModel
+zz.ide.controllers.Header#fullSearchResponseHandler_~documentationView
 zz.ide.controllers.Header#fullSearchResponseHandler_~modalHeight
 zz.ide.controllers.Header#fullSearchResponseHandler_~modalLeft
 zz.ide.controllers.Header#fullSearchResponseHandler_~modalTop
@@ -3649,21 +3646,14 @@ zz.ide.services.Content#get
 zz.ide.services.Content#get~content
 zz.ide.services.Content.prototype.get
 zz.ide.services.DocApi
-zz.ide.services.DocApi#getDocumentationDataMethod
-zz.ide.services.DocApi#getDocumentationDataMethod~dataMethod
-zz.ide.services.DocApi#getDocumentationDataMethod~isMethod
-zz.ide.services.DocApi#getDocumentationDataValue
-zz.ide.services.DocApi#getDocumentationDataValue~dataValue
 zz.ide.services.DocApi#getDocumentationModel
-zz.ide.services.DocApi#getDocumentationModel~dataMethod
-zz.ide.services.DocApi#getDocumentationModel~dataValue
+zz.ide.services.DocApi#getDocumentationModelMethod
+zz.ide.services.DocApi#getDocumentationModelValue
+zz.ide.services.DocApi#getDocumentationModel~classModel
 zz.ide.services.DocApi#getDocumentationModel~isClass
-zz.ide.services.DocApi#getDocumentationModel~model
-zz.ide.services.DocApi#getDocumentationModel~modelMethod
-zz.ide.services.DocApi#getDocumentationModel~modelValue
-zz.ide.services.DocApi.prototype.getDocumentationDataMethod
-zz.ide.services.DocApi.prototype.getDocumentationDataValue
 zz.ide.services.DocApi.prototype.getDocumentationModel
+zz.ide.services.DocApi.prototype.getDocumentationModelMethod
+zz.ide.services.DocApi.prototype.getDocumentationModelValue
 zz.ide.services.FtService
 zz.ide.services.FtService#FILE_DELIM_REG_EXP_
 zz.ide.services.FtService#MODULE_ROOT_

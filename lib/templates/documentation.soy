@@ -47,17 +47,30 @@
             data-model="{$key.filename}">
             {$value.filename}
         </div>
+
         <div
-            class="{css documentation-methods-wrapper}"
+            class="{css documentation-method-wrapper}"
             data-model="{$key.method}"
             data-view="documentationMethod"
             data-controller="documentationMethod">
+            {if $value.method.length}
+                <div
+                    class="{css documentation-method--title}">
+                    Instance Methods
+                </div>
+            {/if}
         </div>
         <div
-            class="{css documentation-values-wrapper}"
-            data-model="{$key.value}"
-            data-view="documentationValue"
-            data-controller="documentationValue">
+            class="{css documentation-property-wrapper}"
+            data-model="{$key.property}"
+            data-view="documentationProperty"
+            data-controller="documentationProperty">
+            {if $value.property.length}
+                <div
+                    class="{css documentation-property--title}">
+                    Properties
+                </div>
+            {/if}
         </div>
     </div>
 {/template}

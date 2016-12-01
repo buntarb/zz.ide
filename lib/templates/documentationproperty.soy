@@ -16,27 +16,19 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-
-goog.provide( 'zz.ide.views.DocumentationValue' );
-
-goog.require( 'goog.dom' );
-
-goog.require( 'zz.ide.templates.documentationvalue' );
-goog.require( 'zz.views.FEBase' );
-goog.require( 'zz.environment.services.MVCTree' );
+{namespace zz.ide.templates.documentationproperty}
 
 /**
- * DocumentationValue view.
- * @constructor
- * @extends {zz.views.FEBase}
+ * @param key
+ * @param value
  */
-zz.ide.views.DocumentationValue = function( ){
-
-    goog.base( this, zz.ide.templates.documentationvalue.default );
-};
-goog.inherits( zz.ide.views.DocumentationValue, zz.views.FEBase );
-zz.environment.services.MVCTree
-
-    .registry
-    .setView( 'documentationValue', zz.ide.views.DocumentationValue );
-goog.addSingletonGetter( zz.ide.views.DocumentationValue );
+{template .default}
+    <div
+        class="{css documentationproperty-node}">
+        <span
+            class="{css documentationproperty-name}"
+            data-model="{$key.name}">
+            {$value.name}
+        </span>
+    </div>
+{/template}
