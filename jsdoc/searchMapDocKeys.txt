@@ -201,8 +201,8 @@ IS_VISIBLE
 IdeServer
 Input
 JS
-JSDOC_COMPLETE
-JSDOC_QUERY
+JSDOC_DEFINITIONS
+JSDOC_KEYWORDS
 JSDocQuery
 JSDocQueryDatarow
 JSDocService
@@ -485,6 +485,7 @@ controllerName
 controllers_
 controllers_[undefined]
 copyFile_
+count
 createAt
 createDatarowElements_
 createDom
@@ -858,6 +859,7 @@ lstat
 lstatSync
 mapDoc_
 markSelectedFolder_
+max
 mdl
 mdlDowngrade
 message
@@ -2262,8 +2264,6 @@ zz.ide.controllers.DocumentationMethod#setupModelInternal
 zz.ide.controllers.DocumentationMethod.prototype.actionHandler_
 zz.ide.controllers.DocumentationMethod.prototype.bootstrap
 zz.ide.controllers.DocumentationMethod.prototype.setupListenersInternal
-zz.ide.controllers.DocumentationMethod~model
-zz.ide.controllers.DocumentationMethod~view
 zz.ide.controllers.DocumentationValue
 zz.ide.controllers.DocumentationValue#actionHandler_
 zz.ide.controllers.DocumentationValue#bootstrap
@@ -2291,9 +2291,6 @@ zz.ide.controllers.DocumentationValue#setupModelInternal
 zz.ide.controllers.DocumentationValue.prototype.actionHandler_
 zz.ide.controllers.DocumentationValue.prototype.bootstrap
 zz.ide.controllers.DocumentationValue.prototype.setupListenersInternal
-zz.ide.controllers.DocumentationValue~model
-zz.ide.controllers.DocumentationValue~view
-zz.ide.controllers.Documentation~view
 zz.ide.controllers.Error
 zz.ide.controllers.Error#actionHandler_
 zz.ide.controllers.Error#bootstrap
@@ -2878,8 +2875,8 @@ zz.ide.enums.Command.CREATE_FILE
 zz.ide.enums.Command.EXTRACTMSG
 zz.ide.enums.Command.GET_CHILDREN
 zz.ide.enums.Command.IDK_HELP
-zz.ide.enums.Command.JSDOC_COMPLETE
-zz.ide.enums.Command.JSDOC_QUERY
+zz.ide.enums.Command.JSDOC_DEFINITIONS
+zz.ide.enums.Command.JSDOC_KEYWORDS
 zz.ide.enums.Command.OPEN_FILE
 zz.ide.enums.Command.PUBLISH
 zz.ide.enums.Command.REMOVE_FILE
@@ -3747,7 +3744,9 @@ zz.ide.services.IdeServer
 zz.ide.services.IdeServer#wss_
 zz.ide.services.JSDocService
 zz.ide.services.JSDocService#complete_
+zz.ide.services.JSDocService#complete_~count
 zz.ide.services.JSDocService#complete_~i
+zz.ide.services.JSDocService#complete_~max
 zz.ide.services.JSDocService#complete_~result
 zz.ide.services.JSDocService#complete_~search
 zz.ide.services.JSDocService#complete_~this_
