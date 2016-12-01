@@ -2,7 +2,7 @@ NAMESPACE: 'zz.ide.models.Documentation'
 
 REQUIRE:
   -  'zz.ide.models.DocumentationMethod'
-  -  'zz.ide.models.DocumentationValue'
+  -  'zz.ide.models.DocumentationProperty'
 
 FIELDS:
 
@@ -36,8 +36,8 @@ FIELDS:
     type: zz.ide.models.DocumentationMethod
     required: false
 
-  value:
+  property:
 
     index: 5
-    type: zz.ide.models.DocumentationValue
+    type: zz.ide.models.DocumentationProperty
     required: false

@@ -1,0 +1,9 @@
+NAMESPACE: 'zz.ide.models.DocumentationProperty'
+
+FIELDS:
+
+  name:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
