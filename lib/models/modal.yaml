@@ -2,44 +2,50 @@ NAMESPACE: 'zz.ide.models.Modal'
 
 FIELDS:
 
-  title:
+  id:
 
     index: 0
     type:  zz.models.enums.FieldType.STRING
     required: false
 
-  showClose:
+  title:
 
     index: 1
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: true
+    type:  zz.models.enums.FieldType.STRING
+    required: false
 
-  showResize:
+  showClose:
 
     index: 2
     type:  zz.models.enums.FieldType.BOOLEAN
     required: true
 
-  height:
+  showResize:
 
     index: 3
-    type:  zz.models.enums.FieldType.NUMBER
+    type:  zz.models.enums.FieldType.BOOLEAN
     required: true
 
-  width:
+  height:
 
     index: 4
     type:  zz.models.enums.FieldType.NUMBER
     required: true
 
-  top:
+  width:
 
     index: 5
+    type:  zz.models.enums.FieldType.NUMBER
+    required: true
+
+  top:
+
+    index: 6
     type:  zz.models.enums.FieldType.NUMBER
     required: false
 
   left:
 
-    index: 6
+    index: 7
     type:  zz.models.enums.FieldType.NUMBER
     required: false
