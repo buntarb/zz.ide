@@ -43,6 +43,11 @@
             {$value.description}
         </div>
         <div
+            class="{css documentation-file}"
+            data-model="{$key.filename}">
+            {$value.filename}
+        </div>
+        <div
             class="{css documentation-methods-wrapper}"
             data-model="{$key.method}"
             data-view="documentationMethod"

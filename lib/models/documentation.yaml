@@ -1,7 +1,6 @@
 NAMESPACE: 'zz.ide.models.Documentation'
 
 REQUIRE:
-
   -  'zz.ide.models.DocumentationMethod'
   -  'zz.ide.models.DocumentationValue'
 
