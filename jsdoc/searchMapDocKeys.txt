@@ -212,7 +212,7 @@ Layout
 LayoutDatarow
 Leave
 MESSAGES
-MODAL
+MODAL_BODY
 MODEL
 MODELS
 MODULE_ROOT_
@@ -2906,7 +2906,7 @@ zz.ide.enums.CssClass.ACE_EDITOR
 zz.ide.enums.CssClass.BLUE
 zz.ide.enums.CssClass.GREEN
 zz.ide.enums.CssClass.HEADER
-zz.ide.enums.CssClass.MODAL
+zz.ide.enums.CssClass.MODAL_BODY
 zz.ide.enums.CssClass.ORANGE
 zz.ide.enums.CssClass.POPUP
 zz.ide.enums.CssClass.POPUP_IS_OPEN

@@ -19,7 +19,16 @@ div.documentation-node {
   }
   & div.documentation-description {
 
+    margin: 10px 0;
     word-wrap: break-word;
+  }
+  & div.documentation-file {
+
+    & span {
+
+      padding: 10px 0;
+      word-wrap: break-word;
+    }
   }
   & div.documentation-method--title {
 
