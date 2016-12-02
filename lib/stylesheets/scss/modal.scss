@@ -9,30 +9,53 @@ div.modal {
   position: fixed;
   box-sizing: border-box;
   z-index: 10;
-  padding: 40px;
-  overflow-y: auto;
+  overflow-y: hidden;
   background: white;
   border: 1px solid #ddd;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-  & div.modal--title {
+  & div.modal--header {
 
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 10px;
-    text-align: center;
+    height: 40px;
+    z-index: 20;
+    & div.modal--buttons {
+
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
   }
-  & div.modal--text {
+  & div.modal--body {
 
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  & div.modal--buttons {
+    height: calc( 100% - 40px );
+    padding: 0 40px 40px 40px;
+    overflow-y: auto;
+    & div.modal--title {
 
-    position: absolute;
-    right: 10px;
-    top: 10px;
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    & div.modal--text {
+
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    & div.modal--buttons_dialog {
+
+      margin-top: 20px;
+      text-align: center;
+      & button.modal--button_ok {
+
+        margin-left: 40px;
+      }
+    }
   }
   & i.modal--btn {
 
@@ -41,15 +64,6 @@ div.modal {
     &:hover {
 
       color: black;
-    }
-  }
-  & div.modal--buttons_dialog {
-
-    margin-top: 20px;
-    text-align: center;
-    & button.modal--button_ok {
-
-      margin-left: 40px;
     }
   }
 }

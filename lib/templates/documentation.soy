@@ -23,7 +23,8 @@
  * @param value
  */
 {template .default}
-    <div>
+    <div
+        class="{css documentation-node}">
         <div
             class="{css documentation-title}">
             <span
@@ -43,9 +44,14 @@
             {$value.description}
         </div>
         <div
-            class="{css documentation-file}"
-            data-model="{$key.filename}">
-            {$value.filename}
+            class="{css documentation-file}">
+            <span>
+                File path:&#160;
+            </span>
+            <span
+                data-model="{$key.filename}">
+                {$value.filename}
+            </span>
         </div>
         {if $value.method.length}
             <div

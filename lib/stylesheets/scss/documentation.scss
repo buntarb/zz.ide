@@ -4,14 +4,31 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-div.documentation-title {
+div.documentation-node {
 
-  & span.documentation-name {
+  color: #212121;;
+  & div.documentation-title {
+
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 400;
+    & span.documentation-name {
+
+      word-wrap: break-word;
+    }
+  }
+  & div.documentation-description {
 
     word-wrap: break-word;
   }
-}
-div.documentation-description {
+  & div.documentation-method--title {
 
-  word-wrap: break-word;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  & div.documentation-property--title {
+
+    margin: 10px 0;
+    font-size: 20px;
+   }
 }
