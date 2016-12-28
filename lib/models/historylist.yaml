@@ -1,0 +1,15 @@
+NAMESPACE: 'zz.ide.models.HistoryList'
+
+FIELDS:
+
+  name:
+
+      index: 0
+      type: zz.models.enums.FieldType.STRING
+      required: true
+
+  route:
+
+      index: 1
+      type: zz.models.enums.FieldType.STRING
+      required: true
