@@ -95,7 +95,7 @@ IDE:
   WS_SERVER_HOST: 'localhost'
 
   #WSServer port
-  WS_SERVER_PORT: '8887'
+  WS_SERVER_PORT: '9999'
 
   #WSServer path
   WS_SERVER_PATH: ''
