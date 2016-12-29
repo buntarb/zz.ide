@@ -1,4 +1,4 @@
-NAMESPACE: 'zz.ide.models.Ace'       
+NAMESPACE: 'zz.ide.models.Ace'
 
 FIELDS:
 
@@ -55,3 +55,15 @@ FIELDS:
     index: 8
     type: zz.models.enums.FieldType.NUMBER
     required: false
+
+  lineNumber:
+
+      index: 9
+      type: zz.models.enums.FieldType.NUMBER
+      required: false
+
+  columnNumber:
+
+      index: 10
+      type: zz.models.enums.FieldType.NUMBER
+      required: false

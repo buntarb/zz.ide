@@ -29,17 +29,50 @@
     <div
         class="{css ace-header}">
         <div
-            class="{css ace-header--history}">
-            <i
-                class="{css material-icons}"
-                data-action
-                data-show-history="1">
-                list
-            </i>
+            class="{css ace-header--left}">
+            <div
+                class="{css ace-header--history}">
+                <i
+                    class="{css material-icons}"
+                    data-action
+                    data-show-history="1">
+                    list
+                </i>
+            </div>
+            <div
+                class="{css ace-header--title}">
+                {$value.name}
+            </div>
         </div>
         <div
-            class="{css ace-header--title}">
-            {$value.name}
+            class="{css ace-header--right}">
+            <div
+                class="{css ace-header--save-file}">
+                <i
+                    class="{css material-icons}"
+                    data-action
+                    data-save-file="1">
+                    save
+                </i>
+            </div>
+            <div
+                class="{css ace-header--find}">
+                <i
+                    class="{css material-icons}"
+                    data-action
+                    data-find-in-file="1">
+                    find_in_page
+                </i>
+            </div>
+            <div
+                class="{css ace-header--replace}">
+                <i
+                    class="{css material-icons}"
+                    data-action
+                    data-replace-in-file="1">
+                    find_replace
+                </i>
+            </div>
         </div>
         // <label
         //     class="{css ace-header--search-wrapper}">
@@ -67,11 +100,27 @@
     <div
         class="{css ace-footer}">
         <div
+            class="{css line-number}">
+            Line: &#160;
+            <span
+                data-model="{$key.lineNumber}">
+                {$value.lineNumber}
+            </span>
+        </div>
+        <div
+            class="{css column-number}">
+            Column: &#160;
+            <span
+                data-model="{$key.columnNumber}">
+                {$value.columnNumber}
+            </span>
+        </div>
+        <div
             class="{css number-of-lines}">
             Total number of lines is&#160;
             <span
-                data-model="{$key.numberOfLines}"
-                {$value.numberOfLines}>
+                data-model="{$key.numberOfLines}">
+                {$value.numberOfLines}
             </span>
         </div>
     </div>
