@@ -27,43 +27,57 @@
     <div
         class="{css header}">
         <div
-            class="{css header--btn} {css header--nav-btn}">
-            <i
-                class="{css material-icons}"
-                data-model="{$key.buttonIcon}"
-                data-action
-                data-show-navigation="1">
-                {$value.buttonIcon}
-            </i>
-        </div>
-        <label
-            class="{css header--search-wrapper}"
-            data-class="{$key.searchFocus}:{css focus}">
+            class="{css header--nav-btn-wrapper}">
             <div
-                class="{css header--search-btn}">
+                class="{css header--btn} {css header--nav-btn}">
                 <i
-                  class="{css material-icons}">
-                  search
+                    class="{css material-icons}"
+                    data-model="{$key.buttonIcon}"
+                    data-action
+                    data-show-navigation="1">
+                    {$value.buttonIcon}
                 </i>
             </div>
             <div
-                class="{css header--search-input-wrapper}">
-                <input
-                    class="{css header--search-input}"
-                    data-input="{$key.search}"
-                    data-focus
-                    data-blur
-                    placeholder="Search">
+                class="{css header--folder-title}"
+                data-model="{$key.folderTitle}">
+                {$value.folderTitle}
             </div>
-        </label>
-        <div
-            class="{css header--btn} {css header--services-btn}"
-            data-action
-            data-services-btn="1">
-            <i
-                class="{css material-icons}">
-                apps
-            </i>
         </div>
+        <div
+            class="{css header--services-wrapper}"
+            data-controller="services"
+            data-view="services"
+            data-model="{$key.services}">
+        </div>
+//        <label
+//            class="{css header--search-wrapper}"
+//            data-class="{$key.searchFocus}:{css focus}">
+//            <div
+//                class="{css header--search-btn}">
+//                <i
+//                  class="{css material-icons}">
+//                  search
+//                </i>
+//            </div>
+//            <div
+//                class="{css header--search-input-wrapper}">
+//                <input
+//                    class="{css header--search-input}"
+//                    data-input="{$key.search}"
+//                    data-focus
+//                    data-blur
+//                    placeholder="Search">
+//            </div>
+//        </label>
+//        <div
+//            class="{css header--btn} {css header--services-btn}"
+//            data-action
+//            data-services-btn="1">
+//            <i
+//                class="{css material-icons}">
+//                apps
+//            </i>
+//        </div>
     </div>
 {/template}

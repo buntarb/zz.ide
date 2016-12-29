@@ -19,14 +19,25 @@ div.ace {
     left: 0;
     right: 0;
     z-index: 30;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-sizing: border-box;
     height: 26px;
     padding: 2px 5px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
     background: white;
+    & div.ace-header--history {
+        
+        & i.material-icons {
+            
+            height: 100%;
+            line-height: 22px;
+            color: #616161;
+            cursor: pointer;
+        }
+    }
     & div.ace-header--title {
 
+      margin-left: 10px;
       color: #616161;
     }
     & label.ace-header--search-wrapper {

@@ -12,6 +12,12 @@
         <script>window[ 'WS_SERVER_HOST' ] = '[{(IDE.WS_SERVER_HOST)}]';</script>
         <script>window[ 'WS_SERVER_PORT' ] = '[{(IDE.WS_SERVER_PORT)}]';</script>
         <script>window[ 'WS_SERVER_PATH' ] = '[{(IDE.WS_SERVER_PATH)}]';</script>
+        <script>window[ 'SERVER_DOMAIN' ] = '[{(SERVER.SERVER_DOMAIN)}]';</script>
+        <script>window[ 'SERVER_PORT' ] = '[{(SERVER.SERVER_PORT)}]';</script>
+        <script>window[ 'SERVER_DEV' ] = '[{(SERVER.SERVER_DEV)}]';</script>
+        <script>window[ 'SERVER_TST' ] = '[{(SERVER.SERVER_TST)}]';</script>
+        <script>window[ 'SERVER_APP' ] = '[{(SERVER.SERVER_APP)}]';</script>
+        <script>window[ 'SERVER_UT' ] = '[{(SERVER.SERVER_UT)}]';</script>
         <script src="/node_modules/imazzine-developer-kit/[{(PATH.BIN)}]/[{(PATH.TEMPLATES)}]/soyutils_usegoog.js"></script>
         <script src="/[{(PATH.LIB)}]/[{(PATH.SOURCES)}]/deps.js"></script>
         <script src="/[{(PATH.LIB)}]/[{(PATH.SOURCES)}]/base.js"></script>

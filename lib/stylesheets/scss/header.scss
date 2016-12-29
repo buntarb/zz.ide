@@ -28,6 +28,19 @@ div.header {
 
     background: #4285f4;
   }
+  & div.header--nav-btn-wrapper {
+      
+      display: flex;
+      display: -webkit-flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+    & div.header--folder-title {
+      
+      font-size: 18px;
+      color: #f2f2f2;
+    }
+  }
   & div.header--btn {
 
     display: flex;
@@ -45,6 +58,7 @@ div.header {
       }
     }
   }
+  
   & label.header--search-wrapper {
 
     display: flex;

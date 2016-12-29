@@ -1,5 +1,8 @@
 NAMESPACE: 'zz.ide.models.Header'
 
+REQUIRE:
+  -  'zz.ide.models.Services'
+
 FIELDS:
 
   buttonIcon:
@@ -18,4 +21,16 @@ FIELDS:
 
       index: 2
       type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
+      
+  folderTitle:
+  
+      index: 3
+      type:  zz.models.enums.FieldType.STRING
+      required: false
+
+  services:
+
+      index: 4
+      type:  zz.ide.models.Services
       required: false
