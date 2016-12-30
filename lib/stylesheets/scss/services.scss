@@ -18,24 +18,67 @@ div.services-dataset {
       position: relative;
       display: flex;
       justify-content: center;
-      flex-direction: column;
+      align-items: center;
       box-sizing: border-box;
-      padding: 5px;
-      width: 100px;
+      padding: 5px 24px 5px 20px;
       height: 56px;
-      font-size: 12px;
-      color: #f2f2f2;
+      font-size: 13px;
+      color: #4c4c4c;
       cursor: pointer;
-      border-radius: 2px;
       z-index: 40;
+      -webkit-transition: background-color, border-bottom .3s, .3s ease, ease;
+      -moz-transition: background-color, border-bottom .3s, .3s ease, ease;
+      -o-transition: background-color, border-bottom .3s, .3s ease, ease;
+      transition: background-color, border-bottom .3s, .3s ease, ease;
       &:hover {
 
-        background: rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      &.start-server {
+
+        border-bottom: 2px solid rgba(0, 102, 206, 0.4);
+        &:hover {
+
+          border-bottom: 2px solid #0066ce;
+        }
+      }
+      &.run-dev {
+
+        border-bottom: 2px solid rgba(212, 1, 0, 0.4);
+        &:hover {
+
+          border-bottom: 2px solid #d40100;
+        }
+      }
+      &.run-dbg {
+
+        border-bottom: 2px solid rgba(0, 145, 55, 0.4);
+        &:hover {
+
+          border-bottom: 2px solid #009137;
+        }
+      }
+      &.run-app {
+
+        border-bottom: 2px solid rgba(233, 181, 2, 0.4);
+        &:hover {
+
+          border-bottom: 2px solid #e9b502;
+        }
+      }
+      &.run-ut {
+
+        border-bottom: 2px solid rgba(0, 102, 206, 0.4);
+        &:hover {
+
+          border-bottom: 2px solid #0066ce;
+        }
       }
       & div.services-node--icon {
 
         text-align: center;
         font-size: 24px;
+        margin-right: 5px;
         & i.material-icons {
 
           font-size: 20px;
@@ -53,7 +96,7 @@ div.services-dataset {
       justify-content: center;
       box-sizing: border-box;
       font-size: 12px;
-      color: #616161;
+      color: #4c4c4c;
       cursor: pointer;
       z-index: 40;
       &:hover {
@@ -66,7 +109,7 @@ div.services-dataset {
         font-size: 24px;
         & i.material-icons {
 
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
@@ -86,7 +129,6 @@ div.ace-services-dataset {
       justify-content: center;
       box-sizing: border-box;
       font-size: 12px;
-      color: #616161;
       cursor: pointer;
       z-index: 40;
       &:hover {

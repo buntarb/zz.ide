@@ -14,7 +14,7 @@ div.header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background: #898984;
+  background: #fff;
   box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
   &.green {
 
@@ -36,9 +36,12 @@ div.header {
       justify-content: space-between;
       align-items: center;
     & div.header--folder-title {
-      
-      font-size: 18px;
-      color: #f2f2f2;
+
+      font-family: 'Open Sans Light';
+      height: 40px;
+      line-height: 40px;
+      color: #4c4c4c;
+      font-size: 24px;
     }
   }
   & div.header--btn {
@@ -51,10 +54,10 @@ div.header {
 
       margin: auto;
       cursor: pointer;
-      color: #f2f2f2;
+      color: #4c4c4c;
       &:hover {
 
-        color: white;
+        color: black;
       }
     }
   }

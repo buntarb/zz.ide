@@ -20,7 +20,10 @@ html {
     -webkit-align-items: stretch;
     align-items: stretch;
     box-sizing: border-box;
-    background: #f2f2f2;
+    font-size: 13px;
+    font-family: 'Open Sans';
+    color: #4c4c4c;
+    background: rgba( 0, 0, 0, 0.02);
     overflow-y: scroll;
     & div#root {
 

@@ -12,12 +12,12 @@ div.navigation-node {
   padding: 0 12px 0 16px;
   height: 40px;
   width: 100%;
-  border-radius: 2px;
   list-style-type: none;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &.selected {
 
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, 0.04);
   }
   & i.navigation-node--icon {
 
@@ -25,20 +25,14 @@ div.navigation-node {
     vertical-align: middle;
     width: 24px;
     height: 24px;
-    color: #616161;
+    color: #4c4c4c;
+    font-size: 20px;
   }
   & span.navigation-node--title {
 
     display: table-cell;
     vertical-align: middle;
-    padding-left: 24px;
-    color: #616161;
-  }
-  &.selected {
-
-    color: #212121;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, .1);
+    padding-left: 5px;
   }
 }
 div.navigation-delimeter {

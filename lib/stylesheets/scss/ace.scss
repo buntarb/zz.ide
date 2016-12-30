@@ -9,7 +9,7 @@ div.ace {
 
   position: relative;
   box-sizing: border-box;
-  padding: 26px 0;
+  padding: 37px 0 26px;
   & div.ace-header {
 
     position: absolute;
@@ -21,10 +21,9 @@ div.ace {
     z-index: 30;
     justify-content: space-between;
     box-sizing: border-box;
-    height: 26px;
-    padding: 2px 5px;
+    height: 37px;
+    padding: 8px 20px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
-    background: white;
     & i:hover {
 
       color: black;
@@ -40,7 +39,6 @@ div.ace {
 
           height: 100%;
           line-height: 22px;
-          color: #616161;
           cursor: pointer;
           &:hover {
 
@@ -51,7 +49,7 @@ div.ace {
       & div.ace-header--title {
 
         margin-left: 10px;
-        color: #616161;
+        font-weight: bold;
       }
       & label.ace-header--search-wrapper {
 
@@ -71,7 +69,6 @@ div.ace {
           & i {
 
             margin: auto;
-            color: #616161;
           }
         }
         & div.ace-header--search-input-wrapper {
@@ -151,7 +148,7 @@ div.ace {
       & div.ace-header--replace {
 
         margin-right: 5px;
-        color: #616161;
+        font-size: 13px;
         & i {
 
           height: 100%;
@@ -180,11 +177,14 @@ div.ace {
     left: 0;
     right: 0;
     height: 26px;
-    padding: 2px 5px;
+    padding: 0 20px;
     z-index: 30;
     box-sizing: border-box;
-    border-top: 1px solid rgba( 0, 0, 0, 0.24 );
-    background: white;
+    border-top: 1px solid rgba( 0, 0, 0, 0.1 );
+    background: #ebebeb;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+    line-height: 26px;
     & > div {
 
       margin-right: 10px;
