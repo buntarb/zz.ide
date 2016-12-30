@@ -25,6 +25,10 @@ div.ace {
     padding: 2px 5px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
     background: white;
+    & i:hover {
+
+      color: black;
+    }
     & div.ace-header--left {
 
       display: flex;
@@ -38,6 +42,10 @@ div.ace {
           line-height: 22px;
           color: #616161;
           cursor: pointer;
+          &:hover {
+
+            color: black;
+          }
         }
       }
       & div.ace-header--title {
@@ -151,6 +159,10 @@ div.ace {
           line-height: 22px;
           cursor: pointer;
         }
+      }
+      & div.ace-header--services-wrapper {
+
+        margin-left: 10px;
       }
     }
   }

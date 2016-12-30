@@ -67,3 +67,9 @@ FIELDS:
       index: 10
       type: zz.models.enums.FieldType.NUMBER
       required: false
+
+  services:
+  
+      index: 11
+      type:  zz.ide.models.Services
+      required: false

@@ -141,10 +141,14 @@ div.layout {
 
         background: #616161;
       }
+      & div.extract-msg {
+
+        background: #616161;
+      }
     }
     &:hover {
 
-      height: 350px;
+      height: 415px;
       & div.layout--compileapp-btn:not( .compiling ){
 
         i {
@@ -157,7 +161,7 @@ div.layout {
       }
       & div.layout--compile-btns-wrapper {
 
-        height: 265px;
+        height: 330px;
         opacity: 1;
       }
     }

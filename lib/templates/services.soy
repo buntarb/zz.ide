@@ -29,6 +29,16 @@
 {/template}
 
 /**
+ * @param uid
+ */
+{template .aceDataset}
+    <div
+        class="{css dataset} {css ace-services-dataset}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
  * @param key
  * @param value
  */
@@ -50,6 +60,27 @@
             class="{css services-node--title}"
             data-model="{$key.name}">
             {$value.name}
+        </div>
+    </div>
+{/template}
+
+/**
+ * @param key
+ * @param value
+ */
+{template .ace}
+    <div
+        class="{css ace-services-node}"
+        data-action
+        data-model="{$key.action}"
+        {$value.action}="1">
+        <div
+            class="{css ace-services-node--icon}">
+            <i
+                class="{css material-icons}"
+                data-model="{$key.icon}">
+                {$value.icon}
+            </i>
         </div>
     </div>
 {/template}

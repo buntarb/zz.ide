@@ -87,21 +87,26 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compileBtnBlur:
+  extractingMsg:
 
     index: 13
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
+  compileBtnBlur:
+
+    index: 14
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
 #  backBtnShow:
 #
-#    index: 14
+#    index: 15
 #    type:  zz.models.enums.FieldType.BOOLEAN
 #    required: false
 #
 #  forwardBtnShow:
 #
-#    index: 15
+#    index: 16
 #    type:  zz.models.enums.FieldType.BOOLEAN
 #    required: false
 
