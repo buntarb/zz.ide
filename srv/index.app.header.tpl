@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <title></title>
+        <title>imazzine.ide</title>
         <style>[{(STYLE)}]</style>
         <style>div.ace_editor.ace-chrome>div.ace_gutter{color: #333;box-sizing:border-box;border-right:1px solid #ebebeb;background:rgb(250,250,250);}</style>
         <script>window[ 'WS_SERVER_HOST' ] = '[{(IDE.WS_SERVER_HOST)}]';</script>
