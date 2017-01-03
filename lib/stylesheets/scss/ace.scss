@@ -4,7 +4,47 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
+div.dataset.models {
 
+  & div.ace-header {
+
+    & div.ace-header--left {
+
+      & div.ace-header--icon {
+
+        color: #4285f4;
+      }
+    }
+  }
+}
+
+div.dataset.templates {
+
+  & div.ace-header {
+
+    & div.ace-header--left {
+
+      & div.ace-header--icon {
+
+        color: #ef6c00;
+      }
+    }
+  }
+}
+
+div.dataset.styles {
+
+  & div.ace-header {
+
+    & div.ace-header--left {
+
+      & div.ace-header--icon {
+
+        color: #33ac71;
+      }
+    }
+  }
+}
 div.ace {
 
   position: relative;
@@ -25,17 +65,25 @@ div.ace {
     height: 37px;
     padding: 8px 20px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
-    & i:hover {
 
-      color: black;
-    }
     & div.ace-header--left {
 
       display: flex;
       display: -webkit-flex;
       justify-content: flex-start;
+      & div.ace-header--icon {
+
+        & i.material-icons {
+
+          height: 100%;
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
       & div.ace-header--history {
 
+        margin-left: 10px;
+        font-size: 20px;
         & i.material-icons {
 
           height: 100%;
@@ -156,6 +204,10 @@ div.ace {
           font-size: 20px;
           line-height: 22px;
           cursor: pointer;
+          &:hover {
+
+            color: black;
+          }
         }
       }
       & div.ace-header--services-wrapper {

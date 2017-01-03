@@ -39,6 +39,16 @@
 {/template}
 
 /**
+ * @param uid
+ */
+{template .compileDataset}
+    <div
+        class="{css dataset} {css compile-services-dataset}"
+        data-set="{$uid}">
+    </div>
+{/template}
+
+/**
  * @param key
  * @param value
  */
@@ -82,5 +92,23 @@
                 {$value.icon}
             </i>
         </div>
+    </div>
+{/template}
+
+/**
+ * @param key
+ * @param value
+ */
+{template .compile}
+    <div
+        class="{css layout--btn} {css $value.class}"
+        data-class="{$key.compilingModels}:{css compiling}"
+        data-action
+        {$value.action}="1">
+        <i
+            class="{css material-icons}"
+            data-model="{$key.icon}">
+            {$value.icon}
+        </i>
     </div>
 {/template}

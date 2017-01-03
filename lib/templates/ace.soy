@@ -31,6 +31,18 @@
         <div
             class="{css ace-header--left}">
             <div
+                class="{css ace-header--icon}">
+                <i
+                    class="{css material-icons}"
+                    data-model="{$key.headerIcon}">
+                    {$value.headerIcon}
+                </i>
+            </div>
+            <div
+                class="{css ace-header--title}">
+                {$value.name}
+            </div>
+            <div
                 class="{css ace-header--history}">
                 <i
                     class="{css material-icons}"
@@ -38,10 +50,6 @@
                     data-show-history="1">
                     bookmark_border
                 </i>
-            </div>
-            <div
-                class="{css ace-header--title}">
-                {$value.name}
             </div>
         </div>
         <div
