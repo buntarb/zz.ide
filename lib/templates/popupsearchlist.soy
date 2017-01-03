@@ -35,11 +35,21 @@
 {template .default}
     <div
         class="{css popupsearchlist-node}"
-        data-action>
-        <span
+        data-action
+        data-open-list-item = "1">
+        <div
             class="{css popupsearchlist-node--title}"
             data-model="{$key.name}">
             {$value.name}
-        </span>
+        </div>
+        <div
+            class="{css popupsearchlist-node--remove}"
+            data-action
+            data-remove-from-list = "1">
+            <i
+                class="{css material-icons}">
+                clear
+            </i>
+        </div>
     </div>
 {/template}

@@ -11,15 +11,36 @@ div.popupsearchlist-dataset {
   & div.popupsearchlist-node {
 
     position: relative;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     padding: 10px;
     z-index: 40;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    & div.popupsearchlist-node--title {
+
+      display: flex;
+      align-content: center;
+    }
+    & div.popupsearchlist-node--remove {
+
+      display: flex;
+      align-content: center;
+      opacity: 0;
+      & i {
+
+        font-size: 20px;
+      }
+    }
     &:hover {
 
       background: rgba(0, 0, 0, .05);
+      & div.popupsearchlist-node--remove {
+
+        opacity: 1;
+      }
     }
   }
 }
