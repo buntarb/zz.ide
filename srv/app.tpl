@@ -16,6 +16,7 @@
         <script>window[ 'SERVER_UT' ] = '[{(SERVER.SERVER_UT)}]';</script>
         <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ace.js"></script>
         <script src="/node_modules/imazzine-developer-kit/node_modules/ace-builds/src-min/ext-language_tools.js"></script>
+        <style>div.ace_editor.ace-chrome>div.ace_gutter{color: #333;box-sizing:border-box;border-right:1px solid #ebebeb;background:rgb(250,250,250);}</style>
         <style>
 
         </style>

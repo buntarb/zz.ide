@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <title></title>
         <style>[{(STYLE)}]</style>
+        <style>div.ace_editor.ace-chrome>div.ace_gutter{color: #333;box-sizing:border-box;border-right:1px solid #ebebeb;background:rgb(250,250,250);}</style>
         <script>window[ 'WS_SERVER_HOST' ] = '[{(IDE.WS_SERVER_HOST)}]';</script>
         <script>window[ 'WS_SERVER_PORT' ] = '[{(IDE.WS_SERVER_PORT)}]';</script>
         <script>window[ 'WS_SERVER_PATH' ] = '[{(IDE.WS_SERVER_PATH)}]';</script>
