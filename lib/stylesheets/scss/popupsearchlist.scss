@@ -11,24 +11,28 @@ div.popupsearchlist-dataset {
   & div.popupsearchlist-node {
 
     position: relative;
-    display: flex;
-    justify-content: space-between;
     cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
     padding: 10px;
     z-index: 40;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
-    & div.popupsearchlist-node--title {
+    & span.popupsearchlist-node--title {
 
       display: flex;
+      margin-right: 20px;
       align-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     & div.popupsearchlist-node--remove {
 
-      display: flex;
+      position: absolute;
+      display: none;
+      right: 10px;
+      top: 10px;
       align-content: center;
-      opacity: 0;
       & i {
 
         font-size: 20px;
@@ -37,9 +41,14 @@ div.popupsearchlist-dataset {
     &:hover {
 
       background: rgba(0, 0, 0, .05);
-      & div.popupsearchlist-node--remove {
 
-        opacity: 1;
+      & span.popupsearchlist-node--title {
+
+        margin-right: 50px;
+      }
+      & div.popupsearchlist-node--remove {
+        
+        display: flex;
       }
     }
   }
