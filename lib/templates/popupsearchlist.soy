@@ -34,18 +34,26 @@
  */
 {template .default}
     <div
-        class="{css popupsearchlist-node}"
+        class="{css popupsearchlist-node} {$value.class}"
         data-action
         data-open-list-item = "1">
-        <span
+        <div
+            class="{css popupsearchlist-node--icon}">
+            <i
+                class="{css material-icons}"
+                data-model="{$key.icon}">
+                {$value.icon}
+            </i>
+        </div>
+        <div
             class="{css popupsearchlist-node--title}"
             data-model="{$key.name}">
             {$value.name}
-        </span>
+        </div>
         <div
             class="{css popupsearchlist-node--remove}"
             data-action
-            data-remove-from-list = "1">
+            data-remove-from-list="1">
             <i
                 class="{css material-icons}">
                 clear

@@ -4,6 +4,9 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
+
+@import "constants";
+
 div.dataset.models {
 
   & div.ace-header {
@@ -12,7 +15,7 @@ div.dataset.models {
 
       & div.ace-header--icon {
 
-        color: #4285f4;
+        color: $google-blue;
       }
     }
   }
@@ -26,7 +29,7 @@ div.dataset.templates {
 
       & div.ace-header--icon {
 
-        color: #ef6c00;
+        color: $google-orange;
       }
     }
   }
@@ -40,7 +43,7 @@ div.dataset.styles {
 
       & div.ace-header--icon {
 
-        color: #33ac71;
+        color: $google-green;
       }
     }
   }

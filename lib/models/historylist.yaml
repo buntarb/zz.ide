@@ -13,3 +13,15 @@ FIELDS:
       index: 1
       type: zz.models.enums.FieldType.STRING
       required: true
+
+  icon:
+
+      index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  class:
+
+      index: 3
+      type: zz.models.enums.FieldType.STRING
+      required: false

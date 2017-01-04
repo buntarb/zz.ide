@@ -3,6 +3,10 @@
 * @license Apache-2.0
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
+
+
+@import "constants";
+
 div.popupsearchlist-dataset {
 
   max-height: 250px;
@@ -11,17 +15,56 @@ div.popupsearchlist-dataset {
   & div.popupsearchlist-node {
 
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
     cursor: pointer;
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
     z-index: 40;
     overflow: hidden;
-    & span.popupsearchlist-node--title {
+    &.models {
+
+      & div.popupsearchlist-node--icon {
+
+        & i {
+
+          color: $google-blue;
+        }
+      }
+    }
+    &.templates {
+
+      & div.popupsearchlist-node--icon {
+
+        & i {
+
+          color: $google-orange;
+        }
+      }
+    }
+    &.styles {
+
+      & div.popupsearchlist-node--icon {
+
+        & i {
+
+          color: $google-green;
+        }
+      }
+    }
+    & div.popupsearchlist-node--icon {
 
       display: flex;
-      margin-right: 20px;
+      justify-content: flex-start;
       align-content: center;
+      margin-right: 10px;
+    }
+    & div.popupsearchlist-node--title {
+
+      margin-right: 20px;
+      line-height: 22px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -31,7 +74,7 @@ div.popupsearchlist-dataset {
       position: absolute;
       display: none;
       right: 10px;
-      top: 10px;
+      top: 12px;
       align-content: center;
       & i {
 
