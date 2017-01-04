@@ -40,12 +40,13 @@ div.modal {
       margin-bottom: 10px;
       text-align: center;
     }
-    & div.modal--text {
+    & textarea.modal--text {
 
       position: relative;
       box-sizing: border-box;
       margin-bottom: 20px;
       text-align: center;
+      resize: none;
     }
     & div.modal--buttons_dialog {
 

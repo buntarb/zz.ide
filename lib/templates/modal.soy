@@ -50,11 +50,23 @@
         </div>
         <div
             class="{css modal--body}">
-            <div
-                class="{css modal--title}"
-                data-model="{$key.title}">
-                {$value.title}
-            </div>
+            {if $value.title}
+                <div
+                    class="{css modal--title}"
+                    data-model="{$key.title}">
+                    {$value.title}
+                </div>
+            {/if}
+            {if $value.text}
+                <textarea
+                    class="{css modal--text}"
+                    rows="7"
+                    cols="50"
+                    readonly
+                    data-model="{$key.text}">
+                    {$value.text}
+                </textarea>
+            {/if}
         </div>
     </div>
 {/template}

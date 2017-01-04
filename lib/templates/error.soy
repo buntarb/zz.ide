@@ -20,32 +20,52 @@
 
 /**
  * @param value
+ * @param key
  */
 {template .default}
     <div
         id="{css error}"
         class="{css modal}">
         <div
-            class="{css modal--title}">
-            {$value.title}
+            class="{css modal--header}">
+            <div
+                class="{css modal--buttons}">
+                {if $value.showResize}
+                    <i
+                        class="{css material-icons} {css modal--btn}"
+                        data-action
+                        data-resize-modal='1'>
+                        fullscreen
+                    </i>
+                {/if}
+                {if $value.showClose}
+                    <i
+                        class="{css material-icons} {css modal--btn}"
+                        data-action
+                        data-close-modal='1'>
+                        close
+                    </i>
+                {/if}
+            </div>
         </div>
         <div
-            class="{css modal--buttons}">
-            {if $value.showResize}
-                <i
-                    class="{css material-icons} {css modal--btn}"
-                    data-action
-                    data-resize-modal='1'>
-                    fullscreen
-                </i>
+            class="{css modal--body}">
+            {if $value.title}
+                <div
+                    class="{css modal--title}"
+                    data-model="{$key.title}">
+                    {$value.title}
+                </div>
             {/if}
-            {if $value.showClose}
-                <i
-                    class="{css material-icons} {css modal--btn}"
-                    data-action
-                    data-close-modal='1'>
-                    close
-                </i>
+            {if $value.text}
+                <textarea
+                    class="{css modal--text}"
+                    rows="7"
+                    cols="50"
+                    readonly
+                    data-model="{$key.text}">
+                    {$value.text}
+                </textarea>
             {/if}
         </div>
     </div>
