@@ -22,30 +22,22 @@
  * @param uid
  */
 {template .dataset}
-    <div
+    <ul
+        role="list"
         class="{css dataset} {css services-dataset}"
         data-set="{$uid}">
-    </div>
+    </ul>
 {/template}
 
 /**
  * @param uid
  */
-{template .aceDataset}
-    <div
-        class="{css dataset} {css ace-services-dataset}"
-        data-set="{$uid}">
-    </div>
-{/template}
-
-/**
- * @param uid
- */
-{template .compileDataset}
-    <div
-        class="{css dataset} {css compile-services-dataset}"
-        data-set="{$uid}">
-    </div>
+{template .datarow}
+    <li
+        role="listitem"
+        class="{css item} {css services-datarow}"
+        data-row="{$uid}">
+    </li>
 {/template}
 
 /**
@@ -54,10 +46,27 @@
  */
 {template .default}
     <div
-        data-action
+        id="{$value.id}"
+        class="{css layout--btn} {$value.cssClass}"
+        data-action>
+        <i
+            class="{css material-icons}"
+            data-model="{$key.icon}">
+            {$value.icon}
+        </i>
+    </div>
+{/template}
+
+/**
+ * @param key
+ * @param value
+ */
+{template .caption}
+    <div
+        id="{$value.id}"
         class="{css services-node} {$value.cssClass}"
         data-model="{$key.action}"
-        {$value.action}="1">
+        data-action>
         <div
             class="{css services-node--icon}">
             <i
@@ -68,47 +77,8 @@
         </div>
         <div
             class="{css services-node--title}"
-            data-model="{$key.name}">
-            {$value.name}
+            data-model="{$key.caption}">
+            {$value.caption}
         </div>
-    </div>
-{/template}
-
-/**
- * @param key
- * @param value
- */
-{template .ace}
-    <div
-        class="{css ace-services-node}"
-        data-action
-        data-model="{$key.action}"
-        {$value.action}="1">
-        <div
-            class="{css ace-services-node--icon}">
-            <i
-                class="{css material-icons}"
-                data-model="{$key.icon}">
-                {$value.icon}
-            </i>
-        </div>
-    </div>
-{/template}
-
-/**
- * @param key
- * @param value
- */
-{template .compile}
-    <div
-        class="{css layout--btn} {css $value.class}"
-        data-class="{$key.compilingModels}:{css compiling}"
-        data-action
-        {$value.action}="1">
-        <i
-            class="{css material-icons}"
-            data-model="{$key.icon}">
-            {$value.icon}
-        </i>
     </div>
 {/template}

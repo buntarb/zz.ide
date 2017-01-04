@@ -6,6 +6,7 @@ REQUIRE:
   -  'zz.ide.models.Modal'
   -  'zz.ide.models.Error'
   -  'zz.ide.models.Popup'
+  -  'zz.ui.models.List'
 
 FIELDS:
 
@@ -98,6 +99,13 @@ FIELDS:
     index: 14
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
+
+  serverServices:
+
+     index: 15
+     type:  zz.ui.models.List
+     required: false
+
 #  backBtnShow:
 #
 #    index: 15
