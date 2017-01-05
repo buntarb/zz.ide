@@ -174,14 +174,14 @@ div.layout--server-services-wrapper{
 }
 
 //layout compile services styles
-div.layout--compile-services-wrapper{
+div.layout--compile-services-wrapper {
 
   height: 58px;
-  transition: height 0.6s;
+  transition: height 0.5s;
   &:hover {
 
     height: 401px;
-    ul.services-dataset {
+    & ul.services-dataset {
 
       height: 401px;
       & li.datarow {
@@ -193,21 +193,22 @@ div.layout--compile-services-wrapper{
       }
     }
   }
-  ul.services-dataset {
+  & ul.services-dataset {
 
     height: 58px;
     flex-direction: column-reverse;
     padding: 0;
-    transition: height 0.6s;
+    transition: height 0.5s;
     & li.datarow {
 
       box-sizing: border-box;
-      & div.layout--btn{
+      & div.layout--btn {
 
         height: 57px;
         width: 57px;
         margin-bottom: 10px;
-        transition: opacity 0.6s;
+        transition-property: opacity;
+        transition-duration: 0.1s;
         &.compiling {
 
           i {
@@ -219,59 +220,65 @@ div.layout--compile-services-wrapper{
           }
         }
       }
-      & div.compile-app.layout--btn{
+      & div.compile-app.layout--btn {
 
         opacity: 1;
         margin-bottom: 1px;
         &:hover {
 
-           & i {
+          & i {
 
-              animation-name: spin;
-              animation-duration: 500ms;
-              animation-iteration-count: 1;
-              animation-timing-function: linear;
-           }
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+          }
         }
         &.blur {
 
           & i {
 
-              animation-name: anti_spin;
-              animation-duration: 500ms;
-              animation-iteration-count: 1;
-              animation-timing-function: linear;
+            animation-name: anti_spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
           }
         }
       }
-      & div.extract-msg{
+      & div.extract-msg {
 
         background: #616161;
         opacity: 0;
+        transition-delay: 0.1s;
       }
-      & div.calc-deps{
+      & div.calc-deps {
 
         background: #616161;
         opacity: 0;
+        transition-delay: 0.2s;
       }
-      & div.compile-css{
+      & div.compile-css {
 
         background: $google-green;
         opacity: 0;
+        transition-delay: 0.3s;
       }
-      & div.compile-soy{
+      & div.compile-soy {
 
         background: $google-orange;
         opacity: 0;
+        transition-delay: 0.4s;
       }
-      & div.compile-models{
+      & div.compile-models {
 
         background: $google-blue;
         opacity: 0;
+        transition-delay: 0.5s;
       }
     }
   }
 }
+
 
 @keyframes spin {
 
