@@ -128,6 +128,26 @@ div.layout--server-services-wrapper{
       & div.start-server{
 
         background: $google-blue;
+        &:hover {
+
+          & i {
+
+            animation-name: spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+          }
+        }
+        &.blur {
+
+          & i {
+
+            animation-name: anti_spin;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+          }
+        }
       }
       & div.run-dev{
 
@@ -203,6 +223,26 @@ div.layout--compile-services-wrapper{
 
         opacity: 1;
         margin-bottom: 1px;
+        &:hover {
+
+           & i {
+
+              animation-name: spin;
+              animation-duration: 500ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+           }
+        }
+        &.blur {
+
+          & i {
+
+              animation-name: anti_spin;
+              animation-duration: 500ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+          }
+        }
       }
       & div.extract-msg{
 
@@ -256,37 +296,3 @@ div.layout--compile-services-wrapper{
     transform: rotate( -360deg );
   }
 }
-
-/////////////////////////////////////////
-//&:hover {
-//
-//  & div.layout--compileapp-btn:not( .compiling ){
-//
-//    i {
-//
-//      animation-name: spin;
-//      animation-duration: 500ms;
-//      animation-iteration-count: 1;
-//      animation-timing-function: linear;
-//    }
-//  }
-//  & div.layout--compile-btns-wrapper {
-//
-//    height: 330px;
-//    opacity: 1;
-//  }
-//}
-//&.blur {
-//
-//  & div.layout--compileapp-btn:not( .compiling )  {
-//
-//    i {
-//
-//      animation-name: anti_spin;
-//      animation-duration: 500ms;
-//      animation-iteration-count: 1;
-//      animation-timing-function: linear;
-//    }
-//  }
-//}
-//}
