@@ -64,47 +64,24 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  compilingSoy:
+  serverServices:
 
-    index: 9
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
+     index: 9
+     type:  zz.ui.models.List
+     required: false
 
-  compilingStyles:
+  compileServices:
 
-    index: 10
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
+     index: 11
+     type:  zz.ui.models.List
+     required: false
 
-  compilingModels:
-
-    index: 11
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
-
-  calculatingDeps:
+  serverServicesIsShown:
 
     index: 12
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
-  extractingMsg:
-
-    index: 13
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
-
-  compileBtnBlur:
-
-    index: 14
-    type:  zz.models.enums.FieldType.BOOLEAN
-    required: false
-
-  serverServices:
-
-     index: 15
-     type:  zz.ui.models.List
-     required: false
 
 #  backBtnShow:
 #

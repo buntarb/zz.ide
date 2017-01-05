@@ -4,13 +4,16 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
+@import "constants";
 
-div.services-dataset {
+ul.services-dataset {
 
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   padding: 10px;
-  & div.datarow {
+  list-style: none;
+  & li.datarow {
 
     box-sizing: border-box;
     & div.services-node {
@@ -89,62 +92,167 @@ div.services-dataset {
         text-align: center;
       }
     }
-    & div.ace-services-node {
+  }
+}
 
-      position: relative;
-      display: flex;
-      justify-content: center;
-      box-sizing: border-box;
-      font-size: 12px;
-      color: #4c4c4c;
-      cursor: pointer;
-      z-index: 40;
-      &:hover {
+//layout server services styles
+div.layout--server-services-wrapper{
 
-        color: black;
-      }
-      & div.ace-services-node--icon {
+  height: 57px;
+  transition: height 0.5s;
+  &:hover {
 
-        text-align: center;
-        font-size: 24px;
-        & i.material-icons {
+    height: 330px;
+    ul.services-dataset {
 
-          font-size: 16px;
+      & li.datarow {
+
+        & div.layout--btn {
+
+          opacity: 1;
         }
+      }
+    }
+  }
+  ul.services-dataset {
+
+    padding: 0;
+    & li.datarow {
+
+      box-sizing: border-box;
+      & div.layout--btn{
+
+        margin-bottom: 10px;
+        transition: opacity 0.5s;
+      }
+      & div.start-server{
+
+        background: $google-blue;
+      }
+      & div.run-dev{
+
+        background: rgba(212, 1, 0, 1);
+        opacity: 0;
+      }
+      & div.run-dbg{
+
+        background: $google-green;
+        opacity: 0;
+      }
+      & div.run-app{
+
+        background: rgba(233, 181, 2, 1);
+        opacity: 0;
+      }
+      & div.run-ut{
+
+        background: $google-blue;
+        opacity: 0;
       }
     }
   }
 }
 
-div.ace-services-dataset {
+//layout compile services styles
+div.layout--compile-services-wrapper{
 
-  display: flex;
-  & div.datarow {
+  height: 58px;
+  transition: height 0.6s;
+  &:hover {
 
-    box-sizing: border-box;
-    & div.ace-services-node {
+    height: 401px;
+    ul.services-dataset {
 
-      position: relative;
-      display: flex;
-      justify-content: center;
-      box-sizing: border-box;
-      font-size: 12px;
-      cursor: pointer;
-      z-index: 40;
-      &:hover {
+      height: 401px;
+      & li.datarow {
 
-        color: black;
-      }
-      & div.ace-services-node--icon {
+        & div.layout--btn {
 
-        margin-right: 5px;
-        text-align: center;
-        font-size: 24px;
-        & i.material-icons {
-
-          font-size: 20px;
+          opacity: 1;
         }
       }
     }
   }
+  ul.services-dataset {
+
+    height: 58px;
+    flex-direction: column-reverse;
+    padding: 0;
+    transition: height 0.6s;
+    & li.datarow {
+
+      box-sizing: border-box;
+      & div.layout--btn{
+
+        height: 57px;
+        width: 57px;
+        margin-bottom: 10px;
+        transition: opacity 0.6s;
+      }
+      & div.compile-app.layout--btn{
+
+        opacity: 1;
+        margin-bottom: 1px;
+      }
+      & div.extract-msg{
+
+        background: #616161;
+        opacity: 0;
+      }
+      & div.calc-deps{
+
+        background: #616161;
+        opacity: 0;
+      }
+      & div.compile-css{
+
+        background: $google-green;
+        opacity: 0;
+      }
+      & div.compile-soy{
+
+        background: $google-orange;
+        opacity: 0;
+      }
+      & div.compile-models{
+
+        background: $google-blue;
+        opacity: 0;
+      }
+    }
+  }
 }
+
+/////////////////////////////////////////
+//&:hover {
+//
+//  & div.layout--compileapp-btn:not( .compiling ){
+//
+//    i {
+//
+//      animation-name: spin;
+//      animation-duration: 500ms;
+//      animation-iteration-count: 1;
+//      animation-timing-function: linear;
+//    }
+//  }
+//  & div.layout--compile-btns-wrapper {
+//
+//    height: 330px;
+//    opacity: 1;
+//  }
+//}
+//&.blur {
+//
+//  & div.layout--compileapp-btn:not( .compiling )  {
+//
+//    i {
+//
+//      animation-name: anti_spin;
+//      animation-duration: 500ms;
+//      animation-iteration-count: 1;
+//      animation-timing-function: linear;
+//    }
+//  }
+//}
+//}

@@ -64,120 +64,35 @@ div.layout {
 
     display: none;
     position: fixed;
-    bottom: 35px;
+    bottom: 30px;
     right: 110px;
     &.show {
 
       display: block;
     }
   }
-  & div.layout--compile-btn-wrapper {
+  & div.layout--server-services-wrapper{
 
     position: fixed;
-    width: 56px;
-    height: 56px;
-    padding: 5px;
+    display: none;
+    width: 57px;
+    top: 30px;
+    right: 40px;
+    overflow: hidden;
+    z-index: 100;
+    &.show {
+
+      display: block;
+    }
+  }
+  & div.layout--compile-services-wrapper {
+
+    position: fixed;
+    width: 57px;
     bottom: 30px;
     right: 40px;
     overflow: hidden;
-    transition: height 0.5s;
     z-index: 100;
-    & div.layout--compileapp-btn {
-
-      position: absolute;
-      bottom: 5px;
-      right: 5px;
-      z-index: 3;
-    }
-    & div.layout--btn{
-
-      & > i.compiling {
-
-        display: none;
-      }
-      &.compiling {
-
-        & > i.compiling {
-
-          display: inline-block;
-          animation-name: spin;
-          animation-duration: 1000ms;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-        }
-        & > i.ready {
-
-          display: none;
-        }
-      }
-    }
-    & div.layout--compile-btns-wrapper {
-
-      display: block;
-      position: absolute;
-      bottom: 60px;
-      height: 0;
-      overflow: hidden;
-      transition: all 0.5s;
-      z-index: 2;
-      opacity: 0;
-      & div.layout--btn {
-
-        margin-bottom: 10px;
-      }
-      & div.compile-models {
-
-        background: #4285f4;
-      }
-      & div.compile-soy {
-
-        background: #ef6c00;
-      }
-      & div.compile-styles {
-
-        background: #33ac71;
-      }
-      & div.calculate-deps {
-
-        background: #616161;
-      }
-      & div.extract-msg {
-
-        background: #616161;
-      }
-    }
-    &:hover {
-
-      height: 415px;
-      & div.layout--compileapp-btn:not( .compiling ){
-
-        i {
-
-          animation-name: spin;
-          animation-duration: 500ms;
-          animation-iteration-count: 1;
-          animation-timing-function: linear;
-        }
-      }
-      & div.layout--compile-btns-wrapper {
-
-        height: 330px;
-        opacity: 1;
-      }
-    }
-    &.blur {
-
-      & div.layout--compileapp-btn:not( .compiling )  {
-
-        i {
-
-          animation-name: anti_spin;
-          animation-duration: 500ms;
-          animation-iteration-count: 1;
-          animation-timing-function: linear;
-        }
-      }
-    }
   }
   &.header-is-shown {
 
@@ -259,7 +174,7 @@ div.layout {
   &.compiling {
 
     opacity: 0.7;
-    div {
+    div, ul, li {
 
       cursor: wait !important;
     }

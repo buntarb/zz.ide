@@ -96,102 +96,17 @@
             </i>
         </div>
         <div
-            class="{css layout--server-serveices-wrapper}"
+            class="{css layout--server-services-wrapper}"
+            data-class="{$key.serverServicesIsShown}:{css show}"
             data-model="{$key.serverServices}"
             data-controller="serverServices"
             data-view="services">
         </div>
         <div
-            class="{css layout--compile-btn-wrapper}"
-            data-class="{$key.compileBtnBlur}:{css blur}"
-            data-hover>
-            <div
-                class="{css layout--compileapp-btn} {css layout--btn}"
-                data-class="{$key.compiling}:{css compiling}"
-                data-action
-                data-compile-app='1'>
-                <i
-                    class="{css material-icons} {css ready}">
-                    build
-                </i>
-                <i
-                    class="{css material-icons} {css compiling}">
-                    autorenew
-                </i>
-            </div>
-            <div
-                class="{css layout--compile-btns-wrapper}">
-                <div
-                    class="{css layout--btn} {css compile-models}"
-                    data-class="{$key.compilingModels}:{css compiling}"
-                    data-action
-                    data-compile-models='1'>
-                    <i
-                        class="{css material-icons} {css ready}">
-                        storage
-                    </i>
-                    <i
-                        class="{css material-icons} {css compiling}">
-                        autorenew
-                    </i>
-                </div>
-                <div
-                    class="{css layout--btn}  {css compile-soy}"
-                    data-class="{$key.compilingSoy}:{css compiling}"
-                    data-action
-                    data-compile-soy='1'>
-                    <i
-                        class="{css material-icons} {css ready}">
-                        web
-                    </i>
-                    <i
-                        class="{css material-icons} {css compiling}">
-                        autorenew
-                    </i>
-                </div>
-                <div
-                    class="{css layout--btn} {css compile-styles}"
-                    data-class="{$key.compilingStyles}:{css compiling}"
-                    data-action
-                    data-compile-styles='1'>
-                    <i
-                        class="{css material-icons} {css ready}">
-                        insert_drive_file
-                    </i>
-                    <i
-                        class="{css material-icons} {css compiling}">
-                        autorenew
-                    </i>
-                </div>
-                <div
-                    class="{css layout--btn} {css calculate-deps}"
-                    data-class="{$key.calculatingDeps}:{css compiling}"
-                    data-action
-                    data-calculating-deps='1'>
-                    <i
-                        class="{css material-icons} {css ready}">
-                        folder
-                    </i>
-                    <i
-                        class="{css material-icons} {css compiling}">
-                        autorenew
-                    </i>
-                </div>
-                <div
-                    class="{css layout--btn} {css extract-msg}"
-                    data-class="{$key.extractingMsg}:{css compiling}"
-                    data-action
-                    data-extracting-msg='1'>
-                    <i
-                        class="{css material-icons} {css ready}">
-                        language
-                    </i>
-                    <i
-                        class="{css material-icons} {css compiling}">
-                        autorenew
-                    </i>
-                </div>
-            </div>
+            class="{css layout--compile-services-wrapper}"
+            data-model="{$key.compileServices}"
+            data-controller="compileServices"
+            data-view="services">
         </div>
     </div>
 {/template}
