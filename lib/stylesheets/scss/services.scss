@@ -99,7 +99,7 @@ ul.services-dataset {
 div.layout--server-services-wrapper{
 
   height: 57px;
-  transition: height 0.4s ease-in-out;
+  transition: height 0.5s ease-in-out;
   &:hover {
 
     height: 330px;
@@ -183,7 +183,7 @@ div.layout--server-services-wrapper{
 div.layout--compile-services-wrapper {
 
   height: 58px;
-  transition: height 0.5s;
+  transition: height 0.7s;
   &:hover {
 
     height: 401px;
@@ -204,7 +204,7 @@ div.layout--compile-services-wrapper {
     height: 58px;
     flex-direction: column-reverse;
     padding: 0;
-    transition: height 0.5s;
+    transition: height 0.7s;
     & li.datarow {
 
       box-sizing: border-box;
