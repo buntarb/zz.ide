@@ -116,8 +116,8 @@ div.layout {
 
     position: fixed;
     box-sizing: border-box;
-    padding: 40px 10px 120px 10px;
-    top: 56px;
+    padding: 10px 10px 120px 10px;
+    top: 86px;
     bottom: 0;
     left: 0;
     width: 232px;
@@ -171,7 +171,7 @@ div.layout {
     }
     & div.navigation-wrapper {
 
-      padding: 10px 10px 120px 10px;
+      top: 56px;
     }
   }
   &.compiling {
