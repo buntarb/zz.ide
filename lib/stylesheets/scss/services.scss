@@ -183,7 +183,7 @@ div.layout--server-services-wrapper{
 div.layout--compile-services-wrapper {
 
   height: 58px;
-  transition: height 0.7s;
+  transition: height 0.6s;
   &:hover {
 
     height: 401px;
@@ -204,7 +204,7 @@ div.layout--compile-services-wrapper {
     height: 58px;
     flex-direction: column-reverse;
     padding: 0;
-    transition: height 0.7s;
+    transition: height 0.6s;
     & li.datarow {
 
       box-sizing: border-box;
