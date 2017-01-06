@@ -248,6 +248,16 @@ div.layout--compile-services-wrapper {
             animation-iteration-count: 1;
             animation-timing-function: linear;
           }
+          &.compiling {
+
+            i {
+
+              animation-name: spin;
+              animation-duration: 500ms;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+            }
+          }
         }
       }
       & div.extract-msg {
@@ -283,7 +293,6 @@ div.layout--compile-services-wrapper {
     }
   }
 }
-
 
 @keyframes spin {
 

@@ -146,17 +146,8 @@ div.layout {
     }
     & div.navigation-wrapper {
 
-      -webkit-transform: translate(0, -56px);
-      transform: translate(0, -56px);
-    }
-  }
-  &.nav-is-shown.header-is-shown {
-
-    & div.navigation-wrapper {
-
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
-      bottom: 0;
     }
   }
   &.header-is-shown {
