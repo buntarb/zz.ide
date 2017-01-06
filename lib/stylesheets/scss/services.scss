@@ -99,7 +99,7 @@ ul.services-dataset {
 div.layout--server-services-wrapper{
 
   height: 57px;
-  transition: height 0.4s;
+  transition: height 0.4s ease-in-out;
   &:hover {
 
     height: 330px;
@@ -125,6 +125,7 @@ div.layout--server-services-wrapper{
         margin-bottom: 10px;
         transition-property: opacity;
         transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
       }
       & div.start-server{
 
@@ -214,6 +215,7 @@ div.layout--compile-services-wrapper {
         margin-bottom: 10px;
         transition-property: opacity;
         transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
         &.compiling {
 
           i {
