@@ -20,7 +20,7 @@ FIELDS:
       type: zz.models.enums.FieldType.STRING
       required: false
 
-  class:
+  cssClass:
 
       index: 3
       type: zz.models.enums.FieldType.STRING

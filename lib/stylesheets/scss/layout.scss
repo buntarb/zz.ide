@@ -109,7 +109,7 @@ div.layout {
     width: 100%;
     -webkit-transform: translateY(-65px);
     transform: translateY(-65px);
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s;
     z-index: 40;
   }
   & div.navigation-wrapper {
