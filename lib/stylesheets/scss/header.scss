@@ -61,14 +61,6 @@ div.header {
       }
     }
   }
-  & div.header--btn_fixed {
-
-    position: fixed;
-    display: block;
-    top: 10px;
-    left: 30px;
-    transform: translateY(65px);
-  }
   & label.header--search-wrapper {
 
     display: flex;
@@ -158,14 +150,5 @@ div.header {
         }
       }
     }
-  }
-}
-
-div.layout.header-is-shown {
-
-  & div.header--btn_fixed {
-
-    display: none;
-    transform: translateY(0);
   }
 }

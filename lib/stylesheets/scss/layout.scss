@@ -71,6 +71,13 @@ div.layout {
       display: block;
     }
   }
+  & div.layout--show-nav-btn {
+
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+  }
   & div.layout--server-services-wrapper{
 
     position: fixed;
@@ -94,14 +101,6 @@ div.layout {
     overflow: hidden;
     z-index: 100;
   }
-  &.header-is-shown {
-
-    & div.header-wrapper {
-
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
   & div.header-wrapper {
 
     position: fixed;
@@ -117,20 +116,28 @@ div.layout {
 
     position: fixed;
     box-sizing: border-box;
-    padding: 10px 10px 120px 10px;
+    padding: 40px 10px 120px 10px;
     top: 56px;
-    bottom: -56px;
+    bottom: 0;
     left: 0;
     width: 232px;
     overflow-y: hidden;
     -webkit-transform: translate(-242px, 0);
     transform: translate(-242px, 0);
-    -webkit-transition: -webkit-transform .15s ease-in-out;
-    transition: transform .15s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     &:hover {
 
       overflow-y: auto;
     }
+  }
+  & div.view-wrapper {
+
+    position: relative;
+    box-sizing: border-box;
+    min-width: 324px;
+    margin: 10px 154px 0 282px;
+    box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
   }
   &.nav-is-shown {
 
@@ -153,14 +160,19 @@ div.layout {
   &.header-is-shown {
 
     padding-top: 56px;
-  }
-  & div.view-wrapper {
+    & div.header-wrapper {
 
-    position: relative;
-    box-sizing: border-box;
-    min-width: 324px;
-    margin: 10px 154px 0 282px;
-    box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    & div.layout--show-nav-btn {
+
+      display: none;
+    }
+    & div.navigation-wrapper {
+
+      padding: 10px 10px 120px 10px;
+    }
   }
   &.compiling {
 
