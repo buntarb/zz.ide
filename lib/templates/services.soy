@@ -55,6 +55,16 @@
             data-model="{$key.icon}">
             {$value.icon}
         </i>
+        {if $value.description}
+            <div
+                class="{css list-tooltip-wrapper}">
+                <div
+                    class="{css list-tooltip}"
+                    data-model="{$key.description}">
+                    {$value.description}
+                </div>
+            </div>
+        {/if}
     </div>
 {/template}
 

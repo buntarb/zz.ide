@@ -22,7 +22,6 @@ div.layout {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0;
-    overflow: hidden;
     box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
     border: none;
     background: #ff4081;
@@ -91,6 +90,10 @@ div.layout {
 
       display: block;
     }
+    &:hover {
+
+      overflow: visible;
+    }
   }
   & div.layout--compile-services-wrapper {
 
@@ -100,6 +103,10 @@ div.layout {
     right: 40px;
     overflow: hidden;
     z-index: 100;
+    &:hover {
+
+      overflow: visible;
+    }
   }
   & div.header-wrapper {
 
