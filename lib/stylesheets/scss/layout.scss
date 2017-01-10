@@ -21,10 +21,12 @@ div.layout {
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0;
-    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+    box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
     border: none;
-    background: #ff4081;
-    color: white;
+    //background: #ff4081;
+    //color: white;
+    background: #fff;
+    color: #4285f4;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -64,6 +66,7 @@ div.layout {
     position: fixed;
     bottom: 30px;
     right: 110px;
+    color: #33ac71;
     &.show {
 
       display: block;
@@ -110,6 +113,12 @@ div.layout {
     &:hover {
 
       overflow: visible;
+    }
+    & div.compile-app {
+        
+        //color: #4285f4;
+        color: #fff;
+        background: $google-blue;
     }
   }
   & div.header-wrapper {
