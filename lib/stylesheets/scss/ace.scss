@@ -85,6 +85,7 @@ div.ace {
       }
       & div.ace-header--history {
 
+        position: relative;
         margin-left: 10px;
         font-size: 20px;
         & i.material-icons {
@@ -95,6 +96,34 @@ div.ace {
           &:hover {
 
             color: black;
+          }
+        }
+        & div.list-tooltip-wrapper {
+
+          position: absolute;
+          display: none;
+          top: 30px;
+          left: -10px;
+          & div.list-tooltip {
+
+            padding: 5px;
+            max-width: 170px;
+            z-index: 999;
+            background: rgba(97, 97, 97, 0.9);
+            border-radius: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            white-space: pre-line;
+            text-align: center;
+          }
+        }
+        &:hover {
+
+          & div.list-tooltip-wrapper {
+
+            display: block;
           }
         }
       }
@@ -198,6 +227,7 @@ div.ace {
       & div.ace-header--find,
       & div.ace-header--replace {
 
+        position: relative;
         margin-right: 5px;
         font-size: 13px;
         & i {
@@ -211,11 +241,56 @@ div.ace {
             color: black;
           }
         }
-      }
-      & div.ace-header--services-wrapper {
+        & div.list-tooltip-wrapper {
 
-        margin-left: 10px;
+          position: absolute;
+          display: none;
+          top: 30px;
+          left: -10px;
+          & div.list-tooltip {
+
+            padding: 5px;
+            max-width: 170px;
+            z-index: 999;
+            background: rgba(97, 97, 97, 0.9);
+            border-radius: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            white-space: pre-line;
+            text-align: center;
+          }
+        }
+        &:hover {
+
+          & div.list-tooltip-wrapper {
+
+            display: block;
+          }
+        }
       }
+      & div.ace-header--save-file {
+
+        & div.list-tooltip-wrapper {
+
+          left: -9px;
+        }
+      }
+      & div.ace-header--find {
+
+        & div.list-tooltip-wrapper {
+
+          left: -7px;
+        }
+      }
+      & div.ace-header--replace {
+
+         & div.list-tooltip-wrapper {
+
+           left: -16px;
+         }
+       }
     }
   }
   & div.ace-editor {

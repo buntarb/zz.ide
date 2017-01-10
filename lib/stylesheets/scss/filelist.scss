@@ -39,6 +39,7 @@ div.filelist-node {
     & div.filelist-node--btn {
 
       display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: center;
       margin-right: 5px;
@@ -49,6 +50,47 @@ div.filelist-node {
         &:hover {
 
           color: black;
+        }
+      }
+      & div.list-tooltip-wrapper {
+
+        position: absolute;
+        display: none;
+        bottom: 30px;
+        & div.list-tooltip {
+
+          padding: 5px;
+          max-width: 170px;
+          z-index: 999;
+          background: rgba(97, 97, 97, 0.9);
+          border-radius: 2px;
+          color: white;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14px;
+          white-space: pre-line;
+          text-align: center;
+        }
+      }
+      &:hover {
+
+        & div.list-tooltip-wrapper {
+
+          display: block;
+        }
+      }
+      &.delete-file-btn {
+
+        & div.list-tooltip-wrapper {
+
+          left: -13px;
+        }
+      }
+      &.edit-file-btn {
+
+        & div.list-tooltip-wrapper {
+
+          left: -10px;
         }
       }
     }
