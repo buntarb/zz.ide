@@ -76,6 +76,11 @@ div.layout {
     position: fixed;
     top: 30px;
     left: 30px;
+    & div.list-tooltip-wrapper {
+
+      right: auto;
+      left: 66px;
+    }
   }
   & div.layout--server-services-wrapper{
 

@@ -318,6 +318,7 @@ div.layout--btn {
     & div.list-tooltip {
 
       padding: 5px;
+      max-width: 170px;
       z-index: 999;
       background: rgba(97, 97, 97, 0.9);
       border-radius: 2px;
