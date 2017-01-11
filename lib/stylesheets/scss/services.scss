@@ -129,7 +129,8 @@ div.layout--server-services-wrapper{
       }
       & div.start-server{
 
-        background: $google-blue;
+        //color: #fff;
+        //background: $google-blue;
         &:hover {
 
           & i {
@@ -153,25 +154,25 @@ div.layout--server-services-wrapper{
       }
       & div.run-dev{
 
-        background: rgba(212, 1, 0, 1);
+        //background: rgba(212, 1, 0, 1);
         opacity: 0;
         transition-delay: 0.1s;
       }
       & div.run-dbg{
 
-        background: $google-green;
+        //background: $google-green;
         opacity: 0;
         transition-delay: 0.2s;
       }
       & div.run-app{
 
-        background: rgba(233, 181, 2, 1);
+        //background: rgba(233, 181, 2, 1);
         opacity: 0;
         transition-delay: 0.3s;
       }
       & div.run-ut{
 
-        background: $google-blue;
+        //background: $google-blue;
         opacity: 0;
         transition-delay: 0.4s;
       }
@@ -264,31 +265,36 @@ div.layout--compile-services-wrapper {
       }
       & div.extract-msg {
 
-        background: #616161;
+        //background: #616161;
+        color: #616161;
         opacity: 0;
         transition-delay: 0.1s;
       }
       & div.calc-deps {
 
-        background: #616161;
+        //background: #616161;
+        color: #616161;
         opacity: 0;
         transition-delay: 0.2s;
       }
       & div.compile-css {
 
-        background: $google-green;
+        //background: $google-green;
+        color: $google-green;
         opacity: 0;
         transition-delay: 0.3s;
       }
       & div.compile-soy {
 
-        background: $google-orange;
+        //background: $google-orange;
+        color: $google-orange;
         opacity: 0;
         transition-delay: 0.4s;
       }
       & div.compile-models {
 
-        background: $google-blue;
+        //background: $google-blue;
+        color: $google-blue;
         opacity: 0;
         transition-delay: 0.5s;
       }
