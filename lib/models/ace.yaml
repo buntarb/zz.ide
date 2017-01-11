@@ -1,5 +1,8 @@
 NAMESPACE: 'zz.ide.models.Ace'
 
+REQUIRE:
+  -  'zz.ide.models.HistoryList'
+
 FIELDS:
 
   theme:
@@ -84,4 +87,10 @@ FIELDS:
 
       index: 13
       type:  zz.models.enums.FieldType.STRING
+      required: false
+
+  tabs:
+
+      index: 14
+      type:  zz.ide.models.HistoryList
       required: false
