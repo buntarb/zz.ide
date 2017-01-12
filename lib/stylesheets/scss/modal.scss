@@ -48,6 +48,13 @@ div.modal {
       text-align: center;
       resize: none;
     }
+    & div.modal--text {
+
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      text-align: center;
+    }
     & div.modal--buttons_dialog {
 
       margin-top: 20px;
