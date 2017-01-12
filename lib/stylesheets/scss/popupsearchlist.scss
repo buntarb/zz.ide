@@ -60,11 +60,15 @@ div.popupsearchlist-dataset {
       justify-content: flex-start;
       align-content: center;
       margin-right: 10px;
+      & i {
+
+        font-size: 20px;
+      }
     }
     & div.popupsearchlist-node--title {
 
       margin-right: 20px;
-      line-height: 22px;
+      line-height: 20px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -74,7 +78,7 @@ div.popupsearchlist-dataset {
       position: absolute;
       display: none;
       right: 10px;
-      top: 12px;
+      top: 10px;
       align-content: center;
       & i {
 
