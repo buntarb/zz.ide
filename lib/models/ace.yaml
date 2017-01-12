@@ -94,3 +94,9 @@ FIELDS:
       index: 14
       type:  zz.ide.models.HistoryList
       required: false
+
+  showHistory:
+
+      index: 15
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false

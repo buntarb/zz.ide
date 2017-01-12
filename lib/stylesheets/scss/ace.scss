@@ -86,6 +86,7 @@ div.ace {
       & div.ace-header--history {
 
         position: relative;
+        display: none;
         margin-left: 10px;
         font-size: 20px;
         & i.material-icons {
@@ -125,6 +126,10 @@ div.ace {
 
             display: block;
           }
+        }
+        &.show {
+
+          display: block;
         }
       }
       & div.ace-header--title {

@@ -98,7 +98,7 @@ ul.services-dataset {
 //layout server services styles
 div.layout--server-services-wrapper{
 
-  height: 57px;
+  height: 58px;
   transition: height 0.5s ease-in-out;
   &:hover {
 
@@ -120,6 +120,7 @@ div.layout--server-services-wrapper{
     & li.datarow {
 
       box-sizing: border-box;
+      width: 100%;
       & div.layout--btn{
 
         margin-bottom: 10px;
@@ -209,6 +210,7 @@ div.layout--compile-services-wrapper {
     & li.datarow {
 
       box-sizing: border-box;
+      width: 100%;
       & div.layout--btn {
 
         height: 57px;
