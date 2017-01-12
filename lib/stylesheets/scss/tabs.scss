@@ -20,8 +20,10 @@ ul.tabs-dataset {
       position: relative;
       box-sizing: border-box;
       padding: 0 5px;
-      max-width: 100px;
+      max-width: 200px;
+      height: 100%;
       font-size: 13px;
+      line-height: 20px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -31,6 +33,7 @@ ul.tabs-dataset {
       &.active {
 
         background: white;
+        max-width: 400px;
       }
     }
     &:last-child {
