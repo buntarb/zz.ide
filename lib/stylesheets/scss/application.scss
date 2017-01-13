@@ -95,5 +95,9 @@ html {
 
       outline: none;
     }
+    ::selection {
+
+      background: none;
+    }
   }
 }

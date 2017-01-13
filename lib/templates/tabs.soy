@@ -49,21 +49,22 @@
         class="{css tabs-node} {$value.cssClass}"
         data-class="{$key.active}:{css active}">
         <div
-            class="{css tabs-node--icon}"
+            class="{css tabs-node--title-wrapper}"
             data-open-list-item = "1"
             data-action>
-            <i
-                class="{css material-icons}"
-                data-model="{$key.icon}">
-                {$value.icon}
-            </i>
-        </div>
-        <div
-            class="{css tabs-node--title}"
-            data-model="{$key.name}"
-            data-open-list-item = "1"
-            data-action>
-            {$value.name}
+            <div
+                class="{css tabs-node--icon}">
+                <i
+                    class="{css material-icons}"
+                    data-model="{$key.icon}">
+                    {$value.icon}
+                </i>
+            </div>
+            <div
+                class="{css tabs-node--title}"
+                data-model="{$key.name}">
+                {$value.name}
+            </div>
         </div>
         <div
             class="{css tabs-node--remove}"
