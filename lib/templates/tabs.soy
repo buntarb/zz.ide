@@ -47,10 +47,11 @@
 {template .default}
     <div
         class="{css tabs-node} {$value.cssClass}"
-        data-class="{$key.active}:{css active}"
-        data-action>
+        data-class="{$key.active}:{css active}">
         <div
-            class="{css tabs-node--icon}">
+            class="{css tabs-node--icon}"
+            data-open-list-item = "1"
+            data-action>
             <i
                 class="{css material-icons}"
                 data-model="{$key.icon}">
@@ -59,8 +60,19 @@
         </div>
         <div
             class="{css tabs-node--title}"
-            data-model="{$key.name}">
+            data-model="{$key.name}"
+            data-open-list-item = "1"
+            data-action>
             {$value.name}
+        </div>
+        <div
+            class="{css tabs-node--remove}"
+            data-action
+            data-remove-from-list="1">
+            <i
+                class="{css material-icons}">
+                clear
+            </i>
         </div>
     </div>
 {/template}
