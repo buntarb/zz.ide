@@ -66,10 +66,19 @@ div.layout {
     position: fixed;
     bottom: 30px;
     right: 110px;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    -ms-transform: scale( 0.1, 0.1 );
+    -webkit-transform: scale( 0.1, 0.1 );
+    transform: scale( 0.1, 0.1 );
     color: #33ac71;
     &.show {
 
       display: block;
+      opacity: 1;
+      -ms-transform: scale( 1, 1 );
+      -webkit-transform: scale( 1, 1 );
+      transform: scale( 1, 1 );
     }
   }
   & div.layout--show-nav-btn {
@@ -78,6 +87,10 @@ div.layout {
     position: fixed;
     top: 30px;
     left: 30px;
+    opacity: 1;
+    -ms-transform: scale( 1, 1 );
+    -webkit-transform: scale( 1, 1 );
+    transform: scale( 1, 1 );
     & div.list-tooltip-wrapper {
 
       right: auto;
@@ -88,7 +101,7 @@ div.layout {
 
     position: fixed;
     display: none;
-    width: 58px;
+    width: 57px;
     top: 30px;
     right: 40px;
     overflow: hidden;
@@ -105,7 +118,7 @@ div.layout {
   & div.layout--compile-services-wrapper {
 
     position: fixed;
-    width: 58px;
+    width: 57px;
     bottom: 30px;
     right: 40px;
     overflow: hidden;
@@ -193,6 +206,11 @@ div.layout {
     & div.layout--show-nav-btn {
 
       display: none;
+      opacity: 0;
+      -ms-transform: scale( 0.1, 0.1 );
+      -webkit-transform: scale( 0.1, 0.1 );
+      transform: scale( 0.1, 0.1 );
+      transition: all 0.1s ease-in-out
     }
     & div.navigation-wrapper {
 

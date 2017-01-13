@@ -4,10 +4,12 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
+@import "constants";
 
 ul.tabs-dataset {
 
   display: flex;
+  height: 100%;
   flex-wrap: wrap;
   margin: 0 0 0 10px;
   padding: 0;
@@ -18,6 +20,9 @@ ul.tabs-dataset {
     & div.tabs-node {
 
       position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-sizing: border-box;
       padding: 0 5px;
       max-width: 200px;
@@ -34,6 +39,41 @@ ul.tabs-dataset {
 
         background: white;
         max-width: 400px;
+      }
+      & div.tabs-node--icon {
+
+        display: flex;
+        margin-right: 5px;
+        i {
+
+          margin: auto;
+          font-size: 20px;
+        }
+      }
+      & div.tabs-node--title {
+
+
+      }
+      &.styles {
+
+        i {
+
+          color: $google-green;
+        }
+      }
+      &.templates {
+
+         i {
+
+           color: $google-orange;
+         }
+       }
+      &.models {
+
+        i {
+
+          color: $google-blue;
+        }
       }
     }
     &:last-child {

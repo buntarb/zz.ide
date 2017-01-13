@@ -48,8 +48,19 @@
     <div
         class="{css tabs-node} {$value.cssClass}"
         data-class="{$key.active}:{css active}"
-        data-model="{$key.name}"
         data-action>
-        {$value.name}
+        <div
+            class="{css tabs-node--icon}">
+            <i
+                class="{css material-icons}"
+                data-model="{$key.icon}">
+                {$value.icon}
+            </i>
+        </div>
+        <div
+            class="{css tabs-node--title}"
+            data-model="{$key.name}">
+            {$value.name}
+        </div>
     </div>
 {/template}

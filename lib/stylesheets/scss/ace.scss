@@ -83,6 +83,10 @@ div.ace {
           line-height: 22px;
         }
       }
+      & div.ace-header--tabs-wrapper {
+
+        margin: -8px 0;
+      }
       & div.ace-header--history {
 
         position: relative;
