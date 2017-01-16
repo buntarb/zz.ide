@@ -10,7 +10,7 @@ ul.tabs-dataset {
 
   display: flex;
   height: 100%;
-  margin: 0 0 0 10px;
+  margin: 0;
   padding: 0;
   list-style: none;
   & li.datarow {
@@ -33,14 +33,6 @@ ul.tabs-dataset {
       &.active {
 
         background: white;
-        & div.tabs-node--title-wrapper {
-
-
-          & div.tabs-node--title {
-
-            max-width: 255px;
-          }
-        }
       }
       & div.tabs-node--title-wrapper {
 
@@ -60,7 +52,7 @@ ul.tabs-dataset {
         }
         & div.tabs-node--title {
 
-          max-width: 150px;
+          width: 180px;
           margin-right: 10px;
           white-space: nowrap;
           overflow: hidden;

@@ -58,6 +58,7 @@ div.ace {
     position: absolute;
     display: flex;
     display: -webkit-flex;
+    padding: 8px 20px 8px 0;
     top: 0;
     left: 0;
     right: 0;
@@ -66,7 +67,6 @@ div.ace {
     justify-content: space-between;
     box-sizing: border-box;
     height: 37px;
-    padding: 8px 20px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.24 );
 
     & div.ace-header--left {
