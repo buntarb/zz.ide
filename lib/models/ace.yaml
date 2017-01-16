@@ -77,26 +77,14 @@ FIELDS:
       type:  zz.ide.models.Services
       required: false
 
-  headerIcon:
-
-      index: 12
-      type:  zz.models.enums.FieldType.STRING
-      required: false
-
-  headerIconClass:
-
-      index: 13
-      type:  zz.models.enums.FieldType.STRING
-      required: false
-
   tabs:
 
-      index: 14
+      index: 12
       type:  zz.ide.models.HistoryList
       required: false
 
   showHistory:
 
-      index: 15
+      index: 13
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
