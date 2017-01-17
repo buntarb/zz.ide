@@ -34,6 +34,10 @@ div.layout {
     text-align: center;
     line-height: 62px;
   }
+  & div.layout--show-nav-btn {
+
+    transition: all 0.1s ease-in-out;
+  }
   & div.layout--back-btn {
 
     display: none;
@@ -62,20 +66,17 @@ div.layout {
   }
   & div.layout--add-btn {
 
-    display: none;
     position: fixed;
     bottom: 30px;
     right: 110px;
-    opacity: 0;
     transition: all 0.1s ease-in-out;
-    -ms-transform: scale( 0.1, 0.1 );
-    -webkit-transform: scale( 0.1, 0.1 );
-    transform: scale( 0.1, 0.1 );
+    -webkit-transition: all 0.1s ease-in-out;;
+    -ms-transform: scale( 0, 0 );
+    -webkit-transform: scale( 0, 0 );
+    transform: scale( 0, 0 );
     color: #33ac71;
     &.show {
 
-      display: block;
-      opacity: 1;
       -ms-transform: scale( 1, 1 );
       -webkit-transform: scale( 1, 1 );
       transform: scale( 1, 1 );
@@ -83,7 +84,6 @@ div.layout {
   }
   & div.layout--show-nav-btn {
 
-    display: block;
     position: fixed;
     top: 30px;
     left: 30px;
@@ -205,12 +205,10 @@ div.layout {
     }
     & div.layout--show-nav-btn {
 
-      display: none;
       opacity: 0;
-      -ms-transform: scale( 0.1, 0.1 );
-      -webkit-transform: scale( 0.1, 0.1 );
-      transform: scale( 0.1, 0.1 );
-      transition: all 0.1s ease-in-out
+      -ms-transform: scale( 0, 0 );
+      -webkit-transform: scale( 0, 0 );
+      transform: scale( 0, 0 );
     }
     & div.navigation-wrapper {
 
