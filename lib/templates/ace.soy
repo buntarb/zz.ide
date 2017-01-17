@@ -57,6 +57,40 @@
         <div
             class="{css ace-header--right}">
             <div
+                class="{css ace-header--undo}">
+                <i
+                    class="{css material-icons}"
+                    data-class="{$key.canUndo}:{css can}"
+                    data-action
+                    data-undo="1">
+                    undo
+                </i>
+                <div
+                    class="{css list-tooltip-wrapper}">
+                    <div
+                        class="{css list-tooltip}">
+                        Undo
+                    </div>
+                </div>
+            </div>
+            <div
+                 class="{css ace-header--redo}">
+                 <i
+                     class="{css material-icons}"
+                     data-class="{$key.canRedo}:{css can}"
+                     data-action
+                     data-redo="1">
+                     redo
+                 </i>
+                 <div
+                     class="{css list-tooltip-wrapper}">
+                     <div
+                         class="{css list-tooltip}">
+                         Redo
+                     </div>
+                 </div>
+            </div>
+            <div
                 class="{css ace-header--save-file}">
                 <i
                     class="{css material-icons}"

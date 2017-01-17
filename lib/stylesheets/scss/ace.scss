@@ -234,7 +234,9 @@ div.ace {
       justify-content: flex-start;
       & div.ace-header--save-file,
       & div.ace-header--find,
-      & div.ace-header--replace {
+      & div.ace-header--replace,
+      & div.ace-header--redo,
+      & div.ace-header--undo {
 
         position: relative;
         margin-right: 5px;
@@ -277,6 +279,24 @@ div.ace {
 
             display: block;
           }
+        }
+      }
+      & div.ace-header--redo,
+      & div.ace-header--undo {
+
+        & i {
+
+          opacity: 0.5;
+          cursor: default;
+        }
+      }
+      & div.ace-header--redo,
+      & div.ace-header--undo {
+
+        & i.can {
+
+          opacity: 1;
+          cursor: pointer;
         }
       }
       & div.ace-header--save-file {

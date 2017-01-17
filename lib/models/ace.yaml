@@ -88,3 +88,15 @@ FIELDS:
       index: 13
       type:  zz.models.enums.FieldType.BOOLEAN
       required: false
+
+  canRedo:
+
+      index: 14
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
+
+  canUndo:
+
+      index: 14
+      type:  zz.models.enums.FieldType.BOOLEAN
+      required: false
