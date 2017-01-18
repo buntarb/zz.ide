@@ -6,6 +6,24 @@
 
 @import "constants";
 
+div.layout.server-is-started {
+
+  & div.layout--server-services-wrapper {
+
+    & ul.services-dataset {
+
+      & li.datarow {
+
+        & div.services-node {
+
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
 ul.services-dataset {
 
   display: flex;
@@ -27,8 +45,9 @@ ul.services-dataset {
       height: 56px;
       font-size: 13px;
       color: #4c4c4c;
-      cursor: pointer;
       z-index: 40;
+      cursor: default;
+      opacity: 0.5;
       -webkit-transition: background-color, border-bottom .3s, .3s ease, ease;
       -moz-transition: background-color, border-bottom .3s, .3s ease, ease;
       -o-transition: background-color, border-bottom .3s, .3s ease, ease;
@@ -40,6 +59,8 @@ ul.services-dataset {
       &.start-server {
 
         border-bottom: 2px solid rgba(0, 102, 206, 0.4);
+        opacity: 1;
+        cursor: pointer;
         &:hover {
 
           border-bottom: 2px solid #0066ce;
@@ -96,6 +117,29 @@ ul.services-dataset {
 }
 
 //layout server services styles
+div.layout.server-is-started {
+
+  div.layout--server-services-wrapper {
+
+    &:hover {
+
+      ul.services-dataset {
+
+        & li.datarow {
+
+          & div.layout--btn {
+
+            opacity: 1;
+            cursor: pointer;
+            -ms-transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}
 div.layout--server-services-wrapper{
 
   height: 58px;
@@ -107,9 +151,10 @@ div.layout--server-services-wrapper{
 
       & li.datarow {
 
-        & div.layout--btn {
+        & div.layout--btn:not(.start-server) {
 
-          opacity: 1;
+          opacity: 0.5;
+          cursor: default;
           -ms-transform: scale( 1, 1 );
           -webkit-transform: scale( 1, 1 );
           transform: scale( 1, 1 );
@@ -135,6 +180,7 @@ div.layout--server-services-wrapper{
 
         //color: #fff;
         //background: $google-blue;
+        opacity: 1;
         &:hover {
 
           & i {

@@ -82,6 +82,11 @@ FIELDS:
     type:  zz.models.enums.FieldType.BOOLEAN
     required: false
 
+  serverIsStarted:
+
+    index: 13
+    type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
 
 #  backBtnShow:
 #
