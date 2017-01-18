@@ -286,7 +286,7 @@ div.ace {
 
         & i {
 
-          opacity: 0.5;
+          opacity: 0.1;
           cursor: default;
         }
       }
@@ -326,6 +326,10 @@ div.ace {
 
     position: relative;
     box-sizing: border-box;
+    & div.ace_gutter {
+
+      z-index: 1;
+    }
   }
   & div.ace-footer {
 

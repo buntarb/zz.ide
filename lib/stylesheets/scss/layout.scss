@@ -34,7 +34,12 @@ div.layout {
     text-align: center;
     line-height: 62px;
   }
-  & div.layout--show-nav-btn {
+  & div.list-tooltip-wrapper {
+
+    z-index: 9999;
+  }
+  & div.layout--show-nav-btn,
+  & div.layout--back-to-folder-btn {
 
     transition: all 0.1s ease-in-out;
   }
@@ -86,7 +91,23 @@ div.layout {
 
     position: fixed;
     top: 30px;
-    left: 30px;
+    left: 40px;
+    opacity: 1;
+    -ms-transform: scale( 1, 1 );
+    -webkit-transform: scale( 1, 1 );
+    transform: scale( 1, 1 );
+    z-index: 10;
+    & div.list-tooltip-wrapper {
+
+      right: auto;
+      left: 66px;
+    }
+  }
+  & div.layout--back-to-folder-btn {
+
+    position: fixed;
+    top: 30px;
+    left: 110px;
     opacity: 1;
     -ms-transform: scale( 1, 1 );
     -webkit-transform: scale( 1, 1 );
@@ -203,7 +224,8 @@ div.layout {
       -webkit-transform: translateY(0);
       transform: translateY(0);
     }
-    & div.layout--show-nav-btn {
+    & div.layout--show-nav-btn,
+    & div.layout--back-to-folder-btn{
 
       opacity: 0;
       -ms-transform: scale( 0, 0 );
