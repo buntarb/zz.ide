@@ -1,8 +1,7 @@
 {
   "debug": true,
   "libs": [
-    "browser",
-    "ecmascript"
+    "browser"
   ],
   "dontLoad": [ ],
   "loadEagerly": [ ],
@@ -11,7 +10,7 @@
     "closure": {
         "debug": true,
         "finder": {
-            "name": "grep",
+            "name": "../../lib/ide/zz.ide.finder",
             "dirs": [ "." ]
         }
     }
