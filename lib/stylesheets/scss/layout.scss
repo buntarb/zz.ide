@@ -25,6 +25,7 @@ div.layout {
     border: none;
     //background: #ff4081;
     //color: white;
+    box-sizing: border-box;
     background: #fff;
     color: #4285f4;
     border-radius: 50%;
@@ -118,41 +119,91 @@ div.layout {
       left: 66px;
     }
   }
-  & div.layout--server-services-wrapper{
+  & div.layout--services-wrapper {
 
     position: fixed;
-    display: none;
-    width: 57px;
-    top: 30px;
+    top: 25px;
+    bottom: 25px;
     right: 40px;
+    width: 220px;
+    padding: 0 5px 0 152px;
+    box-sizing: border-box;
     overflow: hidden;
-    z-index: 100;
-    &.show {
+    z-index: 10;
+    & div.layout--server-services-wrapper{
 
-      display: block;
+      position: static;
+      display: none;
+      width: 68px;
+      height: 47%;
+      padding: 5px;
+      transition: height 0.2s ease-in-out;
+      box-sizing: border-box;
+      z-index: 100;
+      &.show {
+
+        display: block;
+      }
+      &.hover {
+
+        overflow: visible;
+      }
+      &.animation {
+
+        z-index: 999;
+      }
     }
-    &:hover {
+    & div.layout-services-delimeter {
 
-      overflow: visible;
+      position: static;
+      height: 6%;
     }
-  }
-  & div.layout--compile-services-wrapper {
+    & div.layout--compile-services-wrapper {
 
-    position: fixed;
-    width: 57px;
-    bottom: 30px;
-    right: 40px;
-    overflow: hidden;
-    z-index: 100;
-    &:hover {
+      position: static;
+      width: 68px;
+      height: 47%;
+      padding: 5px;
+      box-sizing: border-box;
+      transition: height 0.2s;
+      z-index: 100;
+      &.hover {
 
-      overflow: visible;
-    }
-    & div.compile-app {
-        
+        overflow: visible;
+      }
+      &.animation {
+
+        z-index: 999;
+      }
+      & div.compile-app {
+
         //color: #4285f4;
         color: #fff;
         background: $google-blue;
+      }
+    }
+    &.hover {
+
+      & div.layout--server-services-wrapper {
+
+        height: 56px;
+        &.hover {
+
+          height: 330px;
+        }
+      }
+      & div.layout--compile-services-wrapper {
+
+        position: absolute;
+        bottom: 0;
+        height: 56px;
+        &.hover {
+
+          position: absolute;
+          bottom: 0;
+          height: 401px;
+        }
+      }
     }
   }
   & div.header-wrapper {

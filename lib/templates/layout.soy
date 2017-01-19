@@ -136,17 +136,25 @@
             </div>
         </div>
         <div
-            class="{css layout--server-services-wrapper}"
-            data-class="{$key.serverServicesIsShown}:{css show}"
-            data-model="{$key.serverServices}"
-            data-controller="serverServices"
-            data-view="services">
-        </div>
-        <div
-            class="{css layout--compile-services-wrapper}"
-            data-model="{$key.compileServices}"
-            data-controller="compileServices"
-            data-view="services">
+            class="{css layout--services-wrapper}">
+            <div
+                class="{css layout--server-services-wrapper}"
+                data-class="{$key.serverServicesIsShown}:{css show}"
+                data-model="{$key.serverServices}"
+                data-controller="serverServices"
+                data-view="services"
+                data-hover>
+            </div>
+            <div
+                class="{css layout-services-delimeter}">
+            </div>
+            <div
+                class="{css layout--compile-services-wrapper}"
+                data-model="{$key.compileServices}"
+                data-controller="compileServices"
+                data-view="services"
+                data-hover>
+            </div>
         </div>
     </div>
 {/template}

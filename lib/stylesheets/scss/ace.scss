@@ -326,7 +326,8 @@ div.ace {
 
     position: relative;
     box-sizing: border-box;
-    & div.ace_gutter {
+    & div.ace_gutter,
+    & div.ace_scrollbar {
 
       z-index: 1;
     }
