@@ -93,6 +93,7 @@ ul.services-dataset {
       &.run-ut {
 
         border-bottom: 2px solid rgba(0, 102, 206, 0.4);
+
         &:hover {
 
           border-bottom: 2px solid #0066ce;
@@ -176,33 +177,20 @@ div.layout {
       }
       &.blur {
 
-        & div.start-server.layout--btn {
-
-          & i {
-
-            animation-name: anti_spin;
-            animation-duration: 500ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-          }
-        }
         ul.services-dataset {
 
-          padding: 0;
           & li.datarow {
 
-            box-sizing: border-box;
-            width: 100%;
-            & div.layout--btn{
-
-              margin-bottom: 10px;
-              transition-property: all;
-              transition-duration: 0.1s;
-              transition-timing-function: ease-in-out;
-            }
-            & div.start-server{
+            & div.start-server.layout--btn {
 
               opacity: 1;
+              & i {
+
+                animation-name: anti_spin;
+                animation-duration: 500ms;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+              }
             }
             & div.run-dev{
 
