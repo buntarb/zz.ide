@@ -8,6 +8,7 @@
 div.layout {
 
   position: relative;
+  min-width: 768px;
   box-sizing: border-box;
   transition: padding-top 0.15s ease-in-out;
   & div.layout--btn {
@@ -132,7 +133,8 @@ div.layout {
     z-index: 10;
     & div.layout--server-services-wrapper{
 
-      position: static;
+      position: absolute;
+      top: 0;
       display: none;
       width: 68px;
       height: 47%;
@@ -160,7 +162,8 @@ div.layout {
     }
     & div.layout--compile-services-wrapper {
 
-      position: static;
+      position: absolute;
+      bottom: 0;
       width: 68px;
       height: 47%;
       padding: 5px;

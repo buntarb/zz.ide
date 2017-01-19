@@ -10,11 +10,13 @@ ul.tabs-dataset {
 
   display: flex;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   & li.datarow {
 
+    width: 33.3%;
     box-sizing: border-box;
     & div.tabs-node {
 
@@ -25,6 +27,7 @@ ul.tabs-dataset {
       box-sizing: border-box;
       padding: 0 5px;
       height: 100%;
+      width: 100%;
       font-size: 13px;
       line-height: 20px;
       color: #4c4c4c;
@@ -38,6 +41,7 @@ ul.tabs-dataset {
 
         display: flex;
         height: 100%;
+        width: calc( 100% - 20px );
         justify-content: space-between;
         align-items: center;
         & div.tabs-node--icon {
@@ -52,7 +56,8 @@ ul.tabs-dataset {
         }
         & div.tabs-node--title {
 
-          width: 170px;
+         // width: 170px;
+          width: calc( 100% - 25px );
           margin-right: 10px;
           white-space: nowrap;
           overflow: hidden;
