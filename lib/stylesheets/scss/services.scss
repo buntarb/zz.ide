@@ -481,43 +481,6 @@ div.layout {
   }
 }
 
-
-div.layout--btn {
-
-  position: relative;
-  &:hover {
-
-    & div.list-tooltip-wrapper {
-
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-  }
-  & div.list-tooltip-wrapper {
-
-    position: absolute;
-    display: none;
-    right: 66px;
-    top: 0;
-    bottom: 0;
-    & div.list-tooltip {
-
-      padding: 5px;
-      max-width: 170px;
-      z-index: 999;
-      background: rgba(97, 97, 97, 0.9);
-      border-radius: 2px;
-      color: white;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 14px;
-      white-space: nowrap;
-      text-align: center;
-    }
-  }
-}
-
 @keyframes spin {
 
   from {

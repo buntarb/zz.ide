@@ -160,34 +160,6 @@ div.ace {
             color: black;
           }
         }
-        & div.list-tooltip-wrapper {
-
-          position: absolute;
-          display: none;
-          top: 30px;
-          left: -10px;
-          & div.list-tooltip {
-
-            padding: 5px;
-            max-width: 170px;
-            z-index: 999;
-            background: rgba(97, 97, 97, 0.9);
-            border-radius: 2px;
-            color: white;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 14px;
-            white-space: nowrap;
-            text-align: center;
-          }
-        }
-        &:hover {
-
-          & div.list-tooltip-wrapper {
-
-            display: block;
-          }
-        }
         &.show {
 
           display: block;
@@ -213,34 +185,6 @@ div.ace {
             color: black;
           }
         }
-        & div.list-tooltip-wrapper {
-
-          position: absolute;
-          display: none;
-          top: 30px;
-          left: -10px;
-          & div.list-tooltip {
-
-            padding: 5px;
-            max-width: 170px;
-            z-index: 999;
-            background: rgba(97, 97, 97, 0.9);
-            border-radius: 2px;
-            color: white;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 14px;
-            white-space: nowrap;
-            text-align: center;
-          }
-        }
-        &:hover {
-
-          & div.list-tooltip-wrapper {
-
-            display: block;
-          }
-        }
       }
       & div.ace-header--redo,
       & div.ace-header--undo {
@@ -260,27 +204,6 @@ div.ace {
           cursor: pointer;
         }
       }
-      & div.ace-header--save-file {
-
-        & div.list-tooltip-wrapper {
-
-          left: -9px;
-        }
-      }
-      & div.ace-header--find {
-
-        & div.list-tooltip-wrapper {
-
-          left: -7px;
-        }
-      }
-      & div.ace-header--replace {
-
-         & div.list-tooltip-wrapper {
-
-           left: -16px;
-         }
-       }
     }
   }
   & div.ace-editor {

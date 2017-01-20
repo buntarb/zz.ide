@@ -36,10 +36,6 @@ div.layout {
     text-align: center;
     line-height: 62px;
   }
-  & div.list-tooltip-wrapper {
-
-    z-index: 9999;
-  }
   & div.layout--show-nav-btn,
   & div.layout--back-to-folder-btn {
 
@@ -99,11 +95,6 @@ div.layout {
     -webkit-transform: scale( 1, 1 );
     transform: scale( 1, 1 );
     z-index: 10;
-    & div.list-tooltip-wrapper {
-
-      right: auto;
-      left: 66px;
-    }
   }
   & div.layout--back-to-folder-btn {
 
@@ -114,20 +105,14 @@ div.layout {
     -ms-transform: scale( 1, 1 );
     -webkit-transform: scale( 1, 1 );
     transform: scale( 1, 1 );
-    & div.list-tooltip-wrapper {
-
-      right: auto;
-      left: 66px;
-    }
   }
   & div.layout--services-wrapper {
 
     position: fixed;
     top: 25px;
     bottom: 25px;
-    right: 40px;
-    width: 220px;
-    padding: 0 5px 0 152px;
+    right: 30px;
+    width: 68px;
     box-sizing: border-box;
     overflow: hidden;
     z-index: 10;
