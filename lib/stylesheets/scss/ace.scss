@@ -7,47 +7,6 @@
 
 @import "constants";
 
-div.dataset.models {
-
-  & div.ace-header {
-
-    & div.ace-header--left {
-
-      & div.ace-header--icon {
-
-        color: $google-blue;
-      }
-    }
-  }
-}
-
-div.dataset.templates {
-
-  & div.ace-header {
-
-    & div.ace-header--left {
-
-      & div.ace-header--icon {
-
-        color: $google-orange;
-      }
-    }
-  }
-}
-
-div.dataset.styles {
-
-  & div.ace-header {
-
-    & div.ace-header--left {
-
-      & div.ace-header--icon {
-
-        color: $google-green;
-      }
-    }
-  }
-}
 div.ace {
 
   position: relative;
@@ -73,6 +32,7 @@ div.ace {
 
       display: flex;
       display: -webkit-flex;
+      width: calc( 100% - 160px );
       justify-content: flex-start;
       & div.ace-header--icon {
 
@@ -85,56 +45,8 @@ div.ace {
       }
       & div.ace-header--tabs-wrapper {
 
+        width: 100%;
         margin: -8px 0;
-      }
-      & div.ace-header--history {
-
-        position: relative;
-        display: none;
-        margin-left: 10px;
-        font-size: 20px;
-        & i.material-icons {
-
-          height: 100%;
-          line-height: 22px;
-          cursor: pointer;
-          &:hover {
-
-            color: black;
-          }
-        }
-        & div.list-tooltip-wrapper {
-
-          position: absolute;
-          display: none;
-          top: 30px;
-          left: -10px;
-          & div.list-tooltip {
-
-            padding: 5px;
-            max-width: 170px;
-            z-index: 999;
-            background: rgba(97, 97, 97, 0.9);
-            border-radius: 2px;
-            color: white;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 14px;
-            white-space: nowrap;
-            text-align: center;
-          }
-        }
-        &:hover {
-
-          & div.list-tooltip-wrapper {
-
-            display: block;
-          }
-        }
-        &.show {
-
-          display: block;
-        }
       }
       & div.ace-header--title {
 
@@ -232,6 +144,27 @@ div.ace {
       display: flex;
       display: -webkit-flex;
       justify-content: flex-start;
+      & div.ace-header--history {
+
+        position: relative;
+        display: none;
+        margin-right: 5px;
+        font-size: 20px;
+        & i.material-icons {
+
+          height: 100%;
+          line-height: 22px;
+          cursor: pointer;
+          &:hover {
+
+            color: black;
+          }
+        }
+        &.show {
+
+          display: block;
+        }
+      }
       & div.ace-header--save-file,
       & div.ace-header--find,
       & div.ace-header--replace,
@@ -250,34 +183,6 @@ div.ace {
           &:hover {
 
             color: black;
-          }
-        }
-        & div.list-tooltip-wrapper {
-
-          position: absolute;
-          display: none;
-          top: 30px;
-          left: -10px;
-          & div.list-tooltip {
-
-            padding: 5px;
-            max-width: 170px;
-            z-index: 999;
-            background: rgba(97, 97, 97, 0.9);
-            border-radius: 2px;
-            color: white;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 14px;
-            white-space: nowrap;
-            text-align: center;
-          }
-        }
-        &:hover {
-
-          & div.list-tooltip-wrapper {
-
-            display: block;
           }
         }
       }
@@ -299,27 +204,6 @@ div.ace {
           cursor: pointer;
         }
       }
-      & div.ace-header--save-file {
-
-        & div.list-tooltip-wrapper {
-
-          left: -9px;
-        }
-      }
-      & div.ace-header--find {
-
-        & div.list-tooltip-wrapper {
-
-          left: -7px;
-        }
-      }
-      & div.ace-header--replace {
-
-         & div.list-tooltip-wrapper {
-
-           left: -16px;
-         }
-       }
     }
   }
   & div.ace-editor {

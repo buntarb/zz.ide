@@ -33,7 +33,8 @@ div.header {
       display: flex;
       display: -webkit-flex;
       position: relative;
-      justify-content: space-between;
+      min-width: 200px;
+      justify-content: flex-start;
       align-items: center;
     & div.header--folder-title {
 
@@ -150,5 +151,13 @@ div.header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 845px) {
+
+  div.services-node--title {
+
+    displaY: none;
   }
 }

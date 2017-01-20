@@ -8,16 +8,28 @@
 
 div.layout.server-is-started {
 
-  & div.layout--server-services-wrapper {
+  & div.header-wrapper {
 
-    & ul.services-dataset {
+    & div.dataset {
 
-      & li.datarow {
+      & div.datarow {
 
-        & div.services-node {
+        & div.header {
 
-          opacity: 1;
-          cursor: pointer;
+          & div.header--services-wrapper {
+
+            & ul.dataset {
+
+              & li.datarow {
+
+                & div.services-node {
+
+                  opacity: 1;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -118,32 +130,63 @@ ul.services-dataset {
 }
 
 //layout server services styles
-div.layout.server-is-started {
+div.layout {
 
-  & div.layout--server-services-wrapper {
+  &.server-is-started {
 
-    &.hover {
+    & div.layout--services-wrapper {
 
-      height: 330px;
-      ul.services-dataset {
+      & div.layout--server-services-wrapper {
 
-        & li.datarow {
+        &.hover {
 
-          & div.layout--btn {
+          height: 330px;
+          ul.services-dataset {
 
-            opacity: 1;
-            cursor: pointer;
-            -ms-transform: scale(1, 1);
-            -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+            & li.datarow {
+
+              & div.layout--btn {
+
+                opacity: 1;
+                cursor: pointer;
+                -ms-transform: scale(1, 1);
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+              }
+            }
+          }
+        }
+        & ul.dataset {
+
+          & li.datarow {
+
+            & div.layout--btn {
+
+              opacity: 1;
+              cursor: pointer;
+            }
           }
         }
       }
     }
   }
-}
-div.layout {
+  & div.layout--services-wrapper {
 
+    & div.layout--server-services-wrapper {
+
+      & ul.services-dataset {
+
+        & li.datarow {
+
+          & div.layout--btn:not(.start-server) {
+
+            opacity: 0.5;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
   & div.layout--services-wrapper {
 
     & div.layout--server-services-wrapper{
@@ -156,8 +199,6 @@ div.layout {
 
             & div.layout--btn:not(.start-server) {
 
-              opacity: 0.5;
-              cursor: default;
               -ms-transform: scale( 1, 1 );
               -webkit-transform: scale( 1, 1 );
               transform: scale( 1, 1 );
@@ -290,6 +331,16 @@ div.layout {
             }
             & div.compile-app.layout--btn {
 
+              &.compiling {
+
+                i {
+
+                  animation-name: spin;
+                  animation-duration: 500ms;
+                  animation-iteration-count: infinite;
+                  animation-timing-function: linear;
+                }
+              }
               & i {
 
                 animation-name: spin;
@@ -426,43 +477,6 @@ div.layout {
           }
         }
       }
-    }
-  }
-}
-
-
-div.layout--btn {
-
-  position: relative;
-  &:hover {
-
-    & div.list-tooltip-wrapper {
-
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-  }
-  & div.list-tooltip-wrapper {
-
-    position: absolute;
-    display: none;
-    right: 66px;
-    top: 0;
-    bottom: 0;
-    & div.list-tooltip {
-
-      padding: 5px;
-      max-width: 170px;
-      z-index: 999;
-      background: rgba(97, 97, 97, 0.9);
-      border-radius: 2px;
-      color: white;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 14px;
-      white-space: nowrap;
-      text-align: center;
     }
   }
 }
