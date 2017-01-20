@@ -63,6 +63,12 @@
             data-popup-wrapper='1'>
         </div>
         <div
+            class="{css tooltip-wrapper}"
+            data-model="{$key.tooltip}"
+            data-view="tooltip"
+            data-controller="tooltip">
+        </div>
+        <div
             id="{css view-wrapper}"
             class="{css view-wrapper}">
         </div>
@@ -88,8 +94,10 @@
 //        </div>
         <div
             class="{css layout--btn} {css layout--show-nav-btn}"
-            data-action
-            data-show-navigation="1">
+            data-action{sp}
+            data-hover
+            data-show-navigation="1"
+            data-tooltip="Navigation">
             <i
                 class="{css material-icons}">
                 menu
@@ -97,8 +105,10 @@
         </div>
         <div
             class="{css layout--btn} {css layout--back-to-folder-btn}"
-            data-action
-            data-back-to-folder="1">
+            data-action{sp}
+            data-hover
+            data-back-to-folder="1"
+            data-tooltip="Back to previous folder">
             <i
                 class="{css material-icons}">
                 arrow_back
@@ -107,8 +117,10 @@
         <div
             class="{css layout--add-btn} {css layout--btn}"
             data-class="{$key.addBtnShow}:{css show}"
-            data-action
-            data-add-btn='1'>
+            data-action{sp}
+            data-hover
+            data-add-btn='1'
+            data-tooltip="Add file">
             <i
                 class="{css material-icons}">
                 add
@@ -132,6 +144,8 @@
                 data-model="{$key.compileServices}"
                 data-controller="compileServices"
                 data-view="services"
+                onmouseover="console.log( 'over' )"
+                onmouseout="console.log( 'out' )"
                 data-hover>
             </div>
         </div>

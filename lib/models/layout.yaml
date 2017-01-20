@@ -6,6 +6,7 @@ REQUIRE:
   -  'zz.ide.models.Modal'
   -  'zz.ide.models.Error'
   -  'zz.ide.models.Popup'
+  -  'zz.ide.models.Tooltip'
   -  'zz.ui.models.List'
 
 FIELDS:
@@ -86,6 +87,12 @@ FIELDS:
 
     index: 13
     type:  zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  tooltip:
+
+    index: 14
+    type: zz.ide.models.Tooltip
     required: false
 
 #  backBtnShow:

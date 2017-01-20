@@ -1,0 +1,30 @@
+/**
+* @fileoverview zz.ide main stylesheets files.
+* @license Apache-2.0
+* @author buntarb@gmail.com (Artem Lytvynov)
+*/
+
+
+div.tooltip {
+
+  position: absolute;
+  display: none;
+  z-index: 30;
+  &.show {
+
+    display: block;
+  }
+  & div.tooltip-txt {
+
+    max-width: 220px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    background: #323232;
+    overflow: hidden;
+    z-index: 30;
+  }
+}
