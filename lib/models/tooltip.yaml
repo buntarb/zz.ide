@@ -2,28 +2,10 @@ NAMESPACE: 'zz.ide.models.Tooltip'
 
 FIELDS:
 
-  id:
-
-    index: 0
-    type:  zz.models.enums.FieldType.STRING
-    required: false
-
-  text:
+ text:
 
     index: 1
     type:  zz.models.enums.FieldType.STRING
-    required: false
-
-  top:
-
-    index: 2
-    type:  zz.models.enums.FieldType.NUMBER
-    required: false
-
-  left:
-
-    index: 3
-    type:  zz.models.enums.FieldType.NUMBER
     required: false
 
 

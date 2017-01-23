@@ -191,8 +191,12 @@ div.ace {
 
         & i {
 
-          opacity: 0.1;
+          color: rgba( #4c4c4c, 0.1 );
           cursor: default;
+          &:hover {
+
+            color: rgba( #4c4c4c, 0.5 );;
+          }
         }
       }
       & div.ace-header--redo,
@@ -200,8 +204,12 @@ div.ace {
 
         & i.can {
 
-          opacity: 1;
+          color: #4c4c4c;
           cursor: pointer;
+          &:hover {
+
+          color: black;
+        }
         }
       }
     }

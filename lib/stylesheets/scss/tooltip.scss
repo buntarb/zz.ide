@@ -4,36 +4,28 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-//
-//div.tooltip {
-//
-//  position: absolute;
-//  display: none;
-//  z-index: 30;
-//  &.show {
-//
-//    display: block;
-//  }
-//  & div.tooltip-text {
-//
-//    max-width: 220px;
-//    padding: 8px;
-//    box-sizing: border-box;
-//    border-radius: 4px;
-//    font-size: 11px;
-//    text-align: center;
-//    color: white;
-//    background: #323232;
-//    overflow: hidden;
-//    z-index: 30;
-//  }
-//}
-
 div.tooltip {
 
   position: absolute;
   left: 0;
   width: 100%;
+  &.tooltip_left {
+
+    top: 50%;
+    right: calc( 50% + 5px );
+    left: auto;
+    & div.tooltip--x {
+
+      & div.tooltip--y {
+
+        & div.tooltip--text {
+
+          float: right;
+          margin-top: -15px;
+        }
+      }
+    }
+  }
   & div.tooltip--x {
 
     width: 100%;
