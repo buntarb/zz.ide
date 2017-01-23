@@ -4,27 +4,74 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
+//
+//div.tooltip {
+//
+//  position: absolute;
+//  display: none;
+//  z-index: 30;
+//  &.show {
+//
+//    display: block;
+//  }
+//  & div.tooltip-text {
+//
+//    max-width: 220px;
+//    padding: 8px;
+//    box-sizing: border-box;
+//    border-radius: 4px;
+//    font-size: 11px;
+//    text-align: center;
+//    color: white;
+//    background: #323232;
+//    overflow: hidden;
+//    z-index: 30;
+//  }
+//}
 
 div.tooltip {
 
   position: absolute;
-  display: none;
-  z-index: 30;
-  &.show {
+  left: 0;
+  width: 100%;
+  & div.tooltip--x {
 
-    display: block;
-  }
-  & div.tooltip-txt {
-
-    max-width: 220px;
-    padding: 8px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-size: 11px;
-    text-align: center;
-    color: white;
-    background: #323232;
-    overflow: hidden;
+    width: 100%;
+    height: 0;
     z-index: 30;
+    & div.tooltip--y {
+
+      position: relative;
+      width: 0;
+      height: 100%;
+      margin: 0 auto;
+      & div.tooltip--text {
+
+        max-width: 220px;
+        padding: 8px;
+        float: left;
+        box-sizing: border-box;
+        font-size: 11px;
+        text-align: center;
+        color: white;
+        background: #323232;
+        overflow: hidden;
+        line-height: 14px;
+        font-family: 'Open Sans';
+        white-space: nowrap;
+        z-index: 30;
+        transition: transform 0.1s ease-in-out;
+        -webkit-transition: -webkit-transform 0.05s ease-in-out;
+        -ms-transform: scale( 0, 0 );
+        -webkit-transform: scale( 0, 0 );
+        transform: scale( 0, 0 );
+        &.show {
+
+          -ms-transform: scale( 1, 1 );
+          -webkit-transform: scale( 1, 1 );
+          transform: scale( 1, 1 );
+        }
+      }
+    }
   }
 }

@@ -73,7 +73,7 @@ div.layout {
     bottom: 30px;
     right: 110px;
     transition: all 0.1s ease-in-out;
-    -webkit-transition: all 0.1s ease-in-out;;
+    -webkit-transition: all 0.1s ease-in-out;
     -ms-transform: scale( 0, 0 );
     -webkit-transform: scale( 0, 0 );
     transform: scale( 0, 0 );
@@ -193,6 +193,10 @@ div.layout {
         }
       }
     }
+  }
+  & div.tooltip-wrapper {
+
+    display: none;
   }
   & div.header-wrapper {
 
