@@ -7,21 +7,51 @@
 div.tooltip {
 
   position: absolute;
+  top: calc( 100% + 10px );
   left: 0;
   width: 100%;
   &.tooltip_left {
 
     top: 50%;
-    right: calc( 50% + 5px );
+    right: calc( 100% + 10px);
     left: auto;
+    & div.tooltip--x {
+
+      & div.tooltip--y {
+
+        margin: 0;
+        & div.tooltip--text {
+
+        }
+      }
+    }
+  }
+  &.tooltip_right {
+
+    top: 50%;
+    left: calc( 100% + 10px);
+    right: auto;
+    & div.tooltip--x {
+
+      & div.tooltip--y {
+
+        margin: 0;
+        & div.tooltip--text {
+
+        }
+      }
+    }
+  }
+  &.tooltip_top {
+
+    top: auto;
+    bottom: calc( 100% + 10px );
     & div.tooltip--x {
 
       & div.tooltip--y {
 
         & div.tooltip--text {
 
-          float: right;
-          margin-top: -15px;
         }
       }
     }

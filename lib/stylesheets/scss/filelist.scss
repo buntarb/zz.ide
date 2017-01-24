@@ -18,7 +18,7 @@ div.filelist-node {
   overflow: hidden;
   & i.filelist-node--icon {
 
-    margin-right: 5px;
+    margin: 0 5px;
     font-size: 20px;
   }
   & span.filelist-node--title {
@@ -35,7 +35,7 @@ div.filelist-node {
     position: absolute;
     justify-content: space-between;
     align-items: center;
-    right: 0;
+    right: 10px;
     & div.filelist-node--btn {
 
       display: flex;
@@ -45,7 +45,6 @@ div.filelist-node {
       margin-right: 5px;
       i.filelist-node--icon {
 
-        margin-right: 10px;
         cursor: pointer;
         &:hover {
 
