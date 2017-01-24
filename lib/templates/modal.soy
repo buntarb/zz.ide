@@ -50,13 +50,26 @@
         </div>
         <div
             class="{css modal--body}">
-            {if $value.title}
-                <div
-                    class="{css modal--title}"
-                    data-model="{$key.title}">
-                    {$value.title}
-                </div>
-            {/if}
+            <div
+                class="{css modal--title}">
+                {if $value.icon}
+                    <div
+                        class="{css modal--title-icon}">
+                        <i
+                            class="{css material-icons}"
+                            data-model="{$key.icon}">
+                            {$value.icon}
+                        </i>
+                    </div>
+                {/if}
+                {if $value.title}
+                    <div
+                        class="{css modal--title-text}"
+                        data-model="{$key.title}">
+                        {$value.title}
+                    </div>
+                {/if}
+            </div>
             {if $value.text}
                 <textarea
                     class="{css modal--text}"

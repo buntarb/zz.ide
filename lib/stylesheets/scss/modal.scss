@@ -36,9 +36,16 @@ div.modal {
     & div.modal--title {
 
       position: relative;
+      display: flex;
+      justify-content: center;
       box-sizing: border-box;
       margin-bottom: 10px;
-      text-align: center;
+      & div.modal--title-text {
+
+      }
+      & div.modal--title-icon {
+
+      }
     }
     & textarea.modal--text {
 
