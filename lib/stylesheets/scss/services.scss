@@ -207,8 +207,8 @@ div.layout {
 
               & i {
 
-                animation-name: anti_spin;
-                animation-duration: 500ms;
+                animation-name: spin;
+                animation-duration: 400ms;
                 animation-iteration-count: 1;
                 animation-timing-function: linear;
               }
@@ -228,7 +228,7 @@ div.layout {
               & i {
 
                 animation-name: anti_spin;
-                animation-duration: 500ms;
+                animation-duration: 400ms;
                 animation-iteration-count: 1;
                 animation-timing-function: linear;
               }
@@ -336,7 +336,7 @@ div.layout {
                 i {
 
                   animation-name: spin;
-                  animation-duration: 500ms;
+                  animation-duration: 400ms;
                   animation-iteration-count: infinite;
                   animation-timing-function: linear;
                 }
@@ -344,7 +344,7 @@ div.layout {
               & i {
 
                 animation-name: spin;
-                animation-duration: 500ms;
+                animation-duration: 400ms;
                 animation-iteration-count: 1;
                 animation-timing-function: linear;
               }
@@ -356,6 +356,7 @@ div.layout {
 
         & ul.services-dataset {
 
+          height: 401px;
           & li.datarow {
 
             & div.compile-app.layout--btn {
@@ -363,7 +364,7 @@ div.layout {
               & i {
 
                 animation-name: anti_spin;
-                animation-duration: 500ms;
+                animation-duration: 400ms;
                 animation-iteration-count: 1;
                 animation-timing-function: linear;
               }
