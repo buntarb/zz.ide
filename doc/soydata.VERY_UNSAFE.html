@@ -1,0 +1,64 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>soydata.VERY_UNSAFE</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l48">View Source</a></div><h1 class="title"><div>namespace soydata.VERY_UNSAFE</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="$$ordainSanitizedAttributesForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l952" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$ordainSanitizedAttributesForInternalBlocks(<wbr>content)</div></h3><p>Creates kind&#61;&#34;attributes&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?(<a href="soydata.SanitizedHtmlAttribute.html">soydata.SanitizedHtmlAttribute</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped
+result.</p>
+</dl></dd></dl></section><section class="property" id="$$ordainSanitizedCssForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l963" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$ordainSanitizedCssForInternalBlocks(<wbr>content)</div></h3><p>Creates kind&#61;&#34;css&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?(<a href="soydata.SanitizedCss.html">soydata.SanitizedCss</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped result.</p>
+</dl></dd></dl></section><section class="property" id="$$ordainSanitizedHtmlForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l918" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$ordainSanitizedHtmlForInternalBlocks(<wbr>content,<wbr> opt_contentDir)</div></h3><p>Creates kind&#61;&#34;html&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+<dt class="named">opt_contentDir<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The content direction; null if
+unknown and thus to be estimated when necessary. Default: null.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped result.</p>
+</dl></dd></dl></section><section class="property" id="$$ordainSanitizedJsForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l929" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$ordainSanitizedJsForInternalBlocks(<wbr>content)</div></h3><p>Creates kind&#61;&#34;js&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="soydata.SanitizedJs.html">soydata.SanitizedJs</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped result.</p>
+</dl></dd></dl></section><section class="property" id="$$ordainSanitizedUriForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l940" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$ordainSanitizedUriForInternalBlocks(<wbr>content)</div></h3><p>Creates kind&#61;&#34;uri&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?(<a href="soydata.SanitizedUri.html">soydata.SanitizedUri</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped result.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedCss"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l516" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedCss(<wbr>content)</div></h3><p>Takes a leap of faith that the provided content is &#34;safe&#34; to use as CSS
+in a style attribute or block.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>CSS, such as <code>color:#c3d9ff</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedCss.html">soydata.SanitizedCss</a></code><dd><p>Sanitized CSS wrapper that indicates to
+Soy there is no need to escape or filter when printed in CSS context.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l438" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedHtml(<wbr>content,<wbr> opt_contentDir)</div></h3><p>Takes a leap of faith that the provided content is &#34;safe&#34; HTML.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>A string of HTML that can safely be embedded in
+a PCDATA context in your app. If you would be surprised to find that an
+HTML sanitizer produced <code>s</code> (e.g. it runs code or fetches bad URLs)
+and you wouldn&#39;t write a template that produces <code>s</code> on security or
+privacy grounds, then don&#39;t pass <code>s</code> here.</p>
+<dt class="named">opt_contentDir<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The content direction; null if
+unknown and thus to be estimated when necessary. Default: null.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a></code><dd><p>Sanitized content wrapper that
+indicates to Soy not to escape when printed as HTML.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedHtmlAttribute"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l503" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedHtmlAttribute(<wbr>content)</div></h3><p>Takes a leap of faith that the provided content is &#34;safe&#34; to use as an
+HTML attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>An attribute name and value, such as
+<code>dir&#61;&#34;ltr&#34;</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedHtmlAttribute.html">soydata.SanitizedHtmlAttribute</a></code><dd><p>Sanitized content wrapper that
+indicates to Soy not to escape when printed as an HTML attribute.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedJs"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l451" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedJs(<wbr>content)</div></h3><p>Takes a leap of faith that the provided content is &#34;safe&#34; (non-attacker-
+controlled, XSS-free) Javascript.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Javascript source that when evaluated does not
+execute any attacker-controlled scripts.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedJs.html">soydata.SanitizedJs</a></code><dd><p>Sanitized content wrapper that indicates to
+Soy not to escape when printed as Javascript source.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedJsStrChars"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l471" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedJsStrChars(<wbr>content,<wbr> opt_contentDir)</div></h3><p>Takes a leap of faith that the provided content can be safely embedded in
+a Javascript string without re-esacping.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Content that can be safely inserted as part of a
+single- or double-quoted string without terminating the string.</p>
+<dt class="named">opt_contentDir<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The content direction; null if
+unknown and thus to be estimated when necessary. Default: null.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedJsStrChars.html">soydata.SanitizedJsStrChars</a></code><dd><p>Sanitized content wrapper that
+indicates to Soy not to escape when printed in a JS string.</p>
+</dl></dd></dl></section><section class="property" id="ordainSanitizedUri"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l489" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>ordainSanitizedUri(<wbr>content)</div></h3><p>Takes a leap of faith that the provided content is &#34;safe&#34; to use as a URI
+in a Soy template.</p>
+<p>This creates a Soy SanitizedContent object which indicates to Soy there is
+no need to escape it when printed as a URI (e.g. in an href or src
+attribute), such as if it&#39;s already been encoded or  if it&#39;s a Javascript:
+URI.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>A chunk of URI that the caller knows is safe to
+emit in a template.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedUri.html">soydata.SanitizedUri</a></code><dd><p>Sanitized content wrapper that indicates to
+Soy not to escape or filter when printed in URI context.</p>
+</dl></dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

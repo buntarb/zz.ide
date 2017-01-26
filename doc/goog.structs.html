@@ -1,0 +1,83 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.structs</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/collection.js.src.html#l21">View Source</a></div><h1 class="title"><div>namespace goog.structs</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="clear"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l149" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>clear(<wbr>col)</div></h3><p>Removes all the elements from the collection.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+</dl></dd></dl></section><section class="property" id="contains"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l110" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>contains(<wbr>col,<wbr> val)</div></h3><p>Whether the collection contains the given value. This is O(n) and uses
+equals (&#61;&#61;) to test the existence.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+<dt class="named">val<code>*</code><dd><p>The value to check for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if the map contains the value.</p>
+</dl></dd></dl></section><section class="property" id="every"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l339" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, S&gt;</code> every(<wbr>col,<wbr> f,<wbr> opt_obj)</div></h3><p>Calls f for each value in a collection. If all calls return true this return
+true this returns true. If any returns false this returns false at this point
+and does not continue to check the remaining values.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code>S</code><dd><p>The collection-like object.</p>
+<dt class="named">f<code>function(this: T, ?, ?, S): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The function to call for every
+value. This function takes 3 arguments (the value, the key or
+undefined if the collection has no notion of keys, and the collection)
+and should return a boolean.</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>The object to be used as the value of &#39;this&#39;
+within <code>f</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if all key-value pairs pass the test.</p>
+</dl></dd></dl></section><section class="property" id="filter"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l211" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, S&gt;</code> filter(<wbr>col,<wbr> f,<wbr> opt_obj)</div></h3><p>Calls a function for every value in the collection. When a call returns true,
+adds the value to a new collection (Array is returned by default).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code>S</code><dd><p>The collection-like object.</p>
+<dt class="named">f<code>function(this: T, ?, ?, S): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The function to call for every
+value. This function takes
+3 arguments (the value, the key or undefined if the collection has no
+notion of keys, and the collection) and should return a Boolean. If the
+return value is true the value is added to the result collection. If it
+is false the value is not included.</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>The object to be used as the value of &#39;this&#39;
+within <code>f</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>A new collection where the passed values are
+present. If col is a key-less collection an array is returned.  If col
+has keys and values a plain old JS object is returned.</p>
+</dl></dd></dl></section><section class="property" id="forEach"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l177" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, S&gt;</code> forEach(<wbr>col,<wbr> f,<wbr> opt_obj)</div></h3><p>Calls a function for each value in a collection. The function takes
+three arguments; the value, the key and the collection.</p>
+<p>NOTE: This will be deprecated soon! Please use a more specific method if
+possible, e.g. goog.array.forEach, goog.object.forEach, etc.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code>S</code><dd><p>The collection-like object.</p>
+<dt class="named">f<code>function(this: T, ?, ?, S): ?</code><dd><p>The function to call for every value.
+This function takes
+3 arguments (the value, the key or undefined if the collection has no
+notion of keys, and the collection) and the return value is irrelevant.</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>The object to be used as the value of &#39;this&#39;
+within <code>f</code>.</p>
+</dl></dd></dl></section><section class="property" id="getCount"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l41" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getCount(<wbr>col)</div></h3><p>Returns the number of values in the collection-like object.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The number of values in the collection-like object.</p>
+</dl></dd></dl></section><section class="property" id="getKeys"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l82" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getKeys(<wbr>col)</div></h3><p>Returns the keys of the collection. Some collections have no notion of
+keys/indexes and this function will return undefined in those cases.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)</code><dd><p>The keys in the collection.</p>
+</dl></dd></dl></section><section class="property" id="getValues"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l57" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getValues(<wbr>col)</div></h3><p>Returns the values of the collection-like object.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;?&gt;</code><dd><p>The values in the collection-like object.</p>
+</dl></dd></dl></section><section class="property" id="isEmpty"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l129" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isEmpty(<wbr>col)</div></h3><p>Whether the collection is empty.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The collection-like object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if empty.</p>
+</dl></dd></dl></section><section class="property" id="map"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l261" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, S, V&gt;</code> map(<wbr>col,<wbr> f,<wbr> opt_obj)</div></h3><p>Calls a function for every value in the collection and adds the result into a
+new collection (defaults to creating a new Array).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code>S</code><dd><p>The collection-like object.</p>
+<dt class="named">f<code>function(this: T, ?, ?, S): V</code><dd><p>The function to call for every value.
+This function takes 3 arguments (the value, the key or undefined if the
+collection has no notion of keys, and the collection) and should return
+something. The result will be used as the value in the new collection.</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>The object to be used as the value of &#39;this&#39;
+within <code>f</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;?, V&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;V&gt;)</code><dd><p>A new collection with the new values.  If
+col is a key-less collection an array is returned.  If col has keys and
+values a plain old JS object is returned.</p>
+</dl></dd></dl></section><section class="property" id="some"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/structs/structs.js.src.html#l305" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, S&gt;</code> some(<wbr>col,<wbr> f,<wbr> opt_obj)</div></h3><p>Calls f for each value in a collection. If any call returns true this returns
+true (without checking the rest). If all returns false this returns false.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">col<code>S</code><dd><p>The collection-like object.</p>
+<dt class="named">f<code>function(this: T, ?, ?, S): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The function to call for every
+value. This function takes 3 arguments (the value, the key or undefined
+if the collection has no notion of keys, and the collection) and should
+return a boolean.</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>The object to be used as the value of &#39;this&#39;
+within <code>f</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if any value passes the test.</p>
+</dl></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.structs.Collection.html">Collection</a><dd><p>An interface for a collection of values.</p>
+<dt><a href="goog.structs.InversionMap.html">InversionMap</a><dd><p>Maps ranges to values.</p>
+<dt><a href="goog.structs.Map.html">Map</a><dd><p>Class for Hash Map datastructure.</p>
+<dt><a href="goog.structs.Set.html">Set</a><dd><p>A set that can contain both primitives and objects.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

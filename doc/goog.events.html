@@ -1,0 +1,177 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.events</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventid.js.src.html#l15">View Source</a></div><h1 class="title"><div>namespace goog.events</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="dispatchEvent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l763" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>dispatchEvent(<wbr>src,<wbr> e)</div></h3><p>Dispatches an event (or event like object) and calls all listeners
+listening for events of this type. The type of the event is decided by the
+type property on the event object.</p>
+<p>If any of the listeners returns false OR calls preventDefault then this
+function will return false.  If one of the capture listeners calls
+stopPropagation, then the bubble listeners won&#39;t fire.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code><a href="goog.events.Listenable.html">goog.events.Listenable</a></code><dd><p>The event target.</p>
+<dt class="named">e<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>Event object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>If anyone called preventDefault on the event object (or
+if any of the handlers returns false) this will also return false.
+If there are no handlers, or if all handlers return true, this returns
+true.</p>
+</dl></dd></dl></section><section class="property" id="expose"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l631" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>expose(<wbr>e)</div></h3><p>Provides a nice string showing the normalized event objects public members</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">e<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Event Object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String of the public members of the normalized event object.</p>
+</dl></dd></dl></section><section class="property" id="fireListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l723" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>fireListener(<wbr>listener,<wbr> eventObject)</div></h3><p>Fires a listener with a set of arguments</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">listener<code><a href="goog.events.Listener.html">goog.events.Listener</a></code><dd><p>The listener object to call.</p>
+<dt class="named">eventObject<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The event object to pass to the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Result of listener.</p>
+</dl></dd></dl></section><section class="property" id="fireListeners"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l669" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>fireListeners(<wbr>obj,<wbr> type,<wbr> capture,<wbr> eventObject)</div></h3><p>Fires an object&#39;s listeners of a particular type and phase</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Object whose listeners to call.</p>
+<dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>)</code><dd><p>Event type.</p>
+<dt class="named">capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Which event phase.</p>
+<dt class="named">eventObject<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Event object to be passed to listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if all listeners returned true else false.</p>
+</dl></dd></dl></section><section class="property" id="getListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l578" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;EVENTOBJ&gt;</code> getListener(<wbr>src,<wbr> type,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Gets the goog.events.Listener for the event or null if no such listener is
+in use.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The target from
+which to get listeners.</p>
+<dt class="named">type<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The type of the event.</p>
+<dt class="named">listener<code>?(function(EVENTOBJ): ?|{handleEvent: function(?): ?})</code><dd><p>The
+listener function to get.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>In DOM-compliant browsers, this determines
+whether the listener is fired during the
+capture or bubble phase of the event.</p>
+<dt class="named">opt_handler<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a></code><dd><p>the found listener or null if not found.</p>
+</dl></dd></dl></section><section class="property" id="getListeners"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l544" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getListeners(<wbr>obj,<wbr> type,<wbr> capture)</div></h3><p>Gets the listeners for a given object, type and capture phase.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Object to get listeners for.</p>
+<dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>)</code><dd><p>Event type.</p>
+<dt class="named">capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Capture phase?.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="goog.events.Listener.html">goog.events.Listener</a>&gt;</code><dd><p>Array of listener objects.</p>
+</dl></dd></dl></section><section class="property" id="getProxy"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l273" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getProxy()</div></h3><p>Helper function for returning a proxy function.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code>Function</code><dd><p>A new or reused function object.</p>
+</dl></dd></dl></section><section class="property" id="getTotalListenerCount"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l742" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>getTotalListenerCount()</div></h3><p>Gets the total number of listeners currently in the system.</p>
+<dl><dt class="spec">Deprecated<dd><p>This returns estimated count, now that Closure no longer
+stores a central listener registry. We still return an estimation
+to keep existing listener-related tests passing. In the near future,
+this function will be removed.</p>
+<dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Number of listeners.</p>
+</dl></dd></dl></section><section class="property" id="getUniqueId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l925" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getUniqueId(<wbr>identifier)</div></h3><p>Creates a unique event id.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">identifier<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The identifier.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A unique identifier.</p>
+</dl></dd></dl></section><section class="property" id="hasListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l615" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>hasListener(<wbr>obj,<wbr> opt_type,<wbr> opt_capture)</div></h3><p>Returns whether an event target has any active listeners matching the
+specified signature. If either the type or capture parameters are
+unspecified, the function will match on the remaining criteria.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>Target to get
+listeners for.</p>
+<dt class="named">opt_type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>)=</code><dd><p>Event type.</p>
+<dt class="named">opt_capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to check for capture or bubble-phase
+listeners.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether an event target has one or more listeners matching
+the requested type and/or capture phase.</p>
+</dl></dd></dl></section><section class="property" id="listen"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l169" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, EVENTOBJ&gt;</code> listen(<wbr>src,<wbr> type,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Adds an event listener for a specific event on a native event
+target (such as a DOM element) or an object that has implemented
+<a href="goog.events.Listenable.html"><code>goog.events.Listenable</code></a>. A listener can only be added once
+to an object and if it is added again the key for the listener is
+returned. Note that if the existing listener is a one-off listener
+(registered via listenOnce), it will no longer be a one-off
+listener after a call to listen().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The node to listen
+to events on.</p>
+<dt class="named">type<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code><dd><p>Event type or array of event types.</p>
+<dt class="named">listener<code>?(function(this: T, EVENTOBJ): ?|{handleEvent: function(?): ?})</code><dd><p>Callback method, or an object with a handleEvent function.
+WARNING: passing an Object is now softly deprecated.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to fire in capture phase (defaults to
+false).</p>
+<dt class="named">opt_handler<code>?T=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a>)</code><dd><p>Unique key for the listener.</p>
+</dl></dd></dl></section><section class="property" id="listenOnce"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l318" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T, EVENTOBJ&gt;</code> listenOnce(<wbr>src,<wbr> type,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Adds an event listener for a specific event on a native event
+target (such as a DOM element) or an object that has implemented
+<a href="goog.events.Listenable.html"><code>goog.events.Listenable</code></a>. After the event has fired the event
+listener is removed from the target.</p>
+<p>If an existing listener already exists, listenOnce will do
+nothing. In particular, if the listener was previously registered
+via listen(), listenOnce() will not turn the listener into a
+one-off listener. Similarly, if there is already an existing
+one-off listener, listenOnce does not modify the listeners (it is
+still a once listener).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The node to listen
+to events on.</p>
+<dt class="named">type<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code><dd><p>Event type or array of event types.</p>
+<dt class="named">listener<code>?(function(this: T, EVENTOBJ): ?|{handleEvent: function(?): ?})</code><dd><p>Callback method.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Fire in capture phase?.</p>
+<dt class="named">opt_handler<code>?T=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a>)</code><dd><p>Unique key for the listener.</p>
+</dl></dd></dl></section><section class="property" id="listenWithWrapper"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l355" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T&gt;</code> listenWithWrapper(<wbr>src,<wbr> wrapper,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Adds an event listener with a specific event wrapper on a DOM Node or an
+object that has implemented <a href="goog.events.Listenable.html"><code>goog.events.Listenable</code></a>. A listener can
+only be added once to an object.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The target to
+listen to events on.</p>
+<dt class="named">wrapper<code><a href="goog.events.html">goog.events.EventWrapper</a></code><dd><p>Event wrapper to use.</p>
+<dt class="named">listener<code>?(function(this: T, ?): ?|{handleEvent: function(?): ?})</code><dd><p>Callback method, or an object with a handleEvent function.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to fire in capture phase (defaults to
+false).</p>
+<dt class="named">opt_handler<code>?T=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd></dl></section><section class="property" id="protectBrowserEventEntryPoint"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l779" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>protectBrowserEventEntryPoint(<wbr>errorHandler)</div></h3><p>Installs exception protection for the browser event entry point using the
+given error handler.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">errorHandler<code><a href="goog.debug.html">goog.debug.ErrorHandler</a></code><dd><p>Error handler with which to
+protect the entry point.</p>
+</dl></dd></dl></section><section class="property" id="removeAll"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l500" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeAll(<wbr>obj,<wbr> opt_type)</div></h3><p>Removes all listeners from an object. You can also optionally
+remove listeners of a particular type.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>Object to remove listeners from. Must be an
+EventTarget or a goog.events.Listenable.</p>
+<dt class="named">opt_type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>)=</code><dd><p>Type of event to remove.
+Default is all types.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Number of listeners removed.</p>
+</dl></dd></dl></section><section class="property" id="unlisten"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l378" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;EVENTOBJ&gt;</code> unlisten(<wbr>src,<wbr> type,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Removes an event listener which was added with listen().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The target to stop
+listening to events on.</p>
+<dt class="named">type<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code><dd><p>Event type or array of event types to unlisten to.</p>
+<dt class="named">listener<code>?(function(?): ?|{handleEvent: function(?): ?})</code><dd><p>The
+listener function to remove.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>In DOM-compliant browsers, this determines
+whether the listener is fired during the capture or bubble phase of the
+event.</p>
+<dt class="named">opt_handler<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>indicating whether the listener was there to remove.</p>
+</dl></dd></dl></section><section class="property" id="unlistenByKey"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l423" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>unlistenByKey(<wbr>key)</div></h3><p>Removes an event listener which was added with listen() by the key
+returned by listen().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">key<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a>)</code><dd><p>The key returned by listen() for this
+event listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>indicating whether the listener was there to remove.</p>
+</dl></dd></dl></section><section class="property" id="unlistenWithWrapper"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l484" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>unlistenWithWrapper(<wbr>src,<wbr> wrapper,<wbr> listener,<wbr> opt_capt,<wbr> opt_handler)</div></h3><p>Removes an event listener which was added with listenWithWrapper().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">src<code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code><dd><p>The target to stop
+listening to events on.</p>
+<dt class="named">wrapper<code><a href="goog.events.html">goog.events.EventWrapper</a></code><dd><p>Event wrapper to use.</p>
+<dt class="named">listener<code>?(function(?): ?|{handleEvent: function(?): ?})</code><dd><p>The
+listener function to remove.</p>
+<dt class="named">opt_capt<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>In DOM-compliant browsers, this determines
+whether the listener is fired during the capture or bubble phase of the
+event.</p>
+<dt class="named">opt_handler<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Element in whose scope to call the listener.</p>
+</dl></dd></dl></section><section class="property" id="wrapListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l961" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>wrapListener(<wbr>listener)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">listener<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The listener function or an
+object that contains handleEvent method.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Function</code><dd><p>Either the original function or a function that
+calls obj.handleEvent. If the same listener is passed to this
+function more than once, the same function is guaranteed to be
+returned.</p>
+</dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.events.CAPTURE_SIMULATION_MODE"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l136" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.events.CAPTURE_SIMULATION_MODE</div></h3><p>The capture simulation mode for IE8-. By default,
+this is ON.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.events.BrowserEvent.html">BrowserEvent</a><dd><p>Accepts a browser event object and creates a patched, cross browser event
+object.</p>
+<dt><a href="goog.events.BrowserFeature.html">BrowserFeature</a><dd><p>Enum of browser capabilities.</p>
+<dt><a href="goog.events.CaptureSimulationMode.html">CaptureSimulationMode</a><dd><p>No description.</p><dt><a href="goog.events.Event.html">Event</a><dd><p>A base class for event objects, so that they can support preventDefault and
+stopPropagation.</p>
+<dt><a href="goog.events.EventHandler.html">EventHandler</a><dd><p>Super class for objects that want to easily manage a number of event
+listeners.</p>
+<dt><a href="goog.events.EventId.html">EventId</a><dd><p>A templated class that is used when registering for events.</p>
+<dt><a href="goog.events.EventTarget.html">EventTarget</a><dd><p>An implementation of <code>goog.events.Listenable</code> with full W3C
+EventTarget-like support (capture/bubble mechanism, stopping event
+propagation, preventing default actions).</p>
+<dt><a href="goog.events.EventType.html">EventType</a><dd><p>Constants for event names.</p>
+<dt><a href="goog.events.KeyCodes.html">KeyCodes</a><dd><p>Key codes for common characters.</p>
+<dt><a href="goog.events.KeyEvent.html">KeyEvent</a><dd><p>This class is used for the goog.events.KeyHandler.EventType.KEY event and
+it overrides the key code with the fixed key code.</p>
+<dt><a href="goog.events.KeyHandler.html">KeyHandler</a><dd><p>A wrapper around an element that you want to listen to keyboard events on.</p>
+<dt><a href="goog.events.Listenable.html">Listenable</a><dd><p>A listenable interface.</p>
+<dt><a href="goog.events.ListenableKey.html">ListenableKey</a><dd><p>An interface that describes a single registered listener.</p>
+<dt><a href="goog.events.Listener.html">Listener</a><dd><p>Simple class that stores information about a listener</p>
+<dt><a href="goog.events.ListenerMap.html">ListenerMap</a><dd><p>Creates a new listener map.</p>
+</dl></section></section><section class="type-defs"><h2>Type Definitions</h2><section id="EventLike" class="property"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/event.js.src.html#l41" title="View source"><i class="material-icons">code</i></a></div><h3 class="name">EventLike</h3><dl><dt class="spec">Type<dd><code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code></dl><p>A typedef for event like objects that are dispatchable via the
+goog.events.dispatchEvent function. strings are treated as the type for a
+goog.events.Event. Objects are treated as an extension of a new
+goog.events.Event with the type property of the object being used as the type
+of the Event.</p>
+</section><section id="Key" class="property"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l73" title="View source"><i class="material-icons">code</i></a></div><h3 class="name">Key</h3><dl><dt class="spec">Type<dd><code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a>)</code></dl><p>No description.</p></section><section id="ListenableType" class="property"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/events.js.src.html#l79" title="View source"><i class="material-icons">code</i></a></div><h3 class="name">ListenableType</h3><dl><dt class="spec">Type<dd><code>(EventTarget|<a href="goog.events.Listenable.html">goog.events.Listenable</a>)</code></dl><p>No description.</p></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

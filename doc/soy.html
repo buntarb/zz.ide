@@ -1,0 +1,280 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>soy</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l39">View Source</a></div><h1 class="title"><div>namespace soy</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="$$augmentMap"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l619" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$augmentMap(<wbr>baseMap,<wbr> additionalMap)</div></h3><p>Builds an augmented map. The returned map will contain mappings from both
+the base map and the additional map. If the same key appears in both, then
+the value from the additional map will be visible, while the value from the
+base map will be hidden. The base map will be used, but not modified.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">baseMap<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The original map to augment.</p>
+<dt class="named">additionalMap<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>A map containing the additional mappings.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>An augmented map containing both the original and
+additional mappings.</p>
+</dl></dd></dl></section><section class="property" id="$$bidiDirAttr"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1637" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$bidiDirAttr(<wbr>bidiGlobalDir,<wbr> text,<wbr> opt_isHtml)</div></h3><p>Returns &#39;dir&#61;&#34;ltr&#34;&#39; or &#39;dir&#61;&#34;rtl&#34;&#39;, depending on text&#39;s estimated
+directionality, if it is not the same as bidiGlobalDir.
+Otherwise, returns the empty string.
+If opt_isHtml, makes sure to ignore the LTR nature of the mark-up and escapes
+in text, making the logic suitable for HTML and HTML-escaped text.
+If text has a goog.i18n.bidi.Dir-valued contentDir, this is used instead of
+estimating the directionality.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">bidiGlobalDir<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The global directionality context: 1 if ltr, -1
+if rtl, 0 if unknown.</p>
+<dt class="named">text<code>*</code><dd><p>The content whose directionality is to be estimated.</p>
+<dt class="named">opt_isHtml<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether text is HTML/HTML-escaped.
+Default: false.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedHtmlAttribute.html">soydata.SanitizedHtmlAttribute</a></code><dd><p>&#39;dir&#61;&#34;rtl&#34;&#39; for RTL text in non-RTL
+context; &#39;dir&#61;&#34;ltr&#34;&#39; for LTR text in non-LTR context;
+else, the empty string.</p>
+</dl></dd></dl></section><section class="property" id="$$bidiMarkAfter"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1668" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$bidiMarkAfter(<wbr>bidiGlobalDir,<wbr> text,<wbr> opt_isHtml)</div></h3><p>Returns a Unicode BiDi mark matching bidiGlobalDir (LRM or RLM) if the
+directionality or the exit directionality of text are opposite to
+bidiGlobalDir. Otherwise returns the empty string.
+If opt_isHtml, makes sure to ignore the LTR nature of the mark-up and escapes
+in text, making the logic suitable for HTML and HTML-escaped text.
+If text has a goog.i18n.bidi.Dir-valued contentDir, this is used instead of
+estimating the directionality.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">bidiGlobalDir<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The global directionality context: 1 if ltr, -1
+if rtl, 0 if unknown.</p>
+<dt class="named">text<code>*</code><dd><p>The content whose directionality is to be estimated.</p>
+<dt class="named">opt_isHtml<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether text is HTML/HTML-escaped.
+Default: false.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A Unicode bidi mark matching bidiGlobalDir, or the empty
+string when text&#39;s overall and exit directionalities both match
+bidiGlobalDir, or bidiGlobalDir is 0 (unknown).</p>
+</dl></dd></dl></section><section class="property" id="$$bidiSpanWrap"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1692" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$bidiSpanWrap(<wbr>bidiGlobalDir,<wbr> text)</div></h3><p>Returns text wrapped in a  according to its
+directionality - but only if that is neither neutral nor the same as the
+global context. Otherwise, returns text unchanged.
+Always treats text as HTML/HTML-escaped, i.e. ignores mark-up and escapes
+when estimating text&#39;s directionality.
+If text has a goog.i18n.bidi.Dir-valued contentDir, this is used instead of
+estimating the directionality.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">bidiGlobalDir<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The global directionality context: 1 if ltr, -1
+if rtl, 0 if unknown.</p>
+<dt class="named">text<code>*</code><dd><p>The string to be wrapped. Can be other types, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="goog.soy.data.SanitizedContent.html">goog.soy.data.SanitizedContent</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>The wrapped text.</p>
+</dl></dd></dl></section><section class="property" id="$$bidiTextDir"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1608" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$bidiTextDir(<wbr>text,<wbr> opt_isHtml)</div></h3><p>Estimate the overall directionality of text. If opt_isHtml, makes sure to
+ignore the LTR nature of the mark-up and escapes in text, making the logic
+suitable for HTML and HTML-escaped text.
+If text has a goog.i18n.bidi.Dir-valued contentDir, this is used instead of
+estimating the directionality.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">text<code>*</code><dd><p>The content whose directionality is to be estimated.</p>
+<dt class="named">opt_isHtml<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether text is HTML/HTML-escaped.
+Default: false.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>1 if text is LTR, -1 if it is RTL, and 0 if it is neutral.</p>
+</dl></dd></dl></section><section class="property" id="$$bidiUnicodeWrap"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1733" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$bidiUnicodeWrap(<wbr>bidiGlobalDir,<wbr> text)</div></h3><p>Returns text wrapped in Unicode BiDi formatting characters according to its
+directionality, i.e. either LRE or RLE at the beginning and PDF at the end -
+but only if text&#39;s directionality is neither neutral nor the same as the
+global context. Otherwise, returns text unchanged.
+Only treats soydata.SanitizedHtml as HTML/HTML-escaped, i.e. ignores mark-up
+and escapes when estimating text&#39;s directionality.
+If text has a goog.i18n.bidi.Dir-valued contentDir, this is used instead of
+estimating the directionality.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">bidiGlobalDir<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The global directionality context: 1 if ltr, -1
+if rtl, 0 if unknown.</p>
+<dt class="named">text<code>*</code><dd><p>The string to be wrapped. Can be other types, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="goog.soy.data.SanitizedContent.html">goog.soy.data.SanitizedContent</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>The wrapped string.</p>
+</dl></dd></dl></section><section class="property" id="$$changeNewlineToBr"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1467" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$changeNewlineToBr(<wbr>value)</div></h3><p>Converts \r\n, \r, and \n to <br />s</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The string in which to convert newlines.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a>)</code><dd><p>A copy of <code>value</code> with
+converted newlines. If <code>value</code> is SanitizedHtml, the return value
+is also SanitizedHtml, of the same known directionality.</p>
+</dl></dd></dl></section><section class="property" id="$$checkMapKey"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l641" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$checkMapKey(<wbr>key)</div></h3><p>Checks that the given map key is a string.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">key<code>*</code><dd><p>Key to check.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The given key.</p>
+</dl></dd></dl></section><section class="property" id="$$cleanHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l997" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$cleanHtml(<wbr>value)</div></h3><p>Strips unsafe tags to convert a string of untrusted HTML into HTML that
+is safe to embed. The content direction is preserved.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The string-like value to be escaped. May not be a string,
+but the value will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a></code><dd><p>A sanitized and normalized version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeCssString"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1408" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeCssString(<wbr>value)</div></h3><p>Escapes a string so it can safely be included inside a quoted CSS string.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l984" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeHtml(<wbr>value)</div></h3><p>Returns a SanitizedHtml object for a particular value. The content direction
+is preserved.</p>
+<p>This HTML-escapes the value unless it is already SanitizedHtml. Escapes
+double quote &#39;&#34;&#39; in addition to &#39;&amp;&#39;, &#39;&lt;&#39;, and &#39;&gt;&#39; so that a string can be
+included in an HTML tag attribute value within double quotes.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to convert. If it is already a SanitizedHtml
+object, it is left alone.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeHtmlAttribute"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1156" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeHtmlAttribute(<wbr>value)</div></h3><p>Escapes HTML special characters in an HTML attribute value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The HTML to be escaped. May not be a string, but the
+value will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeHtmlAttributeNospace"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1177" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeHtmlAttributeNospace(<wbr>value)</div></h3><p>Escapes HTML special characters in a string including space and other
+characters that can end an unquoted HTML attribute value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The HTML to be escaped. May not be a string, but the
+value will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeHtmlRcdata"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1026" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeHtmlRcdata(<wbr>value)</div></h3><p>Escapes HTML special characters in a string so that it can be embedded in
+RCDATA.</p>
+ <p>
+ Escapes HTML special characters so that the value will not prematurely end
+ the body of a tag like <code>&lt;textarea&gt;</code> or <code>&lt;title&gt;</code>. RCDATA tags
+ cannot contain other HTML entities, so it is not strictly necessary to escape
+ HTML special characters except when part of that text looks like an HTML
+ entity or like a close tag : <code>&lt;/textarea&gt;</code>.
+ </p><p>
+ Will normalize known safe HTML to make sure that sanitized HTML (which could
+ contain an innocuous <code>&lt;/textarea&gt;</code> don&#39;t prematurely end an RCDATA
+ element.
+</p><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The string-like value to be escaped. May not be a string,
+but the value will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeJs"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1243" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>$$escapeJs(<wbr>value)</div></h3><p>Escapes characters in the value to make it valid content for a JS string
+literal.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeJsRegex"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1306" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeJsRegex(<wbr>value)</div></h3><p>Escapes characters in the string to make it valid content for a JS regular
+expression literal.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeJsString"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1256" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeJsString(<wbr>value)</div></h3><p>Escapes characters in the value to make it valid content for a JS string
+literal.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeJsValue"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1274" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeJsValue(<wbr>value)</div></h3><p>Encodes a value as a JavaScript literal.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A JavaScript code representation of the input.</p>
+</dl></dd></dl></section><section class="property" id="$$escapeUri"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1340" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$escapeUri(<wbr>value)</div></h3><p>Escapes a string so that it can be safely included in a URI.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$filterCssValue"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1420" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterCssValue(<wbr>value)</div></h3><p>Encodes a value as a CSS identifier part, keyword, or quantity.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A safe CSS identifier part, keyword, or quanitity.</p>
+</dl></dd></dl></section><section class="property" id="$$filterHtmlAttributes"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1197" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterHtmlAttributes(<wbr>value)</div></h3><p>Filters out strings that cannot be a substring of a valid HTML attribute.</p>
+<p>Note the input is expected to be key&#61;value pairs.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A valid HTML attribute name part or name/value pair.
+<code>&#34;zSoyz&#34;</code> if the input is invalid.</p>
+</dl></dd></dl></section><section class="property" id="$$filterHtmlElementName"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1223" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterHtmlElementName(<wbr>value)</div></h3><p>Filters out strings that cannot be a substring of a valid HTML element name.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A valid HTML element name part.
+<code>&#34;zSoyz&#34;</code> if the input is invalid.</p>
+</dl></dd></dl></section><section class="property" id="$$filterImageDataUri"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1394" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterImageDataUri(<wbr>value)</div></h3><p>Allows only data-protocol image URI&#39;s.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to process. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.SanitizedUri.html">soydata.SanitizedUri</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$filterNoAutoescape"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1442" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterNoAutoescape(<wbr>value)</div></h3><p>Sanity-checks noAutoescape input for explicitly tainted content.</p>
+<p>SanitizedContentKind.TEXT is used to explicitly mark input that was never
+meant to be used unescaped.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to filter.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><dd><p>The value, that we dearly hope will not cause an attack.</p>
+</dl></dd></dl></section><section class="property" id="$$filterNormalizeUri"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1378" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$filterNormalizeUri(<wbr>value)</div></h3><p>Vets a URI&#39;s protocol and removes rough edges from a URI by escaping
+any raw HTML/JS string delimiters.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$getDelTemplateId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l684" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$getDelTemplateId(<wbr>delTemplateName)</div></h3><p>Gets a consistent unique id for the given delegate template name. Two calls
+to this function will return the same id if and only if the input names are
+the same.</p>
+ <p> Important: This function must always be called with a string constant.
+ </p><p> If Closure Compiler is not being used, then this is just this identity
+ function. If Closure Compiler is being used, then each call to this function
+ will be replaced with a short string constant, which will be consistent per
+ input name.
+</p><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">delTemplateName<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The delegate template name for which to get a
+consistent unique id.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A unique id that is consistent per input name.</p>
+</dl></dd></dl></section><section class="property" id="$$getDelegateFn"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l752" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$getDelegateFn(<wbr>delTemplateId,<wbr> delTemplateVariant,<wbr> allowsEmptyDefault)</div></h3><p>Retrieves the (highest-priority) implementation that has been registered for
+a given delegate template key (id and variant). If no implementation has
+been registered for the key, then the fallback is the same id with empty
+variant. If the fallback is also not registered, and allowsEmptyDefault is
+true, then returns an implementation that is equivalent to an empty template
+(i.e. rendered output would be empty string).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">delTemplateId<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The delegate template id.</p>
+<dt class="named">delTemplateVariant<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The delegate template variant (can be
+empty string).</p>
+<dt class="named">allowsEmptyDefault<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether to default to the empty template
+function if there&#39;s no active implementation.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Function</code><dd><p>The retrieved implementation function.</p>
+</dl></dd></dl></section><section class="property" id="$$getMapKeys"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l657" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$getMapKeys(<wbr>map)</div></h3><p>Gets the keys in a map as an array. There are no guarantees on the order.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">map<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The map to get the keys of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</code><dd><p>The array of keys in the given map.</p>
+</dl></dd></dl></section><section class="property" id="$$insertWordBreaks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1491" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$insertWordBreaks(<wbr>value,<wbr> maxCharsBetweenWordBreaks)</div></h3><p>Inserts word breaks (&#39;wbr&#39; tags) into a HTML string at a given interval. The
+counter is reset if a space is encountered. Word breaks aren&#39;t inserted into
+HTML tags or entities. Entites count towards the character count; HTML tags
+do not.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The HTML string to insert word breaks into. Can be other
+types, but the value will be coerced to a string.</p>
+<dt class="named">maxCharsBetweenWordBreaks<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Maximum number of non-space
+characters to allow before adding a word break.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="soydata.SanitizedHtml.html">soydata.SanitizedHtml</a>)</code><dd><p>The string including word
+breaks. If <code>value</code> is SanitizedHtml, the return value
+is also SanitizedHtml, of the same known directionality.</p>
+</dl></dd></dl></section><section class="property" id="$$normalizeUri"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1365" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$normalizeUri(<wbr>value)</div></h3><p>Removes rough edges from a URI by escaping any raw HTML/JS string delimiters.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to escape. May not be a string, but the value
+will be coerced to a string.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>An escaped version of value.</p>
+</dl></dd></dl></section><section class="property" id="$$registerDelegateFn"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l717" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$registerDelegateFn(<wbr>delTemplateId,<wbr> delTemplateVariant,<wbr> delPriority,<wbr> delFn)</div></h3><p>Registers a delegate implementation. If the same delegate template key (id
+and variant) has been registered previously, then priority values are
+compared and only the higher priority implementation is stored (if
+priorities are equal, an error is thrown).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">delTemplateId<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The delegate template id.</p>
+<dt class="named">delTemplateVariant<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The delegate template variant (can be
+empty string).</p>
+<dt class="named">delPriority<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The implementation&#39;s priority value.</p>
+<dt class="named">delFn<code>Function</code><dd><p>The implementation function.</p>
+</dl></dd></dl></section><section class="property" id="$$stripHtmlTags"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1059" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$stripHtmlTags(<wbr>value,<wbr> opt_tagWhitelist)</div></h3><p>Removes HTML tags from a string of known safe HTML.
+If opt_tagWhitelist is not specified or is empty, then
+the result can be used as an attribute value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The HTML to be escaped. May not be a string, but the
+value will be coerced to a string.</p>
+<dt class="named">opt_tagWhitelist<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;=</code><dd><p>Has an own property whose
+name is a lower-case tag name and whose value is <code>1</code> for
+each element that is allowed in the output.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A representation of value without disallowed tags,
+HTML comments, or other non-text content.</p>
+</dl></dd></dl></section><section class="property" id="$$truncate"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l1514" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$truncate(<wbr>str,<wbr> maxLen,<wbr> doAddEllipsis)</div></h3><p>Truncates a string to a given max length (if it&#39;s currently longer),
+optionally adding ellipsis at the end.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">str<code>*</code><dd><p>The string to truncate. Can be other types, but the value will
+be coerced to a string.</p>
+<dt class="named">maxLen<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The maximum length of the string after truncation
+(including ellipsis, if applicable).</p>
+<dt class="named">doAddEllipsis<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether to add ellipsis if the string needs
+truncation.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The string after truncation.</p>
+</dl></dd></dl></section><section class="property" id="renderAsElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l588" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderAsElement(<wbr>template,<wbr> opt_templateData,<wbr> opt_document,<wbr> opt_injectedData)</div></h3><p>Helper function to render a Soy template into a single node. If the rendered
+HTML string represents a single node, then that node is returned. Otherwise,
+a DIV element is returned containing the rendered nodes.</p>
+<p>NOTE: New code should consider using goog.soy.renderAsElement
+instead (note that the arguments are different).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>ARG_TYPES</code><dd><p>The data for the template.</p>
+<dt class="named">opt_document<code>?Document=</code><dd><p>The document used to create DOM nodes. If not
+specified, global document object is used.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>Rendered template contents, wrapped in a parent DIV
+element if necessary.</p>
+</dl></dd></dl></section><section class="property" id="renderAsFragment"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l562" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderAsFragment(<wbr>template,<wbr> opt_templateData,<wbr> opt_document,<wbr> opt_injectedData)</div></h3><p>Helper function to render a Soy template into a single node or a document
+fragment. If the rendered HTML string represents a single node, then that
+node is returned (note that this is <em>not</em> a fragment, despite them name of
+the method). Otherwise a document fragment is returned containing the
+rendered nodes.</p>
+<p>NOTE: New code should consider using goog.soy.renderAsFragment
+instead (note that the arguments are different).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>ARG_TYPES</code><dd><p>The data for the template.</p>
+<dt class="named">opt_document<code>?Document=</code><dd><p>The document used to create DOM nodes. If not
+specified, global document object is used.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Node</code><dd><p>The resulting node or document fragment.</p>
+</dl></dd></dl></section><section class="property" id="renderElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l540" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderElement(<wbr>element,<wbr> template,<wbr> opt_templateData,<wbr> opt_injectedData)</div></h3><p>Helper function to render a Soy template and then set the output string as
+the innerHTML of an element. It is recommended to use this helper function
+instead of directly setting innerHTML in your hand-written code, so that it
+will be easier to audit the code for cross-site scripting vulnerabilities.</p>
+<p>NOTE: New code should consider using goog.soy.renderElement instead.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element whose content we are rendering.</p>
+<dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>ARG_TYPES</code><dd><p>The data for the template.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+</dl></dd></dl></section></section><section class="static-properties"><h2>Properties</h2><section class="property" id="$$IS_LOCALE_RTL"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l605" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$IS_LOCALE_RTL</div></h3><p>Whether the locale is right-to-left.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="soy.StringBuilder.html">StringBuilder</a><dd><p>Utility class to facilitate much faster string concatenation in IE,
+using Array.join() rather than the &#39;&#43;&#39; operator.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

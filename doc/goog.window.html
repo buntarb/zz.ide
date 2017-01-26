@@ -1,0 +1,66 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.window</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l20">View Source</a></div><h1 class="title"><div>namespace goog.window</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="open"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l88" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>open(<wbr>linkRef,<wbr> opt_options,<wbr> opt_parentWin)</div></h3><p>Opens a new window.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">linkRef<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>If an Object with an &#39;href&#39;
+attribute (such as HTMLAnchorElement) is passed then the value of &#39;href&#39;
+is used, otherwise  otherwise its toString method is called. Note that
+if a string|Object is used, it will be sanitized with SafeUrl.sanitize().</p>
+<dt class="named">opt_options<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>supports the following options:
+&#39;target&#39;: (string) target (window name). If null, linkRef.target will
+be used.
+&#39;width&#39;: (number) window width.
+&#39;height&#39;: (number) window height.
+&#39;top&#39;: (number) distance from top of screen
+&#39;left&#39;: (number) distance from left of screen
+&#39;toolbar&#39;: (boolean) show toolbar
+&#39;scrollbars&#39;: (boolean) show scrollbars
+&#39;location&#39;: (boolean) show location
+&#39;statusbar&#39;: (boolean) show statusbar
+&#39;menubar&#39;: (boolean) show menubar
+&#39;resizable&#39;: (boolean) resizable
+&#39;noreferrer&#39;: (boolean) whether to attempt to remove the referrer header
+from the request headers. Does this by opening a blank window that
+then redirects to the target url, so users may see some flickering.</p>
+<dt class="named">opt_parentWin<code>?Window=</code><dd><p>Parent window that should be used to open the
+new window.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Window</code><dd><p>Returns the window object that was opened. This returns
+null if a popup blocker prevented the window from being
+opened. In case when a new window is opened in a different
+browser sandbox (such as iOS standalone mode), the returned
+object is a emulated Window object that functions as if
+a cross-origin window has been opened.</p>
+</dl></dd></dl></section><section class="property" id="openBlank"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l249" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>openBlank(<wbr>opt_message,<wbr> opt_options,<wbr> opt_parentWin)</div></h3><p>Opens a new window without any real content in it.</p>
+<p>This can be used to get around popup blockers if you need to open a window
+in response to a user event, but need to do asynchronous work to determine
+the URL to open, and then set the URL later.</p>
+<p>Example usage:</p>
+<p>var newWin &#61; goog.window.openBlank(&#39;Loading...&#39;);
+setTimeout(
+function() {
+newWin.location.href &#61; &#39;http://www.google.com&#39;;
+}, 100);</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>String to show in the new window. This string
+will be HTML-escaped to avoid XSS issues.</p>
+<dt class="named">opt_options<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Options to open window with.
+goog.window.open for exact option semantics.</p>
+<dt class="named">opt_parentWin<code>?Window=</code><dd><p>Parent window that should be used to open the
+new window.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Window</code><dd><p>Returns the window object that was opened. This returns
+null if a popup blocker prevented the window from being
+opened.</p>
+</dl></dd></dl></section><section class="property" id="popup"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l301" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>popup(<wbr>linkRef,<wbr> opt_options)</div></h3><p>Raise a help popup window, defaulting to &#34;Google standard&#34; size and name.</p>
+<p>(If your project is using GXPs, consider using <code>PopUpLink.gxp</code>.)</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">linkRef<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>If an Object with an &#39;href&#39;
+attribute (such as HTMLAnchorElement) is passed then the value of &#39;href&#39;
+is used, otherwise  otherwise its toString method is called. Note that
+if a string|Object is used, it will be sanitized with SafeUrl.sanitize().</p>
+<dt class="named">opt_options<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Options to open window with.
+goog.window.open for exact option semantics
+Additional wrinkles to the options:
+- if &#39;target&#39; field is null, linkRef.target will be used. If <em>that&#39;s</em>
+null, the default is &#34;google_popup&#34;.
+- if &#39;width&#39; field is not specified, the default is 690.
+- if &#39;height&#39; field is not specified, the default is 500.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>true if the window was not popped up, false if it was.</p>
+</dl></dd></dl></section></section><section class="static-properties"><h2>Properties</h2><section class="property" id="DEFAULT_POPUP_HEIGHT"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l36" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>DEFAULT_POPUP_HEIGHT</div></h3><p>Default height for popup windows</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section><section class="property" id="DEFAULT_POPUP_TARGET"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l50" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>DEFAULT_POPUP_TARGET</div></h3><p>Default target for popup windows</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></dd></dl></section><section class="property" id="DEFAULT_POPUP_WIDTH"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/window/window.js.src.html#l43" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>DEFAULT_POPUP_WIDTH</div></h3><p>Default width for popup windows</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

@@ -1,0 +1,140 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.dom.safe</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l40">View Source</a></div><h1 class="title"><div>namespace goog.dom.safe</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="documentWrite"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l97" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>documentWrite(<wbr>doc,<wbr> html)</div></h3><p>Writes known-safe HTML to a document.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">doc<code>!Document</code><dd><p>The document to be written to.</p>
+<dt class="named">html<code>!<a href="goog.html.SafeHtml.html">goog.html.SafeHtml</a></code><dd><p>The known-safe HTML to assign.</p>
+</dl></dd></dl></section><section class="property" id="insertAdjacentHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l67" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>insertAdjacentHtml(<wbr>node,<wbr> position,<wbr> html)</div></h3><p>Inserts known-safe HTML into a Node, at the specified position.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">node<code>!Node</code><dd><p>The node on which to call insertAdjacentHTML.</p>
+<dt class="named">position<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Position where
+to insert the HTML.</p>
+<dt class="named">html<code>!<a href="goog.html.SafeHtml.html">goog.html.SafeHtml</a></code><dd><p>The known-safe HTML to insert.</p>
+</dl></dd></dl></section><section class="property" id="openInWindow"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l354" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>openInWindow(<wbr>url,<wbr> opt_openerWin,<wbr> opt_name,<wbr> opt_specs,<wbr> opt_replace)</div></h3><p>Safely opens a URL in a new window (via window.open).</p>
+<p>If url is of type goog.html.SafeUrl, its value is unwrapped and passed in to
+window.open.  If url is of type string however, it is first sanitized
+using goog.html.SafeUrl.sanitize.</p>
+<p>Note that this function does not prevent leakages via the referer that is
+sent by window.open. It is advised to only use this to open 1st party URLs.</p>
+<p>Example usage:
+goog.dom.safe.openInWindow(url);
+which is a safe alternative to
+window.open(url);
+The latter can result in XSS vulnerabilities if redirectUrl is a
+user-/attacker-controlled value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">url<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.html.SafeUrl.html">goog.html.SafeUrl</a>)</code><dd><p>The URL to open.</p>
+<dt class="named">opt_openerWin<code>?Window=</code><dd><p>Window of which to call the .open() method.
+Defaults to the global window.</p>
+<dt class="named">opt_name<code><a href="goog.string.Const.html">goog.string.Const</a>=</code><dd><p>Name of the window to open in. Can be
+_top, etc as allowed by window.open().</p>
+<dt class="named">opt_specs<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Comma-separated list of specifications, same as
+in window.open().</p>
+<dt class="named">opt_replace<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to replace the current entry in browser
+history, same as in window.open().</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Window</code><dd><p>Window the url was opened in.</p>
+</dl></dd></dl></section><section class="property" id="setAnchorHref"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l121" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setAnchorHref(<wbr>anchor,<wbr> url)</div></h3><p>Safely assigns a URL to an anchor element&#39;s href property.</p>
+<p>If url is of type goog.html.SafeUrl, its value is unwrapped and assigned to
+anchor&#39;s href property.  If url is of type string however, it is first
+sanitized using goog.html.SafeUrl.sanitize.</p>
+<p>Example usage:
+goog.dom.safe.setAnchorHref(anchorEl, url);
+which is a safe alternative to
+anchorEl.href &#61; url;
+The latter can result in XSS vulnerabilities if url is a
+user-/attacker-controlled value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">anchor<code>!HTMLAnchorElement</code><dd><p>The anchor element whose href property
+is to be assigned to.</p>
+<dt class="named">url<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.html.SafeUrl.html">goog.html.SafeUrl</a>)</code><dd><p>The URL to assign.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.html.SafeUrl.html#SafeUrl.sanitize">goog.html.SafeUrl#sanitize</a></dd></dl></section><section class="property" id="setEmbedSrc"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l171" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setEmbedSrc(<wbr>embed,<wbr> url)</div></h3><p>Safely assigns a URL to an embed element&#39;s src property.</p>
+<p>Example usage:
+goog.dom.safe.setEmbedSrc(embedEl, url);
+which is a safe alternative to
+embedEl.src &#61; url;
+The latter can result in loading untrusted code unless it is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">embed<code>!HTMLEmbedElement</code><dd><p>The embed element whose src property
+is to be assigned to.</p>
+<dt class="named">url<code>!<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a></code><dd><p>The URL to assign.</p>
+</dl></dd></dl></section><section class="property" id="setFrameSrc"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l190" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setFrameSrc(<wbr>frame,<wbr> url)</div></h3><p>Safely assigns a URL to a frame element&#39;s src property.</p>
+<p>Example usage:
+goog.dom.safe.setFrameSrc(frameEl, url);
+which is a safe alternative to
+frameEl.src &#61; url;
+The latter can result in loading untrusted code unless it is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">frame<code>!HTMLFrameElement</code><dd><p>The frame element whose src property
+is to be assigned to.</p>
+<dt class="named">url<code>!<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a></code><dd><p>The URL to assign.</p>
+</dl></dd></dl></section><section class="property" id="setIframeSrc"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l209" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setIframeSrc(<wbr>iframe,<wbr> url)</div></h3><p>Safely assigns a URL to an iframe element&#39;s src property.</p>
+<p>Example usage:
+goog.dom.safe.setIframeSrc(iframeEl, url);
+which is a safe alternative to
+iframeEl.src &#61; url;
+The latter can result in loading untrusted code unless it is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iframe<code>!HTMLIFrameElement</code><dd><p>The iframe element whose src property
+is to be assigned to.</p>
+<dt class="named">url<code>!<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a></code><dd><p>The URL to assign.</p>
+</dl></dd></dl></section><section class="property" id="setImageSrc"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l145" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setImageSrc(<wbr>imageElement,<wbr> url)</div></h3><p>Safely assigns a URL to an image element&#39;s src property.</p>
+<p>If url is of type goog.html.SafeUrl, its value is unwrapped and assigned to
+image&#39;s src property.  If url is of type string however, it is first
+sanitized using goog.html.SafeUrl.sanitize.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">imageElement<code>!HTMLImageElement</code><dd><p>The image element whose src property
+is to be assigned to.</p>
+<dt class="named">url<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.html.SafeUrl.html">goog.html.SafeUrl</a>)</code><dd><p>The URL to assign.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.html.SafeUrl.html#SafeUrl.sanitize">goog.html.SafeUrl#sanitize</a></dd></dl></section><section class="property" id="setInnerHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l77" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setInnerHtml(<wbr>elem,<wbr> html)</div></h3><p>Assigns known-safe HTML to an element&#39;s innerHTML property.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">elem<code>!Element</code><dd><p>The element whose innerHTML is to be assigned to.</p>
+<dt class="named">html<code>!<a href="goog.html.SafeHtml.html">goog.html.SafeHtml</a></code><dd><p>The known-safe HTML to assign.</p>
+</dl></dd></dl></section><section class="property" id="setLinkHrefAndRel"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l239" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setLinkHrefAndRel(<wbr>link,<wbr> url,<wbr> rel)</div></h3><p>Safely sets a link element&#39;s href and rel properties. Whether or not
+the URL assigned to href has to be a goog.html.TrustedResourceUrl
+depends on the value of the rel property. If rel contains &#34;stylesheet&#34;
+then a TrustedResourceUrl is required.</p>
+<p>Example usage:
+goog.dom.safe.setLinkHrefAndRel(linkEl, url, &#39;stylesheet&#39;);
+which is a safe alternative to
+linkEl.rel &#61; &#39;stylesheet&#39;;
+linkEl.href &#61; url;
+The latter can result in loading untrusted code unless it is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">link<code>!HTMLLinkElement</code><dd><p>The link element whose href property
+is to be assigned to.</p>
+<dt class="named">url<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.html.SafeUrl.html">goog.html.SafeUrl</a>|<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a>)</code><dd><p>The URL
+to assign to the href property. Must be a TrustedResourceUrl if the
+value assigned to rel contains &#34;stylesheet&#34;. A string value is
+sanitized with goog.html.SafeUrl.sanitize.</p>
+<dt class="named">rel<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The value to assign to the rel property.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></code><dd><p>if rel contains &#34;stylesheet&#34; and url is not a
+TrustedResourceUrl</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.html.SafeUrl.html#SafeUrl.sanitize">goog.html.SafeUrl#sanitize</a></dd></dl></section><section class="property" id="setLocationHref"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l314" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setLocationHref(<wbr>loc,<wbr> url)</div></h3><p>Safely assigns a URL to a Location object&#39;s href property.</p>
+<p>If url is of type goog.html.SafeUrl, its value is unwrapped and assigned to
+loc&#39;s href property.  If url is of type string however, it is first sanitized
+using goog.html.SafeUrl.sanitize.</p>
+<p>Example usage:
+goog.dom.safe.setLocationHref(document.location, redirectUrl);
+which is a safe alternative to
+document.location.href &#61; redirectUrl;
+The latter can result in XSS vulnerabilities if redirectUrl is a
+user-/attacker-controlled value.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">loc<code>!Location</code><dd><p>The Location object whose href property is to be
+assigned to.</p>
+<dt class="named">url<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.html.SafeUrl.html">goog.html.SafeUrl</a>)</code><dd><p>The URL to assign.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.html.SafeUrl.html#SafeUrl.sanitize">goog.html.SafeUrl#sanitize</a></dd></dl></section><section class="property" id="setObjectData"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l271" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setObjectData(<wbr>object,<wbr> url)</div></h3><p>Safely assigns a URL to an object element&#39;s data property.</p>
+<p>Example usage:
+goog.dom.safe.setObjectData(objectEl, url);
+which is a safe alternative to
+objectEl.data &#61; url;
+The latter can result in loading untrusted code unless setit is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">object<code>!HTMLObjectElement</code><dd><p>The object element whose data property
+is to be assigned to.</p>
+<dt class="named">url<code>!<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a></code><dd><p>The URL to assign.</p>
+</dl></dd></dl></section><section class="property" id="setOuterHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l87" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setOuterHtml(<wbr>elem,<wbr> html)</div></h3><p>Assigns known-safe HTML to an element&#39;s outerHTML property.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">elem<code>!Element</code><dd><p>The element whose outerHTML is to be assigned to.</p>
+<dt class="named">html<code>!<a href="goog.html.SafeHtml.html">goog.html.SafeHtml</a></code><dd><p>The known-safe HTML to assign.</p>
+</dl></dd></dl></section><section class="property" id="setScriptSrc"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/safe.js.src.html#l290" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setScriptSrc(<wbr>script,<wbr> url)</div></h3><p>Safely assigns a URL to an iframe element&#39;s src property.</p>
+<p>Example usage:
+goog.dom.safe.setScriptSrc(scriptEl, url);
+which is a safe alternative to
+scriptEl.src &#61; url;
+The latter can result in loading untrusted code unless it is ensured that
+the URL refers to a trustworthy resource.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">script<code>!HTMLScriptElement</code><dd><p>The script element whose src property
+is to be assigned to.</p>
+<dt class="named">url<code>!<a href="goog.html.TrustedResourceUrl.html">goog.html.TrustedResourceUrl</a></code><dd><p>The URL to assign.</p>
+</dl></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.dom.safe.InsertAdjacentHtmlPosition.html">InsertAdjacentHtmlPosition</a><dd><p>No description.</p></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

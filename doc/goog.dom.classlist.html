@@ -1,0 +1,73 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.dom.classlist</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l27">View Source</a></div><h1 class="title"><div>namespace goog.dom.classlist</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="add"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l89" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>add(<wbr>element,<wbr> className)</div></h3><p>Adds a class to an element.  Does not add multiples of class names.  This
+method may throw a DOM exception for an invalid or empty class name if
+DOMTokenList is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to add class to.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class name to add.</p>
+</dl></dd></dl></section><section class="property" id="addAll"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l111" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>addAll(<wbr>element,<wbr> classesToAdd)</div></h3><p>Convenience method to add a number of class names at once.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to which to add classes.</p>
+<dt class="named">classesToAdd<code>IArrayLike&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</code><dd><p>An array-like object
+containing a collection of class names to add to the element.
+This method may throw a DOM exception if classesToAdd contains invalid
+or empty class names.</p>
+</dl></dd></dl></section><section class="property" id="addRemove"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l273" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>addRemove(<wbr>element,<wbr> classToRemove,<wbr> classToAdd)</div></h3><p>Adds and removes a class of an element.  Unlike
+<a href="goog.dom.classlist.html#swap"><code>goog.dom.classlist.swap</code></a>, this method adds the classToAdd regardless
+of whether the classToRemove was present and had been removed.  This method
+may throw a DOM exception if the class names are empty or invalid.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to swap classes on.</p>
+<dt class="named">classToRemove<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class to remove.</p>
+<dt class="named">classToAdd<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class to add.</p>
+</dl></dd></dl></section><section class="property" id="contains"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l74" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>contains(<wbr>element,<wbr> className)</div></h3><p>Returns true if an element has a class.  This method may throw a DOM
+exception for an invalid or empty class name if DOMTokenList is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to test.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class name to test for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether element has the class.</p>
+</dl></dd></dl></section><section class="property" id="enable"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l202" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>enable(<wbr>element,<wbr> className,<wbr> enabled)</div></h3><p>Adds or removes a class depending on the enabled argument.  This method
+may throw a DOM exception for an invalid or empty class name if DOMTokenList
+is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to add or remove the class on.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class name to add or remove.</p>
+<dt class="named">enabled<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether to add or remove the class (true adds,
+false removes).</p>
+</dl></dd></dl></section><section class="property" id="enableAll"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l221" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>enableAll(<wbr>element,<wbr> classesToEnable,<wbr> enabled)</div></h3><p>Adds or removes a set of classes depending on the enabled argument.  This
+method may throw a DOM exception for an invalid or empty class name if
+DOMTokenList is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>!Element</code><dd><p>DOM node to add or remove the class on.</p>
+<dt class="named">classesToEnable<code>IArrayLike&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</code><dd><p>An array-like object
+containing a collection of class names to add or remove from the element.</p>
+<dt class="named">enabled<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether to add or remove the classes (true adds,
+false removes).</p>
+</dl></dd></dl></section><section class="property" id="get"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l44" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>get(<wbr>element)</div></h3><p>Gets an array-like object of class names on an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to get the classes of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>IArrayLike&lt;?&gt;</code><dd><p>Class names on <code>element</code>.</p>
+</dl></dd></dl></section><section class="property" id="remove"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l145" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>remove(<wbr>element,<wbr> className)</div></h3><p>Removes a class from an element.  This method may throw a DOM exception
+for an invalid or empty class name if DOMTokenList is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to remove class from.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class name to remove.</p>
+</dl></dd></dl></section><section class="property" id="removeAll"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l172" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeAll(<wbr>element,<wbr> classesToRemove)</div></h3><p>Removes a set of classes from an element.  Prefer this call to
+repeatedly calling <code>goog.dom.classlist.remove</code> if you want to remove
+a large set of class names at once.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element from which to remove classes.</p>
+<dt class="named">classesToRemove<code>IArrayLike&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</code><dd><p>An array-like object
+containing a collection of class names to remove from the element.
+This method may throw a DOM exception if classesToRemove contains invalid
+or empty class names.</p>
+</dl></dd></dl></section><section class="property" id="set"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l62" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>set(<wbr>element,<wbr> className)</div></h3><p>Sets the entire class name of an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to set class of.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class name(s) to apply to element.</p>
+</dl></dd></dl></section><section class="property" id="swap"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l236" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>swap(<wbr>element,<wbr> fromClass,<wbr> toClass)</div></h3><p>Switches a class on an element from one to another without disturbing other
+classes. If the fromClass isn&#39;t removed, the toClass won&#39;t be added.  This
+method may throw a DOM exception if the class names are empty or invalid.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to swap classes on.</p>
+<dt class="named">fromClass<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class to remove.</p>
+<dt class="named">toClass<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class to add.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether classes were switched.</p>
+</dl></dd></dl></section><section class="property" id="toggle"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l256" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>toggle(<wbr>element,<wbr> className)</div></h3><p>Removes a class if an element has it, and adds it the element doesn&#39;t have
+it.  Won&#39;t affect other classes on the node.  This method may throw a DOM
+exception if the class name is empty or invalid.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>DOM node to toggle class on.</p>
+<dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Class to toggle.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if class was added, false if it was removed
+(in other words, whether element has the class after this function has
+been called).</p>
+</dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.dom.classlist.ALWAYS_USE_DOM_TOKEN_LIST"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/dom/classlist.js.src.html#l36" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.dom.classlist.ALWAYS_USE_DOM_TOKEN_LIST</div></h3><p>Override this define at build-time if you know your target supports it.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

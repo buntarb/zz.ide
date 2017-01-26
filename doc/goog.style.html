@@ -1,0 +1,399 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.style</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l25">View Source</a></div><h1 class="title"><div>namespace goog.style</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="clearTransparentBackgroundImage"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1197" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>clearTransparentBackgroundImage(<wbr>el)</div></h3><p>Clears the background image of an element in a browser independent manner.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to clear background image for.</p>
+</dl></dd></dl></section><section class="property" id="getBackgroundColor"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l288" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getBackgroundColor(<wbr>element)</div></h3><p>Retrieves the computed background color string for a given element. The
+string returned is suitable for assigning to another element&#39;s
+background-color, but is not guaranteed to be in any particular string
+format. Accessing the color in a numeric form may not be possible in all
+browsers or with all input.</p>
+<p>If the background color for the element is defined as a hexadecimal value,
+the resulting string can be parsed by goog.color.parse in all supported
+browsers.</p>
+<p>Whether named colors like &#34;red&#34; or &#34;lightblue&#34; get translated into a
+format which can be parsed is browser dependent. Calling this function on
+transparent elements will return &#34;transparent&#34; in most browsers or
+&#34;rgba(0, 0, 0, 0)&#34; in WebKit.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the background color of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string value of the background color.</p>
+</dl></dd></dl></section><section class="property" id="getBorderBox"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1783" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getBorderBox(<wbr>element)</div></h3><p>Gets the computed border widths (on all sides) in pixels</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the border widths for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Box.html">goog.math.Box</a></code><dd><p>The computed border widths.</p>
+</dl></dd></dl></section><section class="property" id="getBorderBoxSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1525" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getBorderBoxSize(<wbr>element)</div></h3><p>Gets the border box size for an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the size for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>The border box size.</p>
+</dl></dd></dl></section><section class="property" id="getBounds"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1083" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getBounds(<wbr>element)</div></h3><p>Returns a bounding rectangle for a given element in page space.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get bounds of. Must not be display none.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Rect.html">goog.math.Rect</a></code><dd><p>Bounding rectangle for the element.</p>
+</dl></dd></dl></section><section class="property" id="getCascadedStyle"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l221" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getCascadedStyle(<wbr>element,<wbr> style)</div></h3><p>Gets the cascaded style value of a node, or null if the value cannot be
+computed (only Internet Explorer can do this).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get style of.</p>
+<dt class="named">style<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Property to get (camel-case).</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Style value.</p>
+</dl></dd></dl></section><section class="property" id="getClientLeftTop"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l679" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getClientLeftTop(<wbr>el)</div></h3><p>Returns clientLeft (width of the left border and, if the directionality is
+right to left, the vertical scrollbar) and clientTop as a coordinate object.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to get clientLeft for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>Client left and top.</p>
+</dl></dd></dl></section><section class="property" id="getClientPosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l857" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getClientPosition(<wbr>el)</div></h3><p>Returns the position of the event or the element&#39;s border box relative to
+the client viewport. If an event is passed, and if this event is a &#34;touch&#34;
+event, then the position of the first changedTouches will be returned.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>(Element|Event|<a href="goog.events.Event.html">goog.events.Event</a>)</code><dd><p>Element or a mouse / touch event.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The position.</p>
+</dl></dd></dl></section><section class="property" id="getClientViewportElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l401" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getClientViewportElement(<wbr>opt_node)</div></h3><p>Returns the viewport element for a particular document</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_node<code>?Node=</code><dd><p>DOM node (Document is OK) to get the viewport element
+of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>document.documentElement or document.body.</p>
+</dl></dd></dl></section><section class="property" id="getComputedBoxSizing"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l253" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedBoxSizing(<wbr>element)</div></h3><p>Retrieves the computed value of the box-sizing CSS attribute.
+Browser support: http://caniuse.com/css3-boxsizing.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>!Element</code><dd><p>The element whose box-sizing to get.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>&#39;content-box&#39;, &#39;border-box&#39; or &#39;padding-box&#39;. null if
+box-sizing is not supported (IE7 and below).</p>
+</dl></dd></dl></section><section class="property" id="getComputedCursor"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l338" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedCursor(<wbr>element)</div></h3><p>Retrieves the computed value of the cursor CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the cursor of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string value of the cursor attribute.</p>
+</dl></dd></dl></section><section class="property" id="getComputedOverflowX"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l298" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedOverflowX(<wbr>element)</div></h3><p>Retrieves the computed value of the overflow-x CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the overflow-x of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string value of the overflow-x attribute.</p>
+</dl></dd></dl></section><section class="property" id="getComputedOverflowY"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l308" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedOverflowY(<wbr>element)</div></h3><p>Retrieves the computed value of the overflow-y CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the overflow-y of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string value of the overflow-y attribute.</p>
+</dl></dd></dl></section><section class="property" id="getComputedPosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l265" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedPosition(<wbr>element)</div></h3><p>Retrieves the computed value of the position CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the position of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Position value.</p>
+</dl></dd></dl></section><section class="property" id="getComputedStyle"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l198" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedStyle(<wbr>element,<wbr> property)</div></h3><p>Retrieves a computed style value of a node. It returns empty string if the
+value cannot be computed (which will be the case in Internet Explorer) or
+&#34;none&#34; if the property requested is an SVG one and it has not been
+explicitly set (firefox and webkit).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get style of.</p>
+<dt class="named">property<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Property to get (camel-case).</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Style value.</p>
+</dl></dd></dl></section><section class="property" id="getComputedTextAlign"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l328" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedTextAlign(<wbr>element)</div></h3><p>Retrieves the computed value of the text-align CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the text-align of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string value of the text-align attribute.</p>
+</dl></dd></dl></section><section class="property" id="getComputedTransform"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l348" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedTransform(<wbr>element)</div></h3><p>Retrieves the computed value of the CSS transform attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the transform of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The computed string representation of the transform matrix.</p>
+</dl></dd></dl></section><section class="property" id="getComputedZIndex"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l318" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getComputedZIndex(<wbr>element)</div></h3><p>Retrieves the computed value of the z-index CSS attribute.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the z-index of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code><dd><p>The computed value of the z-index attribute.</p>
+</dl></dd></dl></section><section class="property" id="getContainerOffsetToScrollInto"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l595" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getContainerOffsetToScrollInto(<wbr>element,<wbr> opt_container,<wbr> opt_center)</div></h3><p>Calculate the scroll position of <code>container</code> with the minimum amount so
+that the content and the borders of the given <code>element</code> become visible.
+If the element is bigger than the container, its top left corner will be
+aligned as close to the container&#39;s top left corner as possible.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to make visible.</p>
+<dt class="named">opt_container<code>?Element=</code><dd><p>The container to scroll. If not set, then the
+document scroll element will be used.</p>
+<dt class="named">opt_center<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to center the element in the container.
+Defaults to false.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The new scroll position of the container,
+in form of goog.math.Coordinate(scrollLeft, scrollTop).</p>
+</dl></dd></dl></section><section class="property" id="getContentBoxSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1568" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getContentBoxSize(<wbr>element)</div></h3><p>Gets the content box size for an element.  This is potentially expensive in
+all browsers.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the size for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>The content box size.</p>
+</dl></dd></dl></section><section class="property" id="getCssTranslation"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l2059" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getCssTranslation(<wbr>element)</div></h3><p>Returns the x,y translation component of any CSS transforms applied to the
+element, in pixels.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>!Element</code><dd><p>The element to get the translation of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The CSS translation of the element in px.</p>
+</dl></dd></dl></section><section class="property" id="getFloat"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l2003" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getFloat(<wbr>el)</div></h3><p>Gets value of explicitly-set float CSS property on an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to get float property of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The value of explicitly-set float CSS property on this
+element.</p>
+</dl></dd></dl></section><section class="property" id="getFontFamily"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1811" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getFontFamily(<wbr>el)</div></h3><p>Returns the font face applied to a given node. Opera and IE should return
+the font actually displayed. Firefox returns the author&#39;s most-preferred
+font (whether the browser is capable of displaying it or not.)</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element whose font family is returned.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The font family applied to el.</p>
+</dl></dd></dl></section><section class="property" id="getFontSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1901" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getFontSize(<wbr>el)</div></h3><p>Returns the font size, in pixels, of text in an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element whose font size is returned.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The font size (in pixels).</p>
+</dl></dd></dl></section><section class="property" id="getFramedPageOffset"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l757" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getFramedPageOffset(<wbr>el,<wbr> relativeWin)</div></h3><p>Returns a Coordinate object relative to the top-left of an HTML document
+in an ancestor frame of this element. Used for measuring the position of
+an element inside a frame relative to a containing frame.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to get the page offset for.</p>
+<dt class="named">relativeWin<code>Window</code><dd><p>The window to measure relative to. If relativeWin
+is not in the ancestor frame chain of the element, we measure relative to
+the top-most window.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The page offset.</p>
+</dl></dd></dl></section><section class="property" id="getLengthUnits"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1863" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getLengthUnits(<wbr>value)</div></h3><p>Returns the units used for a CSS length measurement.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A CSS length quantity.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The units of measurement.</p>
+</dl></dd></dl></section><section class="property" id="getMarginBox"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1742" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getMarginBox(<wbr>element)</div></h3><p>Gets the computed margins (on all sides) in pixels.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the margins for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Box.html">goog.math.Box</a></code><dd><p>The computed margins.</p>
+</dl></dd></dl></section><section class="property" id="getOffsetParent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l491" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getOffsetParent(<wbr>element)</div></h3><p>Returns the first parent that could affect the position of a given element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the offset parent for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The first offset parent or null if one cannot be found.</p>
+</dl></dd></dl></section><section class="property" id="getOpacity"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1120" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getOpacity(<wbr>el)</div></h3><p>Gets the opacity of a node (x-browser). This gets the inline style opacity
+of the node, and does not take into account the cascaded or the computed
+style for this node.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element whose opacity has to be found.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Opacity between 0 and 1 or an empty string <code>&#39;&#39;</code>
+if the opacity is not set.</p>
+</dl></dd></dl></section><section class="property" id="getPaddingBox"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1732" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPaddingBox(<wbr>element)</div></h3><p>Gets the computed paddings (on all sides) in pixels.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to get the padding for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Box.html">goog.math.Box</a></code><dd><p>The computed paddings.</p>
+</dl></dd></dl></section><section class="property" id="getPageOffset"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l694" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPageOffset(<wbr>el)</div></h3><p>Returns a Coordinate object relative to the top-left of the HTML document.
+Implemented as a single function to save having to do two recursive loops in
+opera and safari just to get both coordinates.  If you just want one value do
+use goog.style.getPageOffsetLeft() and goog.style.getPageOffsetTop(), but
+note if you call both those methods the tree will be analysed twice.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to get the page offset for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The page offset.</p>
+</dl></dd></dl></section><section class="property" id="getPageOffsetLeft"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l731" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPageOffsetLeft(<wbr>el)</div></h3><p>Returns the left coordinate of an element relative to the HTML document</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Elements.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The left coordinate.</p>
+</dl></dd></dl></section><section class="property" id="getPageOffsetTop"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l741" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPageOffsetTop(<wbr>el)</div></h3><p>Returns the top coordinate of an element relative to the HTML document</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Elements.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The top coordinate.</p>
+</dl></dd></dl></section><section class="property" id="getPosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l388" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPosition(<wbr>element)</div></h3><p>Gets the offsetLeft and offsetTop properties of an element and returns them
+in a Coordinate object</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The position.</p>
+</dl></dd></dl></section><section class="property" id="getRelativePosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l830" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getRelativePosition(<wbr>a,<wbr> b)</div></h3><p>Returns the position of an element relative to another element in the
+document.  A relative to B</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">a<code>(Element|Event|<a href="goog.events.Event.html">goog.events.Event</a>)</code><dd><p>Element or mouse event whose
+position we&#39;re calculating.</p>
+<dt class="named">b<code>(Element|Event|<a href="goog.events.Event.html">goog.events.Event</a>)</code><dd><p>Element or mouse event position
+is relative to.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The relative position.</p>
+</dl></dd></dl></section><section class="property" id="getScrollbarWidth"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l2017" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getScrollbarWidth(<wbr>opt_className)</div></h3><p>Returns the scroll bar width (represents the width of both horizontal
+and vertical scroll).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>An optional class name (or names) to apply
+to the invisible div created to measure the scrollbar. This is necessary
+if some scrollbars are styled differently than others.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The scroll bar width in px.</p>
+</dl></dd></dl></section><section class="property" id="getSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l983" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getSize(<wbr>element)</div></h3><p>Gets the height and width of an element, even if its display is none.</p>
+<p>Specifically, this returns the height and width of the border box,
+irrespective of the box model in effect.</p>
+<p>Note that this function does not take CSS transforms into account. Please see
+<code>goog.style.getTransformedSize</code>.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get size of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>Object with width/height properties.</p>
+</dl></dd></dl></section><section class="property" id="getStyle"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l170" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getStyle(<wbr>element,<wbr> property)</div></h3><p>Retrieves an explicitly-set style value of a node. This returns &#39;&#39; if there
+isn&#39;t a style attribute on the element or if this style property has not been
+explicitly set in script.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get style of.</p>
+<dt class="named">property<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Property to get, css-style (if you have a camel-case
+property, use element.style[style]).</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Style value.</p>
+</dl></dd></dl></section><section class="property" id="getTransformedSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1066" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getTransformedSize(<wbr>element)</div></h3><p>Gets the height and width of an element, post transform, even if its display
+is none.</p>
+<p>This is like <code>goog.style.getSize</code>, except:</p>
+ <ol><li>Takes webkitTransforms such as rotate and scale into account.
+ </li><li>Will return null if <code>element</code> doesn&#39;t respond to
+     <code>getBoundingClientRect</code>.
+ </li><li>Currently doesn&#39;t make sense on non-WebKit browsers which don&#39;t support
+    webkitTransforms.
+ </li></ol>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>!Element</code><dd><p>Element to get size of.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>Object with width/height properties.</p>
+</dl></dd></dl></section><section class="property" id="getViewportPageOffset"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l425" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getViewportPageOffset(<wbr>doc)</div></h3><p>Calculates the viewport coordinates relative to the page/document
+containing the node. The viewport may be the browser viewport for
+non-iframe document, or the iframe container for iframe&#39;d document.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">doc<code>!Document</code><dd><p>The document to use as the reference point.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Coordinate.html">goog.math.Coordinate</a></code><dd><p>The page offset of the viewport.</p>
+</dl></dd></dl></section><section class="property" id="getVisibleRectForElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l534" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getVisibleRectForElement(<wbr>element)</div></h3><p>Calculates and returns the visible rectangle for a given element. Returns a
+box describing the visible portion of the nearest scrollable offset ancestor.
+Coordinates are given relative to the document.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to get the visible rect for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.math.Box.html">goog.math.Box</a></code><dd><p>Bounding elementBox describing the visible rect or
+null if scrollable ancestor isn&#39;t inside the visible viewport.</p>
+</dl></dd></dl></section><section class="property" id="installSafeStyleSheet"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1302" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>installSafeStyleSheet(<wbr>safeStyleSheet,<wbr> opt_node)</div></h3><p>Installs the style sheet into the window that contains opt_node.  If
+opt_node is null, the main window is used.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">safeStyleSheet<code>!<a href="goog.html.SafeStyleSheet.html">goog.html.SafeStyleSheet</a></code><dd><p>The style sheet to install.</p>
+<dt class="named">opt_node<code>?Node=</code><dd><p>Node whose parent document should have the
+styles installed.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(Element|StyleSheet)</code><dd><p>The style element created.</p>
+</dl></dd></dl></section><section class="property" id="installStyles"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1287" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>installStyles(<wbr>stylesString,<wbr> opt_node)</div></h3><p>Installs the styles string into the window that contains opt_node.  If
+opt_node is null, the main window is used.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use <a href="goog.style.html#installSafeStyleSheet"><code>#installSafeStyleSheet</code></a> instead.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">stylesString<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The style string to install.</p>
+<dt class="named">opt_node<code>?Node=</code><dd><p>Node whose parent document should have the
+styles installed.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(Element|StyleSheet)</code><dd><p>The style element created.</p>
+</dl></dd></dl></section><section class="property" id="isElementShown"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1273" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isElementShown(<wbr>el)</div></h3><p>Test whether the given element has been shown or hidden via a call to
+<a href="goog.style.html#setElementShown"><code>#setElementShown</code></a>.</p>
+<p>Note this is strictly a companion method for a call
+to <a href="goog.style.html#setElementShown"><code>#setElementShown</code></a> and the same caveats apply; in particular, this
+method does not guarantee that the return value will be consistent with
+whether or not the element is actually visible.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to test.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the element has been shown.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.style.html#setElementShown">#setElementShown</a></dd></dl></section><section class="property" id="isRightToLeft"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1441" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isRightToLeft(<wbr>el)</div></h3><p>Returns true if the element is using right to left (rtl) direction.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to test.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True for right to left, false for left to right.</p>
+</dl></dd></dl></section><section class="property" id="isUnselectable"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1467" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isUnselectable(<wbr>el)</div></h3><p>Returns true if the element is set to be unselectable, false otherwise.
+Note that on some platforms (e.g. Mozilla), even if an element isn&#39;t set
+to be unselectable, it will behave as such if any of its ancestors is
+unselectable.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to check.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the element is set to be unselectable.</p>
+</dl></dd></dl></section><section class="property" id="parseStyleAttribute"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1957" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>parseStyleAttribute(<wbr>value)</div></h3><p>Parses a style attribute value.  Converts CSS property names to camel case.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The style attribute value.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Map of CSS properties to string values.</p>
+</dl></dd></dl></section><section class="property" id="scrollIntoContainerView"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l662" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>scrollIntoContainerView(<wbr>element,<wbr> opt_container,<wbr> opt_center)</div></h3><p>Changes the scroll position of <code>container</code> with the minimum amount so
+that the content and the borders of the given <code>element</code> become visible.
+If the element is bigger than the container, its top left corner will be
+aligned as close to the container&#39;s top left corner as possible.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to make visible.</p>
+<dt class="named">opt_container<code>?Element=</code><dd><p>The container to scroll. If not set, then the
+document scroll element will be used.</p>
+<dt class="named">opt_center<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to center the element in the container.
+Defaults to false.</p>
+</dl></dd></dl></section><section class="property" id="setBorderBoxSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1538" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setBorderBoxSize(<wbr>element,<wbr> size)</div></h3><p>Sets the border box size of an element. This is potentially expensive in IE
+if the document is CSS1Compat mode</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to set the size on.</p>
+<dt class="named">size<code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>The new size.</p>
+</dl></dd></dl></section><section class="property" id="setContentBoxSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1600" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setContentBoxSize(<wbr>element,<wbr> size)</div></h3><p>Sets the content box size of an element. This is potentially expensive in IE
+if the document is BackCompat mode.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to set the size on.</p>
+<dt class="named">size<code><a href="goog.math.Size.html">goog.math.Size</a></code><dd><p>The new size.</p>
+</dl></dd></dl></section><section class="property" id="setElementShown"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1255" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setElementShown(<wbr>el,<wbr> isShown)</div></h3><p>Shows or hides an element from the page. Hiding the element is done by
+setting the display property to &#34;none&#34;, removing the element from the
+rendering hierarchy so it takes up no space. To show the element, the default
+inherited display property is restored (defined either in stylesheets or by
+the browser&#39;s default style rules).</p>
+<p>Caveat 1: if the inherited display property for the element is set to &#34;none&#34;
+by the stylesheets, that is the property that will be restored by a call to
+setElementShown(), effectively toggling the display between &#34;none&#34; and
+&#34;none&#34;.</p>
+<p>Caveat 2: if the element display style is set inline (by setting either
+element.style.display or a style attribute in the HTML), a call to
+setElementShown will clear that setting and defer to the inherited style in
+the stylesheet.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to show or hide.</p>
+<dt class="named">isShown<code>*</code><dd><p>True to render the element in its default style,
+false to disable rendering the element.</p>
+</dl></dd></dl></section><section class="property" id="setFloat"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1992" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setFloat(<wbr>el,<wbr> value)</div></h3><p>Sets CSS float property on an element.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to set float property on.</p>
+<dt class="named">value<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The value of float CSS property to set on this element.</p>
+</dl></dd></dl></section><section class="property" id="setHeight"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l956" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setHeight(<wbr>element,<wbr> height)</div></h3><p>Set the height of an element.  Sets the element&#39;s style property.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to set the height of.</p>
+<dt class="named">height<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code><dd><p>The height value to set.  If a number, &#39;px&#39;
+will be appended, otherwise the value will be applied directly.</p>
+</dl></dd></dl></section><section class="property" id="setInlineBlock"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1418" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setInlineBlock(<wbr>el)</div></h3><p>Sets &#39;display: inline-block&#39; for an element (cross-browser).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to which the inline-block display style is to be
+applied.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><p>../demos/inline_block_quirks.html</p>
+</dd><dd><p>../demos/inline_block_standards.html</p>
+</dd></dl></section><section class="property" id="setOpacity"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1144" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setOpacity(<wbr>el,<wbr> alpha)</div></h3><p>Sets the opacity of a node (x-browser).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Elements whose opacity has to be set.</p>
+<dt class="named">alpha<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Opacity between 0 and 1 or an empty string
+<code>&#39;&#39;</code> to clear the opacity.</p>
+</dl></dd></dl></section><section class="property" id="setPageOffset"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l877" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setPageOffset(<wbr>el,<wbr> x,<wbr> opt_y)</div></h3><p>Moves an element to the given coordinates relative to the client viewport.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Absolutely positioned element to set page offset for.
+It must be in the document.</p>
+<dt class="named">x<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.math.Coordinate.html">goog.math.Coordinate</a>)</code><dd><p>Left position of the element&#39;s margin
+box or a coordinate object.</p>
+<dt class="named">opt_y<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>Top position of the element&#39;s margin box.</p>
+</dl></dd></dl></section><section class="property" id="setPosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l364" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setPosition(<wbr>el,<wbr> arg1,<wbr> opt_arg2)</div></h3><p>Sets the top/left values of an element.  If no unit is specified in the
+argument then it will add px. The second argument is required if the first
+argument is a string or number and is ignored if the first argument
+is a coordinate.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to move.</p>
+<dt class="named">arg1<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.math.Coordinate.html">goog.math.Coordinate</a>)</code><dd><p>Left position or coordinate.</p>
+<dt class="named">opt_arg2<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)=</code><dd><p>Top position.</p>
+</dl></dd></dl></section><section class="property" id="setPreWrap"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1398" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setPreWrap(<wbr>el)</div></h3><p>Sets &#39;white-space: pre-wrap&#39; for a node (x-browser).</p>
+<p>There are as many ways of specifying pre-wrap as there are browsers.</p>
+<p>CSS3/IE8: white-space: pre-wrap;
+Mozilla:  white-space: -moz-pre-wrap;
+Opera:    white-space: -o-pre-wrap;
+IE6/7:    white-space: pre; word-wrap: break-word;</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to enable pre-wrap for.</p>
+</dl></dd></dl></section><section class="property" id="setSafeStyleSheet"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1370" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setSafeStyleSheet(<wbr>element,<wbr> safeStyleSheet)</div></h3><p>Sets the content of a style element.  The style element can be any valid
+style element.  This element will have its content completely replaced by
+the safeStyleSheet.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>(Element|StyleSheet)</code><dd><p>A stylesheet element as returned by
+installStyles.</p>
+<dt class="named">safeStyleSheet<code>!<a href="goog.html.SafeStyleSheet.html">goog.html.SafeStyleSheet</a></code><dd><p>The new content of the
+stylesheet.</p>
+</dl></dd></dl></section><section class="property" id="setSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l913" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setSize(<wbr>element,<wbr> w,<wbr> opt_h)</div></h3><p>Sets the width/height values of an element.  If an argument is numeric,
+or a goog.math.Size is passed, it is assumed to be pixels and will add
+&#39;px&#39; after converting it to an integer in string form. (This just sets the
+CSS width and height properties so it might set content-box or border-box
+size depending on the box model the browser is using.)</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to set the size of.</p>
+<dt class="named">w<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="goog.math.Size.html">goog.math.Size</a>)</code><dd><p>Width of the element, or a
+size object.</p>
+<dt class="named">opt_h<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)=</code><dd><p>Height of the element. Required if w is not a
+size object.</p>
+</dl></dd></dl></section><section class="property" id="setStyle"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l65" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setStyle(<wbr>element,<wbr> style,<wbr> opt_value)</div></h3><p>Sets a style value on an element.</p>
+<p>This function is not indended to patch issues in the browser&#39;s style
+handling, but to allow easy programmatic access to setting dash-separated
+style properties.  An example is setting a batch of properties from a data
+object without overwriting old styles.  When possible, use native APIs:
+elem.style.propertyKey &#61; &#39;value&#39; or (if obliterating old styles is fine)
+elem.style.cssText &#61; &#39;property1: value1; property2: value2&#39;.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element to change.</p>
+<dt class="named">style<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>If a string, a style name. If an object, a hash
+of style names to style values.</p>
+<dt class="named">opt_value<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)=</code><dd><p>If style was a string, then this
+should be the value.</p>
+</dl></dd></dl></section><section class="property" id="setStyles"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1355" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>setStyles(<wbr>element,<wbr> stylesString)</div></h3><p>Sets the content of a style element.  The style element can be any valid
+style element.  This element will have its content completely replaced by
+the stylesString.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use <a href="goog.style.html#setSafeStyleSheet"><code>#setSafeStyleSheet</code></a> instead.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>(Element|StyleSheet)</code><dd><p>A stylesheet element as returned by
+installStyles.</p>
+<dt class="named">stylesString<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The new content of the stylesheet.</p>
+</dl></dd></dl></section><section class="property" id="setTransparentBackgroundImage"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1174" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setTransparentBackgroundImage(<wbr>el,<wbr> src)</div></h3><p>Sets the background of an element to a transparent image in a browser-
+independent manner.</p>
+<p>This function does not support repeating backgrounds or alternate background
+positions to match the behavior of Internet Explorer. It also does not
+support sizingMethods other than crop since they cannot be replicated in
+browsers other than Internet Explorer.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to set background on.</p>
+<dt class="named">src<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The image source URL.</p>
+</dl></dd></dl></section><section class="property" id="setUnselectable"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1488" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setUnselectable(<wbr>el,<wbr> unselectable,<wbr> opt_noRecurse)</div></h3><p>Makes the element and its descendants selectable or unselectable.  Note
+that on some platforms (e.g. Mozilla), even if an element isn&#39;t set to
+be unselectable, it will behave as such if any of its ancestors is
+unselectable.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>The element to alter.</p>
+<dt class="named">unselectable<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the element and its descendants
+should be made unselectable.</p>
+<dt class="named">opt_noRecurse<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to only alter the element&#39;s own
+selectable state, and leave its descendants alone; defaults to false.</p>
+</dl></dd></dl></section><section class="property" id="setWidth"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l967" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setWidth(<wbr>element,<wbr> width)</div></h3><p>Set the width of an element.  Sets the element&#39;s style property.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to set the width of.</p>
+<dt class="named">width<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code><dd><p>The width value to set.  If a number, &#39;px&#39;
+will be appended, otherwise the value will be applied directly.</p>
+</dl></dd></dl></section><section class="property" id="showElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1230" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>showElement(<wbr>el,<wbr> display)</div></h3><p>Shows or hides an element from the page. Hiding the element is done by
+setting the display property to &#34;none&#34;, removing the element from the
+rendering hierarchy so it takes up no space. To show the element, the default
+inherited display property is restored (defined either in stylesheets or by
+the browser&#39;s default style rules.)</p>
+<p>Caveat 1: if the inherited display property for the element is set to &#34;none&#34;
+by the stylesheets, that is the property that will be restored by a call to
+showElement(), effectively toggling the display between &#34;none&#34; and &#34;none&#34;.</p>
+<p>Caveat 2: if the element display style is set inline (by setting either
+element.style.display or a style attribute in the HTML), a call to
+showElement will clear that setting and defer to the inherited style in the
+stylesheet.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use goog.style.setElementShown instead.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">el<code>Element</code><dd><p>Element to show or hide.</p>
+<dt class="named">display<code>*</code><dd><p>True to render the element in its default style,
+false to disable rendering the element.</p>
+</dl></dd></dl></section><section class="property" id="toCamelCase"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1096" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>toCamelCase(<wbr>selector)</div></h3><p>Converts a CSS selector in the form style-property to styleProperty.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use goog.string.toCamelCase instead.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">selector<code>*</code><dd><p>CSS Selector.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Camel case selector.</p>
+</dl></dd></dl></section><section class="property" id="toSelectorCase"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1107" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>toSelectorCase(<wbr>selector)</div></h3><p>Converts a CSS selector in the form styleProperty to style-property.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use goog.string.toSelectorCase instead.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">selector<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Camel case selector.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Selector cased.</p>
+</dl></dd></dl></section><section class="property" id="toStyleAttribute"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1978" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>toStyleAttribute(<wbr>obj)</div></h3><p>Reverse of parseStyleAttribute; that is, takes a style object and returns the
+corresponding attribute value.  Converts camel case property names to proper
+CSS selector names.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>Map of CSS properties to values.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The style attribute value.</p>
+</dl></dd></dl></section><section class="property" id="translateRectForAnotherFrame"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l802" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>translateRectForAnotherFrame(<wbr>rect,<wbr> origBase,<wbr> newBase)</div></h3><p>Translates the specified rect relative to origBase page, for newBase page.
+If origBase and newBase are the same, this function does nothing.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">rect<code><a href="goog.math.Rect.html">goog.math.Rect</a></code><dd><p>The source rectangle relative to origBase page,
+and it will have the translated result.</p>
+<dt class="named">origBase<code><a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a></code><dd><p>The DomHelper for the input rectangle.</p>
+<dt class="named">newBase<code><a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a></code><dd><p>The DomHelper for the resultant
+coordinate.  This must be a DOM for an ancestor frame of origBase
+or the same as origBase.</p>
+</dl></dd></dl></section><section class="property" id="uninstallStyles"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/style/style.js.src.html#l1339" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>uninstallStyles(<wbr>styleSheet)</div></h3><p>Removes the styles added by <a href="goog.style.html#installStyles"><code>#installStyles</code></a>.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">styleSheet<code>(Element|StyleSheet)</code><dd><p>The value returned by
+<a href="goog.style.html#installStyles"><code>#installStyles</code></a>.</p>
+</dl></dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

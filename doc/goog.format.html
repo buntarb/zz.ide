@@ -1,0 +1,65 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.format</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l20">View Source</a></div><h1 class="title"><div>namespace goog.format</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="fileSize"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l34" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>fileSize(<wbr>bytes,<wbr> opt_decimals)</div></h3><p>Formats a number of bytes in human readable form.
+54, 450K, 1.3M, 5G etc.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">bytes<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The number of bytes to show.</p>
+<dt class="named">opt_decimals<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The number of decimals to use.  Defaults to 2.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The human readable form of the byte size.</p>
+</dl></dd></dl></section><section class="property" id="insertWordBreaks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l405" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>insertWordBreaks(<wbr>str,<wbr> opt_maxlen)</div></h3><p>Inserts word breaks into an HTML string at a given interval.</p>
+<p>This method is as aggressive as possible, using a full table of Unicode
+characters where it is legal to insert word breaks; however, this table
+comes at a 2.5k pre-gzip (~1k post-gzip) size cost.  Consider using
+insertWordBreaksBasic to minimize the size impact.</p>
+<dl><dt class="spec">Deprecated<dd><p>Prefer wrapping with CSS white-space: pre-wrap.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">str<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>HTML to insert word breaks into.</p>
+<dt class="named">opt_maxlen<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>Maximum length after which to ensure there is a
+break.  Default is 10 characters.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The string including word breaks.</p>
+</dl></dd></dl></section><section class="property" id="insertWordBreaksBasic"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l456" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>insertWordBreaksBasic(<wbr>str,<wbr> opt_maxlen)</div></h3><p>Inserts word breaks into an HTML string at a given interval.</p>
+<p>This method is less aggressive than insertWordBreaks, only inserting
+breaks next to punctuation and between Latin or Cyrillic characters.
+However, this is good enough for the common case of URLs.  It also
+works for all Latin and Cyrillic languages, plus CJK has no need for word
+breaks.  When this method is used, goog.i18n.GraphemeBreak may be dead
+code eliminated.</p>
+<dl><dt class="spec">Deprecated<dd><p>Prefer wrapping with CSS white-space: pre-wrap.</p>
+<dt class="spec">Parameters</dt><dd><dl><dt class="named">str<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>HTML to insert word breaks into.</p>
+<dt class="named">opt_maxlen<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>Maximum length after which to ensure there is a
+break.  Default is 10 characters.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The string including word breaks.</p>
+</dl></dd></dl></section><section class="property" id="isConvertableScaledNumber"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l54" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isConvertableScaledNumber(<wbr>val)</div></h3><p>Checks whether string value containing scaling units (K, M, G, T, P, m,
+u, n) can be converted to a number.</p>
+<p>Where there is a decimal, there must be a digit to the left of the
+decimal point.</p>
+<p>Negative numbers are valid.</p>
+<p>Examples:
+0, 1, 1.0, 10.4K, 2.3M, -0.3P, 1.2m</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">val<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String value to check.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if string could be converted to a numeric value.</p>
+</dl></dd></dl></section><section class="property" id="numBytesToString"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l112" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>numBytesToString(<wbr>val,<wbr> opt_decimals,<wbr> opt_suffix,<wbr> opt_useSeparator)</div></h3><p>Converts number of bytes to string representation. Binary conversion.
+Default is to return the additional &#39;B&#39; suffix only for scales greater than
+1K, e.g. &#39;10.5KB&#39; to minimize confusion with counts that are scaled by powers
+of 1000. Otherwise, suffix is empty string.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">val<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Value to be converted.</p>
+<dt class="named">opt_decimals<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The number of decimals to use.  Defaults to 2.</p>
+<dt class="named">opt_suffix<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, include trailing &#39;B&#39; in returned
+string.  Default is true.</p>
+<dt class="named">opt_useSeparator<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, number and scale will be
+separated by a no break space. Default is false.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String representation of number of bytes.</p>
+</dl></dd></dl></section><section class="property" id="numericValueToString"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l93" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>numericValueToString(<wbr>val,<wbr> opt_decimals)</div></h3><p>Converts a numeric value to string representation. SI conversion.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">val<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Value to be converted.</p>
+<dt class="named">opt_decimals<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The number of decimals to use.  Defaults to 2.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String representation of number.</p>
+</dl></dd></dl></section><section class="property" id="stringToNumBytes"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l81" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>stringToNumBytes(<wbr>stringValue)</div></h3><p>Converts a string to number of bytes, taking into account the units.
+Binary conversion.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">stringValue<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String to be converted to numeric value.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Numeric value for string.</p>
+</dl></dd></dl></section><section class="property" id="stringToNumericValue"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l65" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>stringToNumericValue(<wbr>stringValue)</div></h3><p>Converts a string to numeric value, taking into account the units.
+If string ends in &#39;B&#39;, use binary conversion.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">stringValue<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>String to be converted to numeric value.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Numeric value for string.</p>
+</dl></dd></dl></section></section><section class="static-properties"><h2>Properties</h2><section class="property" id="WORD_BREAK_HTML"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/format/format.js.src.html#l478" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>WORD_BREAK_HTML</div></h3><p>Constant for the WBR replacement used by insertWordBreaks.  Safari requires
+<wbr />, Opera needs the ­ entity, though this will give a visible
+hyphen at breaks.  IE8 uses a zero width space.
+Other browsers just use <wbr />.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.format.WbrToken_.html">WbrToken_</a><dd><p>Tokens used within insertWordBreaks.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

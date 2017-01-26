@@ -1,0 +1,85 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.asserts</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l37">View Source</a></div><h1 class="title"><div>namespace goog.asserts</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="DEFAULT_ERROR_HANDLER"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l85" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>DEFAULT_ERROR_HANDLER(<wbr>e)</div></h3><p>The default error handler.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">e<code>!<a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>The exception to be handled.</p>
+</dl></dd></dl></section><section class="property" id="assert"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l149" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T&gt;</code> assert(<wbr>condition,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the condition evaluates to true if goog.asserts.ENABLE_ASSERTS is
+true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">condition<code>T</code><dd><p>The condition to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>T</code><dd><p>The value of the condition.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the condition evaluates to false.</p>
+</dl></dd></dl></section><section class="property" id="assertArray"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l267" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertArray(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is an Array if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;?&gt;</code><dd><p>The value, guaranteed to be a non-null array.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not an array.</p>
+</dl></dd></dl></section><section class="property" id="assertBoolean"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l286" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertBoolean(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is a boolean if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The value, guaranteed to be a boolean when asserts are
+enabled.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not a boolean.</p>
+</dl></dd></dl></section><section class="property" id="assertElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l305" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertElement(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is a DOM Element if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The value, likely to be a DOM Element when asserts are
+enabled.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not an Element.</p>
+</dl></dd></dl></section><section class="property" id="assertFunction"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l231" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertFunction(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is a function if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Function</code><dd><p>The value, guaranteed to be a function when asserts
+enabled.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not a function.</p>
+</dl></dd></dl></section><section class="property" id="assertInstanceof"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l331" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T&gt;</code> assertInstanceof(<wbr>value,<wbr> type,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is an instance of the user-defined type if
+goog.asserts.ENABLE_ASSERTS is true.</p>
+<p>The compiler may tighten the type returned by this function.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>?</code><dd><p>The value to check.</p>
+<dt class="named">type<code>function(new: T, ...?)</code><dd><p>A user-defined constructor.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>T</code></dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not an instance of
+type.</p>
+</dl></dd></dl></section><section class="property" id="assertNumber"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l194" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertNumber(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is a number if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The value, guaranteed to be a number when asserts enabled.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not a number.</p>
+</dl></dd></dl></section><section class="property" id="assertObject"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l249" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertObject(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is an Object if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The value, guaranteed to be a non-null object.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not an object.</p>
+</dl></dd></dl></section><section class="property" id="assertObjectPrototypeIsIntact"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l346" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertObjectPrototypeIsIntact()</div></h3><p>Checks that no enumerable keys are present in Object.prototype. Such keys
+would break most code that use <code>for (var ... in ...)</code> loops.</p>
+</section><section class="property" id="assertString"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l212" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>assertString(<wbr>value,<wbr> opt_message,<wbr> var_args)</div></h3><p>Checks if the value is a string if goog.asserts.ENABLE_ASSERTS is true.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value to check.</p>
+<dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The value, guaranteed to be a string when asserts enabled.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>When the value is not a string.</p>
+</dl></dd></dl></section><section class="property" id="fail"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l176" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>fail(<wbr>opt_message,<wbr> var_args)</div></h3><p>Fails if goog.asserts.ENABLE_ASSERTS is true. This function is useful in case
+when we want to add a check in the unreachable area like switch-case
+statement:</p>
+ <pre>
+  switch(type) {
+    case FOO: doSomething(); break;
+    case BAR: doSomethingElse(); break;
+    default: goog.assert.fail(&#39;Unrecognized type: &#39; &#43; type);
+      // We have only 2 types - &#34;default:&#34; section is unreachable code.
+  }
+ </pre>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Error message in case of failure.</p>
+<dt class="named">var_args<code>...*</code><dd><p>The items to substitute into the failure message.</p>
+</dl></dd><dt class="spec">Throws</dt><dd><dl><dt><code><a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a></code><dd><p>Failure.</p>
+</dl></dd></dl></section><section class="property" id="setErrorHandler"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l132" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setErrorHandler(<wbr>errorHandler)</div></h3><p>Sets a custom error handler that can be used to customize the behavior of
+assertion failures, for example by turning all assertion failures into log
+messages.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">errorHandler<code>function(<a href="goog.asserts.AssertionError.html">goog.asserts.AssertionError</a>): ?</code></dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.asserts.ENABLE_ASSERTS"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/asserts/asserts.js.src.html#l48" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.asserts.ENABLE_ASSERTS</div></h3><p>Whether to strip out asserts or to leave them in.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.asserts.AssertionError.html">AssertionError</a><dd><p>Error object for failed assertions.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

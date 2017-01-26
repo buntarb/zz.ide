@@ -1,0 +1,406 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Component</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="parentlink"><b>Namespace:</b> <a href="goog.ui.html">goog.ui</a></div><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l50">View Source</a></div><h1 class="title"><div>class Component</div></h1><pre class="inheritance"><a href="goog.Disposable.html">goog.Disposable</a>
+  &#x2514; <a href="goog.events.EventTarget.html">goog.events.EventTarget</a>
+      &#x2514; goog.ui.Component</pre><dl><dt class="spec">All implemented interfaces<dd><code><a href="goog.disposable.IDisposable.html">goog.disposable.IDisposable</a></code><dd><code><a href="goog.events.Listenable.html">goog.events.Listenable</a></code></dl><p>Default implementation of UI component.</p>
+<h3 class="name"><div>new Component(<wbr>opt_domHelper)</div></h3><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_domHelper<code>?<a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a>=</code><dd><p>Optional DOM helper.</p>
+</dl></dd></section><section class="instance-methods"><h2>Instance Methods</h2><section class="property" id="addChild"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l954" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>addChild(<wbr>child,<wbr> opt_render)</div></h3><p>Adds the specified component as the last child of this component.  See
+<a href="goog.ui.Component.html#addChildAt"><code>goog.ui.Component#addChildAt</code></a> for detailed semantics.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">child<code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The new child component.</p>
+<dt class="named">opt_render<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, the child component will be rendered
+into the parent.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#addChildAt">goog.ui.Component#addChildAt</a></dd></dl></section><section class="property" id="addChildAt"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1008" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>addChildAt(<wbr>child,<wbr> index,<wbr> opt_render)</div></h3><p>Adds the specified component as a child of this component at the given
+0-based index.</p>
+<p>Both <code>addChild</code> and <code>addChildAt</code> assume the following contract
+between parent and child components:</p>
+  <ul><li>the child component&#39;s element must be a descendant of the parent
+        component&#39;s element, and
+    </li><li>the DOM state of the child component must be consistent with the DOM
+        state of the parent component (see <code>isInDocument</code>) in the
+        steady state -- the exception is to addChildAt(child, i, false) and
+        then immediately decorate/render the child.
+  </li></ul>
+<p>In particular, <code>parent.addChild(child)</code> will throw an error if the
+child component is already in the document, but the parent isn&#39;t.</p>
+<p>Clients of this API may call <code>addChild</code> and <code>addChildAt</code> with
+<code>opt_render</code> set to true.  If <code>opt_render</code> is true, calling these
+methods will automatically render the child component&#39;s element into the
+parent component&#39;s element. If the parent does not yet have an element, then
+<code>createDom</code> will automatically be invoked on the parent before
+rendering the child.</p>
+<p>Invoking <code>parent.addChild(child, true)</code> will throw an error if the
+child component is already in the document, regardless of the parent&#39;s DOM
+state.</p>
+<p>If <code>opt_render</code> is true and the parent component is not already
+in the document, <code>enterDocument</code> will not be called on this component
+at this point.</p>
+<p>Finally, this method also throws an error if the new child already has a
+different parent, or the given index is out of bounds.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">child<code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The new child component.</p>
+<dt class="named">index<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>0-based index at which the new child component is to be
+added; must be between 0 and the current child count (inclusive).</p>
+<dt class="named">opt_render<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, the child component will be rendered
+into the parent.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><dd><p>Nada.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#addChild">goog.ui.Component#addChild</a></dd></dl></section><section class="property" id="addEventListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l150" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>addEventListener(<wbr>type,<wbr> handler,<wbr> opt_capture,<wbr> opt_handlerScope)</div></h3><p>Adds an event listener to the event target. The same handler can only be
+added once per the type. Even if you add the same handler multiple times
+using the same type then it will only be called once when the event is
+dispatched.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use <code>#listen</code> instead, when possible. Otherwise, use
+<code>goog.events.listen</code> if you are passing Object
+(instead of Function) as handler.</p>
+<dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#addEventListener">goog.events.EventTarget</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The type of the event to listen for.</p>
+<dt class="named">handler<code>?(function(?): ?|{handleEvent: function(?): ?})</code><dd><p>The function
+to handle the event. The handler can also be an object that implements
+the handleEvent method which takes the event object as argument.</p>
+<dt class="named">opt_capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>In DOM-compliant browsers, this determines
+whether the listener is fired during the capture or bubble phase
+of the event.</p>
+<dt class="named">opt_handlerScope<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Object in whose scope to call
+the listener.</p>
+</dl></dd></dl></section><section class="property" id="addOnDisposeCallback"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l216" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T&gt;</code> addOnDisposeCallback(<wbr>callback,<wbr> opt_scope)</div></h3><p>Invokes a callback function when this object is disposed. Callbacks are
+invoked in the order in which they were added. If a callback is added to
+an already disposed Disposable, it will be called immediately.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#addOnDisposeCallback">goog.Disposable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">callback<code>function(this: T): ?</code><dd><p>The callback function.</p>
+<dt class="named">opt_scope<code>?T=</code><dd><p>An optional scope to call the callback in.</p>
+</dl></dd></dl></section><section class="property" id="canDecorate"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l762" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>canDecorate(<wbr>element)</div></h3><p>Determines if a given element can be decorated by this type of component.
+This method should be overridden by inheriting objects.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to decorate.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if the element can be decorated, false otherwise.</p>
+</dl></dd></dl></section><section class="property" id="createDom"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l638" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>createDom()</div></h3><p>Creates the initial DOM representation for the component.  The default
+implementation is to set this.element_ &#61; div.</p>
+</section><section class="property" id="decorate"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l730" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>decorate(<wbr>element)</div></h3><p>Decorates the element for the UI component. If the element is in the
+document, the enterDocument method will be called.</p>
+<p>If goog.ui.Component.ALLOW_DETACHED_DECORATION is false, the caller must
+pass an element that is in the document.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to decorate.</p>
+</dl></dd></dl></section><section class="property" id="decorateInternal"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l783" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="protected"></span></div><div>decorateInternal(<wbr>element)</div></h3><p>Actually decorates the element. Should be overridden by inheriting objects.
+This method can assume there are checks to ensure the component has not
+already been rendered have occurred and that enter document will be called
+afterwards. This method is considered protected.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Element to decorate.</p>
+</dl></dd></dl></section><section class="property" id="dispatchEvent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l181" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>dispatchEvent(<wbr>e)</div></h3><p>Dispatches an event (or event like object) and calls all listeners
+listening for events of this type. The type of the event is decided by the
+type property on the event object.</p>
+<p>If any of the listeners returns false OR calls preventDefault then this
+function will return false.  If one of the capture listeners calls
+stopPropagation, then the bubble listeners won&#39;t fire.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#dispatchEvent">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#dispatchEvent">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">e<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code><dd><p>Event object.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>If anyone called preventDefault on the event object (or
+if any of the listeners returns false) this will also return false.</p>
+</dl></dd></dl></section><section class="property" id="dispose"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l175" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>dispose()</div></h3><p>Disposes of the object. If the object hasn&#39;t already been disposed of, calls
+<a href="goog.ui.Component.html#disposeInternal"><code>#disposeInternal</code></a>. Classes that extend <code>goog.Disposable</code> should
+override <a href="goog.ui.Component.html#disposeInternal"><code>#disposeInternal</code></a> in order to delete references to COM
+objects, DOM nodes, and other disposable objects. Reentrant.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#dispose">goog.Disposable</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.disposable.IDisposable.html#dispose">goog.disposable.IDisposable</a></dd><dt class="spec">Returns</dt><dd><dl><dt><dd><p>Nothing.</p>
+</dl></dd></dl></section><section class="property" id="disposeInternal"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l845" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="protected"></span></div><div>disposeInternal()</div></h3><p>Disposes of the component.  Calls <code>exitDocument</code>, which is expected to
+remove event handlers and clean up the component.  Propagates the call to
+the component&#39;s children, if any. Removes the component&#39;s DOM from the
+document unless it was decorated.</p>
+<dl><dt class="spec">Overrides</dt><dd><a href="goog.events.EventTarget.html#disposeInternal">goog.events.EventTarget</a></dd></dl></section><section class="property" id="enterDocument"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l795" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>enterDocument()</div></h3><p>Called when the component&#39;s element is known to be in the document. Anything
+using document.getElementById etc. should be done at this stage.</p>
+<p>If the component contains child components, this call is propagated to its
+children.</p>
+</section><section class="property" id="exitDocument"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l821" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>exitDocument()</div></h3><p>Called by dispose to clean up the elements and listeners created by a
+component, or by a parent component/application who has removed the
+component from the document but wants to reuse it later.</p>
+<p>If the component contains child components, this call is propagated to its
+children.</p>
+<p>It should be possible for the component to be rendered again once this method
+has been called.</p>
+</section><section class="property" id="fireListeners"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l261" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>fireListeners(<wbr>type,<wbr> capture,<wbr> eventObject)</div></h3><p>Fires all registered listeners in this listenable for the given
+type and capture mode, passing them the given eventObject. This
+does not perform actual capture/bubble. Only implementors of the
+interface should be using this.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#fireListeners">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#fireListeners">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The type of the
+listeners to fire.</p>
+<dt class="named">capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The capture mode of the listeners to fire.</p>
+<dt class="named">eventObject<code>EVENTOBJ</code><dd><p>The event object to fire.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether all listeners succeeded without
+attempting to prevent default behavior. If any listener returns
+false or called goog.events.Event#preventDefault, this returns
+false.</p>
+</dl></dd></dl></section><section class="property" id="forEachChild"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1199" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;T&gt;</code> forEachChild(<wbr>f,<wbr> opt_obj)</div></h3><p>Calls the given function on each of this component&#39;s children in order.  If
+<code>opt_obj</code> is provided, it will be used as the &#39;this&#39; object in the
+function when called.  The function should take two arguments:  the child
+component and its 0-based index.  The return value is ignored.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">f<code>function(this: T, ?, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): ?</code><dd><p>The function to call for every
+child component; should take 2 arguments (the child and its index).</p>
+<dt class="named">opt_obj<code>?T=</code><dd><p>Used as the &#39;this&#39; object in f when called.</p>
+</dl></dd></dl></section><section class="property" id="getChild"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1168" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getChild(<wbr>id)</div></h3><p>Returns the child with the given ID, or null if no such child exists.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">id<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Child component ID.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The child with the given ID; null if none.</p>
+</dl></dd></dl></section><section class="property" id="getChildAt"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1183" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getChildAt(<wbr>index)</div></h3><p>Returns the child at the given index, or null if the index is out of bounds.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">index<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>0-based index.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The child at the given index; null if none.</p>
+</dl></dd></dl></section><section class="property" id="getChildCount"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1139" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getChildCount()</div></h3><p>Returns the number of children of this component.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The number of children.</p>
+</dl></dd></dl></section><section class="property" id="getChildIds"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1149" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getChildIds()</div></h3><p>Returns an array containing the IDs of the children of this component, or an
+empty array if the component has no children.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</code><dd><p>Child component IDs.</p>
+</dl></dd></dl></section><section class="property" id="getContentElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1091" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getContentElement()</div></h3><p>Returns the DOM element into which child components are to be rendered,
+or null if the component itself hasn&#39;t been rendered yet.  This default
+implementation returns the component&#39;s root element.  Subclasses with
+complex DOM structures must override this method.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>Element to contain child elements (null if none).</p>
+</dl></dd></dl></section><section class="property" id="getDisposed"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l163" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>getDisposed()</div></h3><dl><dt class="spec">Deprecated<dd><p>Use <a href="goog.ui.Component.html#isDisposed"><code>#isDisposed</code></a> instead.</p>
+<dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#getDisposed">goog.Disposable</a></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the object has been disposed of.</p>
+</dl></dd></dl></section><section class="property" id="getDomHelper"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l620" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getDomHelper()</div></h3><p>Returns the dom helper that is being used on this component.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a></code><dd><p>The dom helper used on this component.</p>
+</dl></dd></dl></section><section class="property" id="getElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l470" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getElement()</div></h3><p>Gets the component&#39;s element.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The element for the component.</p>
+</dl></dd></dl></section><section class="property" id="getElementByClass"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l526" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getElementByClass(<wbr>className)</div></h3><p>Returns the first element in this component&#39;s DOM with the provided
+className.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The name of the class to look for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The first item with the class name provided.</p>
+</dl></dd></dl></section><section class="property" id="getElementByFragment"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l937" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getElementByFragment(<wbr>idFragment)</div></h3><p>Helper function for returning an element in the document with a unique id
+generated using makeId().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">idFragment<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The partial id.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The element with the unique id, or null if it cannot be
+found.</p>
+</dl></dd></dl></section><section class="property" id="getElementStrict"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l482" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getElementStrict()</div></h3><p>Gets the component&#39;s element. This differs from getElement in that
+it assumes that the element exists (i.e. the component has been
+rendered/decorated) and will cause an assertion error otherwise (if
+assertion is enabled).</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The element for the component.</p>
+</dl></dd></dl></section><section class="property" id="getElementsByClass"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l513" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getElementsByClass(<wbr>className)</div></h3><p>Returns an array of all the elements in this component&#39;s DOM with the
+provided className.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The name of the class to look for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>IArrayLike&lt;Element&gt;</code><dd><p>The items found with the class name provided.</p>
+</dl></dd></dl></section><section class="property" id="getFragmentFromId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l925" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getFragmentFromId(<wbr>id)</div></h3><p>Helper function for returning the fragment portion of an id generated using
+makeId().</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">id<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Id generated with makeId().</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Fragment.</p>
+</dl></dd></dl></section><section class="property" id="getHandler"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l555" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="protected"></span></div><div><code class="template-name">&lt;T&gt;</code> getHandler()</div></h3><p>Returns the event handler for this component, lazily created the first time
+this method is called.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.EventHandler.html">goog.events.EventHandler</a>&lt;T&gt;</code><dd><p>Event handler for this component.</p>
+</dl></dd></dl></section><section class="property" id="getId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l441" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getId()</div></h3><p>Gets the unique ID for the instance of this component.  If the instance
+doesn&#39;t already have an ID, generates one on the fly.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Unique component ID.</p>
+</dl></dd></dl></section><section class="property" id="getListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l299" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getListener(<wbr>type,<wbr> listener,<wbr> capture,<wbr> opt_listenerScope)</div></h3><p>Gets the goog.events.ListenableKey for the event or null if no such
+listener is in use.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#getListener">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#getListener">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The name of the event
+without the &#39;on&#39; prefix.</p>
+<dt class="named">listener<code>function(this: SCOPE, EVENTOBJ): (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)</code><dd><p>The
+listener function to get.</p>
+<dt class="named">capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the listener is a capturing listener.</p>
+<dt class="named">opt_listenerScope<code>?SCOPE=</code><dd><p>Object in whose scope to call the
+listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a></code><dd><p>the found listener or null if not found.</p>
+</dl></dd></dl></section><section class="property" id="getListeners"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l293" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getListeners(<wbr>type,<wbr> capture)</div></h3><p>Gets all listeners in this listenable for the given type and
+capture mode.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#getListeners">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#getListeners">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>)</code><dd><p>The type of the listeners to fire.</p>
+<dt class="named">capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The capture mode of the listeners to fire.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a>&gt;</code><dd><p>An array of registered
+listeners.</p>
+</dl></dd></dl></section><section class="property" id="getModel"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l905" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getModel()</div></h3><p>Returns the model associated with the UI component.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><dd><p>The model.</p>
+</dl></dd></dl></section><section class="property" id="getParent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l598" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getParent()</div></h3><p>Returns the component&#39;s parent, if any.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The parent component.</p>
+</dl></dd></dl></section><section class="property" id="getParentEventTarget"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l116" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getParentEventTarget()</div></h3><p>Returns the parent of this event target to use for bubbling.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#getParentEventTarget">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#getParentEventTarget">goog.events.Listenable</a></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></code><dd><p>The parent EventTarget or null if
+there is no parent.</p>
+</dl></dd></dl></section><section class="property" id="getRequiredElementByClass"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l539" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getRequiredElementByClass(<wbr>className)</div></h3><p>Similar to <code>getElementByClass</code> except that it expects the
+element to be present in the dom thus returning a required value. Otherwise,
+will assert.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">className<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The name of the class to look for.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>The first item with the class name provided.</p>
+</dl></dd></dl></section><section class="property" id="hasChildren"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1130" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>hasChildren()</div></h3><p>Returns true if the component has children.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>True if the component has children.</p>
+</dl></dd></dl></section><section class="property" id="hasListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l307" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>hasListener(<wbr>opt_type,<wbr> opt_capture)</div></h3><p>Whether there is any active listeners matching the specified
+signature. If either the type or capture parameters are
+unspecified, the function will match on the remaining criteria.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#hasListener">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#hasListener">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)=</code><dd><p>Event type.</p>
+<dt class="named">opt_capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to check for capture or bubble
+listeners.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether there is any active listeners matching
+the requested type and/or capture phase.</p>
+</dl></dd></dl></section><section class="property" id="indexOfChild"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1212" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>indexOfChild(<wbr>child)</div></h3><p>Returns the 0-based index of the given child component, or -1 if no such
+child is found.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">child<code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The child component.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>0-based index of the child component; -1 if not found.</p>
+</dl></dd></dl></section><section class="property" id="isDisposed"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l154" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isDisposed()</div></h3><dl><dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#isDisposed">goog.Disposable</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.disposable.IDisposable.html#isDisposed">goog.disposable.IDisposable</a></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the object has been disposed of.</p>
+</dl></dd></dl></section><section class="property" id="isInDocument"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l629" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isInDocument()</div></h3><p>Determines whether the component has been added to the document.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>TRUE if rendered. Otherwise, FALSE.</p>
+</dl></dd></dl></section><section class="property" id="isRightToLeft"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1102" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isRightToLeft()</div></h3><p>Returns true if the component is rendered right-to-left, false otherwise.
+The first time this function is invoked, the right-to-left rendering property
+is set if it has not been already.</p>
+<dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the control is rendered right-to-left.</p>
+</dl></dd></dl></section><section class="property" id="listen"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l216" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>listen(<wbr>type,<wbr> listener,<wbr> opt_useCapture,<wbr> opt_listenerScope)</div></h3><p>Adds an event listener. A listener can only be added once to an
+object and if it is added again the key for the listener is
+returned. Note that if the existing listener is a one-off listener
+(registered via listenOnce), it will no longer be a one-off
+listener after a call to listen().</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#listen">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#listen">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The event type id.</p>
+<dt class="named">listener<code>function(this: SCOPE, EVENTOBJ): (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)</code><dd><p>Callback
+method.</p>
+<dt class="named">opt_useCapture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to fire in capture phase
+(defaults to false).</p>
+<dt class="named">opt_listenerScope<code>?SCOPE=</code><dd><p>Object in whose scope to call the
+listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a></code><dd><p>Unique key for the listener.</p>
+</dl></dd></dl></section><section class="property" id="listenOnce"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l226" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>listenOnce(<wbr>type,<wbr> listener,<wbr> opt_useCapture,<wbr> opt_listenerScope)</div></h3><p>Adds an event listener that is removed automatically after the
+listener fired once.</p>
+<p>If an existing listener already exists, listenOnce will do
+nothing. In particular, if the listener was previously registered
+via listen(), listenOnce() will not turn the listener into a
+one-off listener. Similarly, if there is already an existing
+one-off listener, listenOnce does not modify the listeners (it is
+still a once listener).</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#listenOnce">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#listenOnce">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The event type id.</p>
+<dt class="named">listener<code>function(this: SCOPE, EVENTOBJ): (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)</code><dd><p>Callback
+method.</p>
+<dt class="named">opt_useCapture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to fire in capture phase
+(defaults to false).</p>
+<dt class="named">opt_listenerScope<code>?SCOPE=</code><dd><p>Object in whose scope to call the
+listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a></code><dd><p>Unique key for the listener.</p>
+</dl></dd></dl></section><section class="property" id="makeId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l880" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>makeId(<wbr>idFragment)</div></h3><p>Helper function for subclasses that gets a unique id for a given fragment,
+this can be used by components to generate unique string ids for DOM
+elements.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">idFragment<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>A partial id.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Unique element id.</p>
+</dl></dd></dl></section><section class="property" id="makeIds"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l892" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>makeIds(<wbr>object)</div></h3><p>Makes a collection of ids.  This is a convenience method for makeId.  The
+object&#39;s values are the id fragments and the new values are the generated
+ids.  The key will remain the same.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">object<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The object that will be used to create the ids.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>An object of id keys to generated ids.</p>
+</dl></dd></dl></section><section class="property" id="registerDisposable"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l203" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>registerDisposable(<wbr>disposable)</div></h3><p>Associates a disposable object with this object so that they will be disposed
+together.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#registerDisposable">goog.Disposable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">disposable<code><a href="goog.disposable.IDisposable.html">goog.disposable.IDisposable</a></code><dd><p>that will be disposed when
+this object is disposed.</p>
+</dl></dd></dl></section><section class="property" id="removeAllListeners"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l249" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeAllListeners(<wbr>opt_type)</div></h3><p>Removes all listeners from this listenable. If type is specified,
+it will only remove listeners of the particular type. otherwise all
+registered listeners will be removed.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#removeAllListeners">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#removeAllListeners">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_type<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>Type of event to remove, default is to
+remove all types.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>Number of listeners removed.</p>
+</dl></dd></dl></section><section class="property" id="removeChild"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1236" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeChild(<wbr>child,<wbr> opt_unrender)</div></h3><p>Removes the given child from this component, and returns it.  Throws an error
+if the argument is invalid or if the specified child isn&#39;t found in the
+parent component.  The argument can either be a string (interpreted as the
+ID of the child component to remove) or the child component itself.</p>
+<p>If <code>opt_unrender</code> is true, calls <code>goog.ui.component#exitDocument</code>
+on the removed child, and subsequently detaches the child&#39;s DOM from the
+document.  Otherwise it is the caller&#39;s responsibility to clean up the child
+component&#39;s DOM.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">child<code>?(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.ui.Component.html">goog.ui.Component</a>)</code><dd><p>The ID of the child to remove,
+or the child component itself.</p>
+<dt class="named">opt_unrender<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, calls <code>exitDocument</code> on the
+removed child component, and detaches its DOM from the document.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The removed component, if any.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#removeChildAt">goog.ui.Component#removeChildAt</a></dd></dl></section><section class="property" id="removeChildAt"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1282" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeChildAt(<wbr>index,<wbr> opt_unrender)</div></h3><p>Removes the child at the given index from this component, and returns it.
+Throws an error if the argument is out of bounds, or if the specified child
+isn&#39;t found in the parent.  See <a href="goog.ui.Component.html#removeChild"><code>goog.ui.Component#removeChild</code></a> for
+detailed semantics.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">index<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>0-based index of the child to remove.</p>
+<dt class="named">opt_unrender<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, calls <code>exitDocument</code> on the
+removed child component, and detaches its DOM from the document.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The removed component, if any.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#removeChild">goog.ui.Component#removeChild</a></dd></dl></section><section class="property" id="removeChildren"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1296" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>removeChildren(<wbr>opt_unrender)</div></h3><p>Removes every child component attached to this one and returns them.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_unrender<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>If true, calls <a href="goog.ui.Component.html#exitDocument"><code>#exitDocument</code></a> on the
+removed child components, and detaches their DOM from the document.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="goog.ui.Component.html">goog.ui.Component</a>&gt;</code><dd><p>The removed components if any.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#removeChild">goog.ui.Component#removeChild</a></dd></dl></section><section class="property" id="removeEventListener"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l174" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="deprecated"></span></div><div>removeEventListener(<wbr>type,<wbr> handler,<wbr> opt_capture,<wbr> opt_handlerScope)</div></h3><p>Removes an event listener from the event target. The handler must be the
+same object as the one added. If the handler has not been added then
+nothing is done.</p>
+<dl><dt class="spec">Deprecated<dd><p>Use <code>#unlisten</code> instead, when possible. Otherwise, use
+<code>goog.events.unlisten</code> if you are passing Object
+(instead of Function) as handler.</p>
+<dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#removeEventListener">goog.events.EventTarget</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>The type of the event to listen for.</p>
+<dt class="named">handler<code>?(function(?): ?|{handleEvent: function(?): ?})</code><dd><p>The function
+to handle the event. The handler can also be an object that implements
+the handleEvent method which takes the event object as argument.</p>
+<dt class="named">opt_capture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>In DOM-compliant browsers, this determines
+whether the listener is fired during the capture or bubble phase
+of the event.</p>
+<dt class="named">opt_handlerScope<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>Object in whose scope to call
+the listener.</p>
+</dl></dd></dl></section><section class="property" id="render"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l658" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>render(<wbr>opt_parentElement)</div></h3><p>Renders the component.  If a parent element is supplied, the component&#39;s
+element will be appended to it.  If there is no optional parent element and
+the element doesn&#39;t have a parentNode then it will be appended to the
+document body.</p>
+<p>If this component has a parent component, and the parent component is
+not in the document already, then this will not call <code>enterDocument</code>
+on this component.</p>
+<p>Throws an Error if the component is already rendered.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_parentElement<code>?Element=</code><dd><p>Optional parent element to render the
+component into.</p>
+</dl></dd></dl></section><section class="property" id="renderBefore"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l671" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>renderBefore(<wbr>sibling)</div></h3><p>Renders the component before another element. The other element should be in
+the document already.</p>
+<p>Throws an Error if the component is already rendered.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">sibling<code>Node</code><dd><p>Node to render the component before.</p>
+</dl></dd></dl></section><section class="property" id="setElementInternal"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l502" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setElementInternal(<wbr>element)</div></h3><p>Sets the component&#39;s root element to the given element.  Considered
+protected and final.</p>
+<p>This should generally only be called during createDom. Setting the element
+does not actually change which element is rendered, only the element that is
+associated with this UI component.</p>
+<p>This should only be used by subclasses and its associated renderers.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>Root element for the component.</p>
+</dl></dd></dl></section><section class="property" id="setId"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l454" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setId(<wbr>id)</div></h3><p>Assigns an ID to this component instance.  It is the caller&#39;s responsibility
+to guarantee that the ID is unique.  If the component is a child of a parent
+component, then the parent component&#39;s child index is updated to reflect the
+new ID; this may throw an error if the parent already has a child with an ID
+that conflicts with the new ID.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">id<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Unique component ID.</p>
+</dl></dd></dl></section><section class="property" id="setModel"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l914" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setModel(<wbr>obj)</div></h3><p>Sets the model associated with the UI component.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">obj<code>*</code><dd><p>The model.</p>
+</dl></dd></dl></section><section class="property" id="setParent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l576" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setParent(<wbr>parent)</div></h3><p>Sets the parent of this component to use for event bubbling.  Throws an error
+if the component already has a parent or if an attempt is made to add a
+component to itself as a child.  Callers must use <code>removeChild</code>
+or <code>removeChildAt</code> to remove components from their containers before
+calling this method.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">parent<code><a href="goog.ui.Component.html">goog.ui.Component</a></code><dd><p>The parent component.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><a href="goog.ui.Component.html#removeChild">goog.ui.Component#removeChild</a></dd><dd><a href="goog.ui.Component.html#removeChildAt">goog.ui.Component#removeChildAt</a></dd></dl></section><section class="property" id="setParentEventTarget"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l608" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setParentEventTarget(<wbr>parent)</div></h3><p>Overrides <a href="goog.events.EventTarget.html#setParentEventTarget"><code>goog.events.EventTarget#setParentEventTarget</code></a> to throw an
+error if the parent component is set, and the argument is not the parent.</p>
+<dl><dt class="spec">Overrides</dt><dd><a href="goog.events.EventTarget.html#setParentEventTarget">goog.events.EventTarget</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">parent<code><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></code><dd><p>Parent listenable (null if none).</p>
+</dl></dd></dl></section><section class="property" id="setRightToLeft"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l1118" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setRightToLeft(<wbr>rightToLeft)</div></h3><p>Set is right-to-left. This function should be used if the component needs
+to know the rendering direction during dom creation (i.e. before
+<a href="goog.ui.Component.html#enterDocument"><code>#enterDocument</code></a> is called and is right-to-left is set).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">rightToLeft<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the component is rendered
+right-to-left.</p>
+</dl></dd></dl></section><section class="property" id="setTargetForTesting"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l320" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>setTargetForTesting(<wbr>target)</div></h3><p>Sets the target to be used for <code>event.target</code> when firing
+event. Mainly used for testing. For example, see
+<code>goog.testing.events.mixinListenable</code>.</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#setTargetForTesting">goog.events.EventTarget</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">target<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code><dd><p>The target.</p>
+</dl></dd></dl></section><section class="property" id="unlisten"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l235" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>unlisten(<wbr>type,<wbr> listener,<wbr> opt_useCapture,<wbr> opt_listenerScope)</div></h3><p>Removes an event listener which was added with listen() or listenOnce().</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#unlisten">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#unlisten">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">type<code>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="goog.events.EventId.html">goog.events.EventId</a>&lt;EVENTOBJ&gt;)</code><dd><p>The event type id.</p>
+<dt class="named">listener<code>function(this: SCOPE, EVENTOBJ): (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)</code><dd><p>Callback
+method.</p>
+<dt class="named">opt_useCapture<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>=</code><dd><p>Whether to fire in capture phase
+(defaults to false).</p>
+<dt class="named">opt_listenerScope<code>?SCOPE=</code><dd><p>Object in whose scope to call
+the listener.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether any listener was removed.</p>
+</dl></dd></dl></section><section class="property" id="unlistenByKey"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/events/eventtarget.js.src.html#l243" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>unlistenByKey(<wbr>key)</div></h3><p>Removes an event listener which was added with listen() by the key
+returned by listen().</p>
+<dl><dt class="spec">Defined by</dt><dd><a href="goog.events.EventTarget.html#unlistenByKey">goog.events.EventTarget</a></dd><dt class="spec">Specified by</dt><dd><a href="goog.events.Listenable.html#unlistenByKey">goog.events.Listenable</a></dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">key<code>!<a href="goog.events.ListenableKey.html">goog.events.ListenableKey</a></code><dd><p>The key returned by
+listen() or listenOnce().</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether any listener was removed.</p>
+</dl></dd></dl></section><section class="property" id="wasDecorated"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l770" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>wasDecorated()</div></h3><dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the component was decorated.</p>
+</dl></dd></dl></section></section><section class="instance-properties"><h2>Instance Properties</h2><section class="property" id="creationStack"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/disposable/disposable.js.src.html#l147" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>creationStack</div></h3><p>If monitoring the goog.Disposable instances is enabled, stores the creation
+stack trace of the Disposable instance.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></dd><dt class="spec">Defined by</dt><dd><a href="goog.Disposable.html#creationStack">goog.Disposable</a></dd></dl></section><section class="property" id="dom_"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l58" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="protected"></span></div><div>dom_</div></h3><p>DomHelper used to interact with the document, allowing components to be
+created in a different window.</p>
+<dl><dt class="spec">Type<dd>!<a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a></dd></dl></section></section><section class="static-functions"><h2>Static Functions</h2><section class="property" id="Component.getStateTransitionEvent"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l391" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>Component.getStateTransitionEvent(<wbr>state,<wbr> isEntering)</div></h3><p>Static helper method; returns the type of event components are expected to
+dispatch when transitioning to or from the given state.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">state<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>State to/from which the component
+is transitioning.</p>
+<dt class="named">isEntering<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the component is entering or leaving the
+state.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Event type to dispatch.</p>
+</dl></dd></dl></section><section class="property" id="Component.setDefaultRightToLeft"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l431" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>Component.setDefaultRightToLeft(<wbr>rightToLeft)</div></h3><p>Set the default right-to-left value. This causes all component&#39;s created from
+this point foward to have the given value. This is useful for cases where
+a given page is always in one directionality, avoiding unnecessary
+right to left determinations.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">rightToLeft<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>Whether the components should be rendered
+right-to-left. Null iff components should determine their directionality.</p>
+</dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.ui.Component.ALLOW_DETACHED_DECORATION"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l156" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.ui.Component.ALLOW_DETACHED_DECORATION</div></h3><p>Whether to support calling decorate with an element that is
+not yet in the document. If true, we check if the element is in the
+document, and avoid calling enterDocument if it isn&#39;t. If false, we
+maintain legacy behavior (always call enterDocument from decorate).</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section><section class="property" id="goog.ui.Component.DEFAULT_BIDI_DIR"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/ui/component.js.src.html#l174" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.ui.Component.DEFAULT_BIDI_DIR</div></h3><p>Defines the default BIDI directionality.
+0: Unknown.
+1: Left-to-right.
+-1: Right-to-left.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.ui.Component.Error.html">Component.Error</a><dd><p>Errors thrown by the component.</p>
+<dt><a href="goog.ui.Component.EventType.html">Component.EventType</a><dd><p>Common events fired by components so that event propagation is useful.</p>
+<dt><a href="goog.ui.Component.State.html">Component.State</a><dd><p>Common component states.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

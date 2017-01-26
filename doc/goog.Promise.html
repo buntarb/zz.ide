@@ -1,0 +1,149 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.promise</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><h2>Did you mean?</h2><ul><li><a href="goog.promise.html">goog.promise</a><li><a href="goog.Promise.html">goog.Promise</a></ul></article><article style="display:none" data-name="goog.promise" data-filename="goog.promise.html"><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/resolver.js.src.html#l15">View Source</a></div><h1 class="title"><div>namespace goog.promise</div></h1><p>No description available.</p></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.promise.Resolver.html">Resolver</a><dd><p>Resolver interface for promises.</p>
+</dl></section></section></article><article style="display:none" data-name="Promise" data-filename="goog.Promise.html"><section class="intro"><div class="parentlink"><b>Namespace:</b> <a href="goog.html">goog</a></div><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l76">View Source</a></div><h1 class="title"><div class="tags"><span class="final"></span><span class="struct"></span></div><div>class Promise&lt;TYPE, RESOLVER_CONTEXT&gt;</div></h1><dl><dt class="spec">All implemented interfaces<dd><code>IThenable&lt;TYPE&gt;</code><dd><code><a href="goog.Thenable.html">goog.Thenable</a>&lt;TYPE&gt;</code></dl><p>Promises provide a result that may be resolved asynchronously. A Promise may
+be resolved by being fulfilled with a fulfillment value, rejected with a
+rejection reason, or blocked by another Promise. A Promise is said to be
+settled if it is either fulfilled or rejected. Once settled, the Promise
+result is immutable.</p>
+<p>Promises may represent results of any type, including undefined. Rejection
+reasons are typically Errors, but may also be of any type. Closure Promises
+allow for optional type annotations that enforce that fulfillment values are
+of the appropriate types at compile time.</p>
+<p>The result of a Promise is accessible by calling <code>then</code> and registering
+<code>onFulfilled</code> and <code>onRejected</code> callbacks. Once the Promise
+is settled, the relevant callbacks are invoked with the fulfillment value or
+rejection reason as argument. Callbacks are always invoked in the order they
+were registered, even when additional <code>then</code> calls are made from inside
+another callback. A callback is always run asynchronously sometime after the
+scope containing the registering <code>then</code> invocation has returned.</p>
+<p>If a Promise is resolved with another Promise, the first Promise will block
+until the second is settled, and then assumes the same result as the second
+Promise. This allows Promises to depend on the results of other Promises,
+linking together multiple asynchronous operations.</p>
+<p>This implementation is compatible with the Promises/A&#43; specification and
+passes that specification&#39;s conformance test suite. A Closure Promise may be
+resolved with a Promise instance (or sufficiently compatible Promise-like
+object) created by other Promise implementations. From the specification,
+Promise-like objects are known as &#34;Thenables&#34;.</p>
+<h3 class="name"><div>new Promise(<wbr>resolver,<wbr> opt_context)</div></h3><dt class="spec">Parameters</dt><dd><dl><dt class="named">resolver<code>function(this: RESOLVER_CONTEXT, function(?(TYPE|{then: ?})=): ?, function(*=): ?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a></code><dd><p>Initialization function that is invoked immediately with <code>resolve</code>
+and <code>reject</code> functions as arguments. The Promise is resolved or
+rejected with the first argument passed to either function.</p>
+<dt class="named">opt_context<code>?RESOLVER_CONTEXT=</code><dd><p>An optional context for executing the
+resolver function. If unspecified, the resolver function will be executed
+in the default scope.</p>
+</dl></dd><dt class="spec">See Also</dt><dd><p><a href="http://promisesaplus.com/">http://promisesaplus.com/</a></p>
+</dd></section><section class="instance-methods"><h2>Instance Methods</h2><section class="property" id="cancel"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l689" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>cancel(<wbr>opt_message)</div></h3><p>Cancels the Promise if it is still pending by rejecting it with a cancel
+Error. No action is performed if the Promise is already resolved.</p>
+<p>All child Promises of the canceled Promise will be rejected with the same
+cancel error, as with normal Promise rejection. If the Promise to be canceled
+is the only child of a pending Promise, the parent Promise will also be
+canceled. Cancellation may propagate upward through multiple generations.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_message<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>=</code><dd><p>An optional debugging message for describing the
+cancellation reason.</p>
+</dl></dd></dl></section><section class="property" id="then"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l548" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>then(<wbr>opt_onFulfilled,<wbr> opt_onRejected,<wbr> opt_context)</div></h3><p>Adds callbacks that will operate on the result of the Promise, returning a
+new child Promise.</p>
+<p>If the Promise is fulfilled, the <code>onFulfilled</code> callback will be invoked
+with the fulfillment value as argument, and the child Promise will be
+fulfilled with the return value of the callback. If the callback throws an
+exception, the child Promise will be rejected with the thrown value instead.</p>
+<p>If the Promise is rejected, the <code>onRejected</code> callback will be invoked
+with the rejection reason as argument, and the child Promise will be resolved
+with the return value or rejected with the thrown value of the callback.</p>
+<dl><dt class="spec">Specified by</dt><dd><a href="goog.Thenable.html#then">goog.Thenable</a></dd><dd>IThenable</dd><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_onFulfilled<code>?function(this: THIS, TYPE): VALUE=</code><dd><p>A
+function that will be invoked with the fulfillment value if the Promise
+is fullfilled.</p>
+<dt class="named">opt_onRejected<code>?function(this: THIS, *): *=</code><dd><p>A function that will
+be invoked with the rejection reason if the Promise is rejected.</p>
+<dt class="named">opt_context<code>?THIS=</code><dd><p>An optional context object that will be the
+execution context for the callbacks. By default, functions are executed
+with the default this.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>RESULT</code><dd><p>A new Promise that will receive the result
+of the fulfillment or rejection callback.</p>
+</dl></dd></dl></section><section class="property" id="thenAlways"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l644" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;THIS&gt;</code> thenAlways(<wbr>onSettled,<wbr> opt_context)</div></h3><p>Adds a callback that will be invoked when the Promise is settled (fulfilled
+or rejected). The callback receives no argument, and no new child Promise is
+created. This is useful for ensuring that cleanup takes place after certain
+asynchronous operations. Callbacks added with <code>thenAlways</code> will be
+executed in the same order with other calls to <code>then</code>,
+<code>thenAlways</code>, or <code>thenCatch</code>.</p>
+<p>Since it does not produce a new child Promise, cancellation propagation is
+not prevented by adding callbacks with <code>thenAlways</code>. A Promise that has
+a cleanup handler added with <code>thenAlways</code> will be canceled if all of
+its children created by <code>then</code> (or <code>thenCatch</code>) are canceled.
+Additionally, since any rejections are not passed to the callback, it does
+not stop the unhandled rejection handler from running.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">onSettled<code>function(this: THIS): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a></code><dd><p>A function that will be invoked
+when the Promise is settled (fulfilled or rejected).</p>
+<dt class="named">opt_context<code>?THIS=</code><dd><p>An optional context object that will be the
+execution context for the callbacks. By default, functions are executed
+in the global scope.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a>&lt;TYPE, ?&gt;</code><dd><p>This Promise, for chaining additional calls.</p>
+</dl></dd></dl></section><section class="property" id="thenCatch"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l669" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;THIS&gt;</code> thenCatch(<wbr>onRejected,<wbr> opt_context)</div></h3><p>Adds a callback that will be invoked only if the Promise is rejected. This
+is equivalent to <code>then(null, onRejected)</code>.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">onRejected<code>!function(this: THIS, *): *</code><dd><p>A function that will be
+invoked with the rejection reason if the Promise is rejected.</p>
+<dt class="named">opt_context<code>?THIS=</code><dd><p>An optional context object that will be the
+execution context for the callbacks. By default, functions are executed
+in the global scope.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a></code><dd><p>A new Promise that will receive the result of the
+callback.</p>
+</dl></dd></dl></section><section class="property" id="thenVoid"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l594" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="package"></span></div><div><code class="template-name">&lt;THIS&gt;</code> thenVoid(<wbr>opt_onFulfilled,<wbr> opt_onRejected,<wbr> opt_context)</div></h3><p>Adds callbacks that will operate on the result of the Promise without
+returning a child Promise (unlike &#34;then&#34;).</p>
+<p>If the Promise is fulfilled, the <code>onFulfilled</code> callback will be invoked
+with the fulfillment value as argument.</p>
+<p>If the Promise is rejected, the <code>onRejected</code> callback will be invoked
+with the rejection reason as argument.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_onFulfilled<code>?function(this: THIS, TYPE): ?=</code><dd><p>A
+function that will be invoked with the fulfillment value if the Promise
+is fulfilled.</p>
+<dt class="named">opt_onRejected<code>?function(this: THIS, *): *=</code><dd><p>A function that will
+be invoked with the rejection reason if the Promise is rejected.</p>
+<dt class="named">opt_context<code>?THIS=</code><dd><p>An optional context object that will be the
+execution context for the callbacks. By default, functions are executed
+with the default this.</p>
+</dl></dd></dl></section></section><section class="static-functions"><h2>Static Functions</h2><section class="property" id="Promise.all"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l409" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;TYPE&gt;</code> Promise.all(<wbr>promises)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">promises<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;*&gt;</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;TYPE&gt;, ?&gt;</code><dd><p>A Promise that receives a list of
+every fulfilled value once every input Promise (or Promise-like) is
+successfully fulfilled, or is rejected with the first rejection reason
+immediately after it is rejected.</p>
+</dl></dd></dl></section><section class="property" id="Promise.allSettled"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l452" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;TYPE&gt;</code> Promise.allSettled(<wbr>promises)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">promises<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;*&gt;</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;{fulfilled: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, reason: *, value: (TYPE|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>)}&gt;, ?&gt;</code><dd><p>A Promise that resolves with a list of
+result objects once all input Promises (or Promise-like) have
+settled. Each result object contains a &#39;fulfilled&#39; boolean indicating
+whether an input Promise was fulfilled or rejected. For fulfilled
+Promises, the resulting value is stored in the &#39;value&#39; field. For
+rejected Promises, the rejection reason is stored in the &#39;reason&#39;
+field.</p>
+</dl></dd></dl></section><section class="property" id="Promise.firstFulfilled"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l489" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;TYPE&gt;</code> Promise.firstFulfilled(<wbr>promises)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">promises<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;*&gt;</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a>&lt;TYPE, ?&gt;</code><dd><p>A Promise that receives the value of the first
+input to be fulfilled, or is rejected with a list of every rejection
+reason if all inputs are rejected.</p>
+</dl></dd></dl></section><section class="property" id="Promise.race"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l387" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;TYPE&gt;</code> Promise.race(<wbr>promises)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">promises<code>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;*&gt;</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a>&lt;TYPE, ?&gt;</code><dd><p>A Promise that receives the result of the
+first Promise (or Promise-like) input to settle immediately after it
+settles.</p>
+</dl></dd></dl></section><section class="property" id="Promise.reject"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l353" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>Promise.reject(<wbr>opt_reason)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_reason<code>*=</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.Promise.html">goog.Promise</a></code><dd><p>A new Promise that is immediately rejected with the
+given reason.</p>
+</dl></dd></dl></section><section class="property" id="Promise.resolve"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l333" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;VALUE&gt;</code> Promise.resolve(<wbr>opt_value)</div></h3><dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">opt_value<code>?VALUE=</code></dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>RESULT</code><dd><p>A new Promise that is immediately resolved
+with the given value. If the input value is already a goog.Promise, it
+will be returned immediately without creating a new instance.</p>
+</dl></dd></dl></section><section class="property" id="Promise.setUnhandledRejectionHandler"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l1290" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>Promise.setUnhandledRejectionHandler(<wbr>handler)</div></h3><p>Sets a handler that will be called with reasons from unhandled rejected
+Promises. If the rejected Promise (or one of its descendants) has an
+<code>onRejected</code> callback registered, the rejection will be considered
+handled, and the rejection handler will not be called.</p>
+<p>By default, unhandled rejections are rethrown so that the error may be
+captured by the developer console or a <code>window.onerror</code> handler.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">handler<code>function(*): ?</code><dd><p>A function that will be called with reasons from
+rejected Promises. Defaults to <code>goog.async.throwException</code>.</p>
+</dl></dd></dl></section><section class="property" id="Promise.withResolver"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l523" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;TYPE&gt;</code> Promise.withResolver()</div></h3><dl><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.promise.Resolver.html">goog.promise.Resolver</a>&lt;TYPE&gt;</code><dd><p>Resolver wrapping the promise and its
+resolve / reject functions. Resolving or rejecting the resolver
+resolves or rejects the promise.</p>
+</dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.Promise.DEFAULT_MAX_UNUSED"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l279" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.Promise.DEFAULT_MAX_UNUSED</div></h3><p>The number of currently unused objects to keep around for
+reuse.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section><section class="property" id="goog.Promise.LONG_STACK_TRACES"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l198" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.Promise.LONG_STACK_TRACES</div></h3><p>Whether traces of <code>then</code> calls should be included in
+exceptions thrown</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section><section class="property" id="goog.Promise.UNHANDLED_REJECTION_DELAY"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/promise/promise.js.src.html#l210" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.Promise.UNHANDLED_REJECTION_DELAY</div></h3><p>The delay in milliseconds before a rejected Promise&#39;s reason
+is passed to the rejection handler. By default, the rejection handler
+rethrows the rejection reason so that it appears in the developer console or
+<code>window.onerror</code> handler.</p>
+<p>Rejections are rethrown as quickly as possible by default. A negative value
+disables rejection handling entirely.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="goog.Promise.CallbackEntry_.html">Promise.CallbackEntry_</a><dd><p>Entries in the callback chain.</p>
+<dt><a href="goog.Promise.CancellationError.html">Promise.CancellationError</a><dd><p>Error used as a rejection reason for canceled Promises.</p>
+<dt><a href="goog.Promise.Resolver_.html">Promise.Resolver_</a><dd><p>Internal implementation of the resolver interface.</p>
+<dt><a href="goog.Promise.State_.html">Promise.State_</a><dd><p>The possible internal states for a Promise.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

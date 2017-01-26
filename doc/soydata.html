@@ -1,0 +1,31 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>soydata</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l42">View Source</a></div><h1 class="title"><div>namespace soydata</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="$$markUnsanitizedTextForInternalBlocks"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l900" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>$$markUnsanitizedTextForInternalBlocks(<wbr>content,<wbr> opt_contentDir)</div></h3><p>Creates kind&#61;&#34;text&#34; block contents (internal use only).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text.</p>
+<dt class="named">opt_contentDir<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The content direction; null if
+unknown and thus to be estimated when necessary. Default: null.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>(<a href="soydata.UnsanitizedText.html">soydata.UnsanitizedText</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code><dd><p>Wrapped result.</p>
+</dl></dd></dl></section><section class="property" id="getContentDir"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l121" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getContentDir(<wbr>value)</div></h3><p>Returns a given value&#39;s contentDir property, constrained to a
+goog.i18n.bidi.Dir value or null. Returns null if the value is null,
+undefined, a primitive or does not have a contentDir property, or the
+property&#39;s value is not 1 (for LTR), -1 (for RTL), or 0 (for neutral).</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">value<code>*</code><dd><p>The value whose contentDir property, if any, is to
+be returned.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The contentDir property.</p>
+</dl></dd></dl></section><section class="property" id="markUnsanitizedText"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/bin/templates/soyutils_usegoog.js.src.html#l420" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>markUnsanitizedText(<wbr>content,<wbr> opt_contentDir)</div></h3><p>Protects a string from being used in an noAutoescaped context.</p>
+<p>This is useful for content where there is significant risk of accidental
+unescaped usage in a Soy template. A great case is for user-controlled
+data that has historically been a source of vulernabilities.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">content<code>*</code><dd><p>Text to protect.</p>
+<dt class="named">opt_contentDir<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The content direction; null if
+unknown and thus to be estimated when necessary. Default: null.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="soydata.UnsanitizedText.html">soydata.UnsanitizedText</a></code><dd><p>A wrapper that is rejected by the
+Soy noAutoescape print directive.</p>
+</dl></dd></dl></section></section><section class="types"><h2>Types</h2><section class="property"><dl><dt><a href="soydata.$$EMPTY_STRING_.html">$$EMPTY_STRING_</a><dd><p>Empty string, used as a type in Soy templates.</p>
+<dt><a href="soydata.SanitizedContentKind.html">SanitizedContentKind</a><dd><p>A type of textual content.</p>
+<dt><a href="soydata.SanitizedCss.html">SanitizedCss</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html#CSS"><code>soydata.SanitizedContentKind.CSS</code></a>.</p>
+<dt><a href="soydata.SanitizedHtml.html">SanitizedHtml</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html#HTML"><code>soydata.SanitizedContentKind.HTML</code></a>.</p>
+<dt><a href="soydata.SanitizedHtmlAttribute.html">SanitizedHtmlAttribute</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html#ATTRIBUTES"><code>soydata.SanitizedContentKind.ATTRIBUTES</code></a>.</p>
+<dt><a href="soydata.SanitizedJs.html">SanitizedJs</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html#JS"><code>soydata.SanitizedContentKind.JS</code></a>.</p>
+<dt><a href="soydata.SanitizedJsStrChars.html">SanitizedJsStrChars</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html"><code>soydata.SanitizedContentKind.JS_STR_CHARS</code></a>.</p>
+<dt><a href="soydata.SanitizedUri.html">SanitizedUri</a><dd><p>Content of type <a href="soydata.SanitizedContentKind.html#URI"><code>soydata.SanitizedContentKind.URI</code></a>.</p>
+<dt><a href="soydata.UnsanitizedText.html">UnsanitizedText</a><dd><p>Unsanitized plain text string.</p>
+</dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

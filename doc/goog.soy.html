@@ -1,0 +1,52 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.soy</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/data.js.src.html#l24">View Source</a></div><h1 class="title"><div>namespace goog.soy</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="convertToElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l156" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>convertToElement(<wbr>templateResult,<wbr> opt_domHelper)</div></h3><p>Converts a processed Soy template into a single node. If the rendered
+HTML string represents a single node, then that node is returned. Otherwise,
+a DIV element is returned containing the rendered nodes.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">templateResult<code>!<a href="goog.soy.data.SanitizedContent.html">goog.soy.data.SanitizedContent</a></code><dd><p>The processed
+template of kind HTML or TEXT (which will be escaped).</p>
+<dt class="named">opt_domHelper<code>?<a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a>=</code><dd><p>The DOM helper used to
+create DOM nodes; defaults to <code>goog.dom.getDomHelper</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>Rendered template contents, wrapped in a parent DIV
+element if necessary.</p>
+</dl></dd></dl></section><section class="property" id="renderAsElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l132" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderAsElement(<wbr>template,<wbr> opt_templateData,<wbr> opt_injectedData,<wbr> opt_domHelper)</div></h3><p>Renders a Soy template into a single node. If the rendered
+HTML string represents a single node, then that node is returned. Otherwise,
+a DIV element is returned containing the rendered nodes.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>?ARG_TYPES=</code><dd><p>The data for the template.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+<dt class="named">opt_domHelper<code>?<a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a>=</code><dd><p>The DOM helper used to
+create DOM nodes; defaults to <code>goog.dom.getDomHelper</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Element</code><dd><p>Rendered template contents, wrapped in a parent DIV
+element if necessary.</p>
+</dl></dd></dl></section><section class="property" id="renderAsFragment"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l100" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderAsFragment(<wbr>template,<wbr> opt_templateData,<wbr> opt_injectedData,<wbr> opt_domHelper)</div></h3><p>Renders a Soy template into a single node or a document
+fragment. If the rendered HTML string represents a single node, then that
+node is returned (note that this is <em>not</em> a fragment, despite them name of
+the method). Otherwise a document fragment is returned containing the
+rendered nodes.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>?ARG_TYPES=</code><dd><p>The data for the template.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+<dt class="named">opt_domHelper<code>?<a href="goog.dom.DomHelper.html">goog.dom.DomHelper</a>=</code><dd><p>The DOM helper used to
+create DOM nodes; defaults to <code>goog.dom.getDomHelper</code>.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code>Node</code><dd><p>The resulting node or document fragment.</p>
+</dl></dd></dl></section><section class="property" id="renderElement"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l73" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderElement(<wbr>element,<wbr> template,<wbr> opt_templateData,<wbr> opt_injectedData)</div></h3><p>Renders a Soy template and then set the output string as
+the innerHTML of an element. It is recommended to use this helper function
+instead of directly setting innerHTML in your hand-written code, so that it
+will be easier to audit the code for cross-site scripting vulnerabilities.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element whose content we are rendering into.</p>
+<dt class="named">template<code>?function(ARG_TYPES, ?()=, ?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, *&gt;=): *</code><dd><p>The Soy template defining the element&#39;s content.</p>
+<dt class="named">opt_templateData<code>?ARG_TYPES=</code><dd><p>The data for the template.</p>
+<dt class="named">opt_injectedData<code>?<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>=</code><dd><p>The injected data for the template.</p>
+</dl></dd></dl></section><section class="property" id="renderHtml"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l55" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;ARG_TYPES&gt;</code> renderHtml(<wbr>element,<wbr> templateResult)</div></h3><p>Sets the processed template as the innerHTML of an element. It is recommended
+to use this helper function instead of directly setting innerHTML in your
+hand-written code, so that it will be easier to audit the code for cross-site
+scripting vulnerabilities.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">element<code>Element</code><dd><p>The element whose content we are rendering into.</p>
+<dt class="named">templateResult<code>!<a href="goog.soy.data.SanitizedContent.html">goog.soy.data.SanitizedContent</a></code><dd><p>The processed
+template of kind HTML or TEXT (which will be escaped).</p>
+</dl></dd></dl></section></section><section class="constants"><h2>Compiler Constants</h2><section class="property" id="goog.soy.REQUIRE_STRICT_AUTOESCAPE"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/soy/soy.js.src.html#l41" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>goog.soy.REQUIRE_STRICT_AUTOESCAPE</div></h3><p>Whether to require all Soy templates to be &#34;strict html&#34;.
+Soy templates that use strict autoescaping forbid noAutoescape along with
+many dangerous directives, and return a runtime type SanitizedContent that
+marks them as safe.</p>
+<p>If this flag is enabled, Soy templates will fail to render if a template
+returns plain text -- indicating it is a non-strict template.</p>
+<dl><dt class="spec">Type<dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>

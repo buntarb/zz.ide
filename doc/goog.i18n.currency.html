@@ -1,0 +1,68 @@
+<!DOCTYPE html><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>goog.i18n.currency</title><link href="dossier.css" rel="stylesheet" type="text/css"><header><button class="dossier-menu"><i class="material-icons">menu</i></button><form><input type="search" placeholder="Search" tabindex="1"><i class="material-icons">search</i></form></header><div class="content"><main><article><section class="intro"><div class="codelink"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l35">View Source</a></div><h1 class="title"><div>namespace goog.i18n.currency</div></h1><p>No description available.</p></section><section class="static-functions"><h2>Functions</h2><section class="property" id="addTier2Support"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l74" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>addTier2Support()</div></h3><p>This function will add tier2 currency support. Be default, only tier1
+(most popular currencies) are supported. If an application really needs
+to support some of the rarely used currencies, it should call this function
+before any other functions in this namespace.</p>
+</section><section class="property" id="adjustPrecision"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l237" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>adjustPrecision(<wbr>pattern,<wbr> currencyCode)</div></h3><p>Modify currency pattern string by adjusting precision for given currency.
+Standard currency pattern will have 2 digit after decimal point.
+Examples:
+$#,##0.00 -&gt;  $#,##0    (precision &#61;&#61; 0)
+$#,##0.00 -&gt;  $#,##0.0  (precision &#61;&#61; 1)
+$#,##0.00 -&gt;  $#,##0.000  (precision &#61;&#61; 3)</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">pattern<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>currency pattern string.</p>
+<dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>modified currency pattern string.</p>
+</dl></dd></dl></section><section class="property" id="getGlobalCurrencyPattern"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l96" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getGlobalCurrencyPattern(<wbr>currencyCode)</div></h3><p>Global currency pattern always uses ISO-4217 currency code as prefix. Local
+currency sign is added if it is different from currency code. Each currency
+is unique in this form. The negative side is that ISO code looks weird in
+some countries as people normally do not use it. Local currency sign
+alleviates the problem, but also makes it a little verbose.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Global currency pattern string for given currency.</p>
+</dl></dd></dl></section><section class="property" id="getGlobalCurrencySign"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l114" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getGlobalCurrencySign(<wbr>currencyCode)</div></h3><p>Return global currency sign string for those applications
+that want to handle currency sign themselves.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Global currency sign for given currency.</p>
+</dl></dd></dl></section><section class="property" id="getLocalCurrencyPattern"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l129" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getLocalCurrencyPattern(<wbr>currencyCode)</div></h3><p>Local currency pattern is the most frequently used pattern in currency&#39;s
+native region. It does not care about how it is distinguished from other
+currencies.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Local currency pattern string for given currency.</p>
+</dl></dd></dl></section><section class="property" id="getLocalCurrencySign"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l142" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getLocalCurrencySign(<wbr>currencyCode)</div></h3><p>Returns local currency sign string for those applications that need to
+handle currency sign separately.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Local currency sign for given currency.</p>
+</dl></dd></dl></section><section class="property" id="getPortableCurrencyPattern"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l158" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPortableCurrencyPattern(<wbr>currencyCode)</div></h3><p>Portable currency pattern is a compromise between local and global. It is
+not a mere blend or mid-way between the two. Currency sign is chosen so that
+it looks familiar to native users. It also has enough information to
+distinguish itself from other popular currencies in its native region.
+In this pattern, currency sign symbols that has availability problem in
+popular fonts are also avoided.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Portable currency pattern string for given currency.</p>
+</dl></dd></dl></section><section class="property" id="getPortableCurrencySign"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l171" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>getPortableCurrencySign(<wbr>currencyCode)</div></h3><p>Return portable currency sign string for those applications that need to
+handle currency sign themselves.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>Portable currency sign for given currency.</p>
+</dl></dd></dl></section><section class="property" id="isPrefixSignPosition"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l187" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div>isPrefixSignPosition(<wbr>currencyCode)</div></h3><p>This function returns the default currency sign position. Some applications
+may want to handle currency sign and currency amount separately. This
+function can be used in such situations to correctly position the currency
+sign relative to the amount.</p>
+<p>To match the behavior of ICU, position is not determined by display locale.</p>
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">currencyCode<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code><dd><p>ISO-4217 3-letter currency code.</p>
+</dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>true if currency should be positioned before amount field.</p>
+</dl></dd></dl></section></section><section class="static-properties"><h2>Properties</h2><section class="property" id="CurrencyInfo"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l272" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>CurrencyInfo</div></h3><p>Tier 1 currency information.</p>
+<p>The first number in the array is a combination of the precision mask and
+other flags. The precision mask indicates how many decimal places to show for
+the currency. Valid values are [0..7]. The position flag indicates whether
+the currency sign should be positioned after the number. Valid values are 0
+(before the number) or 16 (after the number). The space flag indicates
+whether a space should be inserted between the currency sign and number.
+Valid values are 0 (no space) and 32 (space).</p>
+<p>The number in the array is calculated by adding together the mask and flag
+values. For example:</p>
+<p>0: no precision (0), currency sign first (0), no space (0)
+2: two decimals precision (2), currency sign first (0), no space (0)
+18: two decimals precision (2), currency sign last (16), no space (0)
+50: two decimals precision (2), currency sign last (16), space (32)</p>
+<dl><dt class="spec">Type<dd>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;?, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;?&gt;&gt;</dd></dl></section><section class="property" id="CurrencyInfoTier2"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/i18n/currency.js.src.html#l339" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div class="tags"><span class="const"></span></div><div>CurrencyInfoTier2</div></h3><p>Tier 2 currency information.</p>
+<dl><dt class="spec">Type<dd>!<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&lt;?, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;?&gt;&gt;</dd></dl></section></section></article></main><footer><div><a href="https://github.com/jleyba/js-dossier">Generated by dossier</a></div></footer></div><nav class="dossier-nav"><section><a class="title" href="index.html" tabindex="2">Overview</a></section><section class="types"><div class="toggle"><div class="title"><span class="item" tabindex="2">Types</span><i class="material-icons">expand_more</i></div></div></section></nav><script src="types.js"></script><script src="dossier.js"></script>
