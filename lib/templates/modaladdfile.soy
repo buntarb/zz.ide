@@ -33,7 +33,11 @@
         type="text"
         data-input="{$key.name}"
         value="{$value.name}">
-    </label>
+    <div
+        class="{css modal--input-error}"
+        data-model="{$key.error}">
+        {$value.error}
+    </div>
     <div
         class="{css modal--buttons_dialog}">
         <button

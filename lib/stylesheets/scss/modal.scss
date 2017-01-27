@@ -16,9 +16,29 @@ div.modal {
   & div.modal--header {
 
     position: relative;
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     height: 40px;
+    margin-bottom: 10px;
     z-index: 20;
+    & div.modal--title {
+
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      color: red;
+      & div.modal--title-text {
+
+      }
+      & div.modal--title-icon {
+
+        margin-right: 10px;
+      }
+    }
     & div.modal--buttons {
 
       position: absolute;
@@ -30,37 +50,26 @@ div.modal {
 
     position: relative;
     box-sizing: border-box;
-    height: calc( 100% - 40px );
-    padding: 0 40px 40px 40px;
+    height: 100%;
+    padding: 20px;
     overflow-y: auto;
-    & div.modal--title {
-
-      position: relative;
-      display: flex;
-      justify-content: center;
-      box-sizing: border-box;
-      margin-bottom: 10px;
-      & div.modal--title-text {
-
-      }
-      & div.modal--title-icon {
-
-      }
-    }
-    & textarea.modal--text {
-
-      position: relative;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-      text-align: center;
-      resize: none;
-    }
     & div.modal--text {
 
-      position: relative;
-      box-sizing: border-box;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-align: center;
+    }
+    & div.modal-error--text {
+
+      width: 100%;
+      height: calc( 100% - 40px );
+      box-sizing: border-box;
+      font-family: 'Monospace';
+      overflow: auto;
+    }
+    & div.modal--input-error {
+
+      font-size: 10px;
+      color: red;
     }
     & div.modal--buttons_dialog {
 

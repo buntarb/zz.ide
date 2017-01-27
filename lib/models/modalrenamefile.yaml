@@ -1,0 +1,21 @@
+NAMESPACE: 'zz.ide.models.ModalRenameFile'
+
+FIELDS:
+
+  path:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  path2:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  error:
+
+    index: 2
+    type: zz.models.enums.FieldType.STRING
+    required: false

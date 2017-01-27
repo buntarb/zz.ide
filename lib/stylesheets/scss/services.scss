@@ -505,3 +505,25 @@ div.layout {
     transform: rotate( -360deg );
   }
 }
+
+
+@media screen and (max-width: 845px) {
+
+  div.services-node--title {
+
+    display: none;
+  }
+  ul.services-dataset {
+
+    & li.datarow {
+
+      & div.services-node {
+
+        & div.services-node--icon {
+
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

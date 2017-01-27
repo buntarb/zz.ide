@@ -1,0 +1,27 @@
+NAMESPACE: 'zz.ide.models.ModalAddFile'
+
+FIELDS:
+
+  name:
+
+      index: 0
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  type:
+
+      index: 1
+      type: zz.models.enums.FieldType.NUMBER
+      required: false
+
+  path:
+
+      index: 2
+      type: zz.models.enums.FieldType.STRING
+      required: false
+
+  error:
+
+    index: 3
+    type: zz.models.enums.FieldType.STRING
+    required: false

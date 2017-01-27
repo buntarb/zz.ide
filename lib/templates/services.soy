@@ -48,7 +48,10 @@
     <div
         id="{$value.id}"
         class="{css layout--btn} {$value.cssClass}"
-        data-action>
+        data-action
+        data-hover
+        data-tooltip="{$value.description}"
+        data-tooltip-position="tooltip-left">
         <i
             class="{css material-icons}"
             data-model="{$key.icon}">
