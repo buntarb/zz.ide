@@ -13,8 +13,6 @@ div.tooltip {
   &.tooltip_left {
 
     top: 50%;
-    right: calc( 100% + 10px);
-    left: auto;
     & div.tooltip--x {
 
       & div.tooltip--y {
