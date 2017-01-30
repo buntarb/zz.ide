@@ -140,7 +140,6 @@ div.layout {
 
         &.hover {
 
-          height: 330px;
           ul.services-dataset {
 
             & li.datarow {
@@ -319,7 +318,7 @@ div.layout {
 
         & ul.services-dataset {
 
-          height: 401px;
+          height: 411px;
           & li.datarow {
 
             & div.layout--btn {
@@ -356,7 +355,7 @@ div.layout {
 
         & ul.services-dataset {
 
-          height: 401px;
+          height: 411px;
           & li.datarow {
 
             & div.compile-app.layout--btn {
@@ -396,7 +395,7 @@ div.layout {
       & ul.services-dataset {
 
         position: absolute;
-        bottom: 5px;
+        bottom: 15px;
         height: 57px;
         width: 57px;
         padding: 0;
