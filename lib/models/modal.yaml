@@ -55,3 +55,9 @@ FIELDS:
     index: 8
     type:  zz.models.enums.FieldType.STRING
     required: false
+
+  className:
+
+    index: 9
+    type:  zz.models.enums.FieldType.STRING
+    required: false

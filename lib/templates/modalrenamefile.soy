@@ -26,12 +26,13 @@
 {template .default}
     <div
         class='{css modal--text}'>
-        Type new name for the {$value.path}
+        {$value.path}
     </div>
     <input
         class="{css mdl-textfield__input}"
         type="text"
-        data-input="{$key.path2}">
+        data-input="{$key.path2}"
+        value="{$value.name}">
     <div
         class="{css modal--input-error}"
         data-model="{$key.error}">

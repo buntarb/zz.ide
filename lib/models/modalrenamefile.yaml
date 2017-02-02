@@ -19,3 +19,9 @@ FIELDS:
     index: 2
     type: zz.models.enums.FieldType.STRING
     required: false
+
+  name:
+
+    index: 3
+    type: zz.models.enums.FieldType.STRING
+    required: false
