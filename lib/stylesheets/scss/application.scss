@@ -95,9 +95,13 @@ html {
 
       outline: none;
     }
-    ::selection {
+    //::selection {
+    //
+    //  background: none;
+    //}
+    & i {
 
-      background: none;
+      -webkit-user-select: none;
     }
   }
 }
