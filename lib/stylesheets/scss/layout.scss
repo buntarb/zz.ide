@@ -86,6 +86,13 @@ div.layout {
       transform: scale( 1, 1 );
     }
   }
+  & div.layout--search-btn {
+
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: #33ac71;
+  }
   & div.layout--show-nav-btn {
 
     position: fixed;
@@ -107,92 +114,43 @@ div.layout {
     -webkit-transform: scale( 1, 1 );
     transform: scale( 1, 1 );
   }
-  & div.layout--services-wrapper {
+  & div.layout--server-services-wrapper {
 
     position: fixed;
-    top: 25px;
-    bottom: 25px;
-    right: 15px;
+    top: 15px;
+    right: 85px;
     width: 88px;
+    padding: 15px;
     box-sizing: border-box;
-    //overflow: hidden;
-    z-index: 10;
-    & div.layout--server-services-wrapper{
+    z-index: 100;
+    opacity: 0;
+    -ms-transform: scale( 0, 0 );
+    -webkit-transform:  scale( 0, 0 );
+    transform:  scale( 0, 0 );
+    transition: all 50ms ease-out;
+    &.show {
 
-      position: absolute;
-      top: -10px;
-      display: none;
-      width: 88px;
-      height: 47%;
-      padding: 15px;
-      transition: height 0.2s ease-in-out;
-      box-sizing: border-box;
-      z-index: 100;
-      &.show {
-
-        display: block;
-      }
-      &.hover {
-
-        overflow: visible;
-      }
-      &.animation {
-
-        z-index: 999;
-      }
+      opacity: 1;
+      -ms-transform: scale( 1, 1 );
+      -webkit-transform: scale( 1, 1 );
+      transform: scale( 1, 1 );
     }
-    & div.layout-services-delimeter {
+  }
+  & div.layout--compile-services-wrapper {
 
-      position: static;
-      height: 6%;
-    }
-    & div.layout--compile-services-wrapper {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    width: 88px;
+    height: 423px;
+    padding: 15px;
+    box-sizing: border-box;
+    //transition: height 0.2s;
+    z-index: 100;
+    & div.compile-app {
 
-      position: absolute;
-      bottom: -10px;
-      width: 88px;
-      height: 47%;
-      padding: 15px;
-      box-sizing: border-box;
-      transition: height 0.2s;
-      z-index: 100;
-      &.hover {
-
-        overflow: visible;
-      }
-      &.animation {
-
-        z-index: 999;
-      }
-      & div.compile-app {
-
-        //color: #4285f4;
-        color: #fff;
-        background: $google-blue;
-      }
-    }
-    &.hover {
-
-      & div.layout--server-services-wrapper {
-
-        height: 56px;
-        &.hover {
-
-          height: 340px;
-        }
-      }
-      & div.layout--compile-services-wrapper {
-
-        position: absolute;
-        bottom: -10px;
-        height: 56px;
-        &.hover {
-
-          position: absolute;
-          bottom: -10px;
-          height: 411px;
-        }
-      }
+      color: #fff;
+      background: $google-blue;
     }
   }
   & div.tooltip-wrapper {

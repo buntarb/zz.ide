@@ -134,61 +134,7 @@ div.layout {
 
   &.server-is-started {
 
-    & div.layout--services-wrapper {
-
-      & div.layout--server-services-wrapper {
-
-        &.hover {
-
-          ul.services-dataset {
-
-            & li.datarow {
-
-              & div.layout--btn {
-
-                opacity: 1;
-                cursor: pointer;
-                -ms-transform: scale(1, 1);
-                -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-              }
-            }
-          }
-        }
-        & ul.dataset {
-
-          & li.datarow {
-
-            & div.layout--btn {
-
-              opacity: 1;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
-  }
-  & div.layout--services-wrapper {
-
     & div.layout--server-services-wrapper {
-
-      & ul.services-dataset {
-
-        & li.datarow {
-
-          & div.layout--btn:not(.start-server) {
-
-            opacity: 0.5;
-            cursor: default;
-          }
-        }
-      }
-    }
-  }
-  & div.layout--services-wrapper {
-
-    & div.layout--server-services-wrapper{
 
       &.hover {
 
@@ -196,111 +142,156 @@ div.layout {
 
           & li.datarow {
 
-            & div.layout--btn:not(.start-server) {
-
-              -ms-transform: scale( 1, 1 );
-              -webkit-transform: scale( 1, 1 );
-              transform: scale( 1, 1 );
-            }
-            & div.start-server.layout--btn {
-
-              & i {
-
-                animation-name: spin;
-                animation-duration: 400ms;
-                animation-iteration-count: 1;
-                animation-timing-function: linear;
-              }
-            }
-          }
-        }
-      }
-      &.blur {
-
-        ul.services-dataset {
-
-          & li.datarow {
-
-            & div.start-server.layout--btn {
+            & div.layout--btn {
 
               opacity: 1;
-              & i {
-
-                animation-name: anti_spin;
-                animation-duration: 400ms;
-                animation-iteration-count: 1;
-                animation-timing-function: linear;
-              }
-            }
-            & div.run-dev{
-
-              transition-delay: 0.3s;
-            }
-            & div.run-dbg{
-
-              transition-delay: 0.2s;
-            }
-            & div.run-app{
-
-              transition-delay: 0.1s;
-            }
-            & div.run-ut{
-
-              transition-delay: 0s;
+              cursor: pointer;
+              -ms-transform: scale(1, 1);
+              -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
             }
           }
         }
       }
-      ul.services-dataset {
+      & ul.dataset {
 
-        padding: 0;
         & li.datarow {
 
-          box-sizing: border-box;
-          width: 100%;
-          & div.layout--btn{
-
-            margin-bottom: 10px;
-            transition-property: all;
-            transition-duration: 0.1s;
-            transition-timing-function: ease-in-out;
-          }
-          & div.start-server{
+          & div.layout--btn {
 
             opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  & div.layout--server-services-wrapper {
+
+    & ul.services-dataset {
+
+      & li.datarow {
+
+        & div.layout--btn:not(.start-server) {
+
+          opacity: 0.5;
+          cursor: default;
+        }
+      }
+    }
+  }
+  & div.layout--server-services-wrapper{
+
+    &.hover {
+
+      ul.services-dataset {
+
+        & li.datarow {
+
+          & div.layout--btn:not(.start-server) {
+
+            -ms-transform: scale( 1, 1 );
+            -webkit-transform: scale( 1, 1 );
+            transform: scale( 1, 1 );
+          }
+          & div.start-server.layout--btn {
+
+            & i {
+
+              animation-name: spin;
+              animation-duration: 400ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+            }
+          }
+        }
+      }
+    }
+    &.blur {
+
+      ul.services-dataset {
+
+        & li.datarow {
+
+          & div.start-server.layout--btn {
+
+            opacity: 1;
+            & i {
+
+              animation-name: anti_spin;
+              animation-duration: 400ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+            }
           }
           & div.run-dev{
 
-            opacity: 0;
-            -ms-transform: scale( 0.1, 0.1 );
-            -webkit-transform: scale( 0.1, 0.1 );
-            transform: scale( 0.1, 0.1 );
-            transition-delay: 0s;
+            transition-delay: 0.3s;
           }
           & div.run-dbg{
 
-            opacity: 0;
-            -ms-transform: scale( 0.1, 0.1 );
-            -webkit-transform: scale( 0.1, 0.1 );
-            transform: scale( 0.1, 0.1 );
-            transition-delay: 0.1s;
+            transition-delay: 0.2s;
           }
           & div.run-app{
 
-            opacity: 0;
-            -ms-transform: scale( 0.1, 0.1 );
-            -webkit-transform: scale( 0.1, 0.1 );
-            transform: scale( 0.1, 0.1 );
-            transition-delay: 0.2s;
+            transition-delay: 0.1s;
           }
           & div.run-ut{
 
-            opacity: 0;
-            -ms-transform: scale( 0.1, 0.1 );
-            -webkit-transform: scale( 0.1, 0.1 );
-            transform: scale( 0.1, 0.1 );
-            transition-delay: 0.3s;
+            transition-delay: 0s;
           }
+        }
+      }
+    }
+    ul.services-dataset {
+
+      padding: 0;
+      & li.datarow {
+
+        box-sizing: border-box;
+        width: 100%;
+        & div.layout--btn{
+
+          margin-bottom: 10px;
+          transition-property: all;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-in-out;
+        }
+        & div.start-server{
+
+          opacity: 1;
+        }
+        & div.run-dev{
+
+          opacity: 0;
+          -ms-transform: scale( 0.1, 0.1 );
+          -webkit-transform: scale( 0.1, 0.1 );
+          transform: scale( 0.1, 0.1 );
+          transition-delay: 0s;
+        }
+        & div.run-dbg{
+
+          opacity: 0;
+          -ms-transform: scale( 0.1, 0.1 );
+          -webkit-transform: scale( 0.1, 0.1 );
+          transform: scale( 0.1, 0.1 );
+          transition-delay: 0.1s;
+        }
+        & div.run-app{
+
+          opacity: 0;
+          -ms-transform: scale( 0.1, 0.1 );
+          -webkit-transform: scale( 0.1, 0.1 );
+          transform: scale( 0.1, 0.1 );
+          transition-delay: 0.2s;
+        }
+        & div.run-ut{
+
+          opacity: 0;
+          -ms-transform: scale( 0.1, 0.1 );
+          -webkit-transform: scale( 0.1, 0.1 );
+          transform: scale( 0.1, 0.1 );
+          transition-delay: 0.3s;
         }
       }
     }
@@ -310,171 +301,165 @@ div.layout {
 //layout compile services styles
 div.layout {
 
-  & div.layout--services-wrapper {
+  div.layout--compile-services-wrapper {
 
-    div.layout--compile-services-wrapper {
+    &.hover {
 
-      &.hover {
-
-        & ul.services-dataset {
-
-          height: 411px;
-          & li.datarow {
-
-            & div.layout--btn {
-
-              opacity: 1;
-              -ms-transform: scale(1, 1);
-              -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-            }
-            & div.compile-app.layout--btn {
-
-              &.compiling {
-
-                i {
-
-                  animation-name: spin;
-                  animation-duration: 400ms;
-                  animation-iteration-count: infinite;
-                  animation-timing-function: linear;
-                }
-              }
-              & i {
-
-                animation-name: spin;
-                animation-duration: 400ms;
-                animation-iteration-count: 1;
-                animation-timing-function: linear;
-              }
-            }
-          }
-        }
-      }
-      &.blur {
-
-        & ul.services-dataset {
-
-          height: 411px;
-          & li.datarow {
-
-            & div.compile-app.layout--btn {
-
-              & i {
-
-                animation-name: anti_spin;
-                animation-duration: 400ms;
-                animation-iteration-count: 1;
-                animation-timing-function: linear;
-              }
-            }
-
-            & div.extract-msg {
-
-              transition-delay: 0.4s;
-            }
-            & div.calc-deps {
-
-              transition-delay: 0.3s;
-            }
-            & div.compile-css {
-
-              transition-delay: 0.2s;
-            }
-            & div.compile-soy {
-
-              transition-delay: 0.1s;
-            }
-            & div.compile-models {
-
-              transition-delay: 0s;
-            }
-          }
-        }
-      }
       & ul.services-dataset {
 
-        position: absolute;
-        bottom: 15px;
-        height: 57px;
-        width: 57px;
-        padding: 0;
-        flex-direction: column-reverse;
-        transition: height 0.6s;
         & li.datarow {
 
-          box-sizing: border-box;
-          width: 100%;
           & div.layout--btn {
 
-            height: 56px;
-            width: 56px;
-            margin-bottom: 10px;
-            margin-top: 1px;
-            transition-property: all;
-            transition-duration: 0.1s;
-            transition-timing-function: ease-in-out;
+            opacity: 1;
+            -ms-transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+          }
+          & div.compile-app.layout--btn {
+
             &.compiling {
 
               i {
 
                 animation-name: spin;
-                animation-duration: 500ms;
+                animation-duration: 400ms;
                 animation-iteration-count: infinite;
                 animation-timing-function: linear;
               }
             }
+            & i {
+
+              animation-name: spin;
+              animation-duration: 400ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+            }
           }
+        }
+      }
+    }
+    &.blur {
+
+      & ul.services-dataset {
+
+        & li.datarow {
+
           & div.compile-app.layout--btn {
 
-            opacity: 1;
-            margin-bottom: 1px;
+            & i {
+
+              animation-name: anti_spin;
+              animation-duration: 400ms;
+              animation-iteration-count: 1;
+              animation-timing-function: linear;
+            }
           }
+
           & div.extract-msg {
 
-            color: #616161;
-            opacity: 0;
-            -ms-transform: scale(0.1, 0.1);
-            -webkit-transform: scale(0.1, 0.1);
-            transform: scale(0.1, 0.1);
-            transition-delay: 0s;
+            transition-delay: 0.4s;
           }
           & div.calc-deps {
 
-            color: #616161;
-            opacity: 0;
-            -ms-transform: scale(0.1, 0.1);
-            -webkit-transform: scale(0.1, 0.1);
-            transform: scale(0.1, 0.1);
-            transition-delay: 0.1s;
+            transition-delay: 0.3s;
           }
           & div.compile-css {
 
-            color: $google-green;
-            opacity: 0;
-            -ms-transform: scale(0.1, 0.1);
-            -webkit-transform: scale(0.1, 0.1);
-            transform: scale(0.1, 0.1);
             transition-delay: 0.2s;
           }
           & div.compile-soy {
 
-            color: $google-orange;
-            opacity: 0;
-            -ms-transform: scale(0.1, 0.1);
-            -webkit-transform: scale(0.1, 0.1);
-            transform: scale(0.1, 0.1);
-            transition-delay: 0.3s;
+            transition-delay: 0.1s;
           }
           & div.compile-models {
 
-            color: $google-blue;
-            opacity: 0;
-            -ms-transform: scale(0.1, 0.1);
-            -webkit-transform: scale(0.1, 0.1);
-            transform: scale(0.1, 0.1);
-            transition-delay: 0.4s;
+            transition-delay: 0s;
           }
+        }
+      }
+    }
+    & ul.services-dataset {
+
+      position: absolute;
+      bottom: 15px;
+      width: 57px;
+      padding: 0;
+      flex-direction: column-reverse;
+      transition: height 0.6s;
+      & li.datarow {
+
+        box-sizing: border-box;
+        width: 100%;
+        & div.layout--btn {
+
+          height: 56px;
+          width: 56px;
+          margin-bottom: 10px;
+          margin-top: 1px;
+          transition-property: all;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-in-out;
+          &.compiling {
+
+            i {
+
+              animation-name: spin;
+              animation-duration: 500ms;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+            }
+          }
+        }
+        & div.compile-app.layout--btn {
+
+          opacity: 1;
+          margin-bottom: 1px;
+        }
+        & div.extract-msg {
+
+          color: #616161;
+          opacity: 0;
+          -ms-transform: scale(0.1, 0.1);
+          -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+          transition-delay: 0s;
+        }
+        & div.calc-deps {
+
+          color: #616161;
+          opacity: 0;
+          -ms-transform: scale(0.1, 0.1);
+          -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+          transition-delay: 0.1s;
+        }
+        & div.compile-css {
+
+          color: $google-green;
+          opacity: 0;
+          -ms-transform: scale(0.1, 0.1);
+          -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+          transition-delay: 0.2s;
+        }
+        & div.compile-soy {
+
+          color: $google-orange;
+          opacity: 0;
+          -ms-transform: scale(0.1, 0.1);
+          -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+          transition-delay: 0.3s;
+        }
+        & div.compile-models {
+
+          color: $google-blue;
+          opacity: 0;
+          -ms-transform: scale(0.1, 0.1);
+          -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+          transition-delay: 0.4s;
         }
       }
     }

@@ -129,25 +129,31 @@
             </i>
         </div>
         <div
-            class="{css layout--services-wrapper}">
-            <div
-                class="{css layout--server-services-wrapper}"
-                data-class="{$key.serverServicesIsShown}:{css show}"
-                data-model="{$key.serverServices}"
-                data-controller="serverServices"
-                data-view="services"
-                data-hover>
-            </div>
-            <div
-                class="{css layout-services-delimeter}">
-            </div>
-            <div
-                class="{css layout--compile-services-wrapper}"
-                data-model="{$key.compileServices}"
-                data-controller="compileServices"
-                data-view="services"
-                data-hover>
-            </div>
+            class="{css layout--search-btn} {css layout--btn}"
+            data-action{sp}
+            data-hover
+            data-search-btn='1'
+            data-tooltip="Search"
+            data-tooltip-position="tooltip-left">
+            <i
+                class="{css material-icons}">
+                search
+            </i>
+        </div>
+        <div
+            class="{css layout--server-services-wrapper}"
+            data-class="{$key.serverServicesIsShown}:{css show}"
+            data-model="{$key.serverServices}"
+            data-controller="serverServices"
+            data-view="services"
+            data-hover>
+        </div>
+        <div
+            class="{css layout--compile-services-wrapper}"
+            data-model="{$key.compileServices}"
+            data-controller="compileServices"
+            data-view="services"
+            data-hover>
         </div>
     </div>
 {/template}
