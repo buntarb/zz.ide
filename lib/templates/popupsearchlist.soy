@@ -37,27 +37,29 @@
         class="{css popupsearchlist-node} {$value.cssClass}"
         data-action
         data-open-list-item = "1">
-        <div
-            class="{css popupsearchlist-node--icon}">
-            <i
-                class="{css material-icons}"
-                data-model="{$key.icon}">
-                {$value.icon}
-            </i>
-        </div>
+        {if $key.icon}
+            <div
+                class="{css popupsearchlist-node--icon}">
+                <i
+                    class="{css material-icons}"
+                    data-model="{$key.icon}">
+                    {$value.icon}
+                </i>
+            </div>
+        {/if}
         <div
             class="{css popupsearchlist-node--title}"
             data-model="{$key.name}">
             {$value.name}
         </div>
-        <div
-            class="{css popupsearchlist-node--remove}"
-            data-action
-            data-remove-from-list="1">
-            <i
-                class="{css material-icons}">
-                clear
-            </i>
-        </div>
+//        <div
+//            class="{css popupsearchlist-node--remove}"
+//            data-action
+//            data-remove-from-list="1">
+//            <i
+//                class="{css material-icons}">
+//                clear
+//            </i>
+//        </div>
     </div>
 {/template}

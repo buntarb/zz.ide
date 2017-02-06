@@ -96,6 +96,14 @@ div.layout {
     transform: translateY(0);
     transition: transform 0.15s ease-out;
   }
+  & div.layout--search-wrapper {
+
+    //display: none;
+    position: fixed;
+    top: 40px;
+    right: 100px;
+    width: 250px;
+  }
   & div.layout--show-nav-btn {
 
     position: fixed;
@@ -244,6 +252,11 @@ div.layout {
       -webkit-transform: translateY( 60px );
       transform: translateY( 60px );
     }
+    & div.layout--search-wrapper {
+
+      -webkit-transform: translateY( 60px );
+      transform: translateY( 60px );
+     }
     & div.navigation-wrapper {
 
       top: 56px;

@@ -3,6 +3,7 @@ NAMESPACE: 'zz.ide.models.Layout'
 REQUIRE:
   -  'zz.ide.models.Header'
   -  'zz.ide.models.Navigation'
+  -  'zz.ide.models.Search'
   -  'zz.ide.models.Modal'
   -  'zz.ide.models.Error'
   -  'zz.ide.models.Popup'
@@ -93,6 +94,12 @@ FIELDS:
 
     index: 14
     type: zz.ide.models.Tooltip
+    required: false
+
+  search:
+
+    index: 15
+    type: zz.ide.models.Search
     required: false
 
 #  backBtnShow:

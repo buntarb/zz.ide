@@ -37,3 +37,8 @@ FIELDS:
     index: 5
     type:  zz.models.enums.FieldType.NUMBER
     required: false
+
+  className:
+
+    index: 6
+    type:  zz.models.enums.FieldType.STRING

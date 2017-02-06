@@ -16,22 +16,26 @@
  * @license Apache-2.0
  * @copyright Artem Lytvynov <buntarb@gmail.com>
  */
-{namespace zz.ide.templates.popup}
+{namespace zz.ide.templates.search}
+
 
 /**
  * @param key
- * @param value
  */
 {template .default}
     <div
-        id="{css popup}"
-        class="{css popup} {$value.className}">
-        {if $value.title}
+        class="{css search}">
+        <label
+//            data-class="{$key.focus}:{css focus}">
             <div
-                class="{css popup--title}"
-                data-model="{$key.title}">
-                {$value.title}
+                class="{css search--input-wrapper}">
+                <input
+                    class="{css search--input} {css mdl-textfield__input}"
+                    data-input="{$key.input}"
+//                    data-focus
+//                    data-blur
+                    placeholder="Search">
             </div>
-        {/if}
+        </label>
     </div>
 {/template}
