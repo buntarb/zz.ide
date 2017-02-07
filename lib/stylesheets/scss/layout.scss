@@ -98,11 +98,28 @@ div.layout {
   }
   & div.layout--search-wrapper {
 
-    //display: none;
+    display: flex;
+    align-items: center;
     position: fixed;
-    top: 40px;
+    top: 30px;
     right: 100px;
     width: 250px;
+    height: 56px;
+    padding: 10px;
+    -ms-transform: scale( 0, 0 );
+    -webkit-transform: scale( 0, 0 );
+    transform: scale( 0, 0 );
+    transition: transform 0.15s ease-out;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    z-index: 5;
+    &.open {
+
+      -ms-transform: scale( 1, 1 );
+      -webkit-transform: scale( 1, 1 );
+      transform: scale( 1, 1 );
+    }
   }
   & div.layout--show-nav-btn {
 
@@ -254,8 +271,7 @@ div.layout {
     }
     & div.layout--search-wrapper {
 
-      -webkit-transform: translateY( 60px );
-      transform: translateY( 60px );
+      top: 90px;
      }
     & div.navigation-wrapper {
 
