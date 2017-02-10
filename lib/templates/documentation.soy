@@ -79,3 +79,21 @@
         </div>
     </div>
 {/template}
+
+/**
+ * @param key
+ * @param value
+ */
+{template .notsupported}
+    <div
+        class="{css documentation-node}">
+        <div
+            class="{css documentation-title}">
+            <span
+                class="{css documentation-name}"
+                data-model="{$key.name}">
+                {$value.name}
+            </span>
+        </div>
+    </div>
+{/template}
