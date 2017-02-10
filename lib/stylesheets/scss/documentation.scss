@@ -4,25 +4,25 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-div.documentation-node {
+div.documentation {
 
   color: #212121;;
-  & div.documentation-title {
+  & div.documentation--title {
 
     margin: 10px 0;
     font-size: 26px;
     font-weight: 400;
-    & span.documentation-name {
+    & span.documentation--name {
 
       word-wrap: break-word;
     }
   }
-  & div.documentation-description {
+  & div.documentation--description {
 
     margin: 10px 0;
     word-wrap: break-word;
   }
-  & div.documentation-file {
+  & div.documentation--file {
 
     & span {
 
@@ -30,12 +30,12 @@ div.documentation-node {
       word-wrap: break-word;
     }
   }
-  & div.documentation-method--title {
+  & div.documentation--method--title {
 
     margin: 10px 0;
     font-size: 20px;
   }
-  & div.documentation-property--title {
+  & div.documentation--property--title {
 
     margin: 10px 0;
     font-size: 20px;

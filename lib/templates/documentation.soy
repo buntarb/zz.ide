@@ -24,55 +24,87 @@
  */
 {template .default}
     <div
-        class="{css documentation-node}">
+        class="{css documentation}">
         <div
-            class="{css documentation-title}">
+            class="{css documentation--title}">
             <span
-                class="{css documentation-kind}"
+                class="{css documentation--kind}"
                 data-model="{$key.kind}">
                 {$value.kind}&#160;
             </span>
             <span
-                class="{css documentation-name}"
+                class="{css documentation--name}"
                 data-model="{$key.name}">
                 {$value.name}
             </span>
         </div>
         <div
-            class="{css documentation-description}"
-            data-model="{$key.description}">
-            {$value.description}
-        </div>
-        <div
-            class="{css documentation-file}">
+            class="{css documentation--file}">
             <span>
-                File path:&#160;
+                Provided in file:&#160;
             </span>
             <span
                 data-model="{$key.filename}">
                 {$value.filename}
             </span>
         </div>
+        <div
+            class="{css documentation--extends}">
+            <span>
+                Extends:&#160;
+            </span>
+            <span
+                data-model="{$key.memberof}">
+                {$value.parent}
+            </span>
+        </div>
+        <div
+            class="{css documentation--description}"
+            data-model="{$key.description}">
+            {$value.description}
+        </div>
+        <div
+            class="{css documentation--constructor-wrapper}">
+            <span>
+                new &#160; (
+//            </span>
+//            <div
+//                class="{css documentation--params-wrapper}"
+//                data-model="{$key.params}"
+//                data-view="documentationParamsSimple"
+//                data-controller="documentationParams">
+//            </div>
+//            <span>
+                {$value.params[0].name}
+                &#160; )
+            </span>
+        </div>
+        <div
+            class="{css documentation--params-wrapper}"
+            data-model="{$key.params}"
+            data-view="documentationParams"
+            data-controller="documentationParams">
+        </div>
         {if $value.method.length}
             <div
-                class="{css documentation-method--title}">
+                class="{css documentation--method-title}">
                 Instance Methods
             </div>
         {/if}
         <div
-            class="{css documentation-method-wrapper}"
+            class="{css documentation--method-wrapper}"
             data-model="{$key.method}"
             data-view="documentationMethod"
             data-controller="documentationMethod">
         </div>
         {if $value.property.length}
             <div
-                class="{css documentation-property--title}">
+                class="{css documentation--property-title}">
                 Properties
             </div>
         {/if}
         <div
-            class="{css documentation-property-wrapper}"
+            class="{css documentation--property-wrapper}"
             data-model="{$key.property}"
             data-view="documentationProperty"
             data-controller="documentationProperty">
