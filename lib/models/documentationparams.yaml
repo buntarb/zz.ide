@@ -1,5 +1,8 @@
 NAMESPACE: 'zz.ide.models.DocumentationParams'
 
+REQUIRE:
+  -  'zz.ide.models.DocumentationParamsType'
+
 FIELDS:
 
   name:
@@ -8,8 +11,8 @@ FIELDS:
     type: zz.models.enums.FieldType.STRING
     required: false
 
-#  type:
-#
-#    index: 1
-#    type: zz.models.enums.FieldType.STRING
-#    required: false
+  type:
+
+    index: 1
+    type: zz.ide.models.DocumentationParamsType
+    required: false

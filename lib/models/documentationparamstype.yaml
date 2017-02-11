@@ -1,0 +1,15 @@
+NAMESPACE: 'zz.ide.models.DocumentationParamsType'
+
+FIELDS:
+
+  name:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  link:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false

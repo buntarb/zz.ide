@@ -28,62 +28,57 @@
         <div
             class="{css documentation--title}">
             <span
-                class="{css documentation--kind}"
-                data-model="{$key.kind}">
+                class="{css documentation--kind}">
                 {$value.kind}&#160;
             </span>
             <span
-                class="{css documentation--name}"
-                data-model="{$key.name}">
+                class="{css documentation--name}">
                 {$value.name}
             </span>
         </div>
         <div
             class="{css documentation--file}">
-            <span>
-                Provided in file:&#160;
-            </span>
-            <span
-                data-model="{$key.filename}">
-                {$value.filename}
-            </span>
+            Provided in file: {$value.filename}
         </div>
         <div
             class="{css documentation--extends}">
-            <span>
-                Extends:&#160;
-            </span>
-            <span
-                data-model="{$key.memberof}">
-                {$value.parent}
-            </span>
+            Extends: {$value.parent}
         </div>
         <div
-            class="{css documentation--description}"
-            data-model="{$key.description}">
+            class="{css documentation--description}">
             {$value.description}
         </div>
         <div
             class="{css documentation--constructor-wrapper}">
             <span>
-                new &#160; (
-//            </span>
-//            <div
-//                class="{css documentation--params-wrapper}"
-//                data-model="{$key.params}"
-//                data-view="documentationParamsSimple"
-//                data-controller="documentationParams">
-//            </div>
-//            <span>
-                {$value.params[0].name}
-                &#160; )
+                new &#160; {$value.name}( &#160;
+            </span>
+            <span>
+                {foreach $param in $value.params}
+                    {if isFirst($param)}
+                       {$param.name}
+                    {/if}
+                    {if not isFirst($param)}
+                       , &#160; {$param.name}
+                    {/if}
+                    {ifempty}
+                {/foreach}
+                &#160;
+            </span>
+            <span>
+             )
             </span>
         </div>
         <div
-            class="{css documentation--params-wrapper}"
-            data-model="{$key.params}"
-            data-view="documentationParams"
-            data-controller="documentationParams">
+            class="{css documentation--params-wrapper}">
+            <div>
+                Parameters
+            </div>
+            <div
+                data-model="{$key.params}"
+                data-view="documentationParams"
+                data-controller="documentationParams">
+            </div>
         </div>
         {if $value.method.length}
             <div
@@ -113,7 +108,6 @@
 {/template}
 
 /**
- * @param key
  * @param value
  */
 {template .notsupported}
@@ -122,8 +116,7 @@
         <div
             class="{css documentation-title}">
             <span
-                class="{css documentation-name}"
-                data-model="{$key.name}">
+                class="{css documentation-name}">
                 {$value.name}
             </span>
         </div>
