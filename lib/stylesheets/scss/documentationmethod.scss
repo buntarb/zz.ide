@@ -4,11 +4,90 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-div.documentationmethod-node {
+div.documentation-method {
 
   padding: 8px 0;
-  & span.documentationmethod-this {
+  & div.documentation-method--title-wrapper {
 
-    color: #616161;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    & div.documentation-method--title {
+
+      & span.documentation-method--title-this {
+
+        color: #616161;
+      }
+      & span.documentation-method--title-name,
+      & span.documentation-method--title-bracket {
+
+        font-size: 16px;
+        font-weight: 500;
+      }
+      & span.documentation-method--title-params {
+
+        font-size: 13px;
+        font-family: 'Monospace';
+        opacity: 0.8;
+      }
+    }
+    & div.documentation-method--title-arrow {
+
+      display: flex;
+      i {
+
+        margin: auto;
+        transition: transform 100ms ease-out;
+      }
+    }
+  }
+  & div.documentation-method--details{
+
+    display: none;
+    & div.documentation-method--description {
+
+      margin-bottom: 10px;
+    }
+    & div.documentation-method--memberof {
+
+      margin-bottom: 10px;
+      & span:first-child {
+
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    & div.documentation-method--params-block {
+
+      display: flex;
+      align-items: flex-start;
+      margin: 20px 0;
+      & div.documentation-method--params-block-name{
+
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 20px;
+      }
+    }
+  }
+  &.documentation-method_open {
+
+    & div.documentation-method--title-wrapper {
+
+      & div.documentation-method--title-arrow {
+
+        i {
+
+          transform: rotate( 180deg );
+        }
+      }
+    }
+    & div.documentation-method--details {
+
+      display: block;
+
+
+    }
   }
 }

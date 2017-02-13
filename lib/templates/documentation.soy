@@ -84,9 +84,12 @@
         </div>
         <div
             class="{css documentation--params-block}">
-            <div>
-                Parameters
-            </div>
+            {if $value.params.length}
+                <div
+                    class="{css documentation--params-block-name}">
+                    Parameters
+                </div>
+            {/if}
             <div
                 class="{css documentation--params-wrapper}"
                 data-model="{$key.params}"

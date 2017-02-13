@@ -24,15 +24,119 @@
  */
 {template .default}
     <div
-        class="{css documentationmethod-node}">
-        <span
-            class="{css documentationmethod-this}">
-            this.
-        </span>
-        <span
-            class="{css documentationmethod-name}"
-            data-model="{$key.name}">
-            {$value.name}
-        </span>
+        class="{css documentation-method}"
+        data-class="{$key.open}:{css documentation-method_open}">
+        <div
+            class="{css documentation-method--title-wrapper}"
+            data-action>
+            <div
+                class="{css documentation-method--title}">
+                <span
+                    class="{css documentation-method--title-this}">
+                    this.
+                </span>
+                <span
+                    class="{css documentation-method--title-name}"
+                    data-model="{$key.name}">
+                    {$value.name}
+                </span>
+                <span
+                    class="{css documentation-method--title-bracket}">
+                    ( &#160;
+                </span>
+                <span
+                    class="{css documentation-method--title-params}">
+                    {foreach $param in $value.params}
+                        {if isFirst($param)}
+                           {$param.name}
+                        {/if}
+                        {if not isFirst($param)}
+                           , {$param.name}
+                        {/if}
+                        {ifempty}
+                    {/foreach}
+                    &#160;
+                </span>
+                <span
+                    class="{css documentation-method--title-bracket}">
+                    )&#160;
+                </span>
+                <span
+                    class="{css documentation-method--title-return-arrow}">
+                    &#10230; (&#160
+                    {if $value.return.length}
+                        {foreach $item in $value.return}
+                            {if isFirst($item)}
+                                {if $item.link}
+                                   <a
+                                       href="{$item.link}"
+                                       target="_blank">
+                                       {$item.name}
+                                   </a>
+                                {else}
+                                   {$item.name}
+                                 {/if}
+                            {/if}
+                            {if not isFirst($item)}
+                               | &#160;
+                               {if $item.link}
+                                  <a
+                                      href="{$item.link}"
+                                      target="_blank">
+                                      {$item.name}
+                                  </a>
+                               {else}
+                                  {$item.name}
+                               {/if}
+                            {/if}
+                            {ifempty}
+                        {/foreach}
+                    {else}
+                        void
+                    {/if}
+                    &#160)
+                </span>
+            </div>
+            <div
+                class="{css documentation-method--title-arrow}">
+                <i
+                    class="{css material-icons}">
+                    arrow_drop_down
+                </i>
+            </div>
+        </div>
+        <div
+            class="{css documentation-method--details}">
+            {if $value.description}
+                <div
+                    class="{css documentation-method--description}">
+                    {$value.description}
+                </div>
+            {/if}
+            <div
+                class="{css documentation-method--memberof}">
+                <span>
+                    Defined by: &#160;
+                </span>
+                <span>
+                    {$value.memberof}
+                </span>
+            </div>
+            <div
+                class="{css documentation-method--params-block}">
+                {if $value.params.length}
+                    <div
+                        class="{css documentation-method--params-block-name}">
+                        Parameters
+                    </div>
+                {/if}
+                <div
+                    class="{css documentation-method--params-wrapper}"
+                    data-model="{$key.params}"
+                    data-view="documentationParams"
+                    data-controller="documentationParams">
+                </div>
+            </div>
+        </div>
     </div>
 {/template}

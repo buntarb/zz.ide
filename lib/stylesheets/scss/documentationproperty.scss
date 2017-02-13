@@ -4,11 +4,60 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-div.documentationproperty-node {
+div.documentation-property {
 
   padding: 8px 0;
-  & span.documentationproperty-this {
+  & div.documentation-property--title-wrapper {
 
-    color: #616161;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    & div.documentation-property--title {
+
+      & span.documentation-property--title-this {
+
+        color: #616161;
+      }
+      & span.documentation-property--title-name {
+
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    & div.documentation-property--title-arrow {
+
+      display: flex;
+      i {
+
+        margin: auto;
+        transition: transform 100ms ease-out;
+      }
+    }
+  }
+  & div.documentation-property--details{
+
+    display: none;
+    & div.documentation-property--description {
+
+      margin-bottom: 10px;
+    }
+  }
+  &.documentation-property_open {
+
+    & div.documentation-property--title-wrapper {
+
+      & div.documentation-property--title-arrow {
+
+        i {
+
+          transform: rotate( 180deg );
+        }
+      }
+    }
+    & div.documentation-property--details {
+
+      display: block;
+    }
   }
 }

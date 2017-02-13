@@ -23,16 +23,40 @@
  * @param value
  */
 {template .default}
-    <div
-        class="{css documentationproperty-node}">
-        <span
-            class="{css documentationproperty-this}">
-            this.
-        </span>
-        <span
-            class="{css documentationproperty-name}"
-            data-model="{$key.name}">
-            {$value.name}
-        </span>
-    </div>
+   <div
+       class="{css documentation-property}"
+       data-class="{$key.open}:{css documentation-property_open}">
+       <div
+           class="{css documentation-property--title-wrapper}"
+           data-action>
+           <div
+               class="{css documentation-property--title}">
+               <span
+                   class="{css documentation-property--title-this}">
+                   this.
+               </span>
+               <span
+                   class="{css documentation-property--title-name}"
+                   data-model="{$key.name}">
+                   {$value.name}
+               </span>
+           </div>
+           <div
+               class="{css documentation-property--title-arrow}">
+               <i
+                   class="{css material-icons}">
+                   arrow_drop_down
+               </i>
+           </div>
+       </div>
+       <div
+           class="{css documentation-property--details}">
+           {if $value.description}
+               <div
+                   class="{css documentation-property--description}">
+                   {$value.description}
+               </div>
+           {/if}
+       </div>
+   </div>
 {/template}

@@ -1,9 +1,42 @@
 NAMESPACE: 'zz.ide.models.DocumentationMethod'
 
+REQUIRE:
+  -  'zz.ide.models.DocumentationParams'
+  -  'zz.ide.models.DocumentationParamsType'
 FIELDS:
 
   name:
 
     index: 0
     type: zz.models.enums.FieldType.STRING
+    required: false
+
+  description:
+
+    index: 1
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  memberof:
+
+    index: 2
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  open:
+
+    index: 4
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  return:
+
+    index: 5
+    type:  zz.ide.models.DocumentationParamsType
+    required: false
+
+  params:
+
+    index: 6
+    type: zz.ide.models.DocumentationParams
     required: false

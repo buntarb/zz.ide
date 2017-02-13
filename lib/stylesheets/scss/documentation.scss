@@ -20,6 +20,10 @@ div.documentation {
   & div.documentation--file {
 
     margin-bottom: 10px;
+    & span {
+
+      word-wrap: break-word;
+    }
     & span:first-child {
 
       font-size: 14px;
@@ -61,32 +65,17 @@ div.documentation {
     display: flex;
     align-items: flex-start;
     margin: 20px 0;
-    & div:first-child {
+    & div.documentation--params-block-name{
 
       font-size: 14px;
       font-weight: 400;
       margin-right: 20px;
     }
-    & div.documentation--params-wrapper {
-
-
-    }
   }
-  & div.documentation--file {
+  & div.documentation--method-title,
+  & div.documentation--property-title{
 
-    & span {
-
-      word-wrap: break-word;
-    }
-  }
-  & div.documentation--method-title {
-
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
     font-size: 20px;
   }
-  & div.documentation--property-title {
-
-    margin: 10px 0;
-    font-size: 20px;
-   }
 }
