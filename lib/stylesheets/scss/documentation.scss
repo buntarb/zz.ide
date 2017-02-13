@@ -9,7 +9,7 @@ div.documentation {
   color: #212121;;
   & div.documentation--title {
 
-    margin: 10px 0;
+    margin-bottom: 20px;
     font-size: 26px;
     font-weight: 400;
     & span.documentation--name {
@@ -17,25 +17,74 @@ div.documentation {
       word-wrap: break-word;
     }
   }
+  & div.documentation--file {
+
+    margin-bottom: 10px;
+    & span:first-child {
+
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  & div.documentation--extends {
+
+    margin-bottom: 10px;
+    & span:first-child {
+
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
   & div.documentation--description {
 
-    margin: 10px 0;
+    margin-bottom: 10px;
     word-wrap: break-word;
+  }
+  & div.documentation--constructor-wrapper {
+
+    margin-bottom: 10px;
+    & span.documentation--constructor-name {
+
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+    & span.documentation--constructor-params {
+
+      font-size: 13px;
+      font-family: 'Monospace';
+      opacity: 0.8;
+    }
+  }
+  & div.documentation--params-block {
+
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    & div:first-child {
+
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 20px;
+    }
+    & div.documentation--params-wrapper {
+
+
+    }
   }
   & div.documentation--file {
 
     & span {
 
-      padding: 10px 0;
       word-wrap: break-word;
     }
   }
-  & div.documentation--method--title {
+  & div.documentation--method-title {
 
     margin: 10px 0;
     font-size: 20px;
   }
-  & div.documentation--property--title {
+  & div.documentation--property-title {
 
     margin: 10px 0;
     font-size: 20px;

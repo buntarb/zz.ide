@@ -38,11 +38,21 @@
         </div>
         <div
             class="{css documentation--file}">
-            Provided in file: {$value.filename}
+            <span>
+                Provided in file: &#160;
+            </span>
+            <span>
+                {$value.filename}
+            </span>
         </div>
         <div
             class="{css documentation--extends}">
-            Extends: {$value.parent}
+            <span>
+                Extends: &#160;
+            </span>
+            <span>
+                {$value.parent}
+            </span>
         </div>
         <div
             class="{css documentation--description}">
@@ -50,10 +60,12 @@
         </div>
         <div
             class="{css documentation--constructor-wrapper}">
-            <span>
+            <span
+                class="{css documentation--constructor-name}">
                 new &#160; {$value.name}( &#160;
             </span>
-            <span>
+            <span
+                class="{css documentation--constructor-params}">
                 {foreach $param in $value.params}
                     {if isFirst($param)}
                        {$param.name}
@@ -65,16 +77,18 @@
                 {/foreach}
                 &#160;
             </span>
-            <span>
-             )
+            <span
+                class="{css documentation--constructor-name}">
+                )
             </span>
         </div>
         <div
-            class="{css documentation--params-wrapper}">
+            class="{css documentation--params-block}">
             <div>
                 Parameters
             </div>
             <div
+                class="{css documentation--params-wrapper}"
                 data-model="{$key.params}"
                 data-view="documentationParams"
                 data-controller="documentationParams">

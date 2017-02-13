@@ -3,3 +3,13 @@
 * @license Apache-2.0
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
+
+div.documentation-params {
+
+  & span.documentation-params--name {
+
+    font-size: 13px;
+    font-family: 'Monospace';
+    opacity: 0.8;
+  }
+}
