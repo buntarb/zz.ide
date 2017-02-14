@@ -18,15 +18,12 @@ div.layout {
     height: 56px;
     margin: auto;
     padding: 0;
-    z-index: 2;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0;
     box-shadow: 0 1px 1.5px 1px rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
     border: none;
-    //background: #ff4081;
-    //color: white;
     box-sizing: border-box;
     background: #fff;
     color: #4285f4;
@@ -113,7 +110,6 @@ div.layout {
     box-sizing: border-box;
     background: #fff;
     box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-    z-index: 5;
     &.open {
 
       -ms-transform: scale( 1, 1 );
@@ -130,7 +126,6 @@ div.layout {
     -ms-transform: scale( 1, 1 );
     -webkit-transform: scale( 1, 1 );
     transform: scale( 1, 1 );
-    z-index: 10;
   }
   & div.layout--back-to-folder-btn {
 
@@ -150,7 +145,6 @@ div.layout {
     width: 88px;
     padding: 15px;
     box-sizing: border-box;
-    z-index: 100;
     opacity: 0;
     -ms-transform: scale( 0, 0 );
     -webkit-transform:  scale( 0, 0 );
@@ -173,7 +167,6 @@ div.layout {
     height: 423px;
     padding: 15px;
     box-sizing: border-box;
-    z-index: 100;
     & div.compile-app {
 
       color: #fff;
@@ -185,7 +178,14 @@ div.layout {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+  }
+  & div.modal-wrapper {
+
+    position: relative;
+  }
+  & div.popup-wrapper {
+
+    position: relative;
   }
   & div.header-wrapper {
 
@@ -196,7 +196,6 @@ div.layout {
     -webkit-transform: translateY(-65px);
     transform: translateY(-65px);
     transition: transform 0.15s;
-    z-index: 40;
   }
   & div.navigation-wrapper {
 
@@ -288,3 +287,42 @@ div.layout {
   }
 }
 
+// classes for z-index
+.z-navigation {
+
+  z-index: 10;
+}
+.z-view {
+
+  z-index: 20;
+}
+
+.z-btns {
+
+  z-index: 30;
+}
+
+.z-header {
+
+  z-index: 40;
+}
+
+.z-modal {
+
+  z-index: 50;
+}
+
+.z-error {
+
+  z-index: 70;
+}
+
+.z-popup {
+
+  z-index: 70;
+}
+
+.z-tooltip {
+
+  z-index: 80;
+}

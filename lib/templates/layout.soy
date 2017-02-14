@@ -31,31 +31,31 @@
                     {$key.serverIsStarted}:{css server-is-started}"
         data-action>
         <div
-            class="{css header-wrapper}"
+            class="{css header-wrapper} {css z-header}"
             data-model="{$key.header}"
             data-view="header"
             data-controller="header">
         </div>
         <div
-            class="{css navigation-wrapper}"
+            class="{css navigation-wrapper} {css z-navigation}"
             data-model="{$key.navigation}"
             data-view="navigation"
             data-controller="navigation">
         </div>
         <div
-            class="{css modal-wrapper}"
+            class="{css modal-wrapper} {css z-modal}"
             data-model="{$key.modal}"
             data-view="modal"
             data-controller="modal">
         </div>
         <div
-            class="{css modal-wrapper}"
+            class="{css modal-wrapper} {css z-error}"
             data-model="{$key.error}"
             data-view="error"
             data-controller="error">
         </div>
         <div
-            class="{css popup-wrapper}"
+            class="{css popup-wrapper} {css z-popup}"
             data-model="{$key.popup}"
             data-view="popup"
             data-controller="popup"
@@ -64,14 +64,14 @@
         </div>
         <div
             id="{css tooltip-wrapper}"
-            class="{css tooltip-wrapper}"
+            class="{css tooltip-wrapper} {css z-tooltip}"
             data-model="{$key.tooltip}"
             data-view="tooltip"
             data-controller="tooltip">
         </div>
         <div
             id="{css view-wrapper}"
-            class="{css view-wrapper}">
+            class="{css view-wrapper} {css z-view}">
         </div>
 //        <div
 //            class="{css layout--back-btn} {css layout--btn}"
@@ -94,7 +94,7 @@
 //            </i>
 //        </div>
         <div
-            class="{css layout--btn} {css layout--show-nav-btn}"
+            class="{css layout--btn} {css layout--show-nav-btn} {css z-btns}"
             data-action{sp}
             data-hover
             data-show-navigation="1"
@@ -105,7 +105,7 @@
             </i>
         </div>
         <div
-            class="{css layout--btn} {css layout--back-to-folder-btn}"
+            class="{css layout--btn} {css layout--back-to-folder-btn} {css z-btns}"
             data-action{sp}
             data-hover
             data-back-to-folder="1"
@@ -116,7 +116,7 @@
             </i>
         </div>
         <div
-            class="{css layout--add-btn} {css layout--btn}"
+            class="{css layout--add-btn} {css layout--btn} {css z-btns}"
             data-class="{$key.addBtnShow}:{css show}"
             data-action{sp}
             data-hover
@@ -129,7 +129,7 @@
             </i>
         </div>
         <div
-            class="{css layout--search-btn} {css layout--btn}"
+            class="{css layout--search-btn} {css layout--btn} {css z-btns}"
             data-action{sp}
             data-hover
             data-search-btn='1'
@@ -141,13 +141,13 @@
             </i>
         </div>
         <div
-            class="{css layout--search-wrapper}"
+            class="{css layout--search-wrapper} {css z-modal}"
             data-model="{$key.search}"
             data-controller="search"
             data-view="search">
         </div>
         <div
-            class="{css layout--server-services-wrapper}"
+            class="{css layout--server-services-wrapper} {css z-btns}"
             data-class="{$key.serverServicesIsShown}:{css show}"
             data-model="{$key.serverServices}"
             data-controller="serverServices"
@@ -155,7 +155,7 @@
             data-hover>
         </div>
         <div
-            class="{css layout--compile-services-wrapper}"
+            class="{css layout--compile-services-wrapper} {css z-btns}"
             data-model="{$key.compileServices}"
             data-controller="compileServices"
             data-view="services"
