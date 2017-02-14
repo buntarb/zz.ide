@@ -67,8 +67,8 @@ div.modal {
 
     position: relative;
     box-sizing: border-box;
-    height: calc( 100% - 50px );
-    max-height: 400px;
+    height: calc( 100% - 40px );
+    max-height: calc( 100vh - 150px );
     padding: 20px;
     overflow-y: auto;
     & div.modal--text {

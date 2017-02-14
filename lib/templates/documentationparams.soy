@@ -30,41 +30,43 @@
         </span>
         {if  $value.type.length}
         <span>
-            &#160; ( &#160;
+            &#160;(&#160;
         </span>
-        <span
-            class="{css documentation-params--type}">
-            {foreach $type in $value.type}
-                {if isFirst( $type )}
-                    {if $type.link}
-                        <a
-                            class="{css documentation-params--type}"
-                            href="{$type.link}"
-                            target="_blank">
+        {if $value.type.length}
+            <span
+                class="{css documentation-params--type}">
+                {foreach $type in $value.type}
+                    {if isFirst( $type )}
+                        {if $type.link}
+                            <a
+                                class="{css documentation-params--type}"
+                                href="{$type.link}"
+                                target="_blank">
+                                {$type.name}
+                            </a>
+                        {else}
                             {$type.name}
-                        </a>
-                    {else}
-                        {$type.name}
+                        {/if}
                     {/if}
-                {/if}
-                {if not isFirst( $type )}
-                   | &#160;
-                   {if $type.link}
-                       <a
-                           class="{css documentation-params--type}"
-                           href="{$type.link}">
+                    {if not isFirst( $type )}
+                       &#160;|&#160;
+                       {if $type.link}
+                           <a
+                               class="{css documentation-params--type}"
+                               href="{$type.link}">
+                               {$type.name}
+                           </a>
+                       {else}
                            {$type.name}
-                       </a>
-                   {else}
-                       {$type.name}
-                   {/if}
-                {/if}
-                {ifempty}
-            {/foreach}
-            &#160;
-        </span>
+                       {/if}
+                    {/if}
+                    {ifempty}
+                {/foreach}
+                &#160;
+            </span>
+        {/if}
         <span>
-            &#160; ) &#160;
+            &#160;)
         </span>
         {/if}
     </div>

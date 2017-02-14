@@ -64,19 +64,21 @@
                 class="{css documentation--constructor-name}">
                 new &#160; {$value.name}(&#160;
             </span>
-            <span
-                class="{css documentation--constructor-params}">
-                {foreach $param in $value.params}
-                    {if isFirst($param)}
-                       {$param.name}
-                    {/if}
-                    {if not isFirst($param)}
-                       ,&#160; {$param.name}
-                    {/if}
-                    {ifempty}
-                {/foreach}
-                &#160;
-            </span>
+            {if $value.params.length}
+                <span
+                    class="{css documentation--constructor-params}">
+                    {foreach $param in $value.params}
+                        {if isFirst($param)}
+                           {$param.name}
+                        {/if}
+                        {if not isFirst($param)}
+                           ,&#160;{$param.name}
+                        {/if}
+                        {ifempty}
+                    {/foreach}
+                    &#160;
+                </span>
+            {/if}
             <span
                 class="{css documentation--constructor-name}">
                 )

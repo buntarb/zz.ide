@@ -44,26 +44,28 @@
                     class="{css documentation-method--title-bracket}">
                     (&#160;
                 </span>
-                <span
-                    class="{css documentation-method--title-params}">
-                    {foreach $param in $value.params}
-                        {if isFirst($param)}
-                              {$param.name}
-                        {/if}
-                        {if not isFirst($param)}
-                           ,&#160;{$param.name}
-                        {/if}
-                        {ifempty}
-                    {/foreach}
-                    &#160;
-                </span>
+                {if $value.params.length}
+                    <span
+                        class="{css documentation-method--title-params}">
+                        {foreach $param in $value.params}
+                            {if isFirst($param)}
+                                  {$param.name}
+                            {/if}
+                            {if not isFirst($param)}
+                               ,&#160;{$param.name}
+                            {/if}
+                            {ifempty}
+                        {/foreach}
+                        &#160;
+                    </span>
+                {/if}
                 <span
                     class="{css documentation-method--title-bracket}">
                     )&#160;
                 </span>
                 <span
-                    class="{css documentation-method--title-return-arrow}">
-                    &#10230; (&#160
+                    class="{css documentation-method--title-return}">
+                    &#10230;&#160(&#160
                     {if $value.return.length}
                         {foreach $item in $value.return}
                             {if isFirst($item)}
@@ -78,7 +80,7 @@
                                  {/if}
                             {/if}
                             {if not isFirst($item)}
-                               | &#160;
+                               &#160;|&#160;
                                {if $item.link}
                                   <a
                                       href="{$item.link}"
