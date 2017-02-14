@@ -42,16 +42,16 @@
                 </span>
                 <span
                     class="{css documentation-method--title-bracket}">
-                    ( &#160;
+                    (&#160;
                 </span>
                 <span
                     class="{css documentation-method--title-params}">
                     {foreach $param in $value.params}
                         {if isFirst($param)}
-                           {$param.name}
+                              {$param.name}
                         {/if}
                         {if not isFirst($param)}
-                           , {$param.name}
+                           ,&#160;{$param.name}
                         {/if}
                         {ifempty}
                     {/foreach}
@@ -101,7 +101,7 @@
                 class="{css documentation-method--title-arrow}">
                 <i
                     class="{css material-icons}">
-                    arrow_drop_down
+                    keyboard_arrow_down
                 </i>
             </div>
         </div>

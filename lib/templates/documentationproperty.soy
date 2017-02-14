@@ -40,6 +40,41 @@
                    data-model="{$key.name}">
                    {$value.name}
                </span>
+               <span
+                   class="{css documentation-property--title-type}">
+                   &#10230; (&#160
+                   {if $value.type.length}
+                       {foreach $item in $value.type}
+                           {if isFirst($item)}
+                               {if $item.link}
+                                  <a
+                                      href="{$item.link}"
+                                      target="_blank">
+                                      {$item.name}
+                                  </a>
+                               {else}
+                                  {$item.name}
+                                {/if}
+                           {/if}
+                           {if not isFirst($item)}
+                              | &#160;
+                              {if $item.link}
+                                 <a
+                                     href="{$item.link}"
+                                     target="_blank">
+                                     {$item.name}
+                                 </a>
+                              {else}
+                                 {$item.name}
+                              {/if}
+                           {/if}
+                           {ifempty}
+                       {/foreach}
+                   {else}
+                       void
+                   {/if}
+                   &#160)
+               </span>
            </div>
            <div
                class="{css documentation-property--title-arrow}">
