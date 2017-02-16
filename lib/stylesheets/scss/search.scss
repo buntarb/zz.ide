@@ -7,5 +7,10 @@
 
 div.search {
 
-  width: 230px;
+    width: 230px;
+    & .search--input.mdl-textfield__input {
+        
+        font-family: 'Open Sans';
+        font-size: 12px;
+    }
 }
