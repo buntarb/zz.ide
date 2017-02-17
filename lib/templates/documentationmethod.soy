@@ -42,7 +42,7 @@
                 </span>
                 <span
                     class="{css documentation-method--title-bracket}">
-                    (&#160;
+                    ({sp}
                 </span>
                 {if $value.params.length}
                     <span
@@ -52,20 +52,20 @@
                                   {$param.name}
                             {/if}
                             {if not isFirst($param)}
-                               ,&#160;{$param.name}
+                               ,{sp}{$param.name}
                             {/if}
                             {ifempty}
                         {/foreach}
-                        &#160;
+                        {sp}
                     </span>
                 {/if}
                 <span
                     class="{css documentation-method--title-bracket}">
-                    )&#160;
+                    )
                 </span>
                 <span
                     class="{css documentation-method--title-return}">
-                    &#10230;&#160(&#160
+                    &#10230;(
                     {if $value.return.length}
                         {foreach $item in $value.return}
                             {if isFirst($item)}
@@ -80,7 +80,7 @@
                                  {/if}
                             {/if}
                             {if not isFirst($item)}
-                               &#160;|&#160;
+                               |
                                {if $item.link}
                                   <a
                                       href="{$item.link}"
@@ -96,7 +96,7 @@
                     {else}
                         void
                     {/if}
-                    &#160)
+                    )
                 </span>
             </div>
             <div
@@ -109,21 +109,22 @@
         </div>
         <div
             class="{css documentation-method--details}">
+            <div
+                class="{css documentation-method--memberof}">
+                <span>
+                    Defined in:{sp}
+                </span>
+                <span
+                    class="{css memberof}">
+                    {$value.memberof}
+                </span>
+            </div>
             {if $value.description}
                 <div
                     class="{css documentation-method--description}">
                     {$value.description}
                 </div>
             {/if}
-            <div
-                class="{css documentation-method--memberof}">
-                <span>
-                    Defined by: &#160;
-                </span>
-                <span>
-                    {$value.memberof}
-                </span>
-            </div>
             <div
                 class="{css documentation-method--params-block}">
                 {if $value.params.length}

@@ -6,11 +6,8 @@
 
 div.documentation-params {
 
-  margin-bottom: 10px;
-  & span.documentation-params--name {
-
-    font-size: 13px;
-    font-family: 'Monospace';
-    opacity: 0.8;
-  }
+    font-family: monospace;
+    color: #4c4c4c;
+    & > span.documentation-params--name { }
+    & > span.documentation-params--type { }
 }

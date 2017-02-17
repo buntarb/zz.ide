@@ -6,58 +6,65 @@
 
 div.documentation-property {
 
-  padding: 8px 0;
-  & div.documentation-property--title-wrapper {
-
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    cursor: pointer;
-    & div.documentation-property--title {
-
-      & span.documentation-property--title-this {
-
-        color: #616161;
-      }
-      & span.documentation-property--title-name {
-
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-    & div.documentation-property--title-arrow {
-
-      display: flex;
-      i {
-
-        margin: auto;
-        transition: transform 100ms ease-out;
-      }
-    }
-  }
-  & div.documentation-property--details{
-
-    display: none;
-    & div.documentation-property--description {
-
-      margin-bottom: 10px;
-    }
-  }
-  &.documentation-property_open {
-
-    & div.documentation-property--title-wrapper {
-
-      & div.documentation-property--title-arrow {
-
-        i {
-
-          transform: rotate( 180deg );
+    & > div.documentation-property--title-wrapper {
+    
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-family: monospace;
+        //font-weight: bold;
+        color: #4c4c4c;
+        & > div.documentation-property--title {
+        
+            & > span.documentation-property--title-this {
+            
+                //color: #992207;
+            }
+            & > span.documentation-property--title-name {
+            
+                //color: #a25615;
+            }
+            & > span.documentation-property--title-type {
+            
+                //color: #a25615;
+            }
         }
-      }
+        & > div.documentation-property--title-arrow {
+        
+            display: flex;
+            & > i {
+            
+                margin: auto;
+                transition: transform 100ms ease-out;
+            }
+        }
     }
-    & div.documentation-property--details {
+    & > div.documentation-property--details{
+    
+        display: none;
+        & > div.documentation-property--description {
+        
+            margin-bottom: 10px;
+            padding-left: 20px;
+            font-size: 11px;
+            color: #4c4c4c;
+        }
+    }
+    &.documentation-property_open {
 
-      display: block;
+        & > div.documentation-property--title-wrapper {
+        
+            & > div.documentation-property--title-arrow {
+            
+                & > i {
+                
+                    transform: rotate( 180deg );
+                }
+            }
+        }
+        & > div.documentation-property--details {
+        
+            display: block;
+        }
     }
-  }
 }

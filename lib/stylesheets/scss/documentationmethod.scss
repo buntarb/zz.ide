@@ -6,71 +6,74 @@
 
 div.documentation-method {
 
-  padding: 8px 0;
-  & div.documentation-method--title-wrapper {
-
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    cursor: pointer;
-    & div.documentation-method--title {
-
-      & span.documentation-method--title-this {
-
-        color: #616161;
-      }
-      & span.documentation-method--title-name,
-      & span.documentation-method--title-bracket {
-
-        font-size: 16px;
-        font-weight: 500;
-      }
-      & span.documentation-method--title-params {
-
-        font-size: 13px;
-        font-family: 'Monospace';
-        opacity: 0.8;
-      }
+    & > div.documentation-method--title-wrapper {
+    
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-family: monospace;
+        & div.documentation-method--title {
+        
+            //font-weight: bold;
+            color: #4c4c4c;
+            & > span.documentation-method--title-this {
+            
+                //color: #992207;
+            }
+            & > span.documentation-method--title-name {
+                
+                //color: #a25615;
+            }
+            & > span.documentation-method--title-bracket {
+            
+                //color: #a25615;
+            }
+            & > span.documentation-method--title-params {
+            
+                //color: #992207;
+            }
+            & > span.documentation-method--title-return {
+                
+                //color: #992207;
+            }
+        }
+        & > div.documentation-method--title-arrow {
+        
+            display: flex;
+            & > i {
+            
+                margin: auto;
+                transition: transform 100ms ease-out;
+            }
+        }
     }
-    & div.documentation-method--title-arrow {
-
-      display: flex;
-      i {
-
-        margin: auto;
-        transition: transform 100ms ease-out;
-      }
+    & > div.documentation-method--details{
+    
+        display: none;
+        & div.documentation-method--memberof {
+        
+            padding: 0 0 5px 20px;
+            font-size: 11px;
+            & > span.memberof {
+                
+                color: #4c4c4c;
+            }
+        }
+        & > div.documentation-method--description {
+        
+            padding: 0 0 10px 20px;
+            color: #4c4c4c;
+        }
+        & > div.documentation-method--params-block {
+        
+            padding: 0 0 10px 20px;
+            & > div.documentation-method--params-block-name{
+                
+                font-weight: bold;
+                color: #4c4c4c;
+            }
+        }
     }
-  }
-  & div.documentation-method--details{
-
-    display: none;
-    & div.documentation-method--description {
-
-      margin-bottom: 10px;
-    }
-    & div.documentation-method--memberof {
-
-      margin-bottom: 10px;
-      & span:first-child {
-
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-    & div.documentation-method--params-block {
-
-      display: flex;
-      align-items: flex-start;
-      margin: 20px 0;
-      & div.documentation-method--params-block-name{
-
-        font-size: 14px;
-        font-weight: 400;
-        margin-right: 20px;
-      }
-    }
-  }
   &.documentation-method_open {
 
     & div.documentation-method--title-wrapper {

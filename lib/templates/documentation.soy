@@ -25,44 +25,57 @@
 {template .default}
     <div
         class="{css documentation}">
+        
+        // Documentation title
         <div
             class="{css documentation--title}">
             <span
                 class="{css documentation--kind}">
-                {$value.kind}&#160;
+                {$value.kind}{sp}
             </span>
             <span
                 class="{css documentation--name}">
                 {$value.name}
             </span>
         </div>
-        <div
-            class="{css documentation--file}">
-            <span>
-                Provided in file: &#160;
-            </span>
-            <span>
-                {$value.filename}
-            </span>
-        </div>
+        
+        // Extend block
         <div
             class="{css documentation--extends}">
             <span>
                 Extends: &#160;
             </span>
-            <span>
+            <span
+                class="{css extends}">
                 {$value.parent}
             </span>
         </div>
+        
+        // File name block
+        <div
+            class="{css documentation--file}">
+            <span>
+                Provided in: &#160;
+            </span>
+            <span
+                class="{css filename}">
+                {$value.filename}
+            </span>
+        </div>
+        
+        // Description block
         <div
             class="{css documentation--description}">
             {$value.description}
         </div>
+        
+        // Constructor block
         <div
             class="{css documentation--constructor-wrapper}">
+            <span class="{css new}">new{sp}</span>
             <span
                 class="{css documentation--constructor-name}">
-                new &#160; {$value.name}(&#160;
+                {$value.name}({sp}
             </span>
             {if $value.params.length}
                 <span
@@ -72,24 +85,26 @@
                            {$param.name}
                         {/if}
                         {if not isFirst($param)}
-                           ,&#160;{$param.name}
+                           ,{sp}{$param.name}
                         {/if}
                         {ifempty}
                     {/foreach}
-                    &#160;
+                    {sp}
                 </span>
             {/if}
             <span
                 class="{css documentation--constructor-name}">
-                )
+                );
             </span>
         </div>
+        
+        // Parameters block
         <div
             class="{css documentation--params-block}">
             {if $value.params.length}
                 <div
                     class="{css documentation--params-block-name}">
-                    Parameters
+                    Constructor parameters
                 </div>
             {/if}
             <div
@@ -99,6 +114,8 @@
                 data-controller="documentationParams">
             </div>
         </div>
+        
+        // Methods block
         {if $value.method.length}
             <div
                 class="{css documentation--method-title}">

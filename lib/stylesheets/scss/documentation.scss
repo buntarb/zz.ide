@@ -4,78 +4,116 @@
 * @author buntarb@gmail.com (Artem Lytvynov)
 */
 
-div.documentation {
-
-  color: #212121;;
-  & div.documentation--title {
-
-    margin-bottom: 20px;
-    font-size: 26px;
-    font-weight: 400;
-    & span.documentation--name {
-
-      word-wrap: break-word;
+div.documentation,
+div.documentation-node {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color: #8c8c8c;
+    
+    // Documentation title
+    & > div.documentation--title {
+        
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #4c4c4c;
+        & > span.documentation--name {
+            
+            word-wrap: break-word;
+        }
     }
-  }
-  & div.documentation--file {
-
-    margin-bottom: 10px;
-    & span {
-
-      word-wrap: break-word;
+    
+    // Extend block
+    & > div.documentation--extends {
+        
+        font-size: 11px;
+        & > span {
+    
+            word-wrap: break-word;
+            &.extends {
+                
+                color: #4c4c4c;
+            }
+        }
     }
-    & span:first-child {
-
-      font-size: 14px;
-      font-weight: 400;
+    
+    // File name block
+    & > div.documentation--file {
+        
+        font-size: 11px;
+        margin-bottom: 10px;
+        & > span {
+    
+            word-wrap: break-word;
+            &.filename {
+                
+                color: #4c4c4c;
+            }
+        }
     }
-  }
-  & div.documentation--extends {
-
-    margin-bottom: 10px;
-    & span:first-child {
-
-      font-size: 14px;
-      font-weight: 400;
+    
+    // Description block
+    & > div.documentation--description {
+    
+        margin-bottom: 10px;
+        word-wrap: break-word;
+        color: #4c4c4c;
     }
-  }
-  & div.documentation--description {
-
-    margin-bottom: 10px;
-    word-wrap: break-word;
-  }
-  & div.documentation--constructor-wrapper {
-
-    margin-bottom: 10px;
-    & span.documentation--constructor-name {
-
-      font-size: 20px;
-      line-height: 28px;
-      font-weight: 400;
+    
+    // Constructor block
+    & > div.documentation--constructor-wrapper {
+    
+        margin-bottom: 10px;
+        font-family: monospace;
+        color: #4c4c4c;
+        & > span.new {
+            
+            //color: #844983;
+        }
+        & span.documentation--constructor-name {
+        
+            //color: #a25615;
+        }
+        & span.documentation--constructor-params {
+            
+            //color: #992207;
+        }
     }
-    & span.documentation--constructor-params {
-
-      font-size: 13px;
-      font-family: 'Monospace';
-      opacity: 0.8;
+    
+    // Parameters block
+    & > div.documentation--params-block {
+    
+        margin-bottom: 10px;
+        color: #4c4c4c;
+        font-family: monospace;
+        
+        & > div.documentation--params-block-name {
+        
+            position: relative;
+            font-family: 'Open Sans';
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        & > div.documentation--params-wrapper {
+            
+            & span.documentation-params--name {
+                
+                //color: #992207;
+            }
+        }
     }
-  }
-  & div.documentation--params-block {
-
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
-    & div.documentation--params-block-name{
-
-      font-size: 14px;
-      font-weight: 400;
-      margin-right: 20px;
+    
+    // Methods block
+    & > div.documentation--method-title {
+        
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #4c4c4c;
     }
-  }
-  & div.documentation--method-title,
-  & div.documentation--property-title{
-
-    margin: 20px 0 10px 0;
-    font-size: 20px;
-  }
+    & div.documentation--property-title{
+    
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #4c4c4c;
+    }
 }

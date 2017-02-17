@@ -40,9 +40,10 @@
                    data-model="{$key.name}">
                    {$value.name}
                </span>
+               &#10230;(
                <span
                    class="{css documentation-property--title-type}">
-                   &#10230; (&#160
+                   
                    {if $value.type.length}
                        {foreach $item in $value.type}
                            {if isFirst($item)}
@@ -57,7 +58,7 @@
                                 {/if}
                            {/if}
                            {if not isFirst($item)}
-                              | &#160;
+                              |
                               {if $item.link}
                                  <a
                                      href="{$item.link}"
@@ -73,14 +74,14 @@
                    {else}
                        void
                    {/if}
-                   &#160)
                </span>
+               )
            </div>
            <div
                class="{css documentation-property--title-arrow}">
                <i
                    class="{css material-icons}">
-                   arrow_drop_down
+                   keyboard_arrow_down
                </i>
            </div>
        </div>
