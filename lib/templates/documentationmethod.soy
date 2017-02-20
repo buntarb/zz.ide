@@ -24,8 +24,9 @@
  */
 {template .default}
     <div
-        class="{css documentation-method}"
-        data-class="{$key.open}:{css documentation-method_open}">
+        class="{css documentation-method} {css documentation-child}"
+        data-class="{$key.open}:{css documentation-method_open}"
+        data-name="{$value.name}">
         <div
             class="{css documentation-method--title-wrapper}"
             data-action>

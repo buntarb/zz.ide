@@ -25,7 +25,7 @@ iterate over all the contents of the iterables contained within
 <code>iterable</code> and filtering those whose elements appear in the order they
 are encountered in <code>iterable</code>. For example, the 3-length combinations
 of <code>[0,1,2,3]</code> are <code>[[0,1,2], [0,1,3], [0,2,3], [1,2,3]]</code>.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The
 iterable from which to generate combinations.</p>
 <dt class="named">length<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code><dd><p>The length of each combination.</p>
 </dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;VALUE&gt;&gt;</code><dd><p>A new iterator containing
@@ -273,7 +273,7 @@ the original.</p>
 </dl></dd></dl></section><section class="property" id="some"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/iter/iter.js.src.html#l358" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;THIS, VALUE&gt;</code> some(<wbr>iterable,<wbr> f,<wbr> opt_obj)</div></h3><p>Goes through the values in the iterator. Calls f for each of these, and if
 any of them returns true, this returns true (without checking the rest). If
 all return false this will return false.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
 object.</p>
 <dt class="named">f<code>function(this: THIS, VALUE, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>, <a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The function to call for every value. This function takes 3 arguments
 (the value, undefined, and the iterator) and should return a boolean.</p>
@@ -299,7 +299,7 @@ results of applying the function to each element in the original
 iterator.</p>
 </dl></dd></dl></section><section class="property" id="takeWhile"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/iter/iter.js.src.html#l508" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;THIS, VALUE&gt;</code> takeWhile(<wbr>iterable,<wbr> f,<wbr> opt_obj)</div></h3><p>Builds a new iterator that iterates over the original, but only as long as a
 supplied function returns true.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
 object.</p>
 <dt class="named">f<code>function(this: THIS, VALUE, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">undefined</a>, <a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code><dd><p>The function to call for every value. This function takes 3 arguments
 (the value, undefined, and the iterator) and should return a boolean.</p>
@@ -308,17 +308,17 @@ object.</p>
 the original iterator as long as the function is true.</p>
 </dl></dd></dl></section><section class="property" id="tee"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/iter/iter.js.src.html#l1032" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;VALUE&gt;</code> tee(<wbr>iterable,<wbr> opt_num)</div></h3><p>Returns an array of iterators each of which can iterate over the values in
 <code>iterable</code> without advancing the others.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The
 iterable to tee.</p>
 <dt class="named">opt_num<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>=</code><dd><p>The number of iterators to create. Default is 2.</p>
 </dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;&gt;</code><dd><p>An array of iterators.</p>
 </dl></dd><dt class="spec">See Also</dt><dd><p><a href="http://docs.python.org/2/library/itertools.html#itertools.tee">http://docs.python.org/2/library/itertools.html#itertools.tee</a></p>
 </dd></dl></section><section class="property" id="toArray"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/iter/iter.js.src.html#l529" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;VALUE&gt;</code> toArray(<wbr>iterable)</div></h3><p>Converts the iterator to an array</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>The iterator
 to convert to an array.</p>
 </dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;VALUE&gt;</code><dd><p>An array of the elements the iterator iterates over.</p>
 </dl></dd></dl></section><section class="property" id="toIterator"><div class="code-link"><a href="source/node_modules/imazzine-developer-kit/node_modules/google-closure-library/closure/goog/iter/iter.js.src.html#l97" title="View source"><i class="material-icons">code</i></a></div><h3 class="name"><div><code class="template-name">&lt;VALUE&gt;</code> toIterator(<wbr>iterable)</div></h3><p>Returns an iterator that knows how to iterate over the values in the object.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>If the
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">iterable<code>?(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>If the
 object is an iterator it will be returned as is.  If the object has an
 <code><strong>iterator</strong></code> method that will be called to get the value
 iterator.  If the object is an array-like object we create an iterator
@@ -330,7 +330,7 @@ provided iterables. The returned arrays will be the same size as the number
 of iterables given in <code>var_args</code>. Once the shortest iterable is
 exhausted, subsequent calls to <code>next()</code> will throw
 <code>goog.iter.StopIteration</code>.</p>
-<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">var_args<code>...({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>Any
+<dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">var_args<code>...(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>Any
 number of iterable objects.</p>
 </dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;VALUE&gt;&gt;</code><dd><p>A new iterator that returns
 arrays of elements from the provided iterables.</p>
@@ -341,7 +341,7 @@ of iterables given in <code>var_args</code>. Shorter iterables will be extended
 with <code>fillValue</code>. Once the longest iterable is exhausted, subsequent
 calls to <code>next()</code> will throw <code>goog.iter.StopIteration</code>.</p>
 <dl><dt class="spec">Parameters</dt><dd><dl><dt class="named">fillValue<code>VALUE</code><dd><p>The object or value used to fill shorter iterables.</p>
-<dt class="named">var_args<code>...({length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>Any
+<dt class="named">var_args<code>...(<a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;VALUE&gt;|{length: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}|{__iterator__: ?})</code><dd><p>Any
 number of iterable objects.</p>
 </dl></dd><dt class="spec">Returns</dt><dd><dl><dt><code><a href="goog.iter.Iterator.html">goog.iter.Iterator</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;VALUE&gt;&gt;</code><dd><p>A new iterator that returns
 arrays of elements from the provided iterables.</p>
