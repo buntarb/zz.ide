@@ -1,6 +1,6 @@
 {
 	"name": "zz.ide",
-	"version": "20160926.0.0",
+	"version": "20170302.0.0",
 	"description": "IDK IDE project.",
 	"author": {
 		"name": "Artem Lytvynov",
@@ -14,18 +14,18 @@
 	},
 	"dependencies": {
 
-	    "imazzine-developer-kit": "",
+	    "imazzine-developer-kit": "20170219.0.0",
 
-		"zz.views": "",
-		"zz.controllers": "",
-		"zz.models": "",
-		"zz.styles": "",
-		"zz.ui": "",
-		"zz.services": "",
-		"zz.net": "",
-		"zz.environment": "",
-		"zz.app": "",
-		"zz.fs": "",
-		"zz.events": ""
+		"zz.views": "20170113.0.1",
+		"zz.controllers": "20161227.0.3",
+		"zz.models": "20161227.0.2",
+		"zz.styles": "20160913.0.0",
+		"zz.ui": "20170104.0.7",
+		"zz.services": "20161222.0.3",
+		"zz.net": "20161226.0.0",
+		"zz.environment": "20170104.0.1",
+		"zz.app": "20161227.0.0",
+		"zz.fs": "20161109.0.0",
+		"zz.events": "20161222.0.3"
 	}
 }
